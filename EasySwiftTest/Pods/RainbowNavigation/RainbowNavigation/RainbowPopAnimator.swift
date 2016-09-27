@@ -9,12 +9,12 @@
 class RainbowPopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     var animating = false
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.2
     }
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
-        let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)!
+        let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)!
         
         let fromColorSource = fromVC as? RainbowColorSource
         let toColorSource = toVC as? RainbowColorSource
@@ -23,13 +23,13 @@ class RainbowPopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         nextColor = fromColorSource?.navigationBarOutColor?()
         nextColor = toColorSource?.navigationBarInColor?()
         
-        let containerView = transitionContext.containerView()!
+        let containerView = transitionContext.containerView
         let shadowMask = UIView(frame: containerView.bounds)
-        shadowMask.backgroundColor = UIColor.blackColor()
+        shadowMask.backgroundColor = UIColor.black
         shadowMask.alpha = 0.3
         
-        let finalToFrame = transitionContext.finalFrameForViewController(toVC)
-        toVC.view.frame = CGRectOffset(finalToFrame, -finalToFrame.width/2, 0)
+        let finalToFrame = transitionContext.finalFrame(for: toVC)
+        toVC.view.frame = finalToFrame.offsetBy(dx: -finalToFrame.width/2, dy: 0)
         
         containerView.insertSubview(toVC.view, belowSubview: fromVC.view)
         containerView.insertSubview(shadowMask, aboveSubview: toVC.view)
@@ -38,15 +38,15 @@ class RainbowPopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let tabBar = fromVC.navigationController?.tabBarController?.tabBar
         
         if needPushBar {
-            fromVC.navigationController?.tabBarController?.view.sendSubviewToBack(tabBar!)
+            fromVC.navigationController?.tabBarController?.view.sendSubview(toBack: tabBar!)
             tabBar!.frame = CGRect(x: toVC.view.frame.minX, y: toVC.view.frame.minY, width: tabBar!.frame.width, height: tabBar!.frame.height)
         }
         
-        let duration = self.transitionDuration(transitionContext)
+        let duration = self.transitionDuration(using: transitionContext)
         
         animating = true
-        UIView.animateWithDuration(duration, delay: 0, options: .CurveLinear, animations: { () -> Void in
-            fromVC.view.frame = CGRectOffset(fromVC.view.frame, fromVC.view.frame.width, 0)
+        UIView.animate(withDuration: duration, delay: 0, options: .curveLinear, animations: { () -> Void in
+            fromVC.view.frame = fromVC.view.frame.offsetBy(dx: fromVC.view.frame.width, dy: 0)
             toVC.view.frame = finalToFrame
             shadowMask.alpha = 0
             if needPushBar {
@@ -59,11 +59,11 @@ class RainbowPopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             }) { (finished) -> Void in
                 self.animating = false
                 if needPushBar {
-                    toVC.navigationController?.tabBarController?.view.bringSubviewToFront(tabBar!)
+                    toVC.navigationController?.tabBarController?.view.bringSubview(toFront: tabBar!)
                 }
                 shadowMask.removeFromSuperview()
                 
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
     }
 }

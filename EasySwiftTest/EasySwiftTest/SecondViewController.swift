@@ -16,14 +16,20 @@ class SecondViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.automaticallyAdjustsScrollViewInsets = false
+
+//        self.navigationController!.navigationBar.tintColor = UIColor.magentaColor()
+        
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+        self.navigationController!.navigationBar.layer.masksToBounds = false
+        self.navigationController!.navigationBar.barTintColor = UIColor.red.withAlphaComponent(0.5)
 
 //        kViewHeight = UIScreen.mainScreen().bounds.size.height - 64
 
 //        kViewHeight [[UIScreen mainScreen] bounds].size.height - 64
 
-        let img = UIImageView(frame: CGRectMake(0, 100, 300, 200))
+        let img = UIImageView(frame: CGRect(x: 0, y: 100, width: 300, height: 200))
         self.view.addSubview(img)
 
         self.view.whenTap {
@@ -32,7 +38,7 @@ class SecondViewController: UITableViewController {
             self.actionSheet.maxSelectCount = 1
             // 设置照片最大预览数
             self.actionSheet.maxPreviewCount = 20
-            self.actionSheet.showWithSender(self, animate: true, lastSelectPhotoModels: nil, completion: { (imgs, selectImgs) in
+            self.actionSheet.show(withSender: self, animate: true, last: nil, completion: { (imgs, selectImgs) in
                 img.image = imgs.first
             })
         }

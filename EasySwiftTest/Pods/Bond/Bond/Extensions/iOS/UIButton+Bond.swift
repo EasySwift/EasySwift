@@ -28,12 +28,12 @@ extension UIButton {
   
   public var bnd_title: Observable<String?> {
     return bnd_associatedObservableForValueForKey("title", initial: self.titleLabel?.text) { [weak self] title in
-      self?.setTitle(title, forState: UIControlState.Normal)
+      self?.setTitle(title, for: UIControlState())
     }
   }
   
   public var bnd_tap: EventProducer<Void> {
-    return self.bnd_controlEvent.filter { $0 == UIControlEvents.TouchUpInside }.map { e in }
+    return self.bnd_controlEvent.filter { $0 == UIControlEvents.touchUpInside }.map { e in }
   }
   
   public var bnd_selected: Observable<Bool> {

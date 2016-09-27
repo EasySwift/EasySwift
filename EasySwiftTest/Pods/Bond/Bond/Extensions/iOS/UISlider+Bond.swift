@@ -28,12 +28,12 @@ import UIKit
 
 extension UISlider {
   
-  private struct AssociatedKeys {
+  fileprivate struct AssociatedKeys {
     static var ValueKey = "bnd_ValueKey"
   }
   
   public var bnd_value: Observable<Float> {
-    if let bnd_value: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.ValueKey) {
+    if let bnd_value: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.ValueKey) as AnyObject? {
       return bnd_value as! Observable<Float>
     } else {
       let bnd_value = Observable<Float>(self.value)
@@ -47,7 +47,7 @@ extension UISlider {
         }
       }
       
-      self.bnd_controlEvent.filter { $0 == UIControlEvents.ValueChanged }.observe { [weak self, weak bnd_value] event in
+      self.bnd_controlEvent.filter { $0 == UIControlEvents.valueChanged }.observe { [weak self, weak bnd_value] event in
         guard let unwrappedSelf = self, let bnd_value = bnd_value else { return }
         updatingFromSelf = true
         bnd_value.next(unwrappedSelf.value)

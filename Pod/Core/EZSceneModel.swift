@@ -9,6 +9,6 @@
 import UIKit
 import Bond
 
-public class EZSceneModel: NSObject {
+open class EZSceneModel: NSObject {
 
 }

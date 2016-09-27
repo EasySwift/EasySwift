@@ -8,12 +8,12 @@
 
 import Foundation
 
-extension NSDate {
+extension Date {
     //format :yyyy-MM-dd
-    public func formatTo(format:String) -> String{
-        let dateFormatter = NSDateFormatter()
+    public func formatTo(_ format:String) -> String{
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
-        let currentDateStr = dateFormatter.stringFromDate(self)
+        let currentDateStr = dateFormatter.string(from: self)
         return currentDateStr
     }
 }

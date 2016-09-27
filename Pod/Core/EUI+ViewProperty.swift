@@ -17,7 +17,7 @@ class ViewProperty: NSObject {
     var subTags = Array<ViewProperty>()
     var otherProperty = Dictionary<String, AnyObject>()
     var tagOut = Array<String>()
-    var imageMode = UIViewContentMode.ScaleAspectFill
+    var imageMode = UIViewContentMode.scaleAspectFill
     var align = Array<Constrain>()
     var margin = Array<Constrain>()
     var width: Constrain?
@@ -31,19 +31,19 @@ class ViewProperty: NSObject {
     var contentText: String?
     var flexEnable = false
 
-    var flexDirection: FLEXBOXFlexDirection = .Column
-    var flexContentDirection: FLEXBOXContentDirection = .LeftToRight
-    var flexJustifyContent: FLEXBOXJustification = .FlexStart
-    var flexAlignSelf: FLEXBOXAlignment = .Auto
-    var flexAlignItems: FLEXBOXAlignment = .Stretch
+    var flexDirection: FLEXBOXFlexDirection = .column
+    var flexContentDirection: FLEXBOXContentDirection = .leftToRight
+    var flexJustifyContent: FLEXBOXJustification = .flexStart
+    var flexAlignSelf: FLEXBOXAlignment = .auto
+    var flexAlignItems: FLEXBOXAlignment = .stretch
 
-    var flexMargin = UIEdgeInsetsZero
-    var flexPadding = UIEdgeInsetsZero
+    var flexMargin = UIEdgeInsets.zero
+    var flexPadding = UIEdgeInsets.zero
     var flexWrap = false
     var flex: CGFloat = 0.0
-    var flexFixedSize = CGSizeZero
-    var flexMinimumSize = CGSizeZero
-    var flexMaximumSize = CGSizeMake(CGFloat.max, CGFloat.max)
+    var flexFixedSize = CGSize.zero
+    var flexMinimumSize = CGSize.zero
+    var flexMaximumSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
 
     func getView() -> UIView {
         if self.tag == nil {
@@ -72,7 +72,7 @@ class ViewProperty: NSObject {
         }
     }
 
-    func renderTag(pelement: OGElement) {
+    func renderTag(_ pelement: OGElement) {
         self.tagOut += ["id", "style", "align", "margin", "type", "image-mode", "name", "width", "height", "class", "ontap", "onswipe", "ontap-bind", "onswipe-bind", "frame", "reuseid", "push", "present", "align-self", "align-items", "justify-content", "flex-direction", "content-direction", "flex-margin", "flex-padding", "flex-wrap", "flex", "flex-minimum-size"]
 
         self.tag = pelement.tag
@@ -151,14 +151,14 @@ class ViewProperty: NSObject {
             if values.count == 1 {
                 if values[0].hasSuffix("%") {
                     var val = values[0]
-                    val.removeAtIndex(val.startIndex.advancedBy(val.characters.count - 1))
+                    val.remove(at: val.characters.index(val.startIndex, offsetBy: val.characters.count - 1))
                     self.width = Constrain(name: .Width, value: CGFloat(val.floatValue / 100))
                 } else {
                     self.width = Constrain(name: .Width, value: CGFloat(values[0].trim.floatValue), target: "")
                 }
             } else if values.count >= 2 && values[0].trim.hasSuffix("%") {
                 var val = values[0].trim
-                val.removeAtIndex(val.startIndex.advancedBy(val.characters.count - 1))
+                val.remove(at: val.characters.index(val.startIndex, offsetBy: val.characters.count - 1))
                 self.width = Constrain(name: .Width, value: CGFloat(val.floatValue / 100), target: values[1].trim)
             }
         }
@@ -168,14 +168,14 @@ class ViewProperty: NSObject {
             if values.count == 1 {
                 if values[0].hasSuffix("%") {
                     var val = values[0]
-                    val.removeAtIndex(val.startIndex.advancedBy(val.characters.count - 1))
+                    val.remove(at: val.characters.index(val.startIndex, offsetBy: val.characters.count - 1))
                     self.height = Constrain(name: .Height, value: CGFloat(val.floatValue / 100))
                 } else {
                     self.height = Constrain(name: .Height, value: CGFloat(values[0].trim.floatValue), target: "")
                 }
             } else if values.count >= 2 && values[0].trim.hasSuffix("%") {
                 var val = values[0].trim
-                val.removeAtIndex(val.startIndex.advancedBy(val.characters.count - 1))
+                val.remove(at: val.characters.index(val.startIndex, offsetBy: val.characters.count - 1))
                 self.height = Constrain(name: .Height, value: CGFloat(val.floatValue / 100), target: values[1].trim)
             }
         }
@@ -230,13 +230,13 @@ class ViewProperty: NSObject {
 
         for (key, value) in pelement.attributes {
             if self.tagOut.contains((key as! String)) == false {
-                self.otherProperty[key as! String] = value
+                self.otherProperty[key as! String] = value as AnyObject?
             }
         }
         self.childLoop(pelement)
     }
 
-    func renderViewStyle(view: UIView) {
+    func renderViewStyle(_ view: UIView) {
         view.contentMode = self.imageMode;
         if (self.flexEnable) {
             view.flexDirection = self.flexDirection
@@ -261,7 +261,7 @@ class ViewProperty: NSObject {
             var theValue: AnyObject = value
             if let str = value as? String {
                 if let newValue = self.bindTheKeyPath(str, key: key) {
-                    theValue = newValue
+                    theValue = newValue as AnyObject
                 }
                 if theValue as! String == "" {
                     continue
@@ -271,7 +271,7 @@ class ViewProperty: NSObject {
         }
     }
 
-    func childLoop(pelement: OGElement) {
+    func childLoop(_ pelement: OGElement) {
         for element in pelement.children {
             if let ele = element as? OGElement, let pro = EUIParse.loopElement(ele) {
                 self.subTags.append(pro)
@@ -279,7 +279,7 @@ class ViewProperty: NSObject {
         }
     }
 
-    func bindTheKeyPath(str: String, key: String) -> String? {
+    func bindTheKeyPath(_ str: String, key: String) -> String? {
         let value = Regex("\\{\\{(\\w+)\\}\\}").replace(str, withBlock: { (regx) -> String in
             let keyPath = regx.subgroupMatchAtIndex(0)?.trim
             self.bind[key] = keyPath

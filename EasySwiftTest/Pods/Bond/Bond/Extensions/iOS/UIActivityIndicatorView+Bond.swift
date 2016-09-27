@@ -27,7 +27,7 @@ import UIKit
 extension UIActivityIndicatorView {
   
   public var bnd_animating: Observable<Bool> {
-    return bnd_associatedObservableForValueForKey("isAnimating", initial: self.isAnimating()) { [weak self] animating in
+    return bnd_associatedObservableForValueForKey("isAnimating", initial: self.isAnimating) { [weak self] animating in
       if animating {
         self?.startAnimating()
       } else {

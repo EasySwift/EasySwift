@@ -8,14 +8,14 @@
 
 import UIKit
 
-let ns = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"] as! String
+let ns = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
 
 extension UIViewController {
 
     public var top: CGFloat {
         get {
             if let nav = self.navigationController {
-                if nav.navigationBarHidden {
+                if nav.isNavigationBarHidden {
                     return view.top
                 } else {
                     return nav.navigationBar.bottom
@@ -29,7 +29,7 @@ extension UIViewController {
     public var bottom: CGFloat {
         get {
             if let tab = tabBarController {
-                if tab.tabBar.hidden {
+                if tab.tabBar.isHidden {
                     return view.bottom
                 } else {
                     return tab.tabBar.top
@@ -71,54 +71,54 @@ extension UIViewController {
     }
 
     // 导航条左右按钮设置 NAV是一个枚举值：.LEFT,.RIGHT
-    public func showBarButton(position: NAV, title: String, fontColor: UIColor) {
+    public func showBarButton(_ position: NAV, title: String, fontColor: UIColor) {
         self.showBarButton(position, button: UIButton(navTitle: title, color: fontColor))
     }
 
-    public func showBarButton(position: NAV, imageName: String) -> Void {
+    public func showBarButton(_ position: NAV, imageName: String) -> Void {
         self.showBarButton(position, button: UIButton(navImage: UIImage(named: imageName)!))
     }
 
-    public func showBarButton(position: NAV, button: UIButton?) {
-        if position == .LEFT {
-            button?.addTarget(self, action: #selector(UIViewController.leftButtonTouch), forControlEvents: UIControlEvents.TouchUpInside)
+    public func showBarButton(_ position: NAV, button: UIButton?) {
+        if position == .left {
+            button?.addTarget(self, action: #selector(UIViewController.leftButtonTouch), for: UIControlEvents.touchUpInside)
             self.navigationItem.leftBarButtonItem = nil
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button!)
             self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
-        } else if position == .RIGHT {
-            button?.addTarget(self, action: #selector(UIViewController.rightButtonTouch), forControlEvents: UIControlEvents.TouchUpInside)
+        } else if position == .right {
+            button?.addTarget(self, action: #selector(UIViewController.rightButtonTouch), for: UIControlEvents.touchUpInside)
             self.navigationItem.rightBarButtonItem = nil
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button!)
         }
     }
 
     public func leftButtonTouch() {
-        self.navigationController?.popViewControllerAnimated(true)
+        self.navigationController?.popViewController(animated: true)
     }
 
     public func rightButtonTouch() {
 
     }
 
-    public func setTitleView(titleView: UIView) {
+    public func setTitleView(_ titleView: UIView) {
         self.navigationItem.titleView = titleView
     }
 
-    public class func ClassFromString(vcName: String) -> AnyClass {
+    public class func ClassFromString(_ vcName: String) -> AnyClass {
         return NSClassFromString(ns + "." + vcName)!
         // return NSClassFromString(vcName)!
     }
 
-    public func pushWithSelfStoryBoard_Swift(VCName: String) {
+    public func pushWithSelfStoryBoard_Swift(_ VCName: String) {
         pushWithOtherStoryBoard_Swift(VCName, storyBoardName: "")
     }
 
-    public func pushWithOtherStoryBoard_Swift(VCName: String, storyBoardName: String) {
+    public func pushWithOtherStoryBoard_Swift(_ VCName: String, storyBoardName: String) {
         let viewControllers = self.navigationController!.viewControllers
         var vc: UIViewController?
 
         for controllers in viewControllers {
-            if controllers.isKindOfClass(UIViewController.ClassFromString(VCName)) {
+            if controllers.isKind(of: UIViewController.ClassFromString(VCName)) {
                 vc = controllers
             }
         }
@@ -132,18 +132,18 @@ extension UIViewController {
             } else {
                 story = self.storyboard
             }
-            let controller: UIViewController = (story?.instantiateViewControllerWithIdentifier(VCName))!
+            let controller: UIViewController = (story?.instantiateViewController(withIdentifier: VCName))!
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
-    public func getVCFormSelfStoryBoard_Swift(VCName: String) -> UIViewController {
+    public func getVCFormSelfStoryBoard_Swift(_ VCName: String) -> UIViewController {
         return getVCFormOtherStoryBoard_Swift(VCName, storyBoardName: "")
     }
-    public func getVCFormOtherStoryBoard_Swift(VCName: String, storyBoardName: String) -> UIViewController {
+    public func getVCFormOtherStoryBoard_Swift(_ VCName: String, storyBoardName: String) -> UIViewController {
         let viewControllers: Array = self.navigationController!.viewControllers
         var tempVC: UIViewController?
         for controllers in viewControllers {
-            if controllers.isKindOfClass(UIViewController.ClassFromString(VCName)) {
+            if controllers.isKind(of: UIViewController.ClassFromString(VCName)) {
                 tempVC = controllers
             }
         }
@@ -156,11 +156,11 @@ extension UIViewController {
             } else {
                 story = self.storyboard
             }
-            let controller: UIViewController = (story?.instantiateViewControllerWithIdentifier(VCName))!
+            let controller: UIViewController = (story?.instantiateViewController(withIdentifier: VCName))!
             return controller
         }
     }
-    public func pushVC_Swift(vc: UIViewController) {
+    public func pushVC_Swift(_ vc: UIViewController) {
         let viewControllers: Array = self.navigationController!.viewControllers
         var tempVC: UIViewController?
         for controllers in viewControllers {

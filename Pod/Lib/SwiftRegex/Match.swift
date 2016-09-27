@@ -8,17 +8,17 @@
 
 import Foundation
 
-private func safeSubstring(whole: String, range: NSRange) -> String? {
+private func safeSubstring(_ whole: String, range: NSRange) -> String? {
     if range.location != NSNotFound && range.length != 0 {
-        return (whole as NSString).substringWithRange(range)
+        return (whole as NSString).substring(with: range)
     } else {
         return nil
     }
 }
 
 public struct RegexMatch {
-    private let sourceString: String
-    private let cocoaMatch: NSTextCheckingResult
+    fileprivate let sourceString: String
+    fileprivate let cocoaMatch: NSTextCheckingResult
     
     internal init(cocoaMatch: NSTextCheckingResult, inString source: String) {
         self.sourceString = source
@@ -43,12 +43,12 @@ public struct RegexMatch {
         }
     }
     
-    public func subgroupRangeAtIndex(index: Int) -> NSRange? {
-        return cocoaMatch.rangeAtIndex(index + 1)
+    public func subgroupRangeAtIndex(_ index: Int) -> NSRange? {
+        return cocoaMatch.rangeAt(index + 1)
     }
     
-    public func subgroupMatchAtIndex(index: Int) -> String? {
-        let range = cocoaMatch.rangeAtIndex(index + 1)
+    public func subgroupMatchAtIndex(_ index: Int) -> String? {
+        let range = cocoaMatch.rangeAt(index + 1)
         return safeSubstring(sourceString, range: range)
     }
 }

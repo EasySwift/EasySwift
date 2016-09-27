@@ -26,13 +26,13 @@ import UIKit
 
 extension UITextView {
   
-  private struct AssociatedKeys {
+  fileprivate struct AssociatedKeys {
     static var TextKey = "bnd_TextKey"
     static var AttributedTextKey = "bnd_AttributedTextKey"
   }
   
   public var bnd_text: Observable<String?> {
-    if let bnd_text: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.TextKey) {
+    if let bnd_text: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.TextKey) as AnyObject? {
       return bnd_text as! Observable<String?>
     } else {
       let bnd_text = Observable<String?>(self.text)
@@ -46,8 +46,8 @@ extension UITextView {
         }
       }
       
-      NSNotificationCenter.defaultCenter().bnd_notification(UITextViewTextDidChangeNotification, object: self).observe { [weak bnd_text] notification in
-        if let textView = notification.object as? UITextView, bnd_text = bnd_text {
+      NotificationCenter.default.bnd_notification(NSNotification.Name.UITextViewTextDidChange, object: self).observe { [weak bnd_text] notification in
+        if let textView = notification.object as? UITextView, let bnd_text = bnd_text {
           updatingFromSelf = true
           bnd_text.next(textView.text)
           updatingFromSelf = false
@@ -59,7 +59,7 @@ extension UITextView {
   }
   
   public var bnd_attributedText: Observable<NSAttributedString?> {
-    if let bnd_attributedText: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.AttributedTextKey) {
+    if let bnd_attributedText: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.AttributedTextKey) as AnyObject? {
       return bnd_attributedText as! Observable<NSAttributedString?>
     } else {
       let bnd_attributedText = Observable<NSAttributedString?>(self.attributedText)
@@ -73,8 +73,8 @@ extension UITextView {
         }
       }
       
-      NSNotificationCenter.defaultCenter().bnd_notification(UITextViewTextDidChangeNotification, object: self).observe { [weak bnd_attributedText] notification in
-        if let textView = notification.object as? UITextView, bnd_attributedText = bnd_attributedText {
+      NotificationCenter.default.bnd_notification(NSNotification.Name.UITextViewTextDidChange, object: self).observe { [weak bnd_attributedText] notification in
+        if let textView = notification.object as? UITextView, let bnd_attributedText = bnd_attributedText {
           updatingFromSelf = true
           bnd_attributedText.next(textView.attributedText)
           updatingFromSelf = false

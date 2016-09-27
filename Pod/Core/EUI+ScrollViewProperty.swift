@@ -9,11 +9,11 @@
 import Foundation
 
 class ScrollViewProperty:ViewProperty{
-    var contentInset = UIEdgeInsetsZero
-    var contentOffset = CGPointZero
-    var contentSize = CGSizeZero
-    var scrollIndicatorInsets = UIEdgeInsetsZero
-    var indicatorStyle:UIScrollViewIndicatorStyle = .Default
+    var contentInset = UIEdgeInsets.zero
+    var contentOffset = CGPoint.zero
+    var contentSize = CGSize.zero
+    var scrollIndicatorInsets = UIEdgeInsets.zero
+    var indicatorStyle:UIScrollViewIndicatorStyle = .default
     var pullToRefresh:PullRefreshAction?
     var infiniteScrolling:InfiniteScrollingAction?
     
@@ -29,7 +29,7 @@ class ScrollViewProperty:ViewProperty{
     }
     
 
-    override func renderViewStyle(view: UIView) {
+    override func renderViewStyle(_ view: UIView) {
         super.renderViewStyle(view)
         let sview = view as! UIScrollView
         sview.contentInset = self.contentInset
@@ -39,7 +39,7 @@ class ScrollViewProperty:ViewProperty{
         sview.indicatorStyle = self.indicatorStyle
     }
     
-    override func renderTag(pelement:OGElement){
+    override func renderTag(_ pelement:OGElement){
         self.tagOut += ["content-offset","content-inset","content-size","scroll-indicator-insets","indicator-style","pull-to-refresh","infinite-scrolling"]
         
         super.renderTag(pelement)

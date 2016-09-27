@@ -14,11 +14,11 @@ public protocol NibDefinable {
 
 public extension NibDefinable {
     var nibName: String {
-        return String(self.dynamicType)
+        return String(describing: type(of: self))
     }
 }
 
-@objc public class YXJXibView: UIView, NibDefinable {
+@objc open class YXJXibView: UIView, NibDefinable {
 
     @IBOutlet weak var view: UIView!
 
@@ -35,15 +35,15 @@ public extension NibDefinable {
     func xibSetup() {
         view = loadViewFromXib()
         view.frame = bounds
-        view.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        backgroundColor = .clearColor()
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        backgroundColor = .clear()
         addSubview(view)
     }
 
-    private func loadViewFromXib() -> UIView {
-        let bundle = NSBundle(forClass: self.dynamicType)
+    fileprivate func loadViewFromXib() -> UIView {
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
-        let view = nib.instantiateWithOwner(self, options: nil).first as! UIView
+        let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
         return view
     }
 }

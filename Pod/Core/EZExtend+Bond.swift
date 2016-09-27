@@ -14,14 +14,14 @@ import Kingfisher
 {
     weak var view: UIView?
     let sink: (UITapGestureRecognizer) -> Void
-    init(view: UIView, number: NSInteger, sink: ((UITapGestureRecognizer) -> Void)) {
+    init(view: UIView, number: NSInteger, sink: @escaping ((UITapGestureRecognizer) -> Void)) {
         self.view = view
         self.sink = sink
         super.init()
         view.addTapGesture(number, target: self, action: #selector(TapGestureDynamicHelper.tapHandle(_:)))
     }
 
-    func tapHandle(gesture: UITapGestureRecognizer) {
+    func tapHandle(_ gesture: UITapGestureRecognizer) {
         sink(gesture)
     }
 }
@@ -29,13 +29,13 @@ import Kingfisher
 @objc class PanGestureDynamicHelper: NSObject {
     weak var view: UIView?
     let sink: (UIPanGestureRecognizer) -> Void
-    init(view: UIView, number: NSInteger, sink: ((UIPanGestureRecognizer) -> Void)) {
+    init(view: UIView, number: NSInteger, sink: @escaping ((UIPanGestureRecognizer) -> Void)) {
         self.view = view
         self.sink = sink
         super.init()
         view.addPanGesture(self, action: #selector(PanGestureDynamicHelper.panHandle(_:)))
     }
-    func panHandle(gestureRecognizer: UIPanGestureRecognizer) {
+    func panHandle(_ gestureRecognizer: UIPanGestureRecognizer) {
         sink(gestureRecognizer)
     }
 }
@@ -45,33 +45,33 @@ import Kingfisher
     weak var view: UIView?
     let sink: ((UISwipeGestureRecognizer) -> Void)
     var number: NSInteger = 1
-    init(view: UIView, number: NSInteger, sink: ((UISwipeGestureRecognizer) -> Void)) {
+    init(view: UIView, number: NSInteger, sink: @escaping ((UISwipeGestureRecognizer) -> Void)) {
         self.view = view
         self.number = number
         self.sink = sink
         super.init()
-        view.addSwipeGesture(UISwipeGestureRecognizerDirection.Right, numberOfTouches: number, target: self, action: #selector(SwipeGestureDynamicHelper.swipeRightHandle(_:)))
-        view.addSwipeGesture(UISwipeGestureRecognizerDirection.Up, numberOfTouches: number, target: self, action: #selector(SwipeGestureDynamicHelper.swipeUpHandle(_:)))
-        view.addSwipeGesture(UISwipeGestureRecognizerDirection.Down, numberOfTouches: number, target: self, action: #selector(SwipeGestureDynamicHelper.swipeDownHandle(_:)))
-        view.addSwipeGesture(UISwipeGestureRecognizerDirection.Left, numberOfTouches: number, target: self, action: #selector(SwipeGestureDynamicHelper.swipeLeftHandle(_:)))
+        view.addSwipeGesture(UISwipeGestureRecognizerDirection.right, numberOfTouches: number, target: self, action: #selector(SwipeGestureDynamicHelper.swipeRightHandle(_:)))
+        view.addSwipeGesture(UISwipeGestureRecognizerDirection.up, numberOfTouches: number, target: self, action: #selector(SwipeGestureDynamicHelper.swipeUpHandle(_:)))
+        view.addSwipeGesture(UISwipeGestureRecognizerDirection.down, numberOfTouches: number, target: self, action: #selector(SwipeGestureDynamicHelper.swipeDownHandle(_:)))
+        view.addSwipeGesture(UISwipeGestureRecognizerDirection.left, numberOfTouches: number, target: self, action: #selector(SwipeGestureDynamicHelper.swipeLeftHandle(_:)))
     }
 
-    func swipeRightHandle(gestureRecognizer: UISwipeGestureRecognizer) {
+    func swipeRightHandle(_ gestureRecognizer: UISwipeGestureRecognizer) {
         sink(gestureRecognizer)
     }
-    func swipeUpHandle(gestureRecognizer: UISwipeGestureRecognizer) {
+    func swipeUpHandle(_ gestureRecognizer: UISwipeGestureRecognizer) {
         sink(gestureRecognizer)
     }
-    func swipeDownHandle(gestureRecognizer: UISwipeGestureRecognizer) {
+    func swipeDownHandle(_ gestureRecognizer: UISwipeGestureRecognizer) {
         sink(gestureRecognizer)
     }
-    func swipeLeftHandle(gestureRecognizer: UISwipeGestureRecognizer) {
+    func swipeLeftHandle(_ gestureRecognizer: UISwipeGestureRecognizer) {
         sink(gestureRecognizer)
     }
 }
 
 extension UIView {
-    private struct AssociatedKeys {
+    fileprivate struct AssociatedKeys {
         static var PanGestureEventKey = "bnd_PanGestureEventKey"
         static var PanGestureEventHelperKey = "bnd_PanGestureEventHelperKey"
         static var SwipeGestureEventKey = "bnd_SwipeGestureEventKey"
@@ -81,11 +81,11 @@ extension UIView {
 
     }
 
-    public func bnd_swipeGestureEvent(number: NSInteger) -> EventProducer<UISwipeGestureRecognizer> {
-        if let bnd_swipeGestureEvent: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.SwipeGestureEventKey) {
+    public func bnd_swipeGestureEvent(_ number: NSInteger) -> EventProducer<UISwipeGestureRecognizer> {
+        if let bnd_swipeGestureEvent: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.SwipeGestureEventKey) as AnyObject? {
             return bnd_swipeGestureEvent as! EventProducer<UISwipeGestureRecognizer>
         } else {
-            var capturedSink: (UISwipeGestureRecognizer -> ())! = nil
+            var capturedSink: ((UISwipeGestureRecognizer) -> ())! = nil
             let bnd_swipeGestureEvent = EventProducer<UISwipeGestureRecognizer> { sink in
                 capturedSink = sink
                 return nil
@@ -97,11 +97,11 @@ extension UIView {
         }
     }
 
-    public func bnd_tapGestureEvent(number: NSInteger) -> EventProducer<UITapGestureRecognizer> {
-        if let bnd_tapGestureEvent: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.TapGestureEventKey) {
+    public func bnd_tapGestureEvent(_ number: NSInteger) -> EventProducer<UITapGestureRecognizer> {
+        if let bnd_tapGestureEvent: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.TapGestureEventKey) as AnyObject? {
             return bnd_tapGestureEvent as! EventProducer<UITapGestureRecognizer>
         } else {
-            var capturedSink: (UITapGestureRecognizer -> ())! = nil
+            var capturedSink: ((UITapGestureRecognizer) -> ())! = nil
             let bnd_tapGestureEvent = EventProducer<UITapGestureRecognizer> { sink in
                 capturedSink = sink
                 return nil
@@ -114,10 +114,10 @@ extension UIView {
     }
 
     public var bnd_panGestureEvent: EventProducer<UIPanGestureRecognizer> {
-        if let bnd_panGestureEvent: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.PanGestureEventKey) {
+        if let bnd_panGestureEvent: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.PanGestureEventKey) as AnyObject? {
             return bnd_panGestureEvent as! EventProducer<UIPanGestureRecognizer>
         } else {
-            var capturedSink: (UIPanGestureRecognizer -> ())! = nil
+            var capturedSink: ((UIPanGestureRecognizer) -> ())! = nil
             let bnd_panGestureEvent = EventProducer<UIPanGestureRecognizer> { sink in
                 capturedSink = sink
                 return nil
@@ -131,14 +131,14 @@ extension UIView {
 }
 
 extension UIImageView {
-    private struct AssociatedKeys {
+    fileprivate struct AssociatedKeys {
         static var UrlImageDynamicHandleUIImageView = "UrlImageDynamicHandleUIImageView"
     }
-    public var bnd_URLImage: Observable<NSURL?> {
-        if let d: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.UrlImageDynamicHandleUIImageView) {
-            return (d as? Observable<NSURL?>)!
+    public var bnd_URLImage: Observable<URL?> {
+        if let d: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.UrlImageDynamicHandleUIImageView) as AnyObject? {
+            return (d as? Observable<URL?>)!
         } else {
-            let d = Observable<NSURL?>(NSURL())
+            let d = Observable<URL?>(URL())
             d.observe { [weak self] v in if let s = self {
                 if v != nil {
                     s.kf_setImageWithURL(v!)
@@ -151,14 +151,14 @@ extension UIImageView {
 }
 
 extension TTTAttributedLabel {
-    private struct AssociatedKeys {
+    fileprivate struct AssociatedKeys {
         static var textDynamicHandleTTTAttributeLabel = "textDynamicHandleTTTAttributeLabel"
         static var attributedTextDynamicHandleTTTAttributeLabel = "attributedTextDynamicHandleTTTAttributeLabel"
         static var dataDynamicHandleTTTAttributeLabel = "dataDynamicHandleTTTAttributeLabel"
     }
 
     public var dynTTText: Observable<String> {
-        if let d: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.textDynamicHandleTTTAttributeLabel) {
+        if let d: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.textDynamicHandleTTTAttributeLabel) as AnyObject? {
             return (d as? Observable<String>)!
         } else {
             let d = Observable<String>(self.text ?? "")
@@ -170,11 +170,11 @@ extension TTTAttributedLabel {
         }
     }
 
-    public var dynTTTData: Observable<NSData> {
-        if let d: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.dataDynamicHandleTTTAttributeLabel) {
-            return (d as? Observable<NSData>)!
+    public var dynTTTData: Observable<Data> {
+        if let d: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.dataDynamicHandleTTTAttributeLabel) as AnyObject? {
+            return (d as? Observable<Data>)!
         } else {
-            let d = Observable<NSData>(NSData())
+            let d = Observable<Data>(Data())
             d.observe { [weak self] v in if let s = self {
                 s.setText(NSAttributedString(fromHTMLData: v, attributes: ["dict": s.tagProperty.style]))
             } }
@@ -184,7 +184,7 @@ extension TTTAttributedLabel {
     }
 
     public var dynTTTAttributedText: Observable<NSAttributedString> {
-        if let d: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.attributedTextDynamicHandleTTTAttributeLabel) {
+        if let d: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.attributedTextDynamicHandleTTTAttributeLabel) as AnyObject? {
             return (d as? Observable<NSAttributedString>)!
         } else {
             let d = Observable<NSAttributedString>(self.attributedText ?? NSAttributedString(string: ""))

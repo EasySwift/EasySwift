@@ -12,61 +12,61 @@ import UIKit
  *  代理
  */
 @objc public protocol YXJTagViewDelegate {
-    optional func didClickView(text: String, index: Int)
+    @objc optional func didClickView(_ text: String, index: Int)
 }
 
-public class YXJTagView: UIView {
+open class YXJTagView: UIView {
     /// 横向间距
-    public var horizontalSpace: CGFloat = 10.0
+    open var horizontalSpace: CGFloat = 10.0
     /// 纵向间距
-    public var verticalSpace: CGFloat = 10.0
+    open var verticalSpace: CGFloat = 10.0
     /// 左边空隙距离
-    public var margin: CGFloat = 0.0
+    open var margin: CGFloat = 0.0
 
     /// 标签文字------使用场景1:纯文字
-    public var textData: [String]?
+    open var textData: [String]?
     /// 标签字体
-    public var textFont = UIFont.systemFontOfSize(15)
+    open var textFont = UIFont.systemFont(ofSize: 15)
     /// 标签文字颜色
-    public var textColor = UIColor.whiteColor()
+    open var textColor = UIColor.white
 
     /// 标签图片------使用场景2:图片
-    public var imageData: [UIImage]?
+    open var imageData: [UIImage]?
     /// 标签图片size,如果不设置，将根据高宽度自动适应
-    public var imageSize: CGSize?
+    open var imageSize: CGSize?
 
     /// 标签图片------使用场景3:视图
-    public var viewData: [UIView]?
+    open var viewData: [UIView]?
     /// 标签视图size,如果不设置，将根据高宽度自动适应
-    public var viewSize: CGSize?
+    open var viewSize: CGSize?
 
     /// 标签背景颜色
-    public var textBackgorund = UIColor.lightGrayColor()
+    open var textBackgorund = UIColor.lightGray
     /// 选中颜色
-    public var selecteColor = UIColor.orangeColor()
+    open var selecteColor = UIColor.orange
     /// 是否可以选中,默认是
-    public var selecteEnable = true
+    open var selecteEnable = true
 
     ///
-    public var title: String?
+    open var title: String?
     ///
-    public var titleFont = UIFont.systemFontOfSize(15)
+    open var titleFont = UIFont.systemFont(ofSize: 15)
     ///
-    public var titleColor = UIColor.blackColor()
+    open var titleColor = UIColor.black
 
     /// 代理
-    public var delegate: YXJTagViewDelegate?
+    open var delegate: YXJTagViewDelegate?
 
     /// 是否是DEBUG模式
-    public var debug = true
+    open var debug = true
 
-    private var btnClick: UIButton!
-    private var label: UILabel?
+    fileprivate var btnClick: UIButton!
+    fileprivate var label: UILabel?
 
-    private var horizontalWidth: CGFloat = 0
-    private var vertical: CGFloat = 0
-    private var verticalHeight: CGFloat = 8
-    private var index = -1
+    fileprivate var horizontalWidth: CGFloat = 0
+    fileprivate var vertical: CGFloat = 0
+    fileprivate var verticalHeight: CGFloat = 8
+    fileprivate var index = -1
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -76,7 +76,7 @@ public class YXJTagView: UIView {
         super.init(coder: aDecoder)
     }
 
-    public func setupUI() {
+    open func setupUI() {
         remove()
         if title != nil {
             setLabel(title!, titleFont: titleFont, titleColor: titleColor)
@@ -92,16 +92,16 @@ public class YXJTagView: UIView {
 // MARK: - 点击方法
 extension YXJTagView {
 
-    func btnClick(sender: UIButton) {
+    func btnClick(_ sender: UIButton) {
         if btnClick == nil {
             btnClick = sender
         }
         if !btnClick.isEqual(sender) {
             btnClick.backgroundColor = textBackgorund
-            btnClick.selected = false
+            btnClick.isSelected = false
         }
         sender.backgroundColor = selecteColor
-        sender.selected = true
+        sender.isSelected = true
         btnClick = sender
 
         if let d = delegate {
@@ -118,22 +118,22 @@ extension YXJTagView {
 
 // MARK: - 私有方法
 extension YXJTagView {
-    private func setLabel(title: String, titleFont: UIFont, titleColor: UIColor) {
+    fileprivate func setLabel(_ title: String, titleFont: UIFont, titleColor: UIColor) {
         label = UILabel()
         label!.text = title
         label!.textColor = titleColor
-        label!.textAlignment = NSTextAlignment.Left
-        let size = NSString(string: title).sizeWithAttributes([NSFontAttributeName: titleFont])
-        label!.frame = CGRectMake(10, 10, size.width + 20, size.height)
+        label!.textAlignment = NSTextAlignment.left
+        let size = NSString(string: title).size(attributes: [NSFontAttributeName: titleFont])
+        label!.frame = CGRect(x: 10, y: 10, width: size.width + 20, height: size.height)
         addSubview(label!)
     }
 
-    private func tagView(textFont: UIFont, viewWidth: CGFloat) {
+    fileprivate func tagView(_ textFont: UIFont, viewWidth: CGFloat) {
         if textData != nil {
             for str in textData! {
                 index += 1;
                 let button = UIButton()
-                let size = NSString(string: str).sizeWithAttributes([NSFontAttributeName: textFont]);
+                let size = NSString(string: str).size(attributes: [NSFontAttributeName: textFont]);
 //                self.setBtn(button, size: size, viewWidth: viewWidth, str: str)
                 self.setTagViewFrame(nil, button: button, size: size, viewWidth: viewWidth, str: str)
 
@@ -143,7 +143,7 @@ extension YXJTagView {
                 button.clipsToBounds = true
 
                 if index == textData!.count - 1 {
-                    self.frame.size.height = CGRectGetMaxY(button.frame) + 10
+                    self.frame.size.height = button.frame.maxY + 10
                 }
             }
         }
@@ -163,10 +163,10 @@ extension YXJTagView {
                 self.setTagViewFrame(nil, button: button, size: size, viewWidth: viewWidth, str: "")
 
                 button.backgroundColor = textBackgorund
-                button.setImage(img, forState: UIControlState.Normal)
+                button.setImage(img, for: UIControlState())
 
                 if index == imageData!.count - 1 {
-                    self.frame.size.height = CGRectGetMaxY(button.frame) + 10
+                    self.frame.size.height = button.frame.maxY + 10
                 }
             }
         }
@@ -187,13 +187,13 @@ extension YXJTagView {
 //                button.setImage(img, forState: UIControlState.Normal)
 
                 if index == viewData!.count - 1 {
-                    self.frame.size.height = CGRectGetMaxY(button.frame) + 10
+                    self.frame.size.height = button.frame.maxY + 10
                 }
             }
         }
     }
 
-    private func setTagViewFrame(view1: UIView?, button: UIButton, size: CGSize, viewWidth: CGFloat, str: String) {
+    fileprivate func setTagViewFrame(_ view1: UIView?, button: UIButton, size: CGSize, viewWidth: CGFloat, str: String) {
         button.frame.size.width = size.width + 10
         button.frame.size.height = size.height + 5
         if index == 0 {
@@ -205,7 +205,7 @@ extension YXJTagView {
 
         if button.frame.origin.x + button.frame.size.width > viewWidth {
             horizontalWidth = 0
-            vertical++
+            vertical += 1
             button.frame.origin.x = margin
 
             if verticalHeight < button.frame.size.height + button.frame.origin.y + verticalSpace {
@@ -215,20 +215,20 @@ extension YXJTagView {
         }
 
         if label != nil {
-            button.frame.origin.y = CGRectGetMaxY(label!.frame) + button.frame.origin.y
+            button.frame.origin.y = label!.frame.maxY + button.frame.origin.y
         }
-        horizontalWidth = CGRectGetMaxX(button.frame)
+        horizontalWidth = button.frame.maxX
 
-        button.setTitle(str, forState: .Normal)
+        button.setTitle(str, for: UIControlState())
         button.titleLabel?.font = textFont
-        button.addTarget(self, action: #selector(YXJTagView.btnClick(_:)), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(YXJTagView.btnClick(_:)), for: .touchUpInside)
 
-        button.setTitleColor(textColor, forState: .Normal)
-        button.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
-        button.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Center
-        button.userInteractionEnabled = true
-        button.titleLabel?.textAlignment = NSTextAlignment.Center
-        button.enabled = selecteEnable
+        button.setTitleColor(textColor, for: UIControlState())
+        button.contentVerticalAlignment = UIControlContentVerticalAlignment.center
+        button.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
+        button.isUserInteractionEnabled = true
+        button.titleLabel?.textAlignment = NSTextAlignment.center
+        button.isEnabled = selecteEnable
         button.tag = 100 + index
 
         view1?.frame = button.frame
@@ -301,20 +301,20 @@ extension YXJTagView {
 //        addSubview(button)
 //    }
 
-    private func remove() {
+    fileprivate func remove() {
         for subV in subviews {
             subV.removeFromSuperview()
         }
     }
 
-    override public func removeFromSuperview() {
+    override open func removeFromSuperview() {
         remove()
         super.removeFromSuperview()
     }
 
-    private func YXJLog<T>(message: T, fileName: String = __FILE__, methodName: String = __FUNCTION__, lineNumber: Int = __LINE__) {
+    fileprivate func YXJLog<T>(_ message: T, fileName: String = #file, methodName: String = #function, lineNumber: Int = #line) {
         if debug == true {
-            let str: String = (fileName as NSString).pathComponents.last!.stringByReplacingOccurrencesOfString("swift", withString: "")
+            let str: String = (fileName as NSString).pathComponents.last!.replacingOccurrences(of: "swift", with: "")
             print("\(str)\(methodName)[\(lineNumber)]:\(message)")
         }
     }

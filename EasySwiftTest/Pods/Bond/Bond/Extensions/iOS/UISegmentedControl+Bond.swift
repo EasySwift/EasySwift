@@ -26,12 +26,12 @@ import UIKit
 
 extension UISegmentedControl {
     
-  private struct AssociatedKeys {
+  fileprivate struct AssociatedKeys {
     static var SelectedSegmentIndexKey = "bnd_SelectedSegmentIndexKey"
   }
     
   public var bnd_selectedSegmentIndex: Observable<Int> {
-    if let bnd_selectedSegmentIndex: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.SelectedSegmentIndexKey) {
+    if let bnd_selectedSegmentIndex: AnyObject = objc_getAssociatedObject(self, &AssociatedKeys.SelectedSegmentIndexKey) as AnyObject? {
       return bnd_selectedSegmentIndex as! Observable<Int>
     } else {
       let bnd_selectedSegmentIndex = Observable<Int>(self.selectedSegmentIndex)
@@ -45,7 +45,7 @@ extension UISegmentedControl {
         }
       }
             
-      self.bnd_controlEvent.filter { $0 == UIControlEvents.ValueChanged }.observe { [weak self, weak bnd_selectedSegmentIndex] event in
+      self.bnd_controlEvent.filter { $0 == UIControlEvents.valueChanged }.observe { [weak self, weak bnd_selectedSegmentIndex] event in
         guard let unwrappedSelf = self, let bnd_selectedSegmentIndex = bnd_selectedSegmentIndex else { return }
         updatingFromSelf = true
         bnd_selectedSegmentIndex.next(unwrappedSelf.selectedSegmentIndex)

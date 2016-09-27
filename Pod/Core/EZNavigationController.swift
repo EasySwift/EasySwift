@@ -8,22 +8,22 @@
 
 import UIKit
 
-public class EZNavigationController: UINavigationController, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
+open class EZNavigationController: UINavigationController, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
-    public var popGestureRecognizerEnabled = true
+    open var popGestureRecognizerEnabled = true
 
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         self.configGestureRecognizer()
         // Do any additional setup after loading the view.
     }
 
-    override public func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    public func configGestureRecognizer() {
+    open func configGestureRecognizer() {
         if let target = self.interactivePopGestureRecognizer?.delegate {
             let pan = UIPanGestureRecognizer(target: target, action: Selector("handleNavigationTransition:"))
             pan.delegate = self
@@ -31,11 +31,11 @@ public class EZNavigationController: UINavigationController, UINavigationControl
         }
         // 禁掉系统的侧滑手势
         weak var weekSelf = self
-        self.interactivePopGestureRecognizer?.enabled = false;
+        self.interactivePopGestureRecognizer?.isEnabled = false;
         self.interactivePopGestureRecognizer?.delegate = weekSelf;
     }
 
-    public func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+    open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if gestureRecognizer != self.interactivePopGestureRecognizer && self.viewControllers.count > 1 && self.popGestureRecognizerEnabled {
             return true
         } else {
@@ -43,15 +43,15 @@ public class EZNavigationController: UINavigationController, UINavigationControl
         }
     }
 
-    override public func pushViewController(viewController: UIViewController, animated: Bool) {
-        self.interactivePopGestureRecognizer?.enabled = false
+    override open func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        self.interactivePopGestureRecognizer?.isEnabled = false
         super.pushViewController(viewController, animated: animated)
     }
 
     // UINavigationControllerDelegate
-    public func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
+    open func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         if self.popGestureRecognizerEnabled {
-            self.interactivePopGestureRecognizer?.enabled = true
+            self.interactivePopGestureRecognizer?.isEnabled = true
         }
     }
 }

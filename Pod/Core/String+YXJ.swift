@@ -30,10 +30,10 @@ extension String {
 
      - returns: 截取后的string字符串
      */
-    public func substringWithRange(start: Int, end: Int) -> String {
-        let rage: Range<String.Index> = self.startIndex.advancedBy(start) ..< self.endIndex.advancedBy(end)
+    public func substringWithRange(_ start: Int, end: Int) -> String {
+        let rage: Range<String.Index> = self.characters.index(self.startIndex, offsetBy: start) ..< self.characters.index(self.endIndex, offsetBy: end)
 //        let rage = start..<end
-        let str = self.substringWithRange(rage)
+        let str = self.substring(with: rage)
         return str
     }
 
@@ -45,21 +45,21 @@ extension String {
 
      - returns: 截取后的string字符串
      */
-    public func substringWithRange(start: Int, length: Int) -> String {
+    public func substringWithRange(_ start: Int, length: Int) -> String {
         let asNSString = self as NSString
-        let temp = asNSString.substringWithRange(NSRange(location: start, length: length))
+        let temp = asNSString.substring(with: NSRange(location: start, length: length))
         return temp
     }
 
     // MARK: 去除HTML标签
-    public func filterHTML(html: String) -> String {
+    public func filterHTML(_ html: String) -> String {
         var temp = html
-        let scanner: NSScanner = NSScanner.init(string: temp)
+        let scanner: Scanner = Scanner.init(string: temp)
         var text: NSString?
-        while scanner.atEnd == false {
-            scanner.scanUpToString("<", intoString: nil)
-            scanner.scanUpToString("<", intoString: &text)
-            temp = temp.stringByReplacingOccurrencesOfString("\(text)>", withString: "")
+        while scanner.isAtEnd == false {
+            scanner.scanUpTo("<", into: nil)
+            scanner.scanUpTo("<", into: &text)
+            temp = temp.replacingOccurrences(of: "\(text)>", with: "")
         }
         return temp
     }
@@ -94,42 +94,42 @@ extension String {
         let regex2 = "^(\\d{14}|\\d{17})(\\d|[xX])$"
         let identityCardPredicate: NSPredicate = NSPredicate.init(format: "SELF MATCHES \(regex2)", argumentArray: nil)
 
-        return identityCardPredicate.evaluateWithObject(self)
+        return identityCardPredicate.evaluate(with: self)
     }
     // MARK: 拼音转换
     public func pinYin() -> String {
         let str: String = self
 
-        CFStringTransform(str as! CFMutableStringRef, nil, kCFStringTransformStripDiacritics, false)
-        CFStringTransform(str as! CFMutableStringRef, nil, kCFStringTransformStripDiacritics, false)
+        CFStringTransform(str as! CFMutableString, nil, kCFStringTransformStripDiacritics, false)
+        CFStringTransform(str as! CFMutableString, nil, kCFStringTransformStripDiacritics, false)
         return str
     }
     // MARK: 根据宽度计算高度
-    public func sizeWithFontByWith(font: UIFont, byWith: CGFloat) -> CGSize {
-        let str: NSString = self
+    public func sizeWithFontByWith(_ font: UIFont, byWith: CGFloat) -> CGSize {
+        let str: NSString = self as NSString
         let attribute: [String: AnyObject] = [NSFontAttributeName: font]
-        let rct: CGRect = str.boundingRectWithSize(CGSizeMake(byWith, 999999.0), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: attribute, context: nil)
+        let rct: CGRect = str.boundingRect(with: CGSize(width: byWith, height: 999999.0), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attribute, context: nil)
         return rct.size
     }
     // MARK: 根据高度计算宽度
-    public func sizeWithFontByHeight(font: UIFont, byHeight: CGFloat) -> CGSize {
-        let str: NSString = self
+    public func sizeWithFontByHeight(_ font: UIFont, byHeight: CGFloat) -> CGSize {
+        let str: NSString = self as NSString
         let attribute: [String: AnyObject] = [NSFontAttributeName: font]
-        let rct: CGRect = str.boundingRectWithSize(CGSizeMake(999999.0, byHeight), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: attribute, context: nil)
+        let rct: CGRect = str.boundingRect(with: CGSize(width: 999999.0, height: byHeight), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attribute, context: nil)
         return rct.size
     }
 
     // MARK: 返回显示字串所需要的尺寸
-    public func calculateSize(size: CGSize, font: UIFont) -> CGSize {
-        var expectedLabelSize: CGSize = CGSizeZero
-        let str: NSString = self
+    public func calculateSize(_ size: CGSize, font: UIFont) -> CGSize {
+        var expectedLabelSize: CGSize = CGSize.zero
+        let str: NSString = self as NSString
         let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle.init()
-        paragraphStyle.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        paragraphStyle.lineBreakMode = NSLineBreakMode.byWordWrapping
 
         let attributes: [String: AnyObject] = [NSFontAttributeName: font, NSParagraphStyleAttributeName: paragraphStyle];
-        expectedLabelSize = str.boundingRectWithSize(size, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: attributes, context: nil).size
+        expectedLabelSize = str.boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attributes, context: nil).size
 
-        return CGSizeMake(ceil(expectedLabelSize.width), ceil(expectedLabelSize.height))
+        return CGSize(width: ceil(expectedLabelSize.width), height: ceil(expectedLabelSize.height))
     }
 
     // MARK:字符串转int
@@ -161,8 +161,8 @@ extension String {
 
      - returns: NSString
      */
-    public func stringFormat(str: String) -> NSString {
-        return NSString(CString: str.cStringUsingEncoding(NSUTF8StringEncoding)!,
-            encoding: NSUTF8StringEncoding)!
+    public func stringFormat(_ str: String) -> NSString {
+        return NSString(cString: str.cString(using: String.Encoding.utf8)!,
+            encoding: String.Encoding.utf8.rawValue)!
     }
 }

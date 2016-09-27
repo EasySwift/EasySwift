@@ -1,12 +1,12 @@
 import Foundation
 
-public class GCDQueue {
+open class GCDQueue {
  /**
   *  Returns the underlying dispatch queue object.
   *
   *  - returns: The dispatch queue object.
   */
-  public let dispatchQueue: dispatch_queue_t
+  open let dispatchQueue: DispatchQueue
   
   // MARK: Global queue accessors
   
@@ -17,8 +17,8 @@ public class GCDQueue {
   *
   *  - SeeAlso: dispatch_get_main_queue()
   */
-  public class var mainQueue: GCDQueue {
-    return GCDQueue(dispatchQueue: dispatch_get_main_queue())
+  open class var mainQueue: GCDQueue {
+    return GCDQueue(dispatchQueue: DispatchQueue.main)
   }
 
  /**
@@ -27,8 +27,8 @@ public class GCDQueue {
   *  - returns: The queue.
   *  - SeeAlso: dispatch_get_global_queue()
   */
-  public class var globalQueue: GCDQueue {
-    return GCDQueue(dispatchQueue: dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
+  open class var globalQueue: GCDQueue {
+    return GCDQueue(dispatchQueue: DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default))
   }
 
  /**
@@ -37,8 +37,8 @@ public class GCDQueue {
   *  - returns: The queue.
   *  - SeeAlso: dispatch_get_global_queue()
   */
-  public class var highPriorityGlobalQueue: GCDQueue {
-    return GCDQueue(dispatchQueue: dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0))
+  open class var highPriorityGlobalQueue: GCDQueue {
+    return GCDQueue(dispatchQueue: DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.high))
   }
 
  /**
@@ -47,8 +47,8 @@ public class GCDQueue {
   *  - returns: The queue.
   *  - SeeAlso: dispatch_get_global_queue()
   */
-  public class var lowPriorityGlobalQueue: GCDQueue {
-    return GCDQueue(dispatchQueue: dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0))
+  open class var lowPriorityGlobalQueue: GCDQueue {
+    return GCDQueue(dispatchQueue: DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.low))
   }
 
  /**
@@ -57,8 +57,8 @@ public class GCDQueue {
   *  - returns: The queue.
   *  - SeeAlso: dispatch_get_global_queue()
   */
-  public class var backgroundPriorityGlobalQueue: GCDQueue {
-    return GCDQueue(dispatchQueue: dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
+  open class var backgroundPriorityGlobalQueue: GCDQueue {
+    return GCDQueue(dispatchQueue: DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.background))
   }
   
   // MARK: Lifecycle
@@ -69,8 +69,8 @@ public class GCDQueue {
   *  - returns: The initialized instance.
   *  - SeeAlso: dispatch_queue_create()
   */
-  public class func serialQueue() -> GCDQueue {
-    return GCDQueue(dispatchQueue: dispatch_queue_create("", DISPATCH_QUEUE_SERIAL))
+  open class func serialQueue() -> GCDQueue {
+    return GCDQueue(dispatchQueue: DispatchQueue(label: "", attributes: []))
   }
   
  /**
@@ -79,8 +79,8 @@ public class GCDQueue {
   *  - returns: The initialized instance.
   *  - SeeAlso: dispatch_queue_create()
   */
-  public class func concurrentQueue() -> GCDQueue {
-    return GCDQueue(dispatchQueue: dispatch_queue_create("", DISPATCH_QUEUE_CONCURRENT))
+  open class func concurrentQueue() -> GCDQueue {
+    return GCDQueue(dispatchQueue: DispatchQueue(label: "", attributes: DispatchQueue.Attributes.concurrent))
   }
   
  /**
@@ -90,7 +90,7 @@ public class GCDQueue {
   *  - SeeAlso: dispatch_queue_create()
   */
   public convenience init() {
-    self.init(dispatchQueue: dispatch_queue_create("", DISPATCH_QUEUE_SERIAL))
+    self.init(dispatchQueue: DispatchQueue(label: "", attributes: []))
   }
   
  /**
@@ -99,7 +99,7 @@ public class GCDQueue {
   *  - parameter dispatchQueue: dispatch_queue_t object.
   *  - returns: The initialized instance.
   */
-  public init(dispatchQueue: dispatch_queue_t) {
+  public init(dispatchQueue: DispatchQueue) {
     self.dispatchQueue = dispatchQueue
   }
   
@@ -112,8 +112,8 @@ public class GCDQueue {
   *
   *  - SeeAlso: dispatch_async()
   */
-  public func queueBlock(block: dispatch_block_t) {
-    dispatch_async(self.dispatchQueue, block)
+  open func queueBlock(_ block: @escaping ()->()) {
+    self.dispatchQueue.async(execute: block)
   }
   
  /**
@@ -123,10 +123,10 @@ public class GCDQueue {
   *  - parameter afterDelay: The delay in seconds.
   *  - SeeAlso: dispatch_after()
   */
-  public func queueBlock(block: dispatch_block_t, afterDelay seconds: Double) {
-    let time = dispatch_time(DISPATCH_TIME_NOW, Int64(seconds * Double(GCDConstants.NanosecondsPerSecond)))
+  open func queueBlock(_ block: @escaping ()->(), afterDelay seconds: Double) {
+    let time = DispatchTime.now() + Double(Int64(seconds * Double(GCDConstants.NanosecondsPerSecond))) / Double(NSEC_PER_SEC)
     
-    dispatch_after(time, self.dispatchQueue, block)
+    self.dispatchQueue.asyncAfter(deadline: time, execute: block)
   }
   
  /**
@@ -135,8 +135,8 @@ public class GCDQueue {
   *  - parameter block: The block to submit.
   *  - SeeAlso: dispatch_sync()
   */
-  public func queueAndAwaitBlock(block: dispatch_block_t) {
-    dispatch_sync(self.dispatchQueue, block)
+  open func queueAndAwaitBlock(_ block: ()->()) {
+    self.dispatchQueue.sync(execute: block)
   }
   
  /**
@@ -146,8 +146,8 @@ public class GCDQueue {
   *  - parameter iterationCount: The number of times to execute the block.
   *  - SeeAlso: dispatch_apply()
   */
-  public func queueAndAwaitBlock(block: ((Int) -> Void), iterationCount count: Int) {
-    dispatch_apply(count, self.dispatchQueue, block)
+  open func queueAndAwaitBlock(_ block: ((Int) -> Void), iterationCount count: Int) {
+    DispatchQueue.concurrentPerform(iterations: count, execute: block)
   }
   
  /**
@@ -157,8 +157,8 @@ public class GCDQueue {
   *  - parameter inGroup: The group to associate the block with.
   *  - SeeAlso: dispatch_group_async()
   */
-  public func queueBlock(block: dispatch_block_t, inGroup group: GCDGroup) {
-    dispatch_group_async(group.dispatchGroup, self.dispatchQueue, block)
+  open func queueBlock(_ block: ()->(), inGroup group: GCDGroup) {
+    self.dispatchQueue.async(group: group.dispatchGroup, execute: block)
   }
  
  /**
@@ -168,8 +168,8 @@ public class GCDQueue {
   *  - parameter inGroup: The group to observe.
   *  - SeeAlso: dispatch_group_notify()
   */
-  public func queueNotifyBlock(block: dispatch_block_t, inGroup group: GCDGroup) {
-    dispatch_group_notify(group.dispatchGroup, self.dispatchQueue, block)
+  open func queueNotifyBlock(_ block: ()->(), inGroup group: GCDGroup) {
+    group.dispatchGroup.notify(queue: self.dispatchQueue, execute: block)
   }
   
  /**
@@ -178,8 +178,8 @@ public class GCDQueue {
   *  - parameter block: The barrier block to submit.
   *  - SeeAlso dispatch_barrier_async()
   */
-  public func queueBarrierBlock(block: dispatch_block_t) {
-    dispatch_barrier_async(self.dispatchQueue, block)
+  open func queueBarrierBlock(_ block: @escaping ()->()) {
+    self.dispatchQueue.async(flags: .barrier, execute: block)
   }
   
  /**
@@ -188,8 +188,8 @@ public class GCDQueue {
   *  - parameter block: The barrier block to submit.
   *  - SeeAlso: dispatch_barrier_sync()
   */
-  public func queueAndAwaitBarrierBlock(block: dispatch_block_t) {
-    dispatch_barrier_sync(self.dispatchQueue, block)
+  open func queueAndAwaitBarrierBlock(_ block: ()->()) {
+    self.dispatchQueue.sync(flags: .barrier, execute: block)
   }
   
   // MARK: Misc public methods
@@ -199,8 +199,8 @@ public class GCDQueue {
   *
   *  - SeeAlso: dispatch_suspend()
   */
-  public func suspend() {
-    dispatch_suspend(self.dispatchQueue)
+  open func suspend() {
+    self.dispatchQueue.suspend()
   }
   
  /**
@@ -208,7 +208,7 @@ public class GCDQueue {
   *
   *  - SeeAlso: dispatch_resume()
   */
-  public func resume() {
-    dispatch_resume(self.dispatchQueue)
+  open func resume() {
+    self.dispatchQueue.resume()
   }
 }

@@ -45,33 +45,33 @@ extension UIFont {
         case Seravek = "Seravek"
     }
     
-    public class func PrintFontFamily (font: FontName) {
-        let arr = UIFont.fontNamesForFamilyName(font.rawValue)
+    public class func PrintFontFamily (_ font: FontName) {
+        let arr = UIFont.fontNames(forFamilyName: font.rawValue)
         for name in arr {
             print(name)
         }
     }
     
-    public class func Font (str:String) -> UIFont?  {
+    public class func Font (_ str:String) -> UIFont?  {
         var array = str.trimArray
         if array.count >= 2{
             let font = array[1] as String
             if font == "system" {
-                return UIFont.systemFontOfSize(array[0].floatValue)
+                return UIFont.systemFont(ofSize: array[0].floatValue)
             }else{
                 return UIFont(name: array[1], size: array[0].floatValue)
             }
         }else if array.count == 1{
-            return UIFont.systemFontOfSize(array[0].floatValue)
+            return UIFont.systemFont(ofSize: array[0].floatValue)
         }
         return nil
     }
     
-    public class func Font (name: FontName, type: FontType, size: CGFloat) -> UIFont {
+    public class func Font (_ name: FontName, type: FontType, size: CGFloat) -> UIFont {
         return UIFont (name: name.rawValue + "-" + type.rawValue, size: size)!
     }
     
-    public class func HelveticaNeue (type: FontType, size: CGFloat) -> UIFont {
+    public class func HelveticaNeue (_ type: FontType, size: CGFloat) -> UIFont {
         return Font(.HelveticaNeue, type: type, size: size)
     }
 }

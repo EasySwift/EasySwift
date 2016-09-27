@@ -24,12 +24,12 @@
 
 import Foundation
 
-extension NSIndexSet {
-  convenience init(set: Set<Int>) {
+extension IndexSet {
+  init(set: Set<Int>) {
     let indexSet = NSMutableIndexSet()
     for index in set {
-      indexSet.addIndex(index)
+      indexSet.add(index)
     }
-    self.init(indexSet: indexSet)
+    (self as NSIndexSet).init(indexSet)
   }
 }

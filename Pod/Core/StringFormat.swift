@@ -11,141 +11,141 @@ import Foundation
 extension String{
     var viewContentMode:UIViewContentMode{
         var dict = Dictionary<String,UIViewContentMode>()
-        dict["ScaleToFill"] = UIViewContentMode.ScaleToFill
-        dict["ScaleAspectFit"] = UIViewContentMode.ScaleAspectFit
-        dict["ScaleAspectFill"] = UIViewContentMode.ScaleAspectFill
-        dict["Redraw"] = UIViewContentMode.Redraw
-        dict["Center"] = UIViewContentMode.Center
-        dict["Top"] = UIViewContentMode.Top
-        dict["Bottom"] = UIViewContentMode.Bottom
-        dict["Left"] = UIViewContentMode.Left
-        dict["Right"] = UIViewContentMode.Right
-        dict["TopLeft"] = UIViewContentMode.TopLeft
-        dict["TopRight"] = UIViewContentMode.TopRight
-        dict["BottomLeft"] = UIViewContentMode.BottomLeft
-        dict["BottomRight"] = UIViewContentMode.BottomRight
+        dict["ScaleToFill"] = UIViewContentMode.scaleToFill
+        dict["ScaleAspectFit"] = UIViewContentMode.scaleAspectFit
+        dict["ScaleAspectFill"] = UIViewContentMode.scaleAspectFill
+        dict["Redraw"] = UIViewContentMode.redraw
+        dict["Center"] = UIViewContentMode.center
+        dict["Top"] = UIViewContentMode.top
+        dict["Bottom"] = UIViewContentMode.bottom
+        dict["Left"] = UIViewContentMode.left
+        dict["Right"] = UIViewContentMode.right
+        dict["TopLeft"] = UIViewContentMode.topLeft
+        dict["TopRight"] = UIViewContentMode.topRight
+        dict["BottomLeft"] = UIViewContentMode.bottomLeft
+        dict["BottomRight"] = UIViewContentMode.bottomRight
         if let mode = dict[self.trim]{
             return mode
         }else{
-            return UIViewContentMode.ScaleToFill
+            return UIViewContentMode.scaleToFill
         }
     }
     
     var flexContentDirection:FLEXBOXContentDirection{
         switch self.trim {
         case "ltr":
-            return .LeftToRight
+            return .leftToRight
         case "rtl":
-            return .RightToLeft
+            return .rightToLeft
         case "inherit":
-            return .Inherit
+            return .inherit
         default:
-            return .LeftToRight
+            return .leftToRight
         }
     }
     
     var justifyContent:FLEXBOXJustification{
         switch self.trim {
         case "center":
-            return .Center
+            return .center
         case "flex-start":
-            return .FlexStart
+            return .flexStart
         case "flex-end":
-            return .FlexEnd
+            return .flexEnd
         case "space-between":
-            return .SpaceBetween
+            return .spaceBetween
         case "space-around":
-            return .SpaceAround
+            return .spaceAround
         default:
-            return .FlexStart
+            return .flexStart
         }
     }
     
     var alignItems:FLEXBOXAlignment{
         switch self.trim {
         case "center":
-            return .Center
+            return .center
         case "flex-start":
-            return .FlexStart
+            return .flexStart
         case "flex-end":
-            return .FlexEnd
+            return .flexEnd
         case "stretch":
-            return .Stretch
+            return .stretch
         case "auto":
-            return .Auto
+            return .auto
         default:
-            return .Auto
+            return .auto
         }
     }
     
     var flexDirection:FLEXBOXFlexDirection{
         switch self.trim {
         case "column":
-            return .Column
+            return .column
         case "row":
-            return .Row
+            return .row
         case "row-reverse":
-            return .RowReverse
+            return .rowReverse
         case "column-reverse":
-            return .ColumnReverse
+            return .columnReverse
         default:
-            return .Row
+            return .row
         }
     }
     
     var separatorStyle:UITableViewCellSeparatorStyle{
         switch self.trim{
         case "None" :
-            return .None
+            return .none
         case "SingleLine":
-            return .SingleLine
+            return .singleLine
         case "SingleLineEtched":
-            return .SingleLineEtched
+            return .singleLineEtched
         default:
-            return .SingleLine
+            return .singleLine
         }
     }
     
     var tableViewStyle:UITableViewStyle{
         switch self.trim{
         case "plain":
-            return .Plain
+            return .plain
         case "grouped":
-            return .Grouped
+            return .grouped
         default:
-            return .Plain
+            return .plain
         }
     }
     
     var scrollViewIndicatorStyle:UIScrollViewIndicatorStyle{
         switch self.trim{
         case "white":
-            return .White
+            return .white
         case "black":
-            return .Black
+            return .black
         default:
-            return .Default
+            return .default
         }
     }
     
     var textAlignment:NSTextAlignment {
         switch(self.trim){
         case "center":
-            return NSTextAlignment.Center
+            return NSTextAlignment.center
         case "left":
-            return NSTextAlignment.Left
+            return NSTextAlignment.left
         case "right":
-            return NSTextAlignment.Right
+            return NSTextAlignment.right
         case "justified":
-            return NSTextAlignment.Justified
+            return NSTextAlignment.justified
         case "natural":
-            return NSTextAlignment.Natural
+            return NSTextAlignment.natural
         default:
-            return NSTextAlignment.Left
+            return NSTextAlignment.left
         }
     }
     
-    var linkStyleDict:[NSObject:AnyObject]{
+    var linkStyleDict:[AnyHashable: Any]{
         let linkArray = self.trimArrayBy(";")
         var dict = Dictionary<NSObject,AnyObject>()
         for str in linkArray {
@@ -153,11 +153,11 @@ extension String{
             if strArray.count == 2 {
                 switch strArray[0] {
                 case "color":
-                    dict[kCTForegroundColorAttributeName] = UIColor(CSS: strArray[1].trim)
+                    dict[kCTForegroundColorAttributeName] = UIColor(css: strArray[1].trim)
                 case "text-decoration":
                     dict[NSUnderlineStyleAttributeName] = strArray[1].trim.underlineStyle.rawValue
                 default :
-                    dict[NSUnderlineStyleAttributeName] = NSUnderlineStyle.StyleSingle.rawValue
+                    dict[NSUnderlineStyleAttributeName] = NSUnderlineStyle.styleSingle.rawValue
                 }
             }
         }
@@ -167,102 +167,102 @@ extension String{
     
     var keyboardType:UIKeyboardType {
         
-        switch self.lowercaseString {
-        case "Default".lowercaseString:
-            return UIKeyboardType.Default
-        case "ASCIICapable".lowercaseString:
-            return UIKeyboardType.ASCIICapable
-        case "NumbersAndPunctuation".lowercaseString:
-            return UIKeyboardType.NumbersAndPunctuation
-        case "URL".lowercaseString:
+        switch self.lowercased() {
+        case "Default".lowercased():
+            return UIKeyboardType.default
+        case "ASCIICapable".lowercased():
+            return UIKeyboardType.asciiCapable
+        case "NumbersAndPunctuation".lowercased():
+            return UIKeyboardType.numbersAndPunctuation
+        case "URL".lowercased():
             return UIKeyboardType.URL
-        case "NumberPad".lowercaseString:
-            return UIKeyboardType.NumberPad
-        case "PhonePad".lowercaseString:
-            return UIKeyboardType.PhonePad
-        case "NamePhonePad".lowercaseString:
-            return UIKeyboardType.NamePhonePad
-        case "EmailAddress".lowercaseString:
-            return UIKeyboardType.EmailAddress
-        case "DecimalPad".lowercaseString:
-            return UIKeyboardType.DecimalPad
-        case "Twitter".lowercaseString:
-            return UIKeyboardType.Twitter
-        case "Twitter".lowercaseString:
-            return UIKeyboardType.WebSearch
+        case "NumberPad".lowercased():
+            return UIKeyboardType.numberPad
+        case "PhonePad".lowercased():
+            return UIKeyboardType.phonePad
+        case "NamePhonePad".lowercased():
+            return UIKeyboardType.namePhonePad
+        case "EmailAddress".lowercased():
+            return UIKeyboardType.emailAddress
+        case "DecimalPad".lowercased():
+            return UIKeyboardType.decimalPad
+        case "Twitter".lowercased():
+            return UIKeyboardType.twitter
+        case "Twitter".lowercased():
+            return UIKeyboardType.webSearch
         default:
-            return UIKeyboardType.Default
+            return UIKeyboardType.default
         }
     }
     
     
     var underlineStyle:NSUnderlineStyle{
-        switch self.lowercaseString {
-        case "None".lowercaseString :
-            return NSUnderlineStyle.StyleNone
-        case "StyleSingle".lowercaseString :
-            return NSUnderlineStyle.StyleSingle
-        case "StyleThick".lowercaseString :
-            return NSUnderlineStyle.StyleThick
-        case "StyleDouble".lowercaseString :
-            return NSUnderlineStyle.StyleDouble
-        case "PatternDot".lowercaseString :
-            return NSUnderlineStyle.PatternDot
-        case "PatternDash".lowercaseString :
-            return NSUnderlineStyle.PatternDash
-        case "PatternDashDot".lowercaseString :
-            return NSUnderlineStyle.PatternDashDot
-        case "PatternDashDotDot".lowercaseString :
-            return NSUnderlineStyle.PatternDashDotDot
-        case "ByWord".lowercaseString :
-            return NSUnderlineStyle.ByWord
+        switch self.lowercased() {
+        case "None".lowercased() :
+            return NSUnderlineStyle.styleNone
+        case "StyleSingle".lowercased() :
+            return NSUnderlineStyle.styleSingle
+        case "StyleThick".lowercased() :
+            return NSUnderlineStyle.styleThick
+        case "StyleDouble".lowercased() :
+            return NSUnderlineStyle.styleDouble
+        case "PatternDot".lowercased() :
+            return NSUnderlineStyle.patternDot
+        case "PatternDash".lowercased() :
+            return NSUnderlineStyle.patternDash
+        case "PatternDashDot".lowercased() :
+            return NSUnderlineStyle.patternDashDot
+        case "PatternDashDotDot".lowercased() :
+            return NSUnderlineStyle.patternDashDotDot
+        case "ByWord".lowercased() :
+            return NSUnderlineStyle.byWord
         default :
-            return NSUnderlineStyle.StyleSingle
+            return NSUnderlineStyle.styleSingle
         }
     }
     
     var controlEvent: UIControlEvents{
-        switch self.lowercaseString {
-        case "TouchDown".lowercaseString :
-            return UIControlEvents.TouchDown
-        case "TouchDownRepeat".lowercaseString :
-            return UIControlEvents.TouchDownRepeat
-        case "TouchDragInside".lowercaseString :
-            return UIControlEvents.TouchDragInside
-        case "TouchDragOutside".lowercaseString :
-            return UIControlEvents.TouchDragOutside
-        case "TouchDragEnter".lowercaseString :
-            return UIControlEvents.TouchDragEnter
-        case "TouchDragExit".lowercaseString :
-            return UIControlEvents.TouchDragExit
-        case "TouchUpInside".lowercaseString :
-            return UIControlEvents.TouchUpInside
-        case "TouchUpOutside".lowercaseString :
-            return UIControlEvents.TouchUpOutside
-        case "ValueChanged".lowercaseString :
-            return UIControlEvents.ValueChanged
-        case "TouchCancel".lowercaseString :
-            return UIControlEvents.TouchCancel
-        case "EditingDidBegin".lowercaseString :
-            return UIControlEvents.EditingDidBegin
-        case "EditingChanged".lowercaseString :
-            return UIControlEvents.EditingChanged
-        case "EditingDidEnd".lowercaseString :
-            return UIControlEvents.EditingDidEnd
-        case "EditingDidEndOnExit".lowercaseString :
-            return UIControlEvents.EditingDidEndOnExit
-        case "AllTouchEvents".lowercaseString :
-            return UIControlEvents.AllTouchEvents
-        case "AllEditingEvents".lowercaseString :
-            return UIControlEvents.AllEditingEvents
-        case "ApplicationReserved".lowercaseString :
-            return UIControlEvents.ApplicationReserved
-        case "SystemReserved".lowercaseString :
-            return UIControlEvents.SystemReserved
-        case "AllEvents".lowercaseString :
-            return UIControlEvents.AllEvents
+        switch self.lowercased() {
+        case "TouchDown".lowercased() :
+            return UIControlEvents.touchDown
+        case "TouchDownRepeat".lowercased() :
+            return UIControlEvents.touchDownRepeat
+        case "TouchDragInside".lowercased() :
+            return UIControlEvents.touchDragInside
+        case "TouchDragOutside".lowercased() :
+            return UIControlEvents.touchDragOutside
+        case "TouchDragEnter".lowercased() :
+            return UIControlEvents.touchDragEnter
+        case "TouchDragExit".lowercased() :
+            return UIControlEvents.touchDragExit
+        case "TouchUpInside".lowercased() :
+            return UIControlEvents.touchUpInside
+        case "TouchUpOutside".lowercased() :
+            return UIControlEvents.touchUpOutside
+        case "ValueChanged".lowercased() :
+            return UIControlEvents.valueChanged
+        case "TouchCancel".lowercased() :
+            return UIControlEvents.touchCancel
+        case "EditingDidBegin".lowercased() :
+            return UIControlEvents.editingDidBegin
+        case "EditingChanged".lowercased() :
+            return UIControlEvents.editingChanged
+        case "EditingDidEnd".lowercased() :
+            return UIControlEvents.editingDidEnd
+        case "EditingDidEndOnExit".lowercased() :
+            return UIControlEvents.editingDidEndOnExit
+        case "AllTouchEvents".lowercased() :
+            return UIControlEvents.allTouchEvents
+        case "AllEditingEvents".lowercased() :
+            return UIControlEvents.allEditingEvents
+        case "ApplicationReserved".lowercased() :
+            return UIControlEvents.applicationReserved
+        case "SystemReserved".lowercased() :
+            return UIControlEvents.systemReserved
+        case "AllEvents".lowercased() :
+            return UIControlEvents.allEvents
         default :
-            return UIControlEvents.TouchUpInside
+            return UIControlEvents.touchUpInside
         }
     }
     

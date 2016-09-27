@@ -10,7 +10,7 @@ import Foundation
 
 public extension DKChainableAnimationKit {
 
-    public func makeOpacity(opacity: CGFloat) -> DKChainableAnimationKit {
+    public func makeOpacity(_ opacity: CGFloat) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let opacityAnimation = self.basicAnimationForKeyPath("opacity")
             opacityAnimation.fromValue = view.alpha
@@ -24,11 +24,11 @@ public extension DKChainableAnimationKit {
         return self
     }
 
-    public func makeAlpha(alpha: CGFloat) -> DKChainableAnimationKit {
+    public func makeAlpha(_ alpha: CGFloat) -> DKChainableAnimationKit {
         return makeOpacity(alpha)
     }
 
-    public func makeBackground(color: UIColor) -> DKChainableAnimationKit {
+    public func makeBackground(_ color: UIColor) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let backgroundColorAnimation = self.basicAnimationForKeyPath("backgroundColor")
             backgroundColorAnimation.fromValue = view.backgroundColor
@@ -42,21 +42,21 @@ public extension DKChainableAnimationKit {
         return self
     }
 
-    public func makeBorderColor(color: UIColor) -> DKChainableAnimationKit {
+    public func makeBorderColor(_ color: UIColor) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let borderColorAnimation = self.basicAnimationForKeyPath("borderColor")
-            borderColorAnimation.fromValue = UIColor(CGColor: view.layer.borderColor!)
+            borderColorAnimation.fromValue = UIColor(cgColor: view.layer.borderColor!)
             borderColorAnimation.toValue = color
             self.addAnimationFromCalculationBlock(borderColorAnimation)
         }
 
         self.addAnimationCompletionAction { (view: UIView) -> Void in
-            view.layer.borderColor = color.CGColor
+            view.layer.borderColor = color.cgColor
         }
         return self
     }
 
-    public func makeBorderWidth(width: CGFloat) -> DKChainableAnimationKit {
+    public func makeBorderWidth(_ width: CGFloat) -> DKChainableAnimationKit {
         let width = max(0, width)
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let borderColorAnimation = self.basicAnimationForKeyPath("borderWidth")
@@ -71,7 +71,7 @@ public extension DKChainableAnimationKit {
         return self
     }
 
-    public func makeCornerRadius(cornerRadius: CGFloat) -> DKChainableAnimationKit {
+    public func makeCornerRadius(_ cornerRadius: CGFloat) -> DKChainableAnimationKit {
         let cornerRadius = max(0, cornerRadius)
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let cornerRadiusAnimation = self.basicAnimationForKeyPath("cornerRadius")

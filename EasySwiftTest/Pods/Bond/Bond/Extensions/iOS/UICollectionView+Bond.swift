@@ -25,23 +25,23 @@
 import UIKit
 
 @objc public protocol BNDCollectionViewProxyDataSource {
-  optional func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView
-  optional func collectionView(collectionView: UICollectionView, canMoveItemAtIndexPath indexPath: NSIndexPath) -> Bool
-  optional func collectionView(collectionView: UICollectionView, moveItemAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
+  @objc optional func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: IndexPath) -> UICollectionReusableView
+  @objc optional func collectionView(_ collectionView: UICollectionView, canMoveItemAtIndexPath indexPath: IndexPath) -> Bool
+  @objc optional func collectionView(_ collectionView: UICollectionView, moveItemAtIndexPath sourceIndexPath: IndexPath, toIndexPath destinationIndexPath: IndexPath)
 
   /// Override to specify reload or update
-  optional func shouldReloadInsteadOfUpdateCollectionView(collectionView: UICollectionView) -> Bool
+  @objc optional func shouldReloadInsteadOfUpdateCollectionView(_ collectionView: UICollectionView) -> Bool
 }
 
 private class BNDCollectionViewDataSource<T>: NSObject, UICollectionViewDataSource {
   
-  private let array: ObservableArray<ObservableArray<T>>
-  private weak var collectionView: UICollectionView!
-  private let createCell: (NSIndexPath, ObservableArray<ObservableArray<T>>, UICollectionView) -> UICollectionViewCell
-  private weak var proxyDataSource: BNDCollectionViewProxyDataSource?
-  private let sectionObservingDisposeBag = DisposeBag()
+  fileprivate let array: ObservableArray<ObservableArray<T>>
+  fileprivate weak var collectionView: UICollectionView!
+  fileprivate let createCell: (IndexPath, ObservableArray<ObservableArray<T>>, UICollectionView) -> UICollectionViewCell
+  fileprivate weak var proxyDataSource: BNDCollectionViewProxyDataSource?
+  fileprivate let sectionObservingDisposeBag = DisposeBag()
   
-  private init(array: ObservableArray<ObservableArray<T>>, collectionView: UICollectionView, proxyDataSource: BNDCollectionViewProxyDataSource?, createCell: (NSIndexPath, ObservableArray<ObservableArray<T>>, UICollectionView) -> UICollectionViewCell) {
+  fileprivate init(array: ObservableArray<ObservableArray<T>>, collectionView: UICollectionView, proxyDataSource: BNDCollectionViewProxyDataSource?, createCell: @escaping (IndexPath, ObservableArray<ObservableArray<T>>, UICollectionView) -> UICollectionViewCell) {
     self.collectionView = collectionView
     self.createCell = createCell
     self.proxyDataSource = proxyDataSource
@@ -55,17 +55,17 @@ private class BNDCollectionViewDataSource<T>: NSObject, UICollectionViewDataSour
     array.observeNew { [weak self] arrayEvent in
       guard let unwrappedSelf = self, let collectionView = unwrappedSelf.collectionView else { return }
 
-      if let reload = unwrappedSelf.proxyDataSource?.shouldReloadInsteadOfUpdateCollectionView?(collectionView) where reload {
+      if let reload = unwrappedSelf.proxyDataSource?.shouldReloadInsteadOfUpdateCollectionView?(collectionView) , reload {
         collectionView.reloadData()
       } else {
         switch arrayEvent.operation {
-        case .Batch(let operations):
+        case .batch(let operations):
           collectionView.performBatchUpdates({
             for operation in changeSetsFromBatchOperations(operations) {
               BNDCollectionViewDataSource.applySectionUnitChangeSet(operation, collectionView: collectionView)
             }
             }, completion: nil)
-        case .Reset:
+        case .reset:
           collectionView.reloadData()
         default:
           BNDCollectionViewDataSource.applySectionUnitChangeSet(arrayEvent.operation.changeSet(), collectionView: collectionView)
@@ -76,23 +76,23 @@ private class BNDCollectionViewDataSource<T>: NSObject, UICollectionViewDataSour
     }.disposeIn(bnd_bag)
   }
   
-  private func setupPerSectionObservers() {
+  fileprivate func setupPerSectionObservers() {
     sectionObservingDisposeBag.dispose()
     
-    for (sectionIndex, sectionObservableArray) in array.enumerate() {
+    for (sectionIndex, sectionObservableArray) in array.enumerated() {
       sectionObservableArray.observeNew { [weak collectionView, weak proxyDataSource] arrayEvent in
         guard let collectionView = collectionView else { return }
-        if let reload = proxyDataSource?.shouldReloadInsteadOfUpdateCollectionView?(collectionView) where reload { collectionView.reloadData(); return }
+        if let reload = proxyDataSource?.shouldReloadInsteadOfUpdateCollectionView?(collectionView) , reload { collectionView.reloadData(); return }
 
         switch arrayEvent.operation {
-        case .Batch(let operations):
+        case .batch(let operations):
           collectionView.performBatchUpdates({
             for operation in changeSetsFromBatchOperations(operations) {
               BNDCollectionViewDataSource.applyRowUnitChangeSet(operation, collectionView: collectionView, sectionIndex: sectionIndex)
             }
           }, completion: nil)
-        case .Reset:
-          collectionView.reloadSections(NSIndexSet(index: sectionIndex))
+        case .reset:
+          collectionView.reloadSections(IndexSet(integer: sectionIndex))
         default:
           BNDCollectionViewDataSource.applyRowUnitChangeSet(arrayEvent.operation.changeSet(), collectionView: collectionView, sectionIndex: sectionIndex)
         }
@@ -100,46 +100,46 @@ private class BNDCollectionViewDataSource<T>: NSObject, UICollectionViewDataSour
     }
   }
   
-  private class func applySectionUnitChangeSet(changeSet: ObservableArrayEventChangeSet, collectionView: UICollectionView) {
+  fileprivate class func applySectionUnitChangeSet(_ changeSet: ObservableArrayEventChangeSet, collectionView: UICollectionView) {
     switch changeSet {
-    case .Inserts(let indices):
-      collectionView.insertSections(NSIndexSet(set: indices))
-    case .Updates(let indices):
-      collectionView.reloadSections(NSIndexSet(set: indices))
-    case .Deletes(let indices):
-      collectionView.deleteSections(NSIndexSet(set: indices))
+    case .inserts(let indices):
+      collectionView.insertSections(IndexSet(set: indices))
+    case .updates(let indices):
+      collectionView.reloadSections(IndexSet(set: indices))
+    case .deletes(let indices):
+      collectionView.deleteSections(IndexSet(set: indices))
     }
   }
   
-  private class func applyRowUnitChangeSet(changeSet: ObservableArrayEventChangeSet, collectionView: UICollectionView, sectionIndex: Int) {
+  fileprivate class func applyRowUnitChangeSet(_ changeSet: ObservableArrayEventChangeSet, collectionView: UICollectionView, sectionIndex: Int) {
     switch changeSet {
-    case .Inserts(let indices):
-      let indexPaths = indices.map { NSIndexPath(forItem: $0, inSection: sectionIndex) }
-      collectionView.insertItemsAtIndexPaths(indexPaths)
-    case .Updates(let indices):
-      let indexPaths = indices.map { NSIndexPath(forItem: $0, inSection: sectionIndex) }
-      collectionView.reloadItemsAtIndexPaths(indexPaths)
-    case .Deletes(let indices):
-      let indexPaths = indices.map { NSIndexPath(forItem: $0, inSection: sectionIndex) }
-      collectionView.deleteItemsAtIndexPaths(indexPaths)
+    case .inserts(let indices):
+      let indexPaths = indices.map { IndexPath(item: $0, section: sectionIndex) }
+      collectionView.insertItems(at: indexPaths)
+    case .updates(let indices):
+      let indexPaths = indices.map { IndexPath(item: $0, section: sectionIndex) }
+      collectionView.reloadItems(at: indexPaths)
+    case .deletes(let indices):
+      let indexPaths = indices.map { IndexPath(item: $0, section: sectionIndex) }
+      collectionView.deleteItems(at: indexPaths)
     }
   }
   
   /// MARK - UICollectionViewDataSource
   
-  @objc func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+  @objc func numberOfSections(in collectionView: UICollectionView) -> Int {
     return array.count
   }
   
-  @objc func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  @objc func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return array[section].count
   }
   
-  @objc func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+  @objc func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     return createCell(indexPath, array, collectionView)
   }
   
-  @objc func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+  @objc func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
     if let view = proxyDataSource?.collectionView?(collectionView, viewForSupplementaryElementOfKind: kind, atIndexPath: indexPath) {
       return view
     } else {
@@ -147,29 +147,29 @@ private class BNDCollectionViewDataSource<T>: NSObject, UICollectionViewDataSour
     }
   }
   
-  @objc func collectionView(collectionView: UICollectionView, canMoveItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+  @objc func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
     return proxyDataSource?.collectionView?(collectionView, canMoveItemAtIndexPath: indexPath) ?? false
   }
   
-  @objc func collectionView(collectionView: UICollectionView, moveItemAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+  @objc func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
     proxyDataSource?.collectionView?(collectionView, moveItemAtIndexPath: sourceIndexPath, toIndexPath: destinationIndexPath)
   }
 }
 
 extension UICollectionView {
-  private struct AssociatedKeys {
+  fileprivate struct AssociatedKeys {
     static var BondDataSourceKey = "bnd_BondDataSourceKey"
   }
 }
 
 public extension EventProducerType where
   EventType: ObservableArrayEventType,
-  EventType.ObservableArrayEventSequenceType.Generator.Element: EventProducerType,
-  EventType.ObservableArrayEventSequenceType.Generator.Element.EventType: ObservableArrayEventType {
+  EventType.ObservableArrayEventSequenceType.Iterator.Element: EventProducerType,
+  EventType.ObservableArrayEventSequenceType.Iterator.Element.EventType: ObservableArrayEventType {
   
-  private typealias ElementType = EventType.ObservableArrayEventSequenceType.Generator.Element.EventType.ObservableArrayEventSequenceType.Generator.Element
+  fileprivate typealias ElementType = EventType.ObservableArrayEventSequenceType.Iterator.Element.EventType.ObservableArrayEventSequenceType.Iterator.Element
   
-  public func bindTo(collectionView: UICollectionView, proxyDataSource: BNDCollectionViewProxyDataSource? = nil, createCell: (NSIndexPath, ObservableArray<ObservableArray<ElementType>>, UICollectionView) -> UICollectionViewCell) -> DisposableType {
+  public func bindTo(_ collectionView: UICollectionView, proxyDataSource: BNDCollectionViewProxyDataSource? = nil, createCell: (IndexPath, ObservableArray<ObservableArray<ElementType>>, UICollectionView) -> UICollectionViewCell) -> DisposableType {
     
     let array: ObservableArray<ObservableArray<ElementType>>
     if let downcastedObservableArray = self as? ObservableArray<ObservableArray<ElementType>> {

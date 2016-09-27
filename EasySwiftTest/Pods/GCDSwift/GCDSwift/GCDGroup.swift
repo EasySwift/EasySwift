@@ -1,12 +1,12 @@
 import Foundation
 
-public class GCDGroup {
+open class GCDGroup {
  /**
   *  Returns the underlying dispatch group object.
   *
   *  - returns: The dispatch group object.
   */
-  public let dispatchGroup: dispatch_group_t
+  open let dispatchGroup: DispatchGroup
   
   // MARK: Lifecycle
   
@@ -17,7 +17,7 @@ public class GCDGroup {
   *  - SeeAlso: dispatch_group_create()
   */
   public convenience init() {
-    self.init(dispatchGroup: dispatch_group_create())
+    self.init(dispatchGroup: DispatchGroup())
   }
   
  /**
@@ -26,7 +26,7 @@ public class GCDGroup {
   *  - parameter dispatchGroup: A dispatch_group_t object.
   *  - returns: The initialized instance.
   */
-  public init(dispatchGroup: dispatch_group_t) {
+  public init(dispatchGroup: DispatchGroup) {
     self.dispatchGroup = dispatchGroup
   }
   
@@ -37,8 +37,8 @@ public class GCDGroup {
   *
   *  - SeeAlso: dispatch_group_enter()
   */
-  public func enter() {
-    return dispatch_group_enter(self.dispatchGroup)
+  open func enter() {
+    return self.dispatchGroup.enter()
   }
 
  /**
@@ -46,8 +46,8 @@ public class GCDGroup {
   *
   *  - SeeAlso: dispatch_group_leave()
   */
-  public func leave() {
-    return dispatch_group_leave(self.dispatchGroup)
+  open func leave() {
+    return self.dispatchGroup.leave()
   }
 
  /**
@@ -55,8 +55,8 @@ public class GCDGroup {
   *
   *  - SeeAlso: dispatch_group_wait()
   */
-  public func wait() {
-    dispatch_group_wait(self.dispatchGroup, DISPATCH_TIME_FOREVER)
+  open func wait() {
+    self.dispatchGroup.wait(timeout: DispatchTime.distantFuture)
   }
   
 /**
@@ -66,9 +66,9 @@ public class GCDGroup {
   *  - returns: `true` if all blocks completed, `false` if the timeout occurred.
   *  - SeeAlso: dispatch_group_wait()
   */
-  public func wait(seconds: Double) -> Bool {
-    let time = dispatch_time(DISPATCH_TIME_NOW, Int64(seconds * Double(GCDConstants.NanosecondsPerSecond)))
+  open func wait(_ seconds: Double) -> Bool {
+    let time = DispatchTime.now() + Double(Int64(seconds * Double(GCDConstants.NanosecondsPerSecond))) / Double(NSEC_PER_SEC)
     
-    return dispatch_group_wait(self.dispatchGroup, time) == 0
+    return self.dispatchGroup.wait(timeout: time) == 0
   }
 }

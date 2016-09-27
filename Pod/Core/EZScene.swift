@@ -10,36 +10,36 @@ import UIKit
 import SnapKit
 
 public enum NAV: Int {
-    case LEFT
-    case RIGHT
+    case left
+    case right
 }
 
 public enum EXTEND: Int {
-    case NONE
-    case TOP
-    case BOTTOM
-    case TOP_BOTTOM
+    case none
+    case top
+    case bottom
+    case top_BOTTOM
 }
 
 public enum INSET: Int {
-    case NONE
-    case TOP
-    case BOTTOM
-    case TOP_BOTTOM
+    case none
+    case top
+    case bottom
+    case top_BOTTOM
 }
 
-public class EZScene: UIViewController {
+open class EZScene: UIViewController {
 
     // parentScene 保留设计，必要的时候保存parentScene
-    public weak var parentScene: EZScene?
+    open weak var parentScene: EZScene?
 
-    public func addSubView(view: UIView, extend: EXTEND) {
+    open func addSubView(_ view: UIView, extend: EXTEND) {
         self.view.addSubview(view)
-        self.view.sendSubviewToBack(view)
+        self.view.sendSubview(toBack: view)
 
         self.automaticallyAdjustsScrollViewInsets = false
         self.extendedLayoutIncludesOpaqueBars = true
-        self.edgesForExtendedLayout = UIRectEdge.All
+        self.edgesForExtendedLayout = UIRectEdge.all
         view.snp_makeConstraints { (make) -> Void in
             // TODO
 //            make.edges.equalTo(view.superview!).inset(
@@ -48,7 +48,7 @@ public class EZScene: UIViewController {
         }
     }
 
-    public func addScrollView(view: UIScrollView, extend: EXTEND, inset: INSET) {
+    open func addScrollView(_ view: UIScrollView, extend: EXTEND, inset: INSET) {
         self.addSubView(view, extend: extend)
 //        view.contentInset = UIEdgeInsetsMake((inset == INSET.TOP || inset == INSET.TOP_BOTTOM) ? 64:0, 0,
 //            (inset == INSET.BOTTOM || inset == INSET.TOP_BOTTOM) ? 49:0, 0)

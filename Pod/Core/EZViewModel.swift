@@ -9,10 +9,10 @@
 import UIKit
 import Bond
 
-public class EZData: NSObject {
-    public var dym: Observable<NSData>?
+open class EZData: NSObject {
+    open var dym: Observable<Data>?
 
-    public var value: NSData? {
+    open var value: Data? {
         get {
             return self.dym?.value
         } set(value) {
@@ -20,15 +20,15 @@ public class EZData: NSObject {
         }
     }
 
-    public init(_ data: NSData) {
-        self.dym = Observable<NSData>(data)
+    public init(_ data: Data) {
+        self.dym = Observable<Data>(data)
     }
 }
 
-public class EZString: NSObject {
-    public var dym: Observable<String>?
+open class EZString: NSObject {
+    open var dym: Observable<String>?
 
-    public var value: String? {
+    open var value: String? {
         get {
             return self.dym?.value
         } set(value) {
@@ -41,23 +41,23 @@ public class EZString: NSObject {
     }
 }
 
-public class EZURL: NSObject {
-    public var dym: Observable<NSURL?>?
-    public var value: NSURL? {
+open class EZURL: NSObject {
+    open var dym: Observable<URL?>?
+    open var value: URL? {
         get {
             return self.dym?.value
         } set(value) {
             self.dym?.value = value!
         }
     }
-    public init(_ url: NSURL?) {
-        self.dym = Observable<NSURL?>(url)
+    public init(_ url: URL?) {
+        self.dym = Observable<URL?>(url)
     }
 }
 
-public class EZAttributedString: NSObject {
-    public var dym: Observable<NSAttributedString>?
-    public var value: NSAttributedString? {
+open class EZAttributedString: NSObject {
+    open var dym: Observable<NSAttributedString>?
+    open var value: NSAttributedString? {
         get {
             return self.dym?.value
         } set(value) {
@@ -69,9 +69,9 @@ public class EZAttributedString: NSObject {
     }
 }
 
-public class EZImage: NSObject {
-    public var dym: Observable<UIImage?>?
-    public var value: UIImage? {
+open class EZImage: NSObject {
+    open var dym: Observable<UIImage?>?
+    open var value: UIImage? {
         get {
             return self.dym?.value
         } set(value) {
@@ -83,9 +83,9 @@ public class EZImage: NSObject {
     }
 }
 
-public class EZColor: NSObject {
-    public var dym: Observable<UIColor>?
-    public var value: UIColor? {
+open class EZColor: NSObject {
+    open var dym: Observable<UIColor>?
+    open var value: UIColor? {
         get {
             return self.dym?.value
         } set(value) {
@@ -97,9 +97,9 @@ public class EZColor: NSObject {
     }
 }
 
-public class EZBool: NSObject {
-    public var dym: Observable<Bool>?
-    public var value: Bool? {
+open class EZBool: NSObject {
+    open var dym: Observable<Bool>?
+    open var value: Bool? {
         get {
             return self.dym?.value
         } set(value) {
@@ -111,9 +111,9 @@ public class EZBool: NSObject {
     }
 }
 
-public class EZFloat: NSObject {
-    public var dym: Observable<CGFloat>?
-    public var value: CGFloat? {
+open class EZFloat: NSObject {
+    open var dym: Observable<CGFloat>?
+    open var value: CGFloat? {
         get {
             return self.dym?.value
         } set(value) {
@@ -125,9 +125,9 @@ public class EZFloat: NSObject {
     }
 }
 
-public class EZInt: NSObject {
-    public var dym: Observable<Int>?
-    public var value: Int? {
+open class EZInt: NSObject {
+    open var dym: Observable<Int>?
+    open var value: Int? {
         get {
             return self.dym?.value
         } set(value) {
@@ -139,9 +139,9 @@ public class EZInt: NSObject {
     }
 }
 
-public class EZNumber: NSObject {
-    public var dym: Observable<NSNumber>?
-    public var value: NSNumber? {
+open class EZNumber: NSObject {
+    open var dym: Observable<NSNumber>?
+    open var value: NSNumber? {
         get {
             return self.dym?.value
         } set(value) {
@@ -158,11 +158,11 @@ extension NSObject {
         return self.listProperties()
     }
 
-    public func model_hasKey(key: String) -> Bool {
+    public func model_hasKey(_ key: String) -> Bool {
         return self.model_properyies.keys.contains(key)
     }
 }
 
-public class EZViewModel: NSObject {
+open class EZViewModel: NSObject {
 
 }

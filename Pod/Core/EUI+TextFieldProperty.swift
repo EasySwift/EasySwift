@@ -9,10 +9,10 @@
 import UIKit
 
 class TextFieldProperty: ViewProperty {
-    var placeholder: NSData?
+    var placeholder: Data?
     var placeholderStyle = ""
-    var text: NSData?
-    var keyboardType = UIKeyboardType.Default
+    var text: Data?
+    var keyboardType = UIKeyboardType.default
 
     override func view() -> UITextField {
         let view = UITextField()
@@ -20,14 +20,14 @@ class TextFieldProperty: ViewProperty {
         view.keyboardType = self.keyboardType
 
         let str = NSAttributedString(fromHTMLData: self.text, attributes: ["html": self.style])
-        view.defaultTextAttributes = str.attributesAtIndex(0, effectiveRange: nil)
+        view.defaultTextAttributes = (str?.attributes(at: 0, effectiveRange: nil))!
         view.attributedPlaceholder = NSAttributedString(fromHTMLData: self.placeholder, attributes: ["html": self.placeholderStyle])
 
         self.renderViewStyle(view)
         return view
     }
 
-    override func renderTag(pelement: OGElement) {
+    override func renderTag(_ pelement: OGElement) {
         self.tagOut += ["placeholder", "placeholder-style", "text", "keyboard-type"]
 
         super.renderTag(pelement)
@@ -40,13 +40,13 @@ class TextFieldProperty: ViewProperty {
                 self.contentText = newHtml
         }
 
-        self.text = "1".dataUsingEncoding(NSUTF8StringEncoding)?.dataByReplacingOccurrencesOfData("\\n".dataUsingEncoding(NSUTF8StringEncoding), withData: "\n".dataUsingEncoding(NSUTF8StringEncoding))
+        self.text = ("1".data(using: String.Encoding.utf8) as NSData?)?.replacingOccurrences(of: "\\n".data(using: String.Encoding.utf8), with: "\n".data(using: String.Encoding.utf8))
 
         if let placeholderStyle = EUIParse.string(pelement, key: "placeholder-style") {
             self.placeholderStyle = "html{" + placeholderStyle + "}"
         }
         if let placeholder = EUIParse.string(pelement, key: "placeholder") {
-            self.placeholder = placeholder.dataUsingEncoding(NSUTF8StringEncoding)?.dataByReplacingOccurrencesOfData("\\n".dataUsingEncoding(NSUTF8StringEncoding), withData: "\n".dataUsingEncoding(NSUTF8StringEncoding))
+            self.placeholder = (placeholder.data(using: String.Encoding.utf8) as NSData?)?.replacingOccurrences(of: "\\n".data(using: String.Encoding.utf8), with: "\n".data(using: String.Encoding.utf8))
         }
 
         if let keyboardType = EUIParse.string(pelement, key: "keyboard-type") {

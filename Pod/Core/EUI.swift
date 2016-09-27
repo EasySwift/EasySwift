@@ -7,18 +7,38 @@
 //
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
 
-public class EUI: NSObject {
-    public class func encode(fileName:String,suffix:String = "xml",toPath:String){
-        let path = NSBundle.mainBundle().pathForResource(fileName, ofType: suffix)!
-        if  NSFileManager.defaultManager().fileExistsAtPath(path) == false{
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
+
+open class EUI: NSObject {
+    open class func encode(_ fileName:String,suffix:String = "xml",toPath:String){
+        let path = Bundle.main.path(forResource: fileName, ofType: suffix)!
+        if  FileManager.default.fileExists(atPath: path) == false{
             return
         }
-        if let str = try? String(contentsOfFile: path, encoding: NSUTF8StringEncoding) {
-            if let encrypt = DesEncrypt.encryptWithText(str, key: CRTPTO_KEY) {
+        if let str = try? String(contentsOfFile: path, encoding: String.Encoding.utf8) {
+            if let encrypt = DesEncrypt.encrypt(withText: str, key: CRTPTO_KEY) {
                 var error:NSError?
                 do {
-                    try encrypt.writeToFile(toPath, atomically: true, encoding: NSUTF8StringEncoding)
+                    try encrypt.write(toFile: toPath, atomically: true, encoding: String.Encoding.utf8)
                     EZPrintln("success")
                 } catch let error1 as NSError {
                     error = error1
@@ -28,7 +48,7 @@ public class EUI: NSObject {
         }
     }
     
-    public class func setLiveLoad(controller:EUScene,suffix:String){
+    open class func setLiveLoad(_ controller:EUScene,suffix:String){
         if IsSimulator && suffix == "xml"{
             let paths = self.loadLiveFile(controller,suffix:suffix)
             if paths?.count > 0 {
@@ -46,25 +66,25 @@ public class EUI: NSObject {
         controller.eu_viewWillLoad()
     }
     
-    private class func loadLiveFile(controller:EUScene,suffix:String) -> [String]?{
+    fileprivate class func loadLiveFile(_ controller:EUScene,suffix:String) -> [String]?{
         let fileName = controller.nameOfClass
         
-        let path = NSBundle(path: LIVE_LOAD_PATH)!.pathForResource(fileName, ofType: suffix)!
-        if  NSFileManager.defaultManager().fileExistsAtPath(path) == false{
+        let path = Bundle(path: LIVE_LOAD_PATH)!.path(forResource: fileName, ofType: suffix)!
+        if  FileManager.default.fileExists(atPath: path) == false{
             return nil
         }
         var paths = Array<String>()
         paths.append(path)
         
         do{
-            if let html = try? String(contentsOfFile: path, encoding: NSUTF8StringEncoding){
+            if let html = try? String(contentsOfFile: path, encoding: String.Encoding.utf8){
                 var finalHtml = html
                 if let newHtml = Regex("@import\\(([^\\)]*)\\)").replace(finalHtml,withBlock: { (regx) -> String in
                     let subFile = regx.subgroupMatchAtIndex(0)?.trim
-                    let subPath = NSBundle(path: LIVE_LOAD_PATH)!.pathForResource(subFile, ofType: suffix)!
-                    if NSFileManager.defaultManager().fileExistsAtPath(subPath) {
+                    let subPath = Bundle(path: LIVE_LOAD_PATH)!.path(forResource: subFile, ofType: suffix)!
+                    if FileManager.default.fileExists(atPath: subPath) {
                         paths.append(subPath)
-                        return try! String(contentsOfFile:subPath, encoding: NSUTF8StringEncoding)
+                        return try! String(contentsOfFile:subPath, encoding: String.Encoding.utf8)
                     }else{
                         return ""
                     }
@@ -108,8 +128,8 @@ public class EUI: NSObject {
                         views.append(aview.getView())
                     }
                     controller.eu_subViews = views
-                    }, `catch`: { (error) in
-                        print(controller.nameOfClass + "Error:\(error.description)")
+                    }, catch: { (error) in
+                        print(controller.nameOfClass + "Error:\(error?.description)")
                     }, finally: nil)
              
             }else{
@@ -122,26 +142,26 @@ public class EUI: NSObject {
         return paths
     }
     
-    private class func loadHtml (controller:EUScene,suffix:String){
+    fileprivate class func loadHtml (_ controller:EUScene,suffix:String){
         let fileName = controller.nameOfClass
         
-        let path = NSBundle(path: BUNDLE_PATH)!.pathForResource(fileName, ofType: suffix)!
-        if  NSFileManager.defaultManager().fileExistsAtPath(path) == false{
+        let path = Bundle(path: BUNDLE_PATH)!.path(forResource: fileName, ofType: suffix)!
+        if  FileManager.default.fileExists(atPath: path) == false{
             return
         }
-        if let html = try? String(contentsOfFile: path, encoding: NSUTF8StringEncoding) {
+        if let html = try? String(contentsOfFile: path, encoding: String.Encoding.utf8) {
             var finalHtml = html
             if suffix == "crypto" && CRTPTO_KEY != "" {
-                if let aHtml = DesEncrypt.decryptWithText(finalHtml, key: CRTPTO_KEY) {
+                if let aHtml = DesEncrypt.decrypt(withText: finalHtml, key: CRTPTO_KEY) {
                     finalHtml = aHtml
                 }
             }
             if let newHtml = Regex("@import\\(([^\\)]*)\\)").replace(finalHtml,withBlock: { (regx) -> String in
                 let subFile = regx.subgroupMatchAtIndex(0)?.trim
-                let subPath = NSBundle(path: BUNDLE_PATH)!.pathForResource(subFile, ofType: suffix)!
+                let subPath = Bundle(path: BUNDLE_PATH)!.path(forResource: subFile, ofType: suffix)!
                 
-                if NSFileManager.defaultManager().fileExistsAtPath(subPath) {
-                    return try! String(contentsOfFile:subPath, encoding: NSUTF8StringEncoding)
+                if FileManager.default.fileExists(atPath: subPath) {
+                    return try! String(contentsOfFile:subPath, encoding: String.Encoding.utf8)
                 }else{
                     return ""
                 }
@@ -187,8 +207,8 @@ public class EUI: NSObject {
                         views.append(aview.getView())
                     }
                     controller.eu_subViews = views
-                }, `catch`: { (error) in
-                    print(controller.nameOfClass + "Error:\(error.description)")
+                }, catch: { (error) in
+                    print(controller.nameOfClass + "Error:\(error?.description)")
                 }, finally: nil)
         }
     }

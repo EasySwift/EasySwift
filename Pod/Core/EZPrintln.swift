@@ -10,9 +10,9 @@ import Foundation
 
 public var DEBUG = true
 
-public func EZPrintln<T>(message: T, fileName: String = __FILE__, methodName: String = __FUNCTION__, lineNumber: Int = __LINE__) {
+public func EZPrintln<T>(_ message: T, fileName: String = #file, methodName: String = #function, lineNumber: Int = #line) {
     if DEBUG {
-        let file: String = (fileName as NSString).pathComponents.last!.stringByReplacingOccurrencesOfString("swift", withString: "")
+        let file: String = (fileName as NSString).pathComponents.last!.replacingOccurrences(of: "swift", with: "")
         print("\(file)\(methodName)[\(lineNumber)]:\(message)")
     }
 }

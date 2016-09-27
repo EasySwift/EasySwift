@@ -17,7 +17,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let img = UIImageView(frame: CGRectMake(0, 100, 300, 200))
+        let img = UIImageView(frame: CGRect(x: 0, y: 100, width: 300, height: 200))
         self.view.addSubview(img)
         
         self.view.whenTap {
@@ -26,7 +26,7 @@ class FirstViewController: UIViewController {
             self.actionSheet.maxSelectCount = 1
             // 设置照片最大预览数
             self.actionSheet.maxPreviewCount = 20
-            self.actionSheet.showWithSender(self, animate: true, lastSelectPhotoModels: nil, completion: { (imgs, selectImgs) in
+            self.actionSheet.show(withSender: self, animate: true, last: nil, completion: { (imgs, selectImgs) in
                 img.image = imgs.first
             })
         }

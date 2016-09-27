@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class EZCollectionView: UICollectionView {
+open class EZCollectionView: UICollectionView {
 
     /*
      // Only override drawRect: if you perform custom drawing.

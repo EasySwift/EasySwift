@@ -24,7 +24,7 @@ public extension UIImageView {
 
      - Returns A new image
      */
-    func imageFromURL(url: String, placeholder: UIImage, fadeIn: Bool = true, shouldCacheImage: Bool = true, closure: ((image: UIImage?) -> ())? = nil)
+    func imageFromURL(_ url: String, placeholder: UIImage, fadeIn: Bool = true, shouldCacheImage: Bool = true, closure: ((_ image: UIImage?) -> ())? = nil)
     {
         self.image = UIImage.imageFromURL(url, placeholder: placeholder, shouldCacheImage: shouldCacheImage) {
             (image: UIImage?) in
@@ -34,9 +34,9 @@ public extension UIImageView {
             if fadeIn {
                 let crossFade = CABasicAnimation(keyPath: "contents")
                 crossFade.duration = 0.5
-                crossFade.fromValue = self.image?.CIImage
-                crossFade.toValue = image!.CGImage
-                self.layer.addAnimation(crossFade, forKey: "")
+                crossFade.fromValue = self.image?.ciImage
+                crossFade.toValue = image!.cgImage
+                self.layer.add(crossFade, forKey: "")
             }
             if let foundClosure = closure {
                 foundClosure(image: image)

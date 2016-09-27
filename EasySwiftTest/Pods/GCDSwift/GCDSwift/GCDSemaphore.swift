@@ -1,12 +1,12 @@
 import Foundation
 
-public class GCDSemaphore {
+open class GCDSemaphore {
  /**
   *  Returns the underlying dispatch semaphore object.
   *
   *  - returns: The dispatch semaphore object.
   */
-  public let dispatchSemaphore: dispatch_semaphore_t
+  open let dispatchSemaphore: DispatchSemaphore
 
   // MARK: Lifecycle
   
@@ -28,7 +28,7 @@ public class GCDSemaphore {
   *  - SeeAlso: dispatch_semaphore_create()
   */
   public convenience init(value: Int) {
-    self.init(dispatchSemaphore: dispatch_semaphore_create(value))
+    self.init(dispatchSemaphore: DispatchSemaphore(value: value))
   }
 
  /**
@@ -38,7 +38,7 @@ public class GCDSemaphore {
   *  - returns: The initialized instance.
   *  - SeeAlso: dispatch_semaphore_create()
   */
-  public init(dispatchSemaphore: dispatch_semaphore_t) {
+  public init(dispatchSemaphore: DispatchSemaphore) {
     self.dispatchSemaphore = dispatchSemaphore
   }
 
@@ -50,8 +50,8 @@ public class GCDSemaphore {
   *  - returns: `true` if a thread is awoken, `false` otherwise.
   *  - SeeAlso: dispatch_semaphore_signal()
   */
-  public func signal() -> Bool {
-    return dispatch_semaphore_signal(self.dispatchSemaphore) != 0
+  open func signal() -> Bool {
+    return self.dispatchSemaphore.signal() != 0
   }
 
  /**
@@ -59,8 +59,8 @@ public class GCDSemaphore {
   *
   *  - SeeAlso: dispatch_semaphore_wait()
   */
-  public func wait() {
-    dispatch_semaphore_wait(self.dispatchSemaphore, DISPATCH_TIME_FOREVER)
+  open func wait() {
+    self.dispatchSemaphore.wait(timeout: DispatchTime.distantFuture)
   }
   
  /**
@@ -70,9 +70,9 @@ public class GCDSemaphore {
   *  - returns: `true` on success, `false` if the timeout occurred.
   *  - SeeAlso: dispatch_semaphore_wait()
   */
-  public func wait(seconds: Double) -> Bool {
-    let time = dispatch_time(DISPATCH_TIME_NOW, Int64(seconds * Double(GCDConstants.NanosecondsPerSecond)))
+  open func wait(_ seconds: Double) -> Bool {
+    let time = DispatchTime.now() + Double(Int64(seconds * Double(GCDConstants.NanosecondsPerSecond))) / Double(NSEC_PER_SEC)
     
-    return dispatch_semaphore_wait(self.dispatchSemaphore, time) == 0
+    return self.dispatchSemaphore.wait(timeout: time) == 0
   }
 }

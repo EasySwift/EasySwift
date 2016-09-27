@@ -1,7 +1,7 @@
 //
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2015 Srdan Rasic (@srdanrasic)
+//  Copyright (c) 2016 Srdan Rasic (@srdanrasic)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,25 +22,5 @@
 //  THE SOFTWARE.
 //
 
-/// A type that can be used to mimic a variable or a property
-/// that enables observation of its change.
-public final class Observable<Wrapped>: EventProducer<Wrapped> {
 
-  /// The encapsulated value.
-  public var value: Wrapped {
-    get {
-      // We've created buffer of size 1 and we own it so it is safe
-      // to force unwrap both the buffer and the last element.
-      return replayBuffer!.last!
-    }
-    set {
-      next(newValue)
-    }
-  }
-  
-  /// Creates a observable with the given initial value.
-  public init(_ value: Wrapped) {
-    super.init(replayLength: 1)
-    next(value)
-  }
-}
+public typealias Observable<Element> = Property<Element>

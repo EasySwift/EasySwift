@@ -15,7 +15,7 @@ class ImageProperty:ViewProperty{
         view.tagProperty = self
         if !self.src.characters.isEmpty {
             if self.src.hasPrefix("http") {
-                view.kf_setImageWithURL(NSURL(string: self.src)!)
+                view.kf_setImageWithURL(URL(string: self.src)!)
             }else{
                 view.image = UIImage(named: self.src)
             }
@@ -27,7 +27,7 @@ class ImageProperty:ViewProperty{
         return view
     }
     
-    override func renderTag(pelement:OGElement){
+    override func renderTag(_ pelement:OGElement){
         self.tagOut += ["src"]
         
         super.renderTag(pelement)
@@ -37,7 +37,7 @@ class ImageProperty:ViewProperty{
         
     }
     
-    override func childLoop(pelement: OGElement) {
+    override func childLoop(_ pelement: OGElement) {
         
     }
 

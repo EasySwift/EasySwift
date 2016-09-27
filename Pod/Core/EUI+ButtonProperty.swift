@@ -28,34 +28,34 @@ class ButtonProperty: ViewProperty {
         view.tagProperty = self
 
         if self.style != "" {
-            view.setAttributedTitle(NSAttributedString(fromHTMLData: self.contentText?.toData(), attributes: ["html": self.style]), forState: UIControlState.Normal)
+            view.setAttributedTitle(NSAttributedString(fromHTMLData: self.contentText?.toData() as Data!, attributes: ["html": self.style]), for: UIControlState())
         }
 
         if self.highlightedText != nil {
-            view.setAttributedTitle(NSAttributedString(fromHTMLData: self.highlightedText?.toData(), attributes: ["html": self.highlightedStyle]), forState: UIControlState.Highlighted)
+            view.setAttributedTitle(NSAttributedString(fromHTMLData: self.highlightedText?.toData() as Data!, attributes: ["html": self.highlightedStyle]), for: UIControlState.highlighted)
         }
 
         if self.disabledText != nil {
-            view.setAttributedTitle(NSAttributedString(fromHTMLData: self.disabledText?.toData(), attributes: ["html": self.disabledStyle]), forState: UIControlState.Disabled)
+            view.setAttributedTitle(NSAttributedString(fromHTMLData: self.disabledText?.toData() as Data!, attributes: ["html": self.disabledStyle]), for: UIControlState.disabled)
         }
 
         if self.selectedText != nil {
-            view.setAttributedTitle(NSAttributedString(fromHTMLData: self.selectedText?.toData(), attributes: ["html": self.selectedStyle]), forState: UIControlState.Selected)
+            view.setAttributedTitle(NSAttributedString(fromHTMLData: self.selectedText?.toData() as Data!, attributes: ["html": self.selectedStyle]), for: UIControlState.selected)
         }
 
         if self.applicationText != nil {
-            view.setAttributedTitle(NSAttributedString(fromHTMLData: self.applicationText?.toData(), attributes: ["html": self.applicationStyle]), forState: UIControlState.Application)
+            view.setAttributedTitle(NSAttributedString(fromHTMLData: self.applicationText?.toData() as Data!, attributes: ["html": self.applicationStyle]), for: UIControlState.application)
         }
 
         if self.reservedText != nil {
-            view.setAttributedTitle(NSAttributedString(fromHTMLData: self.reservedText?.toData(), attributes: ["html": self.reservedStyle]), forState: UIControlState.Reserved)
+            view.setAttributedTitle(NSAttributedString(fromHTMLData: self.reservedText?.toData() as Data!, attributes: ["html": self.reservedStyle]), for: UIControlState.reserved)
         }
 
         self.renderViewStyle(view)
         return view
     }
 
-    override func renderTag(pelement: OGElement) {
+    override func renderTag(_ pelement: OGElement) {
 
         self.tagOut += ["highlighted", "disabled", "selected", "application", "reserved", "disabled-text",
             "selected-text", "application-text", "reserved-text", "highlighted-text", "onevent"]
@@ -98,7 +98,7 @@ class ButtonProperty: ViewProperty {
         var html = ""
         for child in pelement.children
         {
-            html += child.html().trim
+            html += (child as AnyObject).html().trim
         }
         if let newHtml = self.bindTheKeyPath(html, key: "text") {
             html = newHtml

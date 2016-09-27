@@ -1,7 +1,7 @@
 //
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2015 Srdan Rasic (@srdanrasic)
+//  Copyright (c) 2016 Srdan Rasic (@srdanrasic)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,12 +22,23 @@
 //  THE SOFTWARE.
 //
 
-/// Objects conforming to this protocol can dispose or cancel a connection or a task.
-public protocol DisposableType {
-  
-  /// Disposes or cancels a connection or a task.
-  func dispose()
-  
-  /// Returns `true` is already disposed.
-  var isDisposed: Bool { get }
+import UIKit
+
+extension UISegmentedControl {
+
+  public var bnd_selectedSegmentIndex: DynamicSubject<UISegmentedControl, Int> {
+    return DynamicSubject(
+      target: self,
+      signal: bnd_controlEvents(.valueChanged).eraseType(),
+      get: { $0.selectedSegmentIndex },
+      set: { $0.selectedSegmentIndex = $1 }
+    )
+  }
+}
+
+extension UISegmentedControl: BindableProtocol {
+
+  public func bind(signal: Signal<Int, NoError>) -> Disposable {
+    return bnd_selectedSegmentIndex.bind(signal: signal)
+  }
 }

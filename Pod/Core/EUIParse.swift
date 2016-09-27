@@ -10,12 +10,12 @@ import UIKit
 import SnapKit
 
 class EUIParse: NSObject {
-    class func ParseHtml(html:String) -> [ViewProperty]{
-        let data = ObjectiveGumbo.parseDocumentWithString(html)
-        let body = data.elementsWithTag(GUMBO_TAG_BODY).first as! OGElement
+    class func ParseHtml(_ html:String) -> [ViewProperty]{
+        let data = ObjectiveGumbo.parseDocument(with: html)
+        let body = data?.elements(with: GUMBO_TAG_BODY).first as! OGElement
         var viewArray = [ViewProperty]()
         for element in body.children {
-            if element.isKindOfClass(OGElement) {
+            if (element as AnyObject).isKind(of: OGElement) {
                 if let pro = self.loopElement(element as! OGElement) {
                     viewArray.append(pro)
                 }
@@ -25,7 +25,7 @@ class EUIParse: NSObject {
     }
     
     // 对子节点进行递归解析
-    class func loopElement(pelement:OGElement) -> ViewProperty?{
+    class func loopElement(_ pelement:OGElement) -> ViewProperty?{
         var tagProperty:ViewProperty?
         var type:String?
         
@@ -71,14 +71,14 @@ class EUIParse: NSObject {
         return tagProperty
     }
     
-    class func string (element:OGElement,key:String) ->String?{
+    class func string (_ element:OGElement,key:String) ->String?{
         if let str = element.attributes?[key] as? String {
             return str
         }
         return nil
     }
     
-    class func getStyleProperty (element:OGElement,key:String) -> Array<Constrain>? {
+    class func getStyleProperty (_ element:OGElement,key:String) -> Array<Constrain>? {
         if element.attributes?[key] == nil {
             return nil
         }

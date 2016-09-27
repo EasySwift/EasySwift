@@ -11,7 +11,7 @@ import UIKit
 extension NSObject {
 
     // 1. 十进制 -> 二进制
-    public func dec2bin(number: Int) -> String {
+    public func dec2bin(_ number: Int) -> String {
         var temp = number
         var str = ""
         while temp > 0 {
@@ -22,7 +22,7 @@ extension NSObject {
     }
 
     // 2. 二进制 -> 十进制
-    public func bin2dec(num: String) -> Int {
+    public func bin2dec(_ num: String) -> Int {
         var sum = 0
         for c in num.utf8 {
             sum = sum * 2 + Int("\(c)")!
@@ -31,13 +31,13 @@ extension NSObject {
     }
 
     // 3. 十进制 -> 十六进制
-    public func dec2hex(num: Int) -> String {
+    public func dec2hex(_ num: Int) -> String {
         return String(format: "%0X", num)
     }
 
     // 4. 十六进制 -> 十进制
-    public func hex2dec(num: String) -> Int {
-        let str = num.uppercaseString
+    public func hex2dec(_ num: String) -> Int {
+        let str = num.uppercased()
         var sum = 0
         for i in str.utf8 {
             sum = sum * 16 + Int(i) - 48 // 0-9 从48开始
@@ -54,7 +54,7 @@ extension NSObject {
 
      - parameter key: 键值
      */
-    public func localStr(key: String) -> String {
-        return NSBundle.mainBundle().localizedStringForKey(key, value: nil, table: nil)
+    public func localStr(_ key: String) -> String {
+        return Bundle.main.localizedString(forKey: key, value: nil, table: nil)
     }
 }

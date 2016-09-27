@@ -64,8 +64,8 @@ import JavaScriptCore
 
 @objc public protocol EUIImage:JSExport,ENSObject{
     init(named name: String)// load from main bundle
-    @available(iOS, introduced=8.0)
-    init(named name: String, inBundle bundle: NSBundle?, compatibleWithTraitCollection traitCollection: UITraitCollection?)
+    @available(iOS, introduced: 8.0)
+    init(named name: String, inBundle bundle: Bundle?, compatibleWithTraitCollection traitCollection: UITraitCollection?)
     init?(contentsOfFile path: String)
 }
 

@@ -10,7 +10,7 @@ import UIKit
 import Bond
 // MARK: - UIView
 
-let UIViewAnimationDuration: NSTimeInterval = 1
+let UIViewAnimationDuration: TimeInterval = 1
 let UIViewAnimationSpringDamping: CGFloat = 0.5
 let UIViewAnimationSpringVelocity: CGFloat = 0.5
 var UIViewGestureUniqueArray:CGFloat = 0.6
@@ -131,19 +131,19 @@ extension UIView {
     }
     
     
-    public func leftWithOffset (offset: CGFloat) -> CGFloat {
+    public func leftWithOffset (_ offset: CGFloat) -> CGFloat {
         return self.left - offset
     }
     
-    public func rightWithOffset (offset: CGFloat) -> CGFloat {
+    public func rightWithOffset (_ offset: CGFloat) -> CGFloat {
         return self.right + offset
     }
     
-    public func topWithOffset (offset: CGFloat) -> CGFloat {
+    public func topWithOffset (_ offset: CGFloat) -> CGFloat {
         return self.top - offset
     }
     
-    public func botttomWithOffset (offset: CGFloat) -> CGFloat {
+    public func botttomWithOffset (_ offset: CGFloat) -> CGFloat {
         return self.bottom + offset
     }
     
@@ -151,7 +151,7 @@ extension UIView {
     
     // MARK: Transform Extensions
     
-    public func setRotationX (x: CGFloat) {
+    public func setRotationX (_ x: CGFloat) {
         var transform = CATransform3DIdentity
         transform.m34 = 1.0 / -1000.0
         transform = CATransform3DRotate(transform, degreesToRadians(x), 1.0, 0.0, 0.0)
@@ -159,7 +159,7 @@ extension UIView {
         self.layer.transform = transform
     }
     
-    public func setRotationY (y: CGFloat) {
+    public func setRotationY (_ y: CGFloat) {
         var transform = CATransform3DIdentity
         transform.m34 = 1.0 / -1000.0
         transform = CATransform3DRotate(transform, degreesToRadians(y), 0.0, 1.0, 0.0)
@@ -167,7 +167,7 @@ extension UIView {
         self.layer.transform = transform
     }
     
-    public func setRotationZ (z: CGFloat) {
+    public func setRotationZ (_ z: CGFloat) {
         var transform = CATransform3DIdentity
         transform.m34 = 1.0 / -1000.0
         transform = CATransform3DRotate(transform, degreesToRadians(z), 0.0, 0.0, 1.0)
@@ -175,7 +175,7 @@ extension UIView {
         self.layer.transform = transform
     }
     
-    public func setRotation (x: CGFloat,
+    public func setRotation (_ x: CGFloat,
         y: CGFloat,
         z: CGFloat) {
             var transform = CATransform3DIdentity
@@ -188,7 +188,7 @@ extension UIView {
     }
     
     
-    public func setScale (x: CGFloat,
+    public func setScale (_ x: CGFloat,
         y: CGFloat) {
             var transform = CATransform3DIdentity
             transform.m34 = 1.0 / -1000.0
@@ -201,7 +201,7 @@ extension UIView {
     
     // MARK: Anchor Extensions
     
-    public func setAnchorPosition (anchorPosition: AnchorPosition) {
+    public func setAnchorPosition (_ anchorPosition: AnchorPosition) {
         print(anchorPosition.rawValue)
         self.layer.anchorPoint = anchorPosition.rawValue
     }
@@ -210,58 +210,58 @@ extension UIView {
     
     // MARK: Layer Extensions
     
-    public func addShadow (offset: CGSize,
+    public func addShadow (_ offset: CGSize,
         radius: CGFloat,
         color: UIColor,
         opacity: Float) {
             self.layer.shadowOffset = offset
             self.layer.shadowRadius = radius
             self.layer.shadowOpacity = opacity
-            self.layer.shadowColor = color.CGColor
+            self.layer.shadowColor = color.cgColor
     }
     
-    public func addBorder (width: CGFloat,
+    public func addBorder (_ width: CGFloat,
         color: UIColor) {
             self.layer.borderWidth = width
-            self.layer.borderColor = color.CGColor
+            self.layer.borderColor = color.cgColor
             self.layer.masksToBounds = true
     }
     
     
-    public func setCornerRadius (radius: CGFloat) {
+    public func setCornerRadius (_ radius: CGFloat) {
         self.layer.cornerRadius = radius
         self.layer.masksToBounds = true
     }
     
     
-    public func drawCircle (fillColor: UIColor,
+    public func drawCircle (_ fillColor: UIColor,
         strokeColor: UIColor,
         strokeWidth: CGFloat) {
             let path = UIBezierPath (roundedRect: CGRect (x: 0, y: 0, width: self.w, height: self.w), cornerRadius: self.w/2)
             
             let shapeLayer = CAShapeLayer ()
-            shapeLayer.path = path.CGPath
-            shapeLayer.fillColor = fillColor.CGColor
-            shapeLayer.strokeColor = strokeColor.CGColor
+            shapeLayer.path = path.cgPath
+            shapeLayer.fillColor = fillColor.cgColor
+            shapeLayer.strokeColor = strokeColor.cgColor
             shapeLayer.lineWidth = strokeWidth
             
             self.layer.addSublayer(shapeLayer)
     }
     
-    public func drawStroke (width: CGFloat,
+    public func drawStroke (_ width: CGFloat,
         color: UIColor) {
             let path = UIBezierPath (roundedRect: CGRect (x: 0, y: 0, width: self.w, height: self.w), cornerRadius: self.w/2)
             
             let shapeLayer = CAShapeLayer ()
-            shapeLayer.path = path.CGPath
-            shapeLayer.fillColor = UIColor.clearColor().CGColor
-            shapeLayer.strokeColor = color.CGColor
+            shapeLayer.path = path.cgPath
+            shapeLayer.fillColor = UIColor.clear.cgColor
+            shapeLayer.strokeColor = color.cgColor
             shapeLayer.lineWidth = width
             
             self.layer.addSublayer(shapeLayer)
     }
     
-    public func drawArc (from: CGFloat,
+    public func drawArc (_ from: CGFloat,
         to: CGFloat,
         clockwise: Bool,
         width: CGFloat,
@@ -271,9 +271,9 @@ extension UIView {
             let path = UIBezierPath (arcCenter: self.center, radius: self.w/2, startAngle: degreesToRadians(from), endAngle: degreesToRadians(to), clockwise: clockwise)
             
             let shapeLayer = CAShapeLayer ()
-            shapeLayer.path = path.CGPath
-            shapeLayer.fillColor = fillColor.CGColor
-            shapeLayer.strokeColor = strokeColor.CGColor
+            shapeLayer.path = path.cgPath
+            shapeLayer.fillColor = fillColor.cgColor
+            shapeLayer.strokeColor = strokeColor.cgColor
             shapeLayer.lineWidth = width
             
             self.layer.addSublayer(shapeLayer)
@@ -283,20 +283,20 @@ extension UIView {
     
     // MARK: Animation Extensions
     
-    public func spring (animations: (()->Void)!,
+    public func spring (_ animations: (()->Void)!,
         completion: ((Bool)->Void)? = nil) {
-            UIView.animateWithDuration(UIViewAnimationDuration,
+            UIView.animate(withDuration: UIViewAnimationDuration,
                 delay: 0,
                 usingSpringWithDamping: UIViewAnimationSpringDamping,
                 initialSpringVelocity: UIViewAnimationSpringVelocity,
-                options: UIViewAnimationOptions.AllowAnimatedContent,
+                options: UIViewAnimationOptions.allowAnimatedContent,
                 animations: animations,
                 completion: completion)
     }
     
-    public func animate (animations: (()->Void)!,
+    public func animate (_ animations: (()->Void)!,
         completion: ((Bool)->Void)? = nil) {
-            UIView.animateWithDuration(UIViewAnimationDuration,
+            UIView.animate(withDuration: UIViewAnimationDuration,
                 animations: animations,
                 completion: completion)
     }
@@ -305,14 +305,14 @@ extension UIView {
     
     // MARK: Gesture Extensions
     
-    public func addTapGesture (tapNumber: NSInteger,
+    public func addTapGesture (_ tapNumber: NSInteger,
         target: AnyObject, action: Selector) {
             let tap = UITapGestureRecognizer (target: target, action: action)
             tap.numberOfTapsRequired = tapNumber
             self.addGestureRecognizer(tap)
     }
     
-    public func addSwipeGesture (direction: UISwipeGestureRecognizerDirection,
+    public func addSwipeGesture (_ direction: UISwipeGestureRecognizerDirection,
         numberOfTouches: Int,
         target: AnyObject,
         action: Selector) {
@@ -322,21 +322,21 @@ extension UIView {
             self.addGestureRecognizer(swipe)
     }
     
-    public func addPanGesture (target: AnyObject,
+    public func addPanGesture (_ target: AnyObject,
         action: Selector) {
             let pan = UIPanGestureRecognizer (target: target, action: action)
             self.addGestureRecognizer(pan)
     }
     
-    public func whenTap(number:NSInteger = 1,block:()->Void) -> DisposableType{
-        self.userInteractionEnabled = true
+    public func whenTap(_ number:NSInteger = 1,block:()->Void) -> DisposableType{
+        self.isUserInteractionEnabled = true
         return bnd_tapGestureEvent(number).observe { (_) -> () in
             block()
         }
     }
     
-    public func whenSwipe(number:NSInteger = 1,direction:UISwipeGestureRecognizerDirection,block:()->Void) -> DisposableType{
-        self.userInteractionEnabled = true
+    public func whenSwipe(_ number:NSInteger = 1,direction:UISwipeGestureRecognizerDirection,block:()->Void) -> DisposableType{
+        self.isUserInteractionEnabled = true
         return bnd_swipeGestureEvent(number).observe { (_) -> () in
             block()
         }

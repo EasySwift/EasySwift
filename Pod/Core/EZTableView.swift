@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class EZTableView: UITableView {
+open class EZTableView: UITableView {
 
     /*
      // Only override drawRect: if you perform custom drawing.

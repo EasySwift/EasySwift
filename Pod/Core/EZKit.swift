@@ -12,21 +12,21 @@ import UIKit
 
 // MARK: - UIBarButtonItem
 
-public func barButtonItem (imageName: String,
-    action: (AnyObject)->()) -> UIBarButtonItem {
+public func barButtonItem (_ imageName: String,
+    action: @escaping (AnyObject)->()) -> UIBarButtonItem {
         let button = BlockButton (frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        button.setImage(UIImage(named: imageName), forState: .Normal)
+        button.setImage(UIImage(named: imageName), for: UIControlState())
         button.actionBlock = action
         
         return UIBarButtonItem (customView: button)
 }
 
-public func barButtonItem (title: String,
+public func barButtonItem (_ title: String,
     color: UIColor,
-    action: (AnyObject)->()) -> UIBarButtonItem {
+    action: @escaping (AnyObject)->()) -> UIBarButtonItem {
         let button = BlockButton (frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        button.setTitle(title, forState: .Normal)
-        button.setTitleColor(color, forState: .Normal)
+        button.setTitle(title, for: UIControlState())
+        button.setTitleColor(color, for: UIControlState())
         button.actionBlock = action
         button.sizeToFit()
         
@@ -59,20 +59,20 @@ public func - (left: CGPoint, right: CGPoint) -> CGPoint {
 
 
 public enum AnchorPosition: CGPoint {
-    case TopLeft        = "{0, 0}"
-    case TopCenter      = "{0.5, 0}"
-    case TopRight       = "{1, 0}"
+    case topLeft        = "{0, 0}"
+    case topCenter      = "{0.5, 0}"
+    case topRight       = "{1, 0}"
     
-    case MidLeft        = "{0, 0.5}"
-    case MidCenter      = "{0.5, 0.5}"
-    case MidRight       = "{1, 0.5}"
+    case midLeft        = "{0, 0.5}"
+    case midCenter      = "{0.5, 0.5}"
+    case midRight       = "{1, 0.5}"
     
-    case BottomLeft     = "{0, 1}"
-    case BottomCenter   = "{0.5, 1}"
-    case BottomRight    = "{1, 1}"
+    case bottomLeft     = "{0, 1}"
+    case bottomCenter   = "{0.5, 1}"
+    case bottomRight    = "{1, 1}"
 }
 
-extension CGPoint: StringLiteralConvertible {
+extension CGPoint: ExpressibleByStringLiteral {
     
     public init(stringLiteral value: StringLiteralType) {
         self = CGPointFromString(value)
@@ -91,19 +91,19 @@ extension CGPoint: StringLiteralConvertible {
 
 // MARK: - CGFloat
 
-public func degreesToRadians (angle: CGFloat) -> CGFloat {
+public func degreesToRadians (_ angle: CGFloat) -> CGFloat {
     return (CGFloat (M_PI) * angle) / 180.0
 }
 
 
-public func normalizeValue (value: CGFloat,
+public func normalizeValue (_ value: CGFloat,
     min: CGFloat,
     max: CGFloat) -> CGFloat {
     return (max - min) / value
 }
 
 
-public func convertNormalizedValue (value: CGFloat,
+public func convertNormalizedValue (_ value: CGFloat,
     min: CGFloat,
     max: CGFloat) -> CGFloat {
     return ((max - min) * value) + min
@@ -116,7 +116,7 @@ public func convertNormalizedValue (value: CGFloat,
 
 // MARK: - BlockButton
 
-public class BlockButton: UIButton {
+open class BlockButton: UIButton {
     
     override init (frame: CGRect) {
         super.init(frame: frame)
@@ -126,14 +126,14 @@ public class BlockButton: UIButton {
         super.init(coder: aDecoder)
     }
     
-    var actionBlock: ((sender: BlockButton) -> ())? {
+    var actionBlock: ((_ sender: BlockButton) -> ())? {
         didSet {
-            self.addTarget(self, action: #selector(BlockButton.action(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            self.addTarget(self, action: #selector(BlockButton.action(_:)), for: UIControlEvents.touchUpInside)
         }
     }
     
-    func action (sender: BlockButton) {
-        actionBlock! (sender: sender)
+    func action (_ sender: BlockButton) {
+        actionBlock! (sender)
     }
 }
 
@@ -141,13 +141,13 @@ public class BlockButton: UIButton {
 
 // MARK: - BlockWebView
 
-public class BlockWebView: UIWebView, UIWebViewDelegate {
+open class BlockWebView: UIWebView, UIWebViewDelegate {
     
-    var didStartLoad: ((NSURLRequest?) -> ())?
-    var didFinishLoad: ((NSURLRequest?) -> ())?
-    var didFailLoad: ((NSURLRequest?, NSError?) -> ())?
+    var didStartLoad: ((URLRequest?) -> ())?
+    var didFinishLoad: ((URLRequest?) -> ())?
+    var didFailLoad: ((URLRequest?, NSError?) -> ())?
     
-    var shouldStartLoadingRequest: ((NSURLRequest) -> (Bool))?
+    var shouldStartLoadingRequest: ((URLRequest) -> (Bool))?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -159,18 +159,18 @@ public class BlockWebView: UIWebView, UIWebViewDelegate {
     }
     
     
-    @objc public func webViewDidStartLoad(webView: UIWebView) {
+    @objc open func webViewDidStartLoad(_ webView: UIWebView) {
         didStartLoad? (webView.request)
     }
     
-    @objc public func webViewDidFinishLoad(webView: UIWebView) {
+    @objc open func webViewDidFinishLoad(_ webView: UIWebView) {
         didFinishLoad? (webView.request)
     }
-    @objc  public func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
-        didFailLoad? (webView.request, error)
+    @objc  open func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        didFailLoad? (webView.request, error as NSError?)
     }
     
-    @objc public func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    @objc open func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         if let should = shouldStartLoadingRequest {
             return should (request)
         } else {
@@ -181,16 +181,16 @@ public class BlockWebView: UIWebView, UIWebViewDelegate {
 }
 
 
-public func nsValueForAny(anyValue:Any) -> NSObject? {
+public func nsValueForAny(_ anyValue:Any) -> NSObject? {
     switch(anyValue) {
     case let intValue as Int:
-        return NSNumber(int: CInt(intValue))
+        return NSNumber(value: CInt(intValue) as Int32)
     case let doubleValue as Double:
-        return NSNumber(double: CDouble(doubleValue))
+        return NSNumber(value: CDouble(doubleValue) as Double)
     case let stringValue as String:
         return stringValue as NSString
     case let boolValue as Bool:
-        return NSNumber(bool: boolValue)
+        return NSNumber(value: boolValue as Bool)
     default:
         return nil
     }
@@ -198,11 +198,11 @@ public func nsValueForAny(anyValue:Any) -> NSObject? {
 
 extension NSObject{
     public class var nameOfClass: String{
-        return NSStringFromClass(self).componentsSeparatedByString(".").last!
+        return NSStringFromClass(self).components(separatedBy: ".").last!
     }
     
     public var nameOfClass: String{
-        return NSStringFromClass(self.dynamicType).componentsSeparatedByString(".").last!
+        return NSStringFromClass(type(of: self)).components(separatedBy: ".").last!
     }
 
     
@@ -222,12 +222,12 @@ extension NSObject{
 }
 
 
-public func isEmpty<C : NSObject>(x: C) -> Bool {
-    if x.isKindOfClass(NSNull) {
+public func isEmpty<C : NSObject>(_ x: C) -> Bool {
+    if x.isKind(of: NSNull.self) {
         return true
-    }else if x.respondsToSelector(#selector(_NSStringCoreType.length)) && NSData().self.length == 0 {
+    }else if x.responds(to: #selector(_NSStringCoreType.length)) && Data().self.count == 0 {
         return true
-    }else if x.respondsToSelector(Selector("count")) && NSArray().self.count == 0 {
+    }else if x.responds(to: #selector(getter: CIVector.count)) && NSArray().self.count == 0 {
         return true
     }
     return false

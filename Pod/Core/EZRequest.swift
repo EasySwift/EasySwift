@@ -11,60 +11,60 @@ import Bond
 import Alamofire
 
 public enum RequestState: Int {
-    case Default // 初始化状态
-    case Success
-    case Failed
-    case Sending
-    case Error
-    case Cancle
-    case Suspend
-    case SuccessFromCache
-    case ErrorFromCache
+    case `default` // 初始化状态
+    case success
+    case failed
+    case sending
+    case error
+    case cancle
+    case suspend
+    case successFromCache
+    case errorFromCache
 }
 private var enabledDynamicHandleRequest: UInt8 = 0
 private var stateDynamicHandleRequest: UInt8 = 1
 private var managerHandle: UInt8 = 2
 
-public class EZRequest: NSObject {
-    public var output = Dictionary<String, AnyObject>() // 序列化后的数据
-    public var response: Response<AnyObject, NSError>? // 获取字符串数据
-    public var error: ErrorType? // 请求的错误
-    public var state = Observable<RequestState>(.Default) // Request状态
-    public var url: NSURL? // 请求的链接
-    public var message: String? // 错误消息或者服务器返回的MSG
-    public var codeKey: Int? // 错误码返回
+open class EZRequest: NSObject {
+    open var output = Dictionary<String, AnyObject>() // 序列化后的数据
+    open var response: Response<AnyObject, NSError>? // 获取字符串数据
+    open var error: Error? // 请求的错误
+    open var state = Observable<RequestState>(.default) // Request状态
+    open var url: URL? // 请求的链接
+    open var message: String? // 错误消息或者服务器返回的MSG
+    open var codeKey: Int? // 错误码返回
 
     // upload上传相关参数
-    public var files = [(name: String, fileName: String, data: NSData)]() // 请求的文件集合
-    public var progress = 0.0 // 上传进度
-    public var totalBytesWritten = 0.0 // 已上传数据大小
-    public var totalBytesExpectedToWrite = 0.0 // 全部需要上传的数据大小
+    open var files = [(name: String, fileName: String, data: Data)]() // 请求的文件集合
+    open var progress = 0.0 // 上传进度
+    open var totalBytesWritten = 0.0 // 已上传数据大小
+    open var totalBytesExpectedToWrite = 0.0 // 全部需要上传的数据大小
 
     // download下载相关参数
-    public var downloadUrl: URLStringConvertible = ""// 下载图片URL
-    public var targetPath = "" // 下载到路径
-    public var totalBytesRead = 0.0 // 已下载传数据大小
-    public var totalBytesExpectedToRead = 0.0 // 全部需要下载的数据大小
+    open var downloadUrl: URLStringConvertible = ""// 下载图片URL
+    open var targetPath = "" // 下载到路径
+    open var totalBytesRead = 0.0 // 已下载传数据大小
+    open var totalBytesExpectedToRead = 0.0 // 全部需要下载的数据大小
 
-    public var scheme = "http" // 协议
-    public var host = "" // 域名
-    public var path = "" // 请求路径
-    public var staticPath = "" // 其他路径
-    public var method = Method.GET // 提交方式
-    public var parameterEncoding = ParameterEncoding.URL // 编码方式 Http头参数设置
-    public var needCheckCode = true // 是否需要检查错误码
+    open var scheme = "http" // 协议
+    open var host = "" // 域名
+    open var path = "" // 请求路径
+    open var staticPath = "" // 其他路径
+    open var method = Method.GET // 提交方式
+    open var parameterEncoding = ParameterEncoding.url // 编码方式 Http头参数设置
+    open var needCheckCode = true // 是否需要检查错误码
 
-    public var acceptableContentTypes = ["application/json", "text/plain"] // 可接受的序列化返回数据的格式
-    public var requestBlock: (Void -> ())?
-    public var isFirstRequest = false
+    open var acceptableContentTypes = ["application/json", "text/plain"] // 可接受的序列化返回数据的格式
+    open var requestBlock: ((Void) -> ())?
+    open var isFirstRequest = false
 
     // HttpHeader timeoutInterval Cookies 等都在这里设置
-    public var sessionConfiguration: NSURLSessionConfiguration?
-    public var timeoutRequest: NSTimeInterval? // request超时时间
-    public var op: Request?
+    open var sessionConfiguration: URLSessionConfiguration?
+    open var timeoutRequest: TimeInterval? // request超时时间
+    open var op: Request?
 
-    public var requestNeedActive: Observable<Bool> {
-        if let d: AnyObject = objc_getAssociatedObject(self, &enabledDynamicHandleRequest) {
+    open var requestNeedActive: Observable<Bool> {
+        if let d: AnyObject = objc_getAssociatedObject(self, &enabledDynamicHandleRequest) as AnyObject? {
             return (d as? Observable<Bool>)!
         } else {
             let d = Observable<Bool>(false)
@@ -82,25 +82,25 @@ public class EZRequest: NSObject {
     var useCache = false
     var dataFromCache = false
 
-    public var requestKey: String {
+    open var requestKey: String {
         return self.nameOfClass
     }
 
-    public class var requestKey: String {
+    open class var requestKey: String {
         return self.nameOfClass
     }
 
-    public var requestParams: Dictionary<String, AnyObject> {
+    open var requestParams: Dictionary<String, AnyObject> {
         return self.listProperties()
     }
 
-    public var appendPathInfo: String {
+    open var appendPathInfo: String {
         var pathInfo = self.pathInfo
         if pathInfo != nil && !(pathInfo!).characters.isEmpty {
             for (key, nsValue) in self.requestParams {
                 let par = "(\\{\(key)\\})"
                 let str = "\(nsValue)"
-                pathInfo = (try? NSRegularExpression(pattern: par, options: NSRegularExpressionOptions.CaseInsensitive))?.stringByReplacingMatchesInString(str, options: NSMatchingOptions.ReportCompletion, range: NSMakeRange(0, (pathInfo!).characters.count), withTemplate: str)
+                pathInfo = (try? NSRegularExpression(pattern: par, options: NSRegularExpression.Options.caseInsensitive))?.stringByReplacingMatches(in: str, options: NSRegularExpression.MatchingOptions.reportCompletion, range: NSMakeRange(0, (pathInfo!).characters.count), withTemplate: str)
             }
         }
         if pathInfo == nil {
@@ -109,12 +109,12 @@ public class EZRequest: NSObject {
         return pathInfo!
     }
 
-    public var pathInfo: String? {
+    open var pathInfo: String? {
         return nil
     }
 
     // the key for cache
-    public var cacheKey: String {
+    open var cacheKey: String {
         if self.method == .GET {
             return self.url!.absoluteString.MD5
         } else if !isEmpty(self.requestParams) {
@@ -124,22 +124,22 @@ public class EZRequest: NSObject {
         }
     }
 
-    public func suspend() {
+    open func suspend() {
         self.op?.suspend()
-        self.state.value = .Suspend
+        self.state.value = .suspend
     }
 
-    public func resume() {
+    open func resume() {
         self.op?.resume()
-        self.state.value = .Sending
+        self.state.value = .sending
     }
 
-    public func cancel() {
+    open func cancel() {
         self.op?.cancel()
-        self.state.value = .Cancle
+        self.state.value = .cancle
     }
 
-    public var manager: Manager {
+    open var manager: Manager {
         get {
             if let reqManager = objc_getAssociatedObject(self, &managerHandle) as? Manager {
                 return reqManager

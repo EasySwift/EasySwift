@@ -15,11 +15,11 @@ private var databaseNameHandle:UInt8 = 2
 private var modelNameHandle:UInt8 = 3
 private var managedObjectModelHandle:UInt8 = 4
 
-public class EZCoreDataManager {
+open class EZCoreDataManager {
     
-    private static let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String
+    fileprivate static let appName = Bundle.main.infoDictionary!["CFBundleName"] as! String
     
-    public var databaseName: String {
+    open var databaseName: String {
         get {
             if let db = objc_getAssociatedObject(self, &databaseNameHandle) as? String {
                 return db
@@ -34,7 +34,7 @@ public class EZCoreDataManager {
         }
     }
     
-    public var modelName: String {
+    open var modelName: String {
         get {
             if let model = objc_getAssociatedObject(self, &modelNameHandle) as? String {
                 return model
@@ -49,12 +49,12 @@ public class EZCoreDataManager {
         }
     }
     
-    public var managedObjectContext: NSManagedObjectContext {
+    open var managedObjectContext: NSManagedObjectContext {
         get {
             if let context = objc_getAssociatedObject(self, &managedObjectContextHandle) as? NSManagedObjectContext  {
                 return context
             } else {
-                let c = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType)
+                let c = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType)
                 c.persistentStoreCoordinator = persistentStoreCoordinator
                 objc_setAssociatedObject(self, &managedObjectContextHandle, c, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
                 return c
@@ -65,7 +65,7 @@ public class EZCoreDataManager {
         }
     }
     
-    public var persistentStoreCoordinator: NSPersistentStoreCoordinator {
+    open var persistentStoreCoordinator: NSPersistentStoreCoordinator {
         get {
             if let store = objc_getAssociatedObject(self, &persistentStoreCoordinatorHandle) as? NSPersistentStoreCoordinator  {
                 return store
@@ -79,67 +79,67 @@ public class EZCoreDataManager {
         }
     }
 
-    public var managedObjectModel: NSManagedObjectModel {
+    open var managedObjectModel: NSManagedObjectModel {
         if let m = objc_getAssociatedObject(self, &managedObjectModelHandle) as? NSManagedObjectModel {
             return m
         } else {
-            let modelURL = NSBundle.mainBundle().URLForResource(self.modelName, withExtension: "momd")
-            let model = NSManagedObjectModel(contentsOfURL: modelURL!)
+            let modelURL = Bundle.main.url(forResource: self.modelName, withExtension: "momd")
+            let model = NSManagedObjectModel(contentsOf: modelURL!)
             objc_setAssociatedObject(self, &managedObjectModelHandle, model, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             return model!
         }
     }
     
-    public func useInMemoryStore() {
+    open func useInMemoryStore() {
         persistentStoreCoordinator = self.persistentStoreCoordinator(NSInMemoryStoreType, storeURL: nil)
     }
     
-    public func saveContext() -> Bool {
+    open func saveContext() -> Bool {
         return self.managedObjectContext.saveData()
     }
     
-    private var sqliteStoreURL: NSURL {
+    fileprivate var sqliteStoreURL: URL {
         #if os(iOS)
             let dir = EZCoreDataManager.applicationDocumentsDirectory
             #else
             let dir = EZCoreDataManager.applicationSupportDirectory
             self.createApplicationSupportDirIfNeeded(dir)
         #endif
-        return dir!.URLByAppendingPathComponent(self.databaseName)
+        return dir!.appendingPathComponent(self.databaseName)
         
     }
     
-    private func persistentStoreCoordinator(storeType: String, storeURL: NSURL?) -> NSPersistentStoreCoordinator {
+    fileprivate func persistentStoreCoordinator(_ storeType: String, storeURL: URL?) -> NSPersistentStoreCoordinator {
         let c = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let error = NSErrorPointer()
+        let error: NSErrorPointer = nil
         do {
-            try c.addPersistentStoreWithType(storeType, configuration: nil, URL: storeURL, options: [NSMigratePersistentStoresAutomaticallyOption:true,NSInferMappingModelAutomaticallyOption:true])
+            try c.addPersistentStore(ofType: storeType, configurationName: nil, at: storeURL, options: [NSMigratePersistentStoresAutomaticallyOption:true,NSInferMappingModelAutomaticallyOption:true])
         } catch let error1 as NSError {
-            error.memory = error1
+            error?.pointee = error1
             print("ERROR WHILE CREATING PERSISTENT STORE COORDINATOR! " + error.debugDescription)
         }
         return c
     }
     
-    private static var applicationDocumentsDirectory:NSURL? {
-        return NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last
+    fileprivate static var applicationDocumentsDirectory:URL? {
+        return FileManager.default.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).last
     }
     
-    private static var applicationSupportDirectory:NSURL? {
-        return NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.ApplicationSupportDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last?.URLByAppendingPathComponent(EZCoreDataManager.appName)
+    fileprivate static var applicationSupportDirectory:URL? {
+        return FileManager.default.urls(for: FileManager.SearchPathDirectory.applicationSupportDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).last?.appendingPathComponent(EZCoreDataManager.appName)
     }
     
-    private static func createApplicationSupportDirIfNeeded(dir: NSURL) {
-        if NSFileManager.defaultManager().fileExistsAtPath(dir.absoluteString) {
+    fileprivate static func createApplicationSupportDirIfNeeded(_ dir: URL) {
+        if FileManager.default.fileExists(atPath: dir.absoluteString) {
             return
         }
         do {
-            try NSFileManager.defaultManager().createDirectoryAtURL(dir, withIntermediateDirectories: true, attributes: nil)
+            try FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true, attributes: nil)
         } catch _ {
         }
     }
     // singleton
-    public static let sharedManager = EZCoreDataManager()
+    open static let sharedManager = EZCoreDataManager()
 }
 
 
@@ -149,9 +149,9 @@ public extension NSManagedObjectContext {
         return EZCoreDataManager.sharedManager.managedObjectContext
     }
     
-    func createFetchRequest(entityName:String) -> NSFetchRequest {
+    func createFetchRequest(_ entityName:String) -> NSFetchRequest<AnyObject> {
         let request = NSFetchRequest()
-        request.entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: self)
+        request.entity = NSEntityDescription.entity(forEntityName: entityName, in: self)
         return request
     }
     
@@ -159,13 +159,13 @@ public extension NSManagedObjectContext {
         if !self.hasChanges {
             return true
         }
-        let error = NSErrorPointer()
+        let error: NSErrorPointer = nil
         let save: Bool
         do {
             try self.save()
             save = true
         } catch let error1 as NSError {
-            error.memory = error1
+            error?.pointee = error1
             save = false
         }
         
@@ -182,29 +182,29 @@ public extension NSManagedObjectContext {
 
 public extension NSPredicate{
     
-    public func condition(condition: AnyObject?) -> NSPredicate?{
+    public func condition(_ condition: AnyObject?) -> NSPredicate?{
         if let cond: AnyObject = condition {
-            return NSCompoundPredicate(type: NSCompoundPredicateType.AndPredicateType, subpredicates:[self, NSPredicate.predicate(cond)])
+            return NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.and, subpredicates:[self, NSPredicate.predicate(cond)])
         }
         return self
     }
     
-    public func orCondition(condition: AnyObject?) -> NSPredicate?{
+    public func orCondition(_ condition: AnyObject?) -> NSPredicate?{
         if let cond: AnyObject = condition {
-            return NSCompoundPredicate(type: NSCompoundPredicateType.OrPredicateType, subpredicates:[self, NSPredicate.predicate(cond)])
+            return NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.or, subpredicates:[self, NSPredicate.predicate(cond)])
         }
         return self
     }
     
-    private static func predicate(properties: [String:AnyObject]) -> NSPredicate {
+    fileprivate static func predicate(_ properties: [String:AnyObject]) -> NSPredicate {
         var preds = [NSPredicate]()
         for (key, value) in properties {
             preds.append(NSPredicate(format: "%K = %@", argumentArray: [key, value]))
         }
-        return NSCompoundPredicate(type: NSCompoundPredicateType.AndPredicateType, subpredicates: preds)
+        return NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.and, subpredicates: preds)
     }
     
-    private static func predicate(condition: AnyObject) -> NSPredicate {
+    fileprivate static func predicate(_ condition: AnyObject) -> NSPredicate {
         if condition is NSPredicate {
             return condition as! NSPredicate
         }
@@ -217,7 +217,7 @@ public extension NSPredicate{
 
 public extension NSFetchRequest{
     
-    public func condition(condition: AnyObject?) -> NSFetchRequest{
+    public func condition(_ condition: AnyObject?) -> NSFetchRequest{
          if let cond: AnyObject = condition {
             if let pred = self.predicate {
                 self.predicate = pred.condition(cond)
@@ -228,15 +228,15 @@ public extension NSFetchRequest{
         return self
     }
     
-    public func orCondition(condition: AnyObject?) -> NSFetchRequest{
+    public func orCondition(_ condition: AnyObject?) -> NSFetchRequest{
         if let cond: AnyObject = condition,let pred = self.predicate  {
             self.predicate = pred.orCondition(cond)
         }
         return self
     }
     
-    public func orderBy(key:String,_ order:String = "ASC") -> NSFetchRequest{
-        let sortDescriptor = NSSortDescriptor(key: key, ascending: order.uppercaseString=="ASC")
+    public func orderBy(_ key:String,_ order:String = "ASC") -> NSFetchRequest{
+        let sortDescriptor = NSSortDescriptor(key: key, ascending: order.uppercased()=="ASC")
         if self.sortDescriptors == nil{
             self.sortDescriptors = [sortDescriptor]
         }else{
@@ -252,7 +252,7 @@ public extension NSFetchRequest{
     * @return self
     * @static
     */
-    public func limit(value:Int) -> NSFetchRequest{
+    public func limit(_ value:Int) -> NSFetchRequest{
         self.fetchLimit = value
         self.fetchOffset = 0
         return self
@@ -264,7 +264,7 @@ public extension NSFetchRequest{
     * @param int value
     * @return NSFetchRequest
     */
-    public func take(value:Int) -> NSFetchRequest{
+    public func take(_ value:Int) -> NSFetchRequest{
         return self.limit(value)
     }
     
@@ -275,7 +275,7 @@ public extension NSFetchRequest{
     * @param int perPage
     * @return NSFetchRequest
     */
-    public func forPage(page:Int,_ perPage:Int) -> NSFetchRequest{
+    public func forPage(_ page:Int,_ perPage:Int) -> NSFetchRequest{
         self.fetchLimit = perPage
         self.fetchOffset = (page - 1) * perPage
         return self
@@ -289,17 +289,17 @@ public extension NSFetchRequest{
         var i = 0
         for o in self.get() {
             o.delete()
-            i++
+            i += 1
         }
         return i
     }
     
     public func get() -> [NSManagedObject]{
-        return (try! NSManagedObjectContext.defaultContext.executeFetchRequest(self)) as! [NSManagedObject] 
+        return (try! NSManagedObjectContext.defaultContext.fetch(self)) as! [NSManagedObject] 
     }
     
     public func count() -> Int {
-        return NSManagedObjectContext.defaultContext.countForFetchRequest(self, error: nil)
+        return NSManagedObjectContext.defaultContext.count(for: self, error: nil)
     }
     
     public func exists() -> Bool {

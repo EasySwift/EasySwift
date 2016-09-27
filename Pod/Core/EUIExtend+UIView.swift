@@ -20,13 +20,13 @@ private var UIViewDisposeBag: UInt8 = 5
 //private var CollectionViewDataSourceBond :UInt8 = 6
 private var attributedLabelDelegateHandle: UInt8 = 7
 
-public class TTTAttributedLabelDelegateHandle: NSObject, TTTAttributedLabelDelegate {
+open class TTTAttributedLabelDelegateHandle: NSObject, TTTAttributedLabelDelegate {
 
 }
 extension EUScene {
     public var attributedLabelDelegate: TTTAttributedLabelDelegateHandle? {
         get {
-            if let d: AnyObject = objc_getAssociatedObject(self, &attributedLabelDelegateHandle) {
+            if let d: AnyObject = objc_getAssociatedObject(self, &attributedLabelDelegateHandle) as AnyObject? {
                 return d as? TTTAttributedLabelDelegateHandle
             } else {
                 return nil
@@ -36,7 +36,7 @@ extension EUScene {
         }
     }
 
-    public func eu_viewByTag(tagId: String) -> UIView? {
+    public func eu_viewByTag(_ tagId: String) -> UIView? {
         if let subViews = self.eu_subViews {
             for view in subViews {
                 if view.subviews.count > 0 {
@@ -61,7 +61,7 @@ extension EUScene {
             self.view.subRender(self)
         }
 
-        self.context.setObject(self, forKeyedSubscript: "document")
+        self.context.setObject(self, forKeyedSubscript: "document" as (NSCopying & NSObjectProtocol)!)
         self.eval(self.scriptString)
         self.eu_viewDidLoad()
     }
@@ -71,7 +71,7 @@ extension UIView {
 
     public var disposeBag: DisposeBag? {
         get {
-            if let d: AnyObject = objc_getAssociatedObject(self, &UIViewDisposeBag) {
+            if let d: AnyObject = objc_getAssociatedObject(self, &UIViewDisposeBag) as AnyObject? {
                 return d as? DisposeBag
             } else {
                 return nil
@@ -81,7 +81,7 @@ extension UIView {
         }
     }
 
-    public class func formTag(tag: String) -> UIView {
+    public class func formTag(_ tag: String) -> UIView {
         if let scene = URLNavigation.currentViewController() as? EUScene {
             if let view = scene.eu_viewByTag(tag) {
                 return view
@@ -100,7 +100,7 @@ extension UIView {
 
     var tagProperty: ViewProperty {
         get {
-            if let d: AnyObject = objc_getAssociatedObject(self, &UIViewViewPropertyHandle) {
+            if let d: AnyObject = objc_getAssociatedObject(self, &UIViewViewPropertyHandle) as AnyObject? {
                 return d as! ViewProperty
             } else {
                 return ViewProperty()
@@ -110,7 +110,7 @@ extension UIView {
         }
     }
 
-    public func getSubViewByTagId(tagId: String) -> UIView? {
+    public func getSubViewByTagId(_ tagId: String) -> UIView? {
         for view in self.subviews {
             if view.subviews.count > 0 {
                 if let aview = view.getSubViewByTagId(tagId) {
@@ -132,7 +132,7 @@ extension UIView {
         }
     }
 
-    func getViewById(tagId: String) -> UIView? {
+    func getViewById(_ tagId: String) -> UIView? {
         if tagId == "" {
             return nil
         } else if tagId == Constrain.targetRoot {
@@ -146,38 +146,38 @@ extension UIView {
         }
     }
 
-    func subRender(scene: EUScene) {
+    func subRender(_ scene: EUScene) {
         for subView in self.subviews {
             let view = subView
             view.renderTheView(scene)
         }
     }
 
-    func renderTheView(scene: EUScene) {
+    func renderTheView(_ scene: EUScene) {
         self.subRender(scene)
         self.renderSelector(scene)
         self.renderGesture(scene)
         self.renderLayout()
     }
 
-    public func renderDataBinding(scene: EUScene, bind: NSObject?) {
+    public func renderDataBinding(_ scene: EUScene, bind: NSObject?) {
         for subView in self.subviews {
             subView.renderDataBinding(scene, bind: bind)
         }
         let property = self.tagProperty as ViewProperty
 
         if let bindKey = property.bind["background-color"] {
-            if let color = bind!.valueForKey(bindKey) as? EZColor {
+            if let color = bind!.value(forKey: bindKey) as? EZColor {
                 color.dym!.bindTo(self.bnd_backgroundColor)
             }
         }
         if let bindKey = property.bind["alpha"] {
-            if let alpha = bind!.valueForKey(bindKey) as? EZFloat {
+            if let alpha = bind!.value(forKey: bindKey) as? EZFloat {
                 alpha.dym!.bindTo(self.bnd_alpha)
             }
         }
         if let bindKey = property.bind["hidden"] {
-            if let hidden = bind!.valueForKey(bindKey) as? EZBool {
+            if let hidden = bind!.value(forKey: bindKey) as? EZBool {
                 hidden.dym!.bindTo(self.bnd_hidden)
             }
         }
@@ -190,11 +190,11 @@ extension UIView {
             self.disposeBag?.addDisposable(self.whenTap(selector.tapNumber) {
                 let script = Regex("\\{\\{(\\w+)\\}\\}").replace(selector.selector, withBlock: { (regx) -> String in
                     let bindKey = regx.subgroupMatchAtIndex(0)?.trim
-                    if let value = bind!.valueForKey(bindKey!) as? String {
+                    if let value = bind!.value(forKey: bindKey!) as? String {
                         return value
-                    } else if let value = bind!.valueForKey(bindKey!) as? Int {
+                    } else if let value = bind!.value(forKey: bindKey!) as? Int {
                         return String(value)
-                    } else if let value = bind!.valueForKey(bindKey!) as? Bool {
+                    } else if let value = bind!.value(forKey: bindKey!) as? Bool {
                         return value ? "true" : "false"
                     }
                     return ""
@@ -210,11 +210,11 @@ extension UIView {
             self.disposeBag?.addDisposable(self.whenSwipe(selector.numberOfTouches, direction: selector.direction) {
                 let script = Regex("\\{\\{(\\w+)\\}\\}").replace(selector.selector, withBlock: { (regx) -> String in
                     let bindKey = regx.subgroupMatchAtIndex(0)?.trim
-                    if let value = bind!.valueForKey(bindKey!) as? String {
+                    if let value = bind!.value(forKey: bindKey!) as? String {
                         return value
-                    } else if let value = bind!.valueForKey(bindKey!) as? Int {
+                    } else if let value = bind!.value(forKey: bindKey!) as? Int {
                         return String(value)
-                    } else if let value = bind!.valueForKey(bindKey!) as? Bool {
+                    } else if let value = bind!.value(forKey: bindKey!) as? Bool {
                         return value ? "true" : "false"
                     }
                     return ""
@@ -225,7 +225,7 @@ extension UIView {
 
     }
 
-    func renderGesture(scene: EUScene) {
+    func renderGesture(_ scene: EUScene) {
         let property = self.tagProperty as ViewProperty
 
         self.disposeBag?.dispose()
@@ -248,7 +248,7 @@ extension UIView {
         }
     }
 
-    func renderSelector(scene: EUScene) {
+    func renderSelector(_ scene: EUScene) {
 
     }
 
@@ -316,7 +316,7 @@ extension UIView {
 }
 
 extension UIImageView {
-    override public class func formTag(tag: String) -> UIImageView {
+    override public class func formTag(_ tag: String) -> UIImageView {
         if let scene = URLNavigation.currentViewController() as? EUScene {
             if let view = scene.eu_viewByTag(tag) as? UIImageView {
                 return view
@@ -325,28 +325,28 @@ extension UIImageView {
         return UIImageView()
     }
 
-    override public func renderDataBinding(scene: EUScene, bind: NSObject?) {
+    override public func renderDataBinding(_ scene: EUScene, bind: NSObject?) {
         super.renderDataBinding(scene, bind: bind)
         if let bindKey = self.tagProperty.bind["src"] {
-            if let image = bind!.valueForKey(bindKey) as? EZImage {
+            if let image = bind!.value(forKey: bindKey) as? EZImage {
                 image.dym!.bindTo(self.bnd_image)
-            } else if let src = bind!.valueForKey(bindKey) as? EZURL {
+            } else if let src = bind!.value(forKey: bindKey) as? EZURL {
                 src.dym!.bindTo(self.bnd_URLImage)
-            } else if let image = bind!.valueForKey(bindKey) as? UIImage {
+            } else if let image = bind!.value(forKey: bindKey) as? UIImage {
                 self.image = image
-            } else if let url = bind!.valueForKey(bindKey) as? NSURL {
+            } else if let url = bind!.value(forKey: bindKey) as? URL {
                 self.kf_setImageWithURL(url)
-            } else if let str = bind!.valueForKey(bindKey) as? String {
+            } else if let str = bind!.value(forKey: bindKey) as? String {
                 if let image = UIImage(named: str) {
                     self.image = image
-                } else if let url = NSURL(string: str) {
+                } else if let url = URL(string: str) {
                     self.kf_setImageWithURL(url)
                 }
             }
         } else if let bindKey = self.tagProperty.bind["image"] {
-            if let image = bind!.valueForKey(bindKey) as? EZImage {
+            if let image = bind!.value(forKey: bindKey) as? EZImage {
                 image.dym!.bindTo(self.bnd_image)
-            } else if let image = bind!.valueForKey(bindKey) as? UIImage {
+            } else if let image = bind!.value(forKey: bindKey) as? UIImage {
                 self.image = image
             }
         }
@@ -354,7 +354,7 @@ extension UIImageView {
 }
 
 extension UILabel {
-    override public class func formTag(tag: String) -> UILabel {
+    override public class func formTag(_ tag: String) -> UILabel {
         if let scene = URLNavigation.currentViewController() as? EUScene {
             if let view = scene.eu_viewByTag(tag) as? UILabel {
                 return view
@@ -363,25 +363,25 @@ extension UILabel {
         return UILabel()
     }
 
-    override public func renderDataBinding(scene: EUScene, bind: NSObject?) {
+    override public func renderDataBinding(_ scene: EUScene, bind: NSObject?) {
         super.renderDataBinding(scene, bind: bind)
         if let bindKey = self.tagProperty.bind["text"] {
-            if let text = bind!.valueForKey(bindKey) as? EZAttributedString {
+            if let text = bind!.value(forKey: bindKey) as? EZAttributedString {
                 text.dym!.bindTo(self.bnd_attributedText)
-            } else if let text = bind!.valueForKey(bindKey) as? EZString {
+            } else if let text = bind!.value(forKey: bindKey) as? EZString {
                 text.dym!.bindTo(self.bnd_text)
-            } else if let text = bind!.valueForKey(bindKey) as? String {
+            } else if let text = bind!.value(forKey: bindKey) as? String {
                 self.text = text
-            } else if let data = bind!.valueForKey(bindKey) as? NSData {
+            } else if let data = bind!.value(forKey: bindKey) as? Data {
                 self.attributedText = NSAttributedString(fromHTMLData: data, attributes: ["dict": self.tagProperty.style])
-            } else if let string = bind!.valueForKey(bindKey) as? NSAttributedString {
+            } else if let string = bind!.value(forKey: bindKey) as? NSAttributedString {
                 self.attributedText = string
             }
         }
         if let bindKey = self.tagProperty.bind["text-color"] {
-            if let color = bind!.valueForKey(bindKey) as? EZColor {
+            if let color = bind!.value(forKey: bindKey) as? EZColor {
                 color.dym!.bindTo(self.bnd_textColor)
-            } else if let color = bind!.valueForKey(bindKey) as? UIColor {
+            } else if let color = bind!.value(forKey: bindKey) as? UIColor {
                 self.textColor = color
             }
         }
@@ -389,35 +389,35 @@ extension UILabel {
 }
 
 extension TTTAttributedLabel {
-    override public class func formTag(tag: String) -> TTTAttributedLabel {
+    override public class func formTag(_ tag: String) -> TTTAttributedLabel {
         if let scene = URLNavigation.currentViewController() as? EUScene {
             if let view = scene.eu_viewByTag(tag) as? TTTAttributedLabel {
                 return view
             }
         }
-        return TTTAttributedLabel(frame: CGRectZero)
+        return TTTAttributedLabel(frame: CGRect.zero)
     }
 
-    override public func renderDataBinding(scene: EUScene, bind: NSObject?) {
+    override public func renderDataBinding(_ scene: EUScene, bind: NSObject?) {
         super.renderDataBinding(scene, bind: bind)
         if let bindKey = self.tagProperty.bind["TTText"] {
-            if let text = bind!.valueForKey(bindKey) as? EZAttributedString {
+            if let text = bind!.value(forKey: bindKey) as? EZAttributedString {
                 text.dym! ->> self.dynTTTAttributedText
-            } else if let text = bind!.valueForKey(bindKey) as? EZString {
+            } else if let text = bind!.value(forKey: bindKey) as? EZString {
                 text.dym! ->> self.dynTTText
-            } else if let data = bind!.valueForKey(bindKey) as? EZData {
+            } else if let data = bind!.value(forKey: bindKey) as? EZData {
                 data.dym! ->> self.dynTTTData
-            } else if let text = bind!.valueForKey(bindKey) as? String {
+            } else if let text = bind!.value(forKey: bindKey) as? String {
                 self.setText(text)
-            } else if let data = bind!.valueForKey(bindKey) as? NSData {
+            } else if let data = bind!.value(forKey: bindKey) as? Data {
                 self.setText(NSAttributedString(fromHTMLData: data, attributes: ["dict": self.tagProperty.style]))
-            } else if let string = bind!.valueForKey(bindKey) as? NSAttributedString {
+            } else if let string = bind!.value(forKey: bindKey) as? NSAttributedString {
                 self.setText(string)
             }
         }
     }
 
-    override func renderSelector(scene: EUScene) {
+    override func renderSelector(_ scene: EUScene) {
         if let delegate = scene.attributedLabelDelegate {
             self.delegate = delegate
         }
@@ -425,7 +425,7 @@ extension TTTAttributedLabel {
 }
 
 extension UITextField {
-    override public class func formTag(tag: String) -> UITextField {
+    override public class func formTag(_ tag: String) -> UITextField {
         if let scene = URLNavigation.currentViewController() as? EUScene {
             if let view = scene.eu_viewByTag(tag) as? UITextField {
                 return view
@@ -434,12 +434,12 @@ extension UITextField {
         return UITextField()
     }
 
-    override public func renderDataBinding(scene: EUScene, bind: NSObject?) {
+    override public func renderDataBinding(_ scene: EUScene, bind: NSObject?) {
         super.renderDataBinding(scene, bind: bind)
         if let bindKey = self.tagProperty.bind["text"] {
-            if let text = bind!.valueForKey(bindKey) as? EZString {
+            if let text = bind!.value(forKey: bindKey) as? EZString {
                 text.dym!.bindTo(self.bnd_text)
-            } else if let text = bind!.valueForKey(bindKey) as? String {
+            } else if let text = bind!.value(forKey: bindKey) as? String {
                 self.text = text
             }
         }
@@ -447,7 +447,7 @@ extension UITextField {
 }
 
 extension UIButton {
-    override public class func formTag(tag: String) -> UIButton {
+    override public class func formTag(_ tag: String) -> UIButton {
         if let scene = URLNavigation.currentViewController() as? EUScene {
             if let view = scene.eu_viewByTag(tag) as? UIButton {
                 return view
@@ -456,7 +456,7 @@ extension UIButton {
         return UIButton()
     }
 
-    override func renderSelector(scene: EUScene) {
+    override func renderSelector(_ scene: EUScene) {
         let property = self.tagProperty as? ButtonProperty
         if let selector = property?.onEvent {
             self.bnd_controlEvent.filter { $0 == selector.event }.map { e in }.observe({
@@ -468,7 +468,7 @@ extension UIButton {
 
 private var UITableViewCellHandle: UInt8 = 5
 extension UITableView {
-    override public class func formTag(tag: String) -> UITableView {
+    override public class func formTag(_ tag: String) -> UITableView {
         if let scene = URLNavigation.currentViewController() as? EUScene {
             if let view = scene.eu_viewByTag(tag) as? UITableView {
                 return view
@@ -477,7 +477,7 @@ extension UITableView {
         return UITableView()
     }
 
-    public func getSectionViewByTagId(tagId: String, target: EUScene, bind: NSObject? = nil) -> UIView? {
+    public func getSectionViewByTagId(_ tagId: String, target: EUScene, bind: NSObject? = nil) -> UIView? {
         let property = self.tagProperty as? TableViewProperty
         if let pro = property?.sectionView[tagId] {
             let view = pro.getView()
@@ -490,7 +490,7 @@ extension UITableView {
 
     var reusableViews: Dictionary<String, UIView> {
         get {
-            if let d: AnyObject = objc_getAssociatedObject(self, &UITableViewCellHandle) {
+            if let d: AnyObject = objc_getAssociatedObject(self, &UITableViewCellHandle) as AnyObject? {
                 return d as! Dictionary<String, UIView>
             } else {
                 return Dictionary<String, UIView>()
@@ -500,12 +500,12 @@ extension UITableView {
         }
     }
 
-    override func subRender(scene: EUScene) {
+    override func subRender(_ scene: EUScene) {
         scene.eu_tableViewDidLoad(self)
     }
 
-    public func dequeueReusableCell(reuseId: String, forIndexPath: NSIndexPath, target: EUScene, bind: NSObject? = nil) -> UITableViewCell {
-        let cell = self.dequeueReusableCellWithIdentifier(reuseId, forIndexPath: forIndexPath)
+    public func dequeueReusableCell(_ reuseId: String, forIndexPath: IndexPath, target: EUScene, bind: NSObject? = nil) -> UITableViewCell {
+        let cell = self.dequeueReusableCell(withIdentifier: reuseId, for: forIndexPath)
         if cell.contentView.subviews.count == 0 {
             SwiftTryCatch.`try`({
                 let property = self.tagProperty as! TableViewProperty
@@ -513,8 +513,8 @@ extension UITableView {
                     let view = cellProperty.getView()
                     cell.contentView.addSubview(view)
                     view.renderTheView(target)
-                } }, `catch`: { (error) in
-                    print(self.nameOfClass + "Error:\(error.description)")
+                } }, catch: { (error) in
+                    print(self.nameOfClass + "Error:\(error?.description)")
                 }, finally: nil)
         }
         if let view = cell.contentView.subviews.first {
@@ -526,7 +526,7 @@ extension UITableView {
 
 private var UICollectionViewCellHandle: UInt8 = 5
 extension UICollectionView {
-    override public class func formTag(tag: String) -> UICollectionView {
+    override public class func formTag(_ tag: String) -> UICollectionView {
         if let scene = URLNavigation.currentViewController() as? EUScene {
             if let view = scene.eu_viewByTag(tag) as? UICollectionView {
                 return view
@@ -537,7 +537,7 @@ extension UICollectionView {
 
     var reusableViews: Dictionary<String, UIView> {
         get {
-            if let d: AnyObject = objc_getAssociatedObject(self, &UICollectionViewCellHandle) {
+            if let d: AnyObject = objc_getAssociatedObject(self, &UICollectionViewCellHandle) as AnyObject? {
                 return d as! Dictionary<String, UIView>
             } else {
                 return Dictionary<String, UIView>()
@@ -547,12 +547,12 @@ extension UICollectionView {
         }
     }
 
-    override func subRender(scene: EUScene) {
+    override func subRender(_ scene: EUScene) {
         scene.eu_collectionViewDidLoad(self)
     }
 
-    public func dequeueReusableCell(reuseId: String, forIndexPath: NSIndexPath, target: EUScene, bind: NSObject? = nil) -> UICollectionViewCell {
-        let cell = self.dequeueReusableCellWithReuseIdentifier(reuseId, forIndexPath: forIndexPath)
+    public func dequeueReusableCell(_ reuseId: String, forIndexPath: IndexPath, target: EUScene, bind: NSObject? = nil) -> UICollectionViewCell {
+        let cell = self.dequeueReusableCell(withReuseIdentifier: reuseId, for: forIndexPath)
         if cell.contentView.subviews.count == 0 {
             SwiftTryCatch.`try`({
                 let property = self.tagProperty as! CollectionViewProperty
@@ -560,8 +560,8 @@ extension UICollectionView {
                     let view = cellProperty.getView()
                     cell.contentView.addSubview(view)
                     view.renderTheView(target)
-                } }, `catch`: { (error) in
-                    print(self.nameOfClass + "Error:\(error.description)")
+                } }, catch: { (error) in
+                    print(self.nameOfClass + "Error:\(error?.description)")
                 }, finally: nil)
         }
         if let view = cell.contentView.subviews.first {
@@ -572,7 +572,7 @@ extension UICollectionView {
 }
 
 extension UIScrollView {
-    override public class func formTag(tag: String) -> UIScrollView {
+    override public class func formTag(_ tag: String) -> UIScrollView {
         if let scene = URLNavigation.currentViewController() as? EUScene {
             if let view = scene.eu_viewByTag(tag) as? UIScrollView {
                 return view

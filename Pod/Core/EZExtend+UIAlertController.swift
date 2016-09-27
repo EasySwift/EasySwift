@@ -10,17 +10,17 @@ import UIKit
 
 // MARK: - UIAlertController
 
-public func alert (title: String,
+public func alert (_ title: String,
     message: String,
-    cancelAction: ((UIAlertAction!)->Void)? = nil,
-    okAction: ((UIAlertAction!)->Void)? = nil) -> UIAlertController {
-        let a = UIAlertController (title: title, message: message, preferredStyle: .Alert)
+    cancelAction: ((UIAlertAction?)->Void)? = nil,
+    okAction: ((UIAlertAction?)->Void)? = nil) -> UIAlertController {
+        let a = UIAlertController (title: title, message: message, preferredStyle: .alert)
         
         if let ok = okAction {
-            a.addAction(UIAlertAction(title: "OK", style: .Default, handler: ok))
-            a.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: cancelAction))
+            a.addAction(UIAlertAction(title: "OK", style: .default, handler: ok))
+            a.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: cancelAction))
         } else {
-            a.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: cancelAction))
+            a.addAction(UIAlertAction(title: "OK", style: .cancel, handler: cancelAction))
         }
         
         return a

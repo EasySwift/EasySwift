@@ -1,7 +1,7 @@
 //
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2015 Srdan Rasic (@srdanrasic)
+//  Copyright (c) 2016 Srdan Rasic (@srdanrasic)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,52 +22,19 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+import UIKit
 
-/// A simple collection that buffers latest `size` values.
-public struct Buffer<EventType> {
-  
-  /// Internal buffer
-  internal var buffer: [EventType] = []
-  
-  /// Buffer size
-  public var size: Int
-  
-  /// Last event pushed into the buffer
-  public var last: EventType? {
-    return buffer.last
+public extension UIBarItem {
+
+  public var bnd_title: Bond<UIBarItem, String?> {
+    return Bond(target: self) { $0.title = $1 }
   }
-  
-  /// Creates a new buffer of given size
-  public init(size: Int) {
-    guard size > 0 else {
-      fatalError("Dear Sir/Madam, buffer has to have the size of least 1.")
-    }
-    
-    self.size = size
-    buffer.reserveCapacity(size)
+
+  public var bnd_image: Bond<UIBarItem, UIImage?> {
+    return Bond(target: self) { $0.image = $1 }
   }
-  
-  /// Adds the given element to the buffer. If the buffer is already
-  /// at its capacity, it will discard the oldest element.
-  public mutating func push(event: EventType) {
-    if size == 1 {
-      if buffer.count == 0 {
-        buffer.append(event)
-      } else {
-        buffer[0] = event;
-      }
-    } else {
-      buffer.append(event)
-      if buffer.count > size {
-        buffer.removeFirst()
-      }
-    }
-  }
-  
-  public func replayTo(sink: EventType -> Void) {
-    for event in buffer {
-      sink(event)
-    }
+
+  public var bnd_isEnabled: Bond<UIBarItem, Bool> {
+    return Bond(target: self) { $0.isEnabled = $1 }
   }
 }

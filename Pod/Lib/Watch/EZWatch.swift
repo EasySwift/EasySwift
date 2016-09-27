@@ -8,32 +8,32 @@
 
 import Foundation
 
-func watchForChangesToFilePath(filePath:String,callback:dispatch_block_t) {
-    let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+func watchForChangesToFilePath(_ filePath:String,callback:@escaping ()->()) {
+    let queue = DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default)
     let fileDescriptor = open(filePath, O_EVTONLY)
     
     if fileDescriptor <= 0 {
         return
     }
     assert(fileDescriptor > 0, "Error could subscribe to events for file at path: \(filePath)")
-    let source = dispatch_source_create(DISPATCH_SOURCE_TYPE_VNODE, UInt(fileDescriptor), DISPATCH_VNODE_DELETE | DISPATCH_VNODE_WRITE | DISPATCH_VNODE_EXTEND, queue)
-    dispatch_source_set_event_handler(source){
-        let flags = dispatch_source_get_data(source)
+    let source = DispatchSource.makeFileSystemObjectSource(fileDescriptor: fileDescriptor, eventMask: DispatchSource.FileSystemEvent.delete | DispatchSource.FileSystemEvent.write | DispatchSource.FileSystemEvent.extend, queue: queue)
+    source.setEventHandler{
+        let flags = source.data
         if flags != 0 {
-            dispatch_source_cancel(source)
-            dispatch_async(dispatch_get_main_queue()){
+            source.cancel()
+            DispatchQueue.main.async{
                  callback()
             }
-            let popTime = dispatch_time(DISPATCH_TIME_NOW,  Int64(0.5*Double(NSEC_PER_SEC)))
-            dispatch_after(popTime, queue){
+            let popTime = DispatchTime.now() + Double(Int64(0.5*Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+            queue.asyncAfter(deadline: popTime){
                 watchForChangesToFilePath(filePath, callback: callback)
             }
         }
     }
-    dispatch_source_set_cancel_handler(source){
+    source.setCancelHandler{
         close(fileDescriptor)
     }
-    dispatch_resume(source)
+    source.resume()
 }
 
 

@@ -1,7 +1,7 @@
 //
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2015 Srdan Rasic (@srdanrasic)
+//  Copyright (c) 2016 Srdan Rasic (@srdanrasic)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,10 +22,26 @@
 //  THE SOFTWARE.
 //
 
-public protocol BindableType {
-  associatedtype Element
-  
-  /// Returns a sink that can be used to dispatch events to the receiver.
-  /// Can accept a disposable that will be disposed on receiver's deinit.
-  func sink(disconnectDisposable: DisposableType?) -> (Element -> Void)
+import UIKit
+
+public extension UILabel {
+
+  public var bnd_text: Bond<UILabel, String?> {
+    return Bond(target: self) { $0.text = $1 }
+  }
+
+  public var bnd_attributedText: Bond<UILabel, NSAttributedString?> {
+    return Bond(target: self) { $0.attributedText = $1 }
+  }
+
+  public var bnd_textColor: Bond<UILabel, UIColor?> {
+    return Bond(target: self) { $0.textColor = $1 }
+  }
+}
+
+extension UILabel: BindableProtocol {
+
+  public func bind(signal: Signal<String?, NoError>) -> Disposable {
+    return bnd_text.bind(signal: signal)
+  }
 }

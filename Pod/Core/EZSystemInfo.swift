@@ -9,14 +9,14 @@
 import UIKit
 
 #if os(iOS)
-    public let IOS10_OR_LATER = (UIDevice.currentDevice().systemVersion.caseInsensitiveCompare("10.0") != NSComparisonResult.OrderedAscending)
-    public let IOS9_OR_LATER = (UIDevice.currentDevice().systemVersion.caseInsensitiveCompare("9.0") != NSComparisonResult.OrderedAscending)
-    public let IOS8_OR_LATER = (UIDevice.currentDevice().systemVersion.caseInsensitiveCompare("8.0") != NSComparisonResult.OrderedAscending)
-    public let IOS7_OR_LATER = (UIDevice.currentDevice().systemVersion.caseInsensitiveCompare("7.0") != NSComparisonResult.OrderedAscending)
-    public let IOS6_OR_LATER = (UIDevice.currentDevice().systemVersion.caseInsensitiveCompare("6.0") != NSComparisonResult.OrderedAscending)
-    public let IOS5_OR_LATER = (UIDevice.currentDevice().systemVersion.caseInsensitiveCompare("5.0") != NSComparisonResult.OrderedAscending)
-    public let IOS4_OR_LATER = (UIDevice.currentDevice().systemVersion.caseInsensitiveCompare("4.0") != NSComparisonResult.OrderedAscending)
-    public let IOS3_OR_LATER = (UIDevice.currentDevice().systemVersion.caseInsensitiveCompare("3.0") != NSComparisonResult.OrderedAscending)
+    public let IOS10_OR_LATER = (UIDevice.current.systemVersion.caseInsensitiveCompare("10.0") != ComparisonResult.orderedAscending)
+    public let IOS9_OR_LATER = (UIDevice.current.systemVersion.caseInsensitiveCompare("9.0") != ComparisonResult.orderedAscending)
+    public let IOS8_OR_LATER = (UIDevice.current.systemVersion.caseInsensitiveCompare("8.0") != ComparisonResult.orderedAscending)
+    public let IOS7_OR_LATER = (UIDevice.current.systemVersion.caseInsensitiveCompare("7.0") != ComparisonResult.orderedAscending)
+    public let IOS6_OR_LATER = (UIDevice.current.systemVersion.caseInsensitiveCompare("6.0") != ComparisonResult.orderedAscending)
+    public let IOS5_OR_LATER = (UIDevice.current.systemVersion.caseInsensitiveCompare("5.0") != ComparisonResult.orderedAscending)
+    public let IOS4_OR_LATER = (UIDevice.current.systemVersion.caseInsensitiveCompare("4.0") != ComparisonResult.orderedAscending)
+    public let IOS3_OR_LATER = (UIDevice.current.systemVersion.caseInsensitiveCompare("3.0") != ComparisonResult.orderedAscending)
 
     public let IOS9_OR_EARLIER = !IOS10_OR_LATER
     public let IOS8_OR_EARLIER = !IOS9_OR_LATER
@@ -26,11 +26,11 @@ import UIKit
     public let IOS4_OR_EARLIER = !IOS5_OR_LATER
     public let IOS3_OR_EARLIER = !IOS4_OR_LATER
 
-    public let IS_SCREEN_35_INCH = CGSizeEqualToSize(CGSizeMake(640, 960), UIScreen.mainScreen().currentMode!.size)
-    public let IS_SCREEN_4_INCH = CGSizeEqualToSize(CGSizeMake(640, 1136), UIScreen.mainScreen().currentMode!.size)
-    public let IS_SCREEN_47_INCH = CGSizeEqualToSize(CGSizeMake(750, 1334), UIScreen.mainScreen().currentMode!.size)
+    public let IS_SCREEN_35_INCH = CGSize(width: 640, height: 960).equalTo(UIScreen.main.currentMode!.size)
+    public let IS_SCREEN_4_INCH = CGSize(width: 640, height: 1136).equalTo(UIScreen.main.currentMode!.size)
+    public let IS_SCREEN_47_INCH = CGSize(width: 750, height: 1334).equalTo(UIScreen.main.currentMode!.size)
     public let IS_SCREEN_47_INCH_BIG = (ScreenWidth == 568)
-    public let IS_SCREEN_55_INCH = CGSizeEqualToSize(CGSizeMake(1242, 2208), UIScreen.mainScreen().currentMode!.size)
+    public let IS_SCREEN_55_INCH = CGSize(width: 1242, height: 2208).equalTo(UIScreen.main.currentMode!.size)
     public let IS_SCREEN_55_INCH_BIG = (ScreenWidth == 667)
 #else
     public let IOS9_OR_LATER = false
@@ -67,22 +67,22 @@ public var IsSimulator: Bool {
 }
 
 /// 获取设备名称
-public let name = UIDevice.currentDevice().name
+public let name = UIDevice.current.name
 
 /// 获取设备系统名称
-public let systemName = UIDevice.currentDevice().systemName
+public let systemName = UIDevice.current.systemName
 
 /// 获取系统版本
-public let systemVersion = UIDevice.currentDevice().systemVersion
+public let systemVersion = UIDevice.current.systemVersion
 
 /// 获取设备模型
-public let model = UIDevice.currentDevice().model
+public let model = UIDevice.current.model
 
 /// 获取设备本地模型
-public let localizedModel = UIDevice.currentDevice().localizedModel
+public let localizedModel = UIDevice.current.localizedModel
 
 /// Swift获取Bundle的相关信息
-public let infoDict = NSBundle.mainBundle().infoDictionary
+public let infoDict = Bundle.main.infoDictionary
 
 /// app名称
 public let appName = infoDict!["CFBundleName"] as! String!
@@ -98,14 +98,14 @@ public let appBuild = infoDict!["CFBundleVersion"] as! String!
  - returns: 设备类型
  */
 public func deviceType () -> String? {
-    let name = UnsafeMutablePointer<utsname>.alloc(1)
+    let name = UnsafeMutablePointer<utsname>.allocate(capacity: 1)
     uname(name)
-    let machine = withUnsafePointer(&name.memory.machine, { (ptr) -> String? in
+    let machine = withUnsafePointer(to: &name.pointee.machine, { (ptr) -> String? in
 
-        let int8Ptr = unsafeBitCast(ptr, UnsafePointer<CChar>.self)
-        return String.fromCString(int8Ptr)
+        let int8Ptr = unsafeBitCast(ptr, to: UnsafePointer<CChar>.self)
+        return String(cString: int8Ptr)
     })
-    name.dealloc(1)
+    name.deallocate(capacity: 1)
     if let deviceString = machine {
         switch deviceString {
             // iPhone
@@ -131,7 +131,7 @@ public func deviceType () -> String? {
 
 public var Orientation: UIInterfaceOrientation {
     get {
-        return UIApplication.sharedApplication().statusBarOrientation
+        return UIApplication.shared.statusBarOrientation
     }
 }
 
@@ -139,9 +139,9 @@ public var Orientation: UIInterfaceOrientation {
 public var ScreenWidth: CGFloat {
     get {
         if UIInterfaceOrientationIsPortrait(Orientation) {
-            return UIScreen.mainScreen().bounds.size.width
+            return UIScreen.main.bounds.size.width
         } else {
-            return UIScreen.mainScreen().bounds.size.height
+            return UIScreen.main.bounds.size.height
         }
     }
 }
@@ -150,9 +150,9 @@ public var ScreenWidth: CGFloat {
 public var ScreenHeight: CGFloat {
     get {
         if UIInterfaceOrientationIsPortrait(Orientation) {
-            return UIScreen.mainScreen().bounds.size.height
+            return UIScreen.main.bounds.size.height
         } else {
-            return UIScreen.mainScreen().bounds.size.width
+            return UIScreen.main.bounds.size.width
         }
     }
 }
@@ -160,7 +160,7 @@ public var ScreenHeight: CGFloat {
 /// 状态栏高度
 public var StatusBarHeight: CGFloat {
     get {
-        return UIApplication.sharedApplication().statusBarFrame.height
+        return UIApplication.shared.statusBarFrame.height
     }
 }
 

@@ -9,40 +9,40 @@
 import UIKit
 import JavaScriptCore
 
-public var LIVE_LOAD_PATH = NSBundle.mainBundle().pathForResource("xml", ofType: "bundle")!
-public var BUNDLE_PATH = NSBundle.mainBundle().pathForResource("xml", ofType: "bundle")!
+public var LIVE_LOAD_PATH = Bundle.main.path(forResource: "xml", ofType: "bundle")!
+public var BUNDLE_PATH = Bundle.main.path(forResource: "xml", ofType: "bundle")!
 
 public var CRTPTO_KEY = ""
 
 
 @objc protocol EUSceneExport:JSExport {
-    func getElementById(id:String) -> UIView
+    func getElementById(_ id:String) -> UIView
 }
 
-public class EUScene: EZScene,EUSceneExport{
+open class EUScene: EZScene,EUSceneExport{
     
     
-    public func getElementById(id:String) -> UIView {
+    open func getElementById(_ id:String) -> UIView {
         return UIView.formTag(id)
     }
     
-    public var SUFFIX = "xml"
-    public var eu_subViews:[UIView]?
-    public var scriptString:String?
+    open var SUFFIX = "xml"
+    open var eu_subViews:[UIView]?
+    open var scriptString:String?
     
-    public var context = EZJSContext()
+    open var context = EZJSContext()
     
-    public func define(funcName:String,actionBlock:@convention(block) ()->Void){
+    open func define(_ funcName:String,actionBlock:@convention(block) ()->Void){
         context.define(funcName, actionBlock: actionBlock)
     }
     
-    public func eval(script: String?) -> JSValue?{
+    open func eval(_ script: String?) -> JSValue?{
         if let str =  script {
             var result:JSValue?
             SwiftTryCatch.`try`({
                 result = self.context.evaluateScript(str)
-                }, `catch`: { (error) in
-                    print("JS Error:\(error.description)")
+                }, catch: { (error) in
+                    print("JS Error:\(error?.description)")
                 }, finally: nil)
             return result
         }else{
@@ -50,34 +50,34 @@ public class EUScene: EZScene,EUSceneExport{
         }
     }
     
-    override public func loadView() {
+    override open func loadView() {
         super.loadView()
         EUI.setLiveLoad(self,suffix: SUFFIX)
         
     }
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false;
         self.extendedLayoutIncludesOpaqueBars = true;
-        self.edgesForExtendedLayout = UIRectEdge.All;
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.edgesForExtendedLayout = UIRectEdge.all;
+        self.view.backgroundColor = UIColor.white
         self.loadEZLayout()
     }
     
-    public func eu_viewWillLoad(){
+    open func eu_viewWillLoad(){
     
     }
     
-    public func eu_viewDidLoad(){
+    open func eu_viewDidLoad(){
 
     }
 
-    public func eu_tableViewDidLoad(tableView:UITableView?){
+    open func eu_tableViewDidLoad(_ tableView:UITableView?){
         
     }
     
-    public func eu_collectionViewDidLoad(collectionView:UICollectionView?){
+    open func eu_collectionViewDidLoad(_ collectionView:UICollectionView?){
         
     }
 

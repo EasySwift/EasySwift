@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 // MARK: - String
 
-public func trimToArray(str: String) -> Array<String> {
-    return str.trim.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).filter() {
+public func trimToArray(_ str: String) -> Array<String> {
+    return str.trim.components(separatedBy: CharacterSet.whitespacesAndNewlines).filter() {
         return !$0.characters.isEmpty
     }
 }
 
-public func trimToArrayBy(str: String, by: String) -> Array<String> {
-    return str.trim.componentsSeparatedByString(by).filter() {
+public func trimToArrayBy(_ str: String, by: String) -> Array<String> {
+    return str.trim.components(separatedBy: by).filter() {
         return !$0.characters.isEmpty
     }
 }
@@ -28,7 +28,7 @@ extension String {
     }
 
     public var urlencode: String? {
-        return self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.letterCharacterSet())
+        return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.letters)
     }
 
     public var urldecode: String? {
@@ -37,26 +37,26 @@ extension String {
 
     // MARK: 取消首位空格和换行
     public var trim: String {
-        return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
 
     public var trimArray: Array<String> {
         return trimToArray(self)
     }
 
-    public func trimArrayBy(str: String) -> Array<String> {
+    public func trimArrayBy(_ str: String) -> Array<String> {
         return trimToArrayBy(self, by: str)
     }
 
     public var toKeyPath: String {
-        let keyArray = self.trim.componentsSeparatedByString("-")
+        let keyArray = self.trim.components(separatedBy: "-")
         var str = ""
         var index = 0
         for akey in keyArray {
             if index == 0 {
                 str += akey
             } else {
-                str += akey.capitalizedString
+                str += akey.capitalized
             }
             index += 1
         }
@@ -78,7 +78,7 @@ extension String {
         return (self as NSString).boolValue
     }
 
-    public func anyValue(key: String) -> AnyObject {
+    public func anyValue(_ key: String) -> AnyObject {
         if key == "font" {
             if let font = UIFont.Font(self.trim) {
                 return font
@@ -91,31 +91,31 @@ extension String {
         let str = self.trim
 
         if str.hasSuffix(".cg") {
-            if let color = UIColor(CSS: Regex(".cg").replace(str, withTemplate: "")) {
-                return color.CGColor
+            if let color = UIColor(css: Regex(".cg").replace(str, withTemplate: "")) {
+                return color.cgColor
             }
         }
 
-        if ["YES", "NO", "TRUE", "FALSE"].contains(str.uppercaseString) {
-            return str.boolValue
-        } else if let color = UIColor(CSS: str) {
+        if ["YES", "NO", "TRUE", "FALSE"].contains(str.uppercased()) {
+            return str.boolValue as AnyObject
+        } else if let color = UIColor(css: str) {
             return color
         } else if let image = UIImage(named: str) {
             return image
         } else if str.floatValue != 0.0 {
-            return str.floatValue
+            return str.floatValue as AnyObject
         } else {
-            return str
+            return str as AnyObject
         }
     }
 
     public var MD5: String {
-        let data = self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-        return data!.MD5String
+        let data = self.data(using: String.Encoding.utf8, allowLossyConversion: false)
+        return data!.md5String
     }
 
-    public func toData() -> NSData? {
-        return self.dataUsingEncoding(NSUTF8StringEncoding)?.dataByReplacingOccurrencesOfData("\\n".dataUsingEncoding(NSUTF8StringEncoding), withData: "\n".dataUsingEncoding(NSUTF8StringEncoding))
+    public func toData() -> Data? {
+        return (self.data(using: String.Encoding.utf8) as NSData?)?.replacingOccurrences(of: "\\n".data(using: String.Encoding.utf8), with: "\n".data(using: String.Encoding.utf8))
     }
 
     public var chineseFirstLetter: String {

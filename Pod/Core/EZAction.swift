@@ -19,30 +19,30 @@ public var MSG_KEY = "" // 消息提示msg,暂不支持路径 如 msg
 
 private var networkReachabilityHandle: UInt8 = 2;
 
-public class EZAction: NSObject {
+open class EZAction: NSObject {
 
     // 使用缓存策略 仅首次读取缓存
-    public class func SEND_IQ_CACHE (req: EZRequest) {
+    open class func SEND_IQ_CACHE (_ req: EZRequest) {
         req.useCache = true
         req.dataFromCache = req.isFirstRequest
         self.Send(req)
     }
 
     // 使用缓存策略 优先从缓存读取
-    public class func SEND_CACHE (req: EZRequest) {
+    open class func SEND_CACHE (_ req: EZRequest) {
         req.useCache = true
         req.dataFromCache = true
         self.Send(req)
     }
 
     // 不使用缓存策略
-    public class func SEND (req: EZRequest) {
+    open class func SEND (_ req: EZRequest) {
         req.useCache = false
         req.dataFromCache = false
         self.Send(req)
     }
 
-    public class func Send (req: EZRequest) {
+    open class func Send (_ req: EZRequest) {
         var url = ""
         var requestParams = Dictionary<String, AnyObject>()
 
@@ -62,7 +62,7 @@ public class EZAction: NSObject {
                 url = url + req.appendPathInfo
             }
         }
-        req.state.value = RequestState.Sending
+        req.state.value = RequestState.sending
 
         req.op = req.manager
             .request(req.method, url, parameters: requestParams, encoding: req.parameterEncoding)
@@ -78,11 +78,11 @@ public class EZAction: NSObject {
                     self.checkCode(req)
                 }
         }
-        req.url = req.op?.request!.URL
+        req.url = req.op?.request!.url
         self.getCacheJson(req)
     }
 
-    public class func Upload (req: EZRequest) {
+    open class func Upload (_ req: EZRequest) {
         var url = ""
 
         if !req.staticPath.characters.isEmpty {
@@ -103,7 +103,7 @@ public class EZAction: NSObject {
 
         let urlRequest = urlRequestWithComponents(url, parameters: req.requestParams, images: req.files)
 
-        req.state.value = RequestState.Sending
+        req.state.value = RequestState.sending
         req.op = req.manager
             .upload(urlRequest.0.URLRequest, data: urlRequest.1)
             .validate(statusCode: 200 ..< 300)
@@ -122,7 +122,7 @@ public class EZAction: NSObject {
                     self.checkCode(req)
                 }
         }
-        req.url = req.op?.request!.URL
+        req.url = req.op?.request!.url
     }
 
     /**
@@ -134,10 +134,10 @@ public class EZAction: NSObject {
 
      - returns:  (URLRequestConvertible, NSData)
      */
-    private class func urlRequestWithComponents(urlString: String, parameters: Dictionary<String, AnyObject>, images: [(name: String, fileName: String, data: NSData)]) -> (URLRequestConvertible, NSData) {
+    fileprivate class func urlRequestWithComponents(_ urlString: String, parameters: Dictionary<String, AnyObject>, images: [(name: String, fileName: String, data: Data)]) -> (URLRequestConvertible, Data) {
 
-        var mutableURLRequest = NSMutableURLRequest(URL: NSURL(string: urlString)!)
-        mutableURLRequest.HTTPMethod = Alamofire.Method.POST.rawValue
+        var mutableURLRequest = NSMutableURLRequest(url: URL(string: urlString)!)
+        mutableURLRequest.httpMethod = Alamofire.Method.POST.rawValue
         let boundaryConstant = "myRandomBoundary12345";
         let contentType = "multipart/form-data;boundary=" + boundaryConstant
         mutableURLRequest.setValue(contentType, forHTTPHeaderField: "Content-Type")
@@ -145,28 +145,28 @@ public class EZAction: NSObject {
         let uploadData = NSMutableData()
 
         for img in images {
-            uploadData.appendData("\r\n--\(boundaryConstant)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-            uploadData.appendData("Content-Disposition: form-data; name=\"\(img.name)\"; filename=\"\(img.fileName)\"\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-            uploadData.appendData("Content-Type: image/png\r\n\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-            uploadData.appendData(img.data)
+            uploadData.append("\r\n--\(boundaryConstant)\r\n".data(using: String.Encoding.utf8)!)
+            uploadData.append("Content-Disposition: form-data; name=\"\(img.name)\"; filename=\"\(img.fileName)\"\r\n".data(using: String.Encoding.utf8)!)
+            uploadData.append("Content-Type: image/png\r\n\r\n".data(using: String.Encoding.utf8)!)
+            uploadData.append(img.data)
         }
 
         for (key, value) in parameters {
-            uploadData.appendData("\r\n--\(boundaryConstant)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-            uploadData.appendData("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n\(value)".dataUsingEncoding(NSUTF8StringEncoding)!)
+            uploadData.append("\r\n--\(boundaryConstant)\r\n".data(using: String.Encoding.utf8)!)
+            uploadData.append("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n\(value)".data(using: String.Encoding.utf8)!)
         }
-        uploadData.appendData("\r\n--\(boundaryConstant)--\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        uploadData.append("\r\n--\(boundaryConstant)--\r\n".data(using: String.Encoding.utf8)!)
 
-        return (Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: nil).0, uploadData)
+        return (Alamofire.ParameterEncoding.url.encode(mutableURLRequest, parameters: nil).0, uploadData)
     }
 
-    public class func Download (req: EZRequest) {
-        req.state.value = RequestState.Sending
+    open class func Download (_ req: EZRequest) {
+        req.state.value = RequestState.sending
         req.op = req.manager
             .download(.GET, req.downloadUrl, destination: { (temporaryURL, response) in
-                let directoryURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory,
-                    inDomains: .UserDomainMask)[0]
-                return directoryURL.URLByAppendingPathComponent(req.targetPath + response.suggestedFilename!)
+                let directoryURL = FileManager.default.urls(for: .documentDirectory,
+                    in: .userDomainMask)[0]
+                return directoryURL.appendingPathComponent(req.targetPath + response.suggestedFilename!)
         })
             .validate(statusCode: 200 ..< 300)
             .progress { (bytesRead, totalBytesRead, totalBytesExpectedToRead) in
@@ -179,13 +179,13 @@ public class EZAction: NSObject {
                     req.error = error
                     self.failed(req)
                 } else {
-                    req.state.value = RequestState.Success
+                    req.state.value = RequestState.success
                 }
         }
-        req.url = req.op?.request!.URL
+        req.url = req.op?.request!.url
     }
 
-    private class func cacheJson (req: EZRequest) {
+    fileprivate class func cacheJson (_ req: EZRequest) {
         if req.useCache {
             let cache = Shared.JSONCache
             cache.set(value: .Dictionary(req.output), key: req.cacheKey, formatName: HanekeGlobals.Cache.OriginalFormatName) { JSON in
@@ -194,37 +194,36 @@ public class EZAction: NSObject {
         }
     }
 
-    private class func getCacheJson (req: EZRequest) {
+    fileprivate class func getCacheJson (_ req: EZRequest) {
         let cache = Shared.JSONCache
         cache.fetch(key: req.cacheKey).onSuccess { JSON in
             req.output = JSON.dictionary
             if req.dataFromCache && !isEmpty(req.output) {
-                let delayTime = dispatch_time(DISPATCH_TIME_NOW,
-                    Int64(0.1 * Double(NSEC_PER_SEC)))
+                let delayTime = DispatchTime.now() + Double(Int64(0.1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
 
-                dispatch_after(delayTime, dispatch_get_main_queue()) {
+                DispatchQueue.main.asyncAfter(deadline: delayTime) {
                     self.loadFromCache(req)
                 }
             }
         }
     }
 
-    private class func loadFromCache (req: EZRequest) {
-        if req.needCheckCode && req.state.value != .Success {
+    fileprivate class func loadFromCache (_ req: EZRequest) {
+        if req.needCheckCode && req.state.value != .success {
             req.codeKey = req.output[CODE_KEY] as? Int
             if req.codeKey == RIGHT_CODE {
                 req.message = req.output[MSG_KEY] as? String
-                req.state.value = RequestState.SuccessFromCache
+                req.state.value = RequestState.successFromCache
                 EZPrintln("Fetch  Success from Cache by key: \(req.cacheKey)")
             } else {
                 req.message = req.output[MSG_KEY] as? String
-                req.state.value = RequestState.ErrorFromCache
+                req.state.value = RequestState.errorFromCache
                 EZPrintln(req.message)
             }
         }
     }
 
-    private class func checkCode (req: EZRequest) {
+    fileprivate class func checkCode (_ req: EZRequest) {
         if req.needCheckCode {
             req.codeKey = req.output[CODE_KEY] as? Int
             if req.codeKey == RIGHT_CODE {
@@ -234,30 +233,30 @@ public class EZAction: NSObject {
                 self.error(req)
             }
         } else {
-            req.state.value = RequestState.Success
+            req.state.value = RequestState.success
             self.cacheJson(req)
         }
     }
 
-    private class func success (req: EZRequest) {
+    fileprivate class func success (_ req: EZRequest) {
         req.isFirstRequest = false
         req.message = req.output[MSG_KEY] as? String
         if req.output.isEmpty {
-            req.state.value = RequestState.Error
+            req.state.value = RequestState.error
         } else {
-            req.state.value = RequestState.Success
+            req.state.value = RequestState.success
         }
     }
 
-    private class func failed (req: EZRequest) {
+    fileprivate class func failed (_ req: EZRequest) {
         req.message = req.error.debugDescription
-        req.state.value = RequestState.Failed
+        req.state.value = RequestState.failed
         EZPrintln(req.message)
     }
 
-    private class func error (req: EZRequest) {
+    fileprivate class func error (_ req: EZRequest) {
         req.message = req.output[MSG_KEY] as? String
-        req.state.value = RequestState.Error
+        req.state.value = RequestState.error
         EZPrintln(req.message)
     }
 
@@ -276,20 +275,20 @@ public class EZAction: NSObject {
      }
      */
 
-    public class var networkReachability: Observable<Reachability.NetworkStatus>? {
-        if let d: AnyObject = objc_getAssociatedObject(self, &networkReachabilityHandle) {
+    open class var networkReachability: Observable<Reachability.NetworkStatus>? {
+        if let d: AnyObject = objc_getAssociatedObject(self, &networkReachabilityHandle) as AnyObject? {
             return d as? Observable<Reachability.NetworkStatus>
         } else {
             do {
                 let reachability = try Reachability.reachabilityForInternetConnection()
                 let d = Observable<Reachability.NetworkStatus>(reachability.currentReachabilityStatus)
                 reachability.whenReachable = { reachability in
-                    dispatch_async(dispatch_get_main_queue()) {
+                    DispatchQueue.main.async {
                         d.value = reachability.currentReachabilityStatus
                     }
                 }
                 reachability.whenUnreachable = { reachability in
-                    dispatch_async(dispatch_get_main_queue()) {
+                    DispatchQueue.main.async {
                         d.value = reachability.currentReachabilityStatus
                     }
                 }

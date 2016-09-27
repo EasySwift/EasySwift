@@ -13,7 +13,7 @@ import TTTAttributedLabel
 class LabelProperty:ViewProperty{
     var linkStyle = Dictionary<NSObject,AnyObject>()
     var activeLinkStyle = Dictionary<NSObject,AnyObject>()
-    var textAlignment:NSTextAlignment = .Left
+    var textAlignment:NSTextAlignment = .left
     
     override func view() -> UIView{
         if self.style.characters.isEmpty {
@@ -23,7 +23,7 @@ class LabelProperty:ViewProperty{
             self.renderViewStyle(view)
             return view
         }else{
-            let view = TTTAttributedLabel(frame: CGRectZero)
+            let view = TTTAttributedLabel(frame: CGRect.zero)
             view.tagProperty = self
             if self.linkStyle.count > 0 {
                 view.linkAttributes = self.linkStyle
@@ -31,13 +31,13 @@ class LabelProperty:ViewProperty{
             if self.activeLinkStyle.count > 0 {
                 view.activeLinkAttributes = self.activeLinkStyle
             }
-            view.setText(NSAttributedString(fromHTMLData: self.contentText?.toData(), attributes: ["dict":self.style]))
+            view.setText(NSAttributedString(fromHTMLData: self.contentText?.toData() as Data!, attributes: ["dict":self.style]))
             self.renderViewStyle(view)
             return view
         }
     }
     
-    override func renderTag(pelement: OGElement) {
+    override func renderTag(_ pelement: OGElement) {
         
         self.tagOut += ["link-style","active-link-style","text-alignment"]
         super.renderTag(pelement)
@@ -57,7 +57,7 @@ class LabelProperty:ViewProperty{
         var html = ""
         for child in pelement.children
         {
-            html += child.html().trim
+            html += (child as AnyObject).html().trim
         }
         var bindKey = "text"
         if !self.style.characters.isEmpty {
@@ -69,11 +69,11 @@ class LabelProperty:ViewProperty{
         self.contentText = html
     }
     
-    override func childLoop(pelement: OGElement) {
+    override func childLoop(_ pelement: OGElement) {
         
     }
     
-    override func renderViewStyle(view:UIView){
+    override func renderViewStyle(_ view:UIView){
         super.renderViewStyle(view)
         let sview = view as! UILabel
         sview.textAlignment = self.textAlignment

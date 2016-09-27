@@ -9,19 +9,19 @@
 import Foundation
 import CoreData
 
-public func DBQuery(aClass: NSManagedObject.Type!,entityName:String) -> NSFetchRequest {
+public func DBQuery(_ aClass: NSManagedObject.Type!,entityName:String) -> NSFetchRequest<AnyObject> {
     return aClass.defaultContext().createFetchRequest(entityName)
 }
 
-public class EasyORM {
+open class EasyORM {
     
-    public static var generateRelationships = false
+    open static var generateRelationships = false
     
-    public static func setUpEntities(entities: [String:NSManagedObject.Type]) {
+    open static func setUpEntities(_ entities: [String:NSManagedObject.Type]) {
         nameToEntities = entities
     }
     
-    private static var nameToEntities: [String:NSManagedObject.Type] = [String:NSManagedObject.Type]()
+    fileprivate static var nameToEntities: [String:NSManagedObject.Type] = [String:NSManagedObject.Type]()
 
     
 }
@@ -29,22 +29,22 @@ public class EasyORM {
 public extension NSManagedObject{
 
     public func defaultContext() -> NSManagedObjectContext{
-        return self.managedObjectContext ?? self.dynamicType.defaultContext()
+        return self.managedObjectContext ?? type(of: self).defaultContext()
     }
     
     public static func defaultContext() -> NSManagedObjectContext{
         return NSManagedObjectContext.defaultContext
     }
     
-    private static var query:NSFetchRequest{
+    fileprivate static var query:NSFetchRequest<AnyObject>{
         return self.defaultContext().createFetchRequest(self.entityName())
     }
     
-    public static func condition(condition: AnyObject?) -> NSFetchRequest{
+    public static func condition(_ condition: AnyObject?) -> NSFetchRequest<AnyObject>{
         return self.query.condition(condition)
     }
     
-    public static func orderBy(key:String,_ order:String = "ASC") -> NSFetchRequest{
+    public static func orderBy(_ key:String,_ order:String = "ASC") -> NSFetchRequest<AnyObject>{
         return self.query.orderBy(key, order)
     }
     
@@ -55,7 +55,7 @@ public extension NSManagedObject{
     * @return self
     * @static
     */
-    public static func limit(value:Int) -> NSFetchRequest{
+    public static func limit(_ value:Int) -> NSFetchRequest<AnyObject>{
         return self.query.limit(value)
     }
     
@@ -65,7 +65,7 @@ public extension NSManagedObject{
     * @param int value
     * @return NSFetchRequest
     */
-    public static func take(value:Int) -> NSFetchRequest{
+    public static func take(_ value:Int) -> NSFetchRequest<AnyObject>{
         return self.query.take(value)
     }
     
@@ -76,7 +76,7 @@ public extension NSManagedObject{
     * @param int perPage
     * @return NSFetchRequest
     */
-    public static func forPage(page:Int,_ perPage:Int) -> NSFetchRequest{
+    public static func forPage(_ page:Int,_ perPage:Int) -> NSFetchRequest<AnyObject>{
         return self.query.forPage(page,perPage)
     }
     
@@ -88,8 +88,8 @@ public extension NSManagedObject{
         return self.query.count()
     }
     
-    public static func findAndUpdate(unique:[String:AnyObject],data:[String:AnyObject]) -> NSManagedObject?{
-        if let object = self.find(unique) {
+    public static func findAndUpdate(_ unique:[String:AnyObject],data:[String:AnyObject]) -> NSManagedObject?{
+        if let object = self.find(unique as AnyObject) {
             object.update(data)
             return object
         }else{
@@ -97,8 +97,8 @@ public extension NSManagedObject{
         }
     }
     
-    public static func updateOrCreate(unique:[String:AnyObject],data:[String:AnyObject]) -> NSManagedObject{
-        if let object = self.find(unique) {
+    public static func updateOrCreate(_ unique:[String:AnyObject],data:[String:AnyObject]) -> NSManagedObject{
+        if let object = self.find(unique as AnyObject) {
             object.update(data)
             return object
         }else{
@@ -106,27 +106,27 @@ public extension NSManagedObject{
         }
     }
     
-    public static func findOrCreate(properties: [String:AnyObject]) -> NSManagedObject {
+    public static func findOrCreate(_ properties: [String:AnyObject]) -> NSManagedObject {
         let transformed = self.transformProperties(properties)
-        let existing = self.find(properties)
+        let existing = self.find(properties as AnyObject)
         return existing ?? self.create(transformed)
     }
     
-    public static func find(condition: AnyObject) -> NSManagedObject? {
+    public static func find(_ condition: AnyObject) -> NSManagedObject? {
         return self.query.condition(condition).first()
     }
     
-    public func update(properties: [String:AnyObject]) {
+    public func update(_ properties: [String:AnyObject]) {
         
         if (properties.count == 0) {
             return
         }
-        let transformed = self.dynamicType.transformProperties(properties)
+        let transformed = type(of: self).transformProperties(properties)
         //Finish
         for (key, value) in transformed {
-            self.willChangeValueForKey(key)
+            self.willChangeValue(forKey: key)
             self.setSafeValue(value, forKey: key)
-            self.didChangeValueForKey(key)
+            self.didChangeValue(forKey: key)
         }
     }
     
@@ -136,7 +136,7 @@ public extension NSManagedObject{
     
     public func delete() -> NSManagedObjectContext {
         let context = self.defaultContext()
-        context.deleteObject(self)
+        context.delete(self)
         return context
     }
     
@@ -148,19 +148,19 @@ public extension NSManagedObject{
     }
     
     public static func create() -> NSManagedObject {
-        let o = NSEntityDescription.insertNewObjectForEntityForName(self.entityName(), inManagedObjectContext: self.defaultContext())
+        let o = NSEntityDescription.insertNewObject(forEntityName: self.entityName(), into: self.defaultContext())
         if let idprop = self.autoIncrementingId() {
-            o.setPrimitiveValue(NSNumber(integer: self.nextId()), forKey: idprop)
+            o.setPrimitiveValue(NSNumber(value: self.nextId() as Int), forKey: idprop)
         }
         return o
     }
     
-    public static func create(properties: [String:AnyObject]) -> NSManagedObject {
+    public static func create(_ properties: [String:AnyObject]) -> NSManagedObject {
         let newEntity: NSManagedObject = self.create()
         newEntity.update(properties)
         if let idprop = self.autoIncrementingId() {
-            if newEntity.primitiveValueForKey(idprop) == nil {
-                newEntity.setPrimitiveValue(NSNumber(integer: self.nextId()), forKey: idprop)
+            if newEntity.primitiveValue(forKey: idprop) == nil {
+                newEntity.setPrimitiveValue(NSNumber(value: self.nextId() as Int), forKey: idprop)
             }
         }
         return newEntity
@@ -173,8 +173,8 @@ public extension NSManagedObject{
     public static func nextId() -> Int {
         let key = "SwiftRecord-" + self.entityName() + "-ID"
         if self.autoIncrementingId() != nil {
-            let id = NSUserDefaults.standardUserDefaults().integerForKey(key)
-            NSUserDefaults.standardUserDefaults().setInteger(id + 1, forKey: key)
+            let id = UserDefaults.standard.integer(forKey: key)
+            UserDefaults.standard.set(id + 1, forKey: key)
             return id
         }
         return 0
@@ -187,8 +187,8 @@ public extension NSManagedObject{
     
     //Private
     
-    private static func transformProperties(properties: [String:AnyObject]) -> [String:AnyObject]{
-        let entity = NSEntityDescription.entityForName(self.entityName(), inManagedObjectContext: self.defaultContext())!
+    fileprivate static func transformProperties(_ properties: [String:AnyObject]) -> [String:AnyObject]{
+        let entity = NSEntityDescription.entity(forEntityName: self.entityName(), in: self.defaultContext())!
         let attrs = entity.attributesByName
         let rels = entity.relationshipsByName
         
@@ -199,7 +199,7 @@ public extension NSManagedObject{
                 transformed[localKey] = value
             } else if let rel = rels[localKey]  {
                 if EasyORM.generateRelationships {
-                    if rel.toMany {
+                    if rel.isToMany {
                         if let array = value as? [[String:AnyObject]] {
                             transformed[localKey] = self.generateSet(rel, array: array)
                         } else {
@@ -223,7 +223,7 @@ public extension NSManagedObject{
     }
     
     
-    private func setSafeValue(value: AnyObject?, forKey key: String) {
+    fileprivate func setSafeValue(_ value: AnyObject?, forKey key: String) {
         if (value == nil) {
             self.setNilValueForKey(key)
             return
@@ -231,20 +231,20 @@ public extension NSManagedObject{
         let val: AnyObject = value!
         if let attr = self.entity.attributesByName[key] {
             let attrType = attr.attributeType
-            if attrType == NSAttributeType.StringAttributeType && value is NSNumber {
+            if attrType == NSAttributeType.stringAttributeType && value is NSNumber {
                 self.setPrimitiveValue((val as! NSNumber).stringValue, forKey: key)
             } else if let s = val as? String {
                 if self.isIntegerAttributeType(attrType) {
-                    self.setPrimitiveValue(NSNumber(integer: val.integerValue), forKey: key)
+                    self.setPrimitiveValue(NSNumber(value: val.intValue as Int), forKey: key)
                     return
-                } else if attrType == NSAttributeType.BooleanAttributeType {
-                    self.setPrimitiveValue(NSNumber(bool: val.boolValue), forKey: key)
+                } else if attrType == NSAttributeType.booleanAttributeType {
+                    self.setPrimitiveValue(NSNumber(value: val.boolValue as Bool), forKey: key)
                     return
-                } else if (attrType == NSAttributeType.FloatAttributeType) {
+                } else if (attrType == NSAttributeType.floatAttributeType) {
                     self.setPrimitiveValue(NSNumber(floatLiteral: val.doubleValue), forKey: key)
                     return
-                } else if (attrType == NSAttributeType.DateAttributeType) {
-                    self.setPrimitiveValue(self.dynamicType.dateFormatter.dateFromString(s), forKey: key)
+                } else if (attrType == NSAttributeType.dateAttributeType) {
+                    self.setPrimitiveValue(type(of: self).dateFormatter.date(from: s), forKey: key)
                     return
                 }
             }
@@ -252,29 +252,29 @@ public extension NSManagedObject{
         self.setPrimitiveValue(value, forKey: key)
     }
     
-    private func isIntegerAttributeType(attrType: NSAttributeType) -> Bool {
-        return attrType == NSAttributeType.Integer16AttributeType || attrType == NSAttributeType.Integer32AttributeType || attrType == NSAttributeType.Integer64AttributeType
+    fileprivate func isIntegerAttributeType(_ attrType: NSAttributeType) -> Bool {
+        return attrType == NSAttributeType.integer16AttributeType || attrType == NSAttributeType.integer32AttributeType || attrType == NSAttributeType.integer64AttributeType
     }
     
-    private static var dateFormatter: NSDateFormatter {
+    fileprivate static var dateFormatter: DateFormatter {
         if _dateFormatter == nil {
-            _dateFormatter = NSDateFormatter()
+            _dateFormatter = DateFormatter()
             _dateFormatter!.dateFormat = "yyyy-MM-dd HH:mm:ss z"
         }
         return _dateFormatter!
     }
-    private static var _dateFormatter: NSDateFormatter?
+    fileprivate static var _dateFormatter: DateFormatter?
     
     
     public class func mappings() -> [String:String] {
         return [String:String]()
     }
     
-    public static func keyForRemoteKey(remote: String) -> String {
+    public static func keyForRemoteKey(_ remote: String) -> String {
         if let s = cachedMappings[remote] {
             return s
         }
-        let entity = NSEntityDescription.entityForName(self.entityName(), inManagedObjectContext: self.defaultContext())!
+        let entity = NSEntityDescription.entity(forEntityName: self.entityName(), in: self.defaultContext())!
         let properties = entity.propertiesByName
         if properties[remote] != nil {
             _cachedMappings![remote] = remote
@@ -289,7 +289,7 @@ public extension NSManagedObject{
         _cachedMappings![remote] = remote
         return remote
     }
-    private static var cachedMappings: [String:String] {
+    fileprivate static var cachedMappings: [String:String] {
         if let m = _cachedMappings {
             return m
         } else {
@@ -301,9 +301,9 @@ public extension NSManagedObject{
             return m
         }
     }
-    private static var _cachedMappings: [String:String]?
+    fileprivate static var _cachedMappings: [String:String]?
     
-    private static func generateSet(rel: NSRelationshipDescription, array: [[String:AnyObject]]) -> NSSet {
+    fileprivate static func generateSet(_ rel: NSRelationshipDescription, array: [[String:AnyObject]]) -> NSSet {
         var cls: NSManagedObject.Type?
         if EasyORM.nameToEntities.count > 0 {
             cls = EasyORM.nameToEntities[rel.destinationEntity!.managedObjectClassName]
@@ -315,12 +315,12 @@ public extension NSManagedObject{
         }
         let set = NSMutableSet()
         for d in array {
-            set.addObject(cls!.findOrCreate(d))
+            set.add(cls!.findOrCreate(d))
         }
         return set
     }
     
-    private static func generateObject(rel: NSRelationshipDescription, dict: [String:AnyObject]) -> NSManagedObject {
+    fileprivate static func generateObject(_ rel: NSRelationshipDescription, dict: [String:AnyObject]) -> NSManagedObject {
         let entity = rel.destinationEntity!
         
         let cls: NSManagedObject.Type = NSClassFromString(entity.managedObjectClassName) as! NSManagedObject.Type
@@ -332,27 +332,27 @@ public extension NSManagedObject{
         return ""
     }
     
-    private static func entityName() -> String {
+    fileprivate static func entityName() -> String {
         var name = NSStringFromClass(self)
-        if name.rangeOfString(".") != nil {
+        if name.range(of: ".") != nil {
             let comp = name.characters.split {$0 == "."}.map { String($0) }
             if comp.count > 1 {
                 name = comp.last!
             }
         }
-        if name.rangeOfString("_") != nil {
+        if name.range(of: "_") != nil {
             var comp = name.characters.split {$0 == "_"}.map { String($0) }
             var last: String = ""
             var remove = -1
-            for (i,s) in Array(comp.reverse()).enumerate() {
+            for (i,s) in Array(comp.reversed()).enumerated() {
                 if last == s {
                     remove = i
                 }
                 last = s
             }
             if remove > -1 {
-                comp.removeAtIndex(remove)
-                name = comp.joinWithSeparator("_")
+                comp.remove(at: remove)
+                name = comp.joined(separator: "_")
             }
         }
         return name
@@ -361,9 +361,9 @@ public extension NSManagedObject{
 
 public extension String {
     var camelCase: String {
-        let spaced = self.stringByReplacingOccurrencesOfString("_", withString: " ", options: [], range:Range<String.Index>(start: self.startIndex, end: self.endIndex))
-        let capitalized = spaced.capitalizedString
-        let spaceless = capitalized.stringByReplacingOccurrencesOfString(" ", withString: "", options:[], range:Range<String.Index>(start:self.startIndex, end:self.endIndex))
-        return spaceless.stringByReplacingCharactersInRange(Range<String.Index>(start:spaceless.startIndex, end:spaceless.startIndex.successor()), withString: "\(spaceless[spaceless.startIndex])".lowercaseString)
+        let spaced = self.replacingOccurrences(of: "_", with: " ", options: [], range:(self.characters.indices))
+        let capitalized = spaced.capitalized
+        let spaceless = capitalized.replacingOccurrences(of: " ", with: "", options:[], range:(self.characters.indices))
+        return spaceless.replacingCharacters(in: (spaceless.startIndex ..< spaceless.characters.index(after: spaceless.startIndex)), with: "\(spaceless[spaceless.startIndex])".lowercased())
     }
 }

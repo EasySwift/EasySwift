@@ -46,7 +46,7 @@ struct Constrain{
 
 struct SelectorAction{
     var selector:String = ""
-    var event:UIControlEvents = UIControlEvents.TouchUpInside
+    var event:UIControlEvents = UIControlEvents.touchUpInside
     
     init(selector:String,event:String = "TouchUpInside"){
         self.selector = selector
@@ -92,17 +92,17 @@ struct SwipeGestureAction {
     init(selector:String,direction:String,numberOfTouches:String = "1"){
         self.selector = selector
         self.numberOfTouches = numberOfTouches.integerValue
-        switch direction.lowercaseString {
+        switch direction.lowercased() {
         case "up" :
-            self.direction = .Up
+            self.direction = .up
         case "down" :
-            self.direction = .Down
+            self.direction = .down
         case "right" :
-            self.direction = .Right
+            self.direction = .right
         case "left" :
-            self.direction = .Left
+            self.direction = .left
         default :
-            self.direction = .Up
+            self.direction = .up
         }
     }
 }

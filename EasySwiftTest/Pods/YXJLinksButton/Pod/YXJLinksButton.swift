@@ -8,30 +8,30 @@
 
 import UIKit
 
-public class YXJLinksButton: UIButton {
+open class YXJLinksButton: UIButton {
 
-    private var linksColor = UIColor.whiteColor()
+    fileprivate var linksColor = UIColor.white
 
-    public func setLinksColor(color: UIColor) {
+    open func setLinksColor(_ color: UIColor) {
         self.linksColor = color
         self.setNeedsDisplay()
     }
 
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
-    override public func drawRect(rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         let textRect = self.titleLabel!.frame
         let contextRef = UIGraphicsGetCurrentContext()
 
         let descender = self.titleLabel!.font.descender
-        if (self.linksColor.isKindOfClass(UIColor)) {
-            CGContextSetStrokeColorWithColor(contextRef, linksColor.CGColor)
+        if (self.linksColor.isKind(of: UIColor.self)) {
+            contextRef?.setStrokeColor(linksColor.cgColor)
         }
 
-        CGContextMoveToPoint(contextRef, textRect.origin.x, textRect.origin.y + textRect.size.height + descender + 3)
-        CGContextAddLineToPoint(contextRef, textRect.origin.x + textRect.size.width, textRect.origin.y + textRect.size.height + descender + 3)
+        contextRef?.move(to: CGPoint(x: textRect.origin.x, y: textRect.origin.y + textRect.size.height + descender + 3))
+        contextRef?.addLine(to: CGPoint(x: textRect.origin.x + textRect.size.width, y: textRect.origin.y + textRect.size.height + descender + 3))
 
-        CGContextClosePath(contextRef)
-        CGContextDrawPath(contextRef, CGPathDrawingMode.Stroke) // kCGPathStroke)
+        contextRef?.closePath()
+        contextRef?.drawPath(using: CGPathDrawingMode.stroke) // kCGPathStroke)
     }
 }

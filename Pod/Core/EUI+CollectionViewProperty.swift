@@ -16,17 +16,17 @@ class CollectionViewProperty: ScrollViewProperty {
     var layout:String?
     
     override func view() -> UICollectionView{
-        let view = UICollectionView(frame: CGRectZero, collectionViewLayout: self.getLayout())
+        let view = UICollectionView(frame: CGRect.zero, collectionViewLayout: self.getLayout())
         view.tagProperty = self
         
         self.renderViewStyle(view)
         for (reuseId,_) in self.reuseCell {
-            view.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseId)
+            view.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseId)
         }
         return view
     }
     
-    override func renderTag(pelement:OGElement){
+    override func renderTag(_ pelement:OGElement){
         self.tagOut += ["delegate","datasource","flow-layout","layout"]
         
         super.renderTag(pelement)
@@ -43,7 +43,7 @@ class CollectionViewProperty: ScrollViewProperty {
     }
 
     func getLayout() -> UICollectionViewLayout{
-        if let customlayout = self.layout,let nsobject = NSObject(fromString: customlayout) as? UICollectionViewLayout {
+        if let customlayout = self.layout,let nsobject = NSObject(from: customlayout) as? UICollectionViewLayout {
             return nsobject
         }
         
@@ -62,23 +62,23 @@ class CollectionViewProperty: ScrollViewProperty {
             }else if key == "sectionInset" {
                 layout.sectionInset = UIEdgeInsetsFromString(value)
             }else if key == "scrollDirection" {
-                if value.lowercaseString == "Vertical".lowercaseString {
-                    layout.scrollDirection = .Vertical
-                }else if value.lowercaseString == "Horizontal".lowercaseString {
-                    layout.scrollDirection = .Horizontal
+                if value.lowercased() == "Vertical".lowercased() {
+                    layout.scrollDirection = .vertical
+                }else if value.lowercased() == "Horizontal".lowercased() {
+                    layout.scrollDirection = .horizontal
                 }
             }
         }
         return layout
     }
     
-    override func childLoop(pelement: OGElement) {
+    override func childLoop(_ pelement: OGElement) {
         for element in pelement.children {
             if let ele = element as? OGElement,
                 let type = EUIParse.string(ele, key: "type"),
                 let tagId = EUIParse.string(ele, key: "id"),
                 let property = EUIParse.loopElement(ele){
-                if type.lowercaseString == "cell"  {
+                if type.lowercased() == "cell"  {
                     self.reuseCell[tagId] = property
                 }
             }

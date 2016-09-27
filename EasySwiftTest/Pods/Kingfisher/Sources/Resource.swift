@@ -37,7 +37,7 @@ public struct Resource {
     public let cacheKey: String
     
     /// The target image URL.
-    public let downloadURL: NSURL
+    public let downloadURL: URL
     
     /**
      Create a resource.
@@ -47,7 +47,7 @@ public struct Resource {
      
      - returns: A resource.
      */
-    public init(downloadURL: NSURL, cacheKey: String? = nil) {
+    public init(downloadURL: URL, cacheKey: String? = nil) {
         self.downloadURL = downloadURL
         self.cacheKey = cacheKey ?? downloadURL.absoluteString
     }
