@@ -1,7 +1,7 @@
 //
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2015 Srdan Rasic (@srdanrasic)
+//  Copyright (c) 2016 Srdan Rasic (@srdanrasic)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,34 +22,11 @@
 //  THE SOFTWARE.
 //
 
-/// A simple wrapper around an optional that can retain or release given optional at will.
-public final class Reference<T: AnyObject> {
-  
-  /// Encapsulated optional object.
-  public weak var object: T?
-  
-  /// Used to strongly reference (retain) encapsulated object.
-  private var strongReference: T?
-  
-  /// Creates the wrapper and strongly references the given object.
-  public init(_ object: T) {
-    self.object = object
-    self.strongReference = object
-  }
-  
-  public init(weak object: T) {
-    self.object = object
-  }
-  
-  /// Relinquishes strong reference to the object, but keeps weak one.
-  /// If object is not strongly referenced by anyone else, it will be deallocated.
-  public func release() {
-    strongReference = nil
-  }
-  
-  /// Re-establishes a strong reference to the object if it's still alive,
-  /// otherwise it doesn't do anything useful.
-  public func retain() {
-    strongReference = object
+import UIKit
+
+public extension UINavigationItem {
+
+  public var bnd_title: Bond<UINavigationItem, String?> {
+    return Bond(target: self) { $0.title = $1 }
   }
 }

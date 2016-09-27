@@ -1,7 +1,7 @@
 //
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2015 Srdan Rasic (@srdanrasic)
+//  Copyright (c) 2016 Srdan Rasic (@srdanrasic)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,28 +22,29 @@
 //  THE SOFTWARE.
 //
 
-public protocol OptionalType {
-  associatedtype WrappedType
-  var isNil: Bool { get }
-  var value: WrappedType? { get }
-  init(optional: WrappedType?)
+import UIKit
+import ReactiveKit
+import Foundation
+
+#if os(iOS)
+
+public extension UIDatePicker {
+
+  public var bnd_date: DynamicSubject<UIDatePicker, Date> {
+    return DynamicSubject(
+      target: self,
+      signal: bnd_controlEvents(.valueChanged).eraseType(),
+      get: { $0.date },
+      set: { $0.date = $1 }
+    )
+  }
 }
 
-extension Optional: OptionalType {
-  
-  public var isNil: Bool {
-    return self == nil
-  }
-  
-  public var value: Wrapped? {
-    return self
-  }
-  
-  public init(optional: Wrapped?) {
-    if let some = optional {
-      self = .Some(some)
-    } else {
-      self = .None
-    }
+extension UIDatePicker: BindableProtocol {
+
+  public func bind(signal: Signal<Date, NoError>) -> Disposable {
+    return bnd_date.bind(signal: signal)
   }
 }
+
+#endif

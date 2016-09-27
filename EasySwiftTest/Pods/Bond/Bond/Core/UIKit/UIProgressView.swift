@@ -1,7 +1,7 @@
 //
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2015 Srdan Rasic (@srdanrasic)
+//  Copyright (c) 2016 Srdan Rasic (@srdanrasic)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,26 +22,19 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+import ReactiveKit
+import UIKit
 
-/// Unidirectional binding operator
-infix operator ->> { associativity left precedence 95 }
+public extension UIProgressView {
 
-/// Bidirectional binding operator
-infix operator ->>< { associativity left precedence 95 }
-
-/// Establishes a unidirectional binding between the source observer and the destination sink.
-public func ->> <O: EventProducerType, B: BindableType where B.Element == O.EventType>(source: O, destination: B) -> DisposableType {
-  return source.bindTo(destination)
+  public var bnd_progress: Bond<UIProgressView, Float> {
+    return Bond(target: self) { $0.progress = $1 }
+  }
 }
 
-public func ->> <O: EventProducerType, B: BindableType where B.Element == Optional<O.EventType>>(source: O, destination: B) -> DisposableType {
-  return source.bindTo(destination)
-}
+extension UIProgressView: BindableProtocol {
 
-/// Establishes a bidirectional binding between the source and the destination.
-public func ->>< <B: BindableType where B: EventProducerType, B.Element == B.EventType>(source: B, destination: B) -> DisposableType {
-  let d1 = source.bindTo(destination)
-  let d2 = destination.bindTo(source)
-  return CompositeDisposable([d1, d2])
+  public func bind(signal: Signal<Float, NoError>) -> Disposable {
+    return bnd_progress.bind(signal: signal)
+  }
 }

@@ -1,7 +1,7 @@
 //
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2015 Srdan Rasic (@srdanrasic)
+//  Copyright (c) 2016 Srdan Rasic (@srdanrasic)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,28 +22,19 @@
 //  THE SOFTWARE.
 //
 
-public struct MutableObservable<Wrapped>: EventProducerType {
+import ReactiveKit
+import UIKit
 
-  private var observable: Observable<Wrapped>
+extension UIImageView {
 
-  public var value: Wrapped {
-    get {
-      return observable.value
-    }
-    set {
-      observable.value = newValue
-    }
+  public var bnd_image: Bond<UIImageView, UIImage?> {
+    return Bond(target: self) { $0.image = $1 }
   }
+}
 
-  public init(_ value: Wrapped) {
-    observable = Observable(value)
-  }
+extension UIImageView: BindableProtocol {
 
-  public var replayLength: Int {
-    return observable.replayLength
-  }
-
-  public func observe(observer: Wrapped -> Void) -> DisposableType {
-    return observable.observe(observer)
+  public func bind(signal: Signal<UIImage?, NoError>) -> Disposable {
+    return bnd_image.bind(signal: signal)
   }
 }

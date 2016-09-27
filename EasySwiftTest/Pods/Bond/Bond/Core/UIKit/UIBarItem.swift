@@ -1,7 +1,7 @@
 //
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2015 Srdan Rasic (@srdanrasic)
+//  Copyright (c) 2016 Srdan Rasic (@srdanrasic)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,34 +22,19 @@
 //  THE SOFTWARE.
 //
 
-import Dispatch
-import Foundation
+import UIKit
 
-/// A simple wrapper around GCD queue.
-public struct Queue {
-  
-  public typealias TimeInterval = NSTimeInterval
-  
-  public static let Main = Queue(queue: dispatch_get_main_queue());
-  public static let Default = Queue(queue: dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
-  public static let Background = Queue(queue: dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
-  
-  public private(set) var queue: dispatch_queue_t
+public extension UIBarItem {
 
-  public init(queue: dispatch_queue_t = dispatch_queue_create("com.swift-bond.Bond.Queue", DISPATCH_QUEUE_SERIAL)) {
-    self.queue = queue
-  }
-  
-  public func after(interval: NSTimeInterval, block: () -> Void) {
-    let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(interval * NSTimeInterval(NSEC_PER_SEC)))
-    dispatch_after(dispatchTime, queue, block)
-  }
-  
-  public func async(block: () -> Void) {
-    dispatch_async(queue, block)
+  public var bnd_title: Bond<UIBarItem, String?> {
+    return Bond(target: self) { $0.title = $1 }
   }
 
-  public func sync(block: () -> Void) {
-    dispatch_sync(queue, block)
+  public var bnd_image: Bond<UIBarItem, UIImage?> {
+    return Bond(target: self) { $0.image = $1 }
+  }
+
+  public var bnd_isEnabled: Bond<UIBarItem, Bool> {
+    return Bond(target: self) { $0.isEnabled = $1 }
   }
 }
