@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<!-- 🖼 Photo Library -->
+<key>NSPhotoLibraryUsageDescription</key>
+<string>请点击“允许”以允许访问</string>
+
+<!-- 📷 Camera -->
+<key>NSCameraUsageDescription</key>
+<string>请点击“允许”以允许访问</string>
+
+<!-- 🎤 Microphone -->
+<key>NSMicrophoneUsageDescription</key>
+<string>请点击“允许”以允许访问</string>
+
+<!-- 📍 Location -->
+<key>NSLocationUsageDescription</key>
+<string>请点击“允许”以允许访问</string>
+
+<!-- 📍 Location When In Use -->
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>请点击“允许”以允许访问</string>
+
+<!-- 📍 Location Always -->
+<key>NSLocationAlwaysUsageDescription</key>
+<string>请点击“允许”以允许访问</string>
+
+<!-- 📆 Calendars -->
+<key>NSCalendarsUsageDescription</key>
+<string>请点击“允许”以允许访问</string>
+
+<!-- ⏰ Reminders -->
+<key>NSRemindersUsageDescription</key>
+<string>请点击“允许”以允许访问</string>
+
+<!-- 🏊 Motion -->
+<key>NSMotionUsageDescription</key>
+<string>请点击“允许”以允许访问</string>
+
+<!-- 💊 Health Update -->
+<key>NSHealthUpdateUsageDescription</key>
+<string>请点击“允许”以允许访问</string>
+
+<!-- 💊 Health Share -->
+<key>NSHealthShareUsageDescription</key>
+<string>请点击“允许”以允许访问</string>
+
+<!-- ᛒ🔵 Bluetooth Peripheral -->
+<key>NSBluetoothPeripheralUsageDescription</key>
+<string>请点击“允许”以允许访问</string>
+
+<!-- 🎵 Media Library -->
+<key>NSAppleMusicUsageDescription</key>
+<string>请点击“允许”以允许访问</string>
+
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+</dict>
+</plist>

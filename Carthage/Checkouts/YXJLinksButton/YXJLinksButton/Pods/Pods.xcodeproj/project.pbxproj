@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11250426A8A57540A5366315D194CF02 /* YXJLinksButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AD7C73313B84D4C6686CE4ECE7308 /* YXJLinksButton-dummy.m */; };
+		27BB991EE226B15C1E79A8574A9F8FA8 /* YXJLinksButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6954EA3704C5E94DE8F78D08C11429 /* YXJLinksButton.swift */; };
+		8D5E4C675DC2EB9908641B6825532A94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
+		94E258781B580032CAC22CB27F175BE2 /* Pods-YXJLinksButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D39C3BD44CBFF75F4C6A76EAF6558AC0 /* Pods-YXJLinksButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A42743DCC2F76C7A8E592424364F309B /* YXJLinksButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BF733C933F0701E85C9889650EAC6D3 /* YXJLinksButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD0EC47008D749E69D7453609A6F79D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		DA8D7AB894DB17C82041C1CF82F237D1 /* Pods-YXJLinksButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E959CBF8BE035C978529F427490167CC /* Pods-YXJLinksButton-dummy.m */; };
+		FB348099A07D7AEC477E80677CF911B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A394172665D9AFDA4253F31F745AB5FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C703322BCB7AD09C015D60721CA4AC75;
+			remoteInfo = YXJLinksButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		12DED8632CB3B8BA63ABAED21B95CFF0 /* YXJLinksButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YXJLinksButton-prefix.pch"; sourceTree = "<group>"; };
+		144651B7EF7306AAB2AFD4F141709A0C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A6AD7C73313B84D4C6686CE4ECE7308 /* YXJLinksButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YXJLinksButton-dummy.m"; sourceTree = "<group>"; };
+		1BF733C933F0701E85C9889650EAC6D3 /* YXJLinksButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YXJLinksButton-umbrella.h"; sourceTree = "<group>"; };
+		2D5E4572E4A2530A18B1778FA03DDEB0 /* Pods-YXJLinksButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YXJLinksButton.modulemap"; sourceTree = "<group>"; };
+		33A317FF961C40292F3B888B029D44A8 /* YXJLinksButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YXJLinksButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34F947E83BA8E0B09AD687385CBDEDF1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DA230D1F39A977E61F60DA4C98C1FD8 /* Pods-YXJLinksButton-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YXJLinksButton-resources.sh"; sourceTree = "<group>"; };
+		5813116BD7FDA9A5061A2EACA7F26DF9 /* Pods-YXJLinksButton-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YXJLinksButton-acknowledgements.markdown"; sourceTree = "<group>"; };
+		59F22E5CDD12A18FB8AA6ACA8EE76BA7 /* Pods-YXJLinksButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YXJLinksButton.release.xcconfig"; sourceTree = "<group>"; };
+		734E9C4D182CC0C629DAEC476DCDEB25 /* Pods-YXJLinksButton-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YXJLinksButton-frameworks.sh"; sourceTree = "<group>"; };
+		746000EE7E43F79A20669C3F7E22FEF4 /* Pods-YXJLinksButton-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YXJLinksButton-acknowledgements.plist"; sourceTree = "<group>"; };
+		854F6019B1E40C72143B852BAAFE858E /* Pods_YXJLinksButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YXJLinksButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B6954EA3704C5E94DE8F78D08C11429 /* YXJLinksButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YXJLinksButton.swift; sourceTree = "<group>"; };
+		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A88336786793B41D1C35C4D44AA1FFBC /* YXJLinksButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YXJLinksButton.xcconfig; sourceTree = "<group>"; };
+		CF51AA6118772FA465C4155AEDA8C752 /* YXJLinksButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = YXJLinksButton.modulemap; sourceTree = "<group>"; };
+		D39C3BD44CBFF75F4C6A76EAF6558AC0 /* Pods-YXJLinksButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YXJLinksButton-umbrella.h"; sourceTree = "<group>"; };
+		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E959CBF8BE035C978529F427490167CC /* Pods-YXJLinksButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YXJLinksButton-dummy.m"; sourceTree = "<group>"; };
+		F3095CF32CCF7D79B0F0CA7DC09D4082 /* Pods-YXJLinksButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YXJLinksButton.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		498C62DC3FA69EBA20738F5F72188383 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAD0EC47008D749E69D7453609A6F79D /* Foundation.framework in Frameworks */,
+				8D5E4C675DC2EB9908641B6825532A94 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D8855AAE64DA2432B72CBFA59CD028 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB348099A07D7AEC477E80677CF911B0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		004E8DEF8E8EBDB002B9FA1EDD04002A /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				9B6954EA3704C5E94DE8F78D08C11429 /* YXJLinksButton.swift */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		1377CDDA62663BF58382D601968BDE4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				854F6019B1E40C72143B852BAAFE858E /* Pods_YXJLinksButton.framework */,
+				33A317FF961C40292F3B888B029D44A8 /* YXJLinksButton.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		353BD097A38B49B36E69270C1A58E96B /* YXJLinksButton */ = {
+			isa = PBXGroup;
+			children = (
+				004E8DEF8E8EBDB002B9FA1EDD04002A /* Pod */,
+				D79E7742285F028464D9D3B14EAA89F0 /* Support Files */,
+			);
+			name = YXJLinksButton;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F83D422E1642A694EDB15A208C08F18 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A574A2B49274FA249CEA9F543714ACD5 /* Pods-YXJLinksButton */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		71324876944262FAC24A10B43CB8F10B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				353BD097A38B49B36E69270C1A58E96B /* YXJLinksButton */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				71324876944262FAC24A10B43CB8F10B /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				1377CDDA62663BF58382D601968BDE4D /* Products */,
+				4F83D422E1642A694EDB15A208C08F18 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A574A2B49274FA249CEA9F543714ACD5 /* Pods-YXJLinksButton */ = {
+			isa = PBXGroup;
+			children = (
+				34F947E83BA8E0B09AD687385CBDEDF1 /* Info.plist */,
+				2D5E4572E4A2530A18B1778FA03DDEB0 /* Pods-YXJLinksButton.modulemap */,
+				5813116BD7FDA9A5061A2EACA7F26DF9 /* Pods-YXJLinksButton-acknowledgements.markdown */,
+				746000EE7E43F79A20669C3F7E22FEF4 /* Pods-YXJLinksButton-acknowledgements.plist */,
+				E959CBF8BE035C978529F427490167CC /* Pods-YXJLinksButton-dummy.m */,
+				734E9C4D182CC0C629DAEC476DCDEB25 /* Pods-YXJLinksButton-frameworks.sh */,
+				4DA230D1F39A977E61F60DA4C98C1FD8 /* Pods-YXJLinksButton-resources.sh */,
+				D39C3BD44CBFF75F4C6A76EAF6558AC0 /* Pods-YXJLinksButton-umbrella.h */,
+				F3095CF32CCF7D79B0F0CA7DC09D4082 /* Pods-YXJLinksButton.debug.xcconfig */,
+				59F22E5CDD12A18FB8AA6ACA8EE76BA7 /* Pods-YXJLinksButton.release.xcconfig */,
+			);
+			name = "Pods-YXJLinksButton";
+			path = "Target Support Files/Pods-YXJLinksButton";
+			sourceTree = "<group>";
+		};
+		D79E7742285F028464D9D3B14EAA89F0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				144651B7EF7306AAB2AFD4F141709A0C /* Info.plist */,
+				CF51AA6118772FA465C4155AEDA8C752 /* YXJLinksButton.modulemap */,
+				A88336786793B41D1C35C4D44AA1FFBC /* YXJLinksButton.xcconfig */,
+				1A6AD7C73313B84D4C6686CE4ECE7308 /* YXJLinksButton-dummy.m */,
+				12DED8632CB3B8BA63ABAED21B95CFF0 /* YXJLinksButton-prefix.pch */,
+				1BF733C933F0701E85C9889650EAC6D3 /* YXJLinksButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "YXJLinksButton/Pods/Target Support Files/YXJLinksButton";
+			sourceTree = "<group>";
+		};
+		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */,
+				E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		496315EAE0CDEEAA5AD1ABC1A80A5A59 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E258781B580032CAC22CB27F175BE2 /* Pods-YXJLinksButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		546D4BBFE8E565583623B6277944D226 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A42743DCC2F76C7A8E592424364F309B /* YXJLinksButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C703322BCB7AD09C015D60721CA4AC75 /* YXJLinksButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A43A42080DD426DEE5C19E787F7960A9 /* Build configuration list for PBXNativeTarget "YXJLinksButton" */;
+			buildPhases = (
+				56CA85E2621C3B3FC5B0C9DB688D526C /* Sources */,
+				498C62DC3FA69EBA20738F5F72188383 /* Frameworks */,
+				546D4BBFE8E565583623B6277944D226 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YXJLinksButton;
+			productName = YXJLinksButton;
+			productReference = 33A317FF961C40292F3B888B029D44A8 /* YXJLinksButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FE2763E042B4E71ADB6ADCFD9495D689 /* Pods-YXJLinksButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A4AD81088DB457F2DDE288E9E1D2200 /* Build configuration list for PBXNativeTarget "Pods-YXJLinksButton" */;
+			buildPhases = (
+				162235FAABEA0B5AB73E2C3F2FB066F7 /* Sources */,
+				B5D8855AAE64DA2432B72CBFA59CD028 /* Frameworks */,
+				496315EAE0CDEEAA5AD1ABC1A80A5A59 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24B571F3CB08C2BD4C5F6568A87AE66E /* PBXTargetDependency */,
+			);
+			name = "Pods-YXJLinksButton";
+			productName = "Pods-YXJLinksButton";
+			productReference = 854F6019B1E40C72143B852BAAFE858E /* Pods_YXJLinksButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					C703322BCB7AD09C015D60721CA4AC75 = {
+						LastSwiftMigration = 0800;
+					};
+					FE2763E042B4E71ADB6ADCFD9495D689 = {
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1377CDDA62663BF58382D601968BDE4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE2763E042B4E71ADB6ADCFD9495D689 /* Pods-YXJLinksButton */,
+				C703322BCB7AD09C015D60721CA4AC75 /* YXJLinksButton */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		162235FAABEA0B5AB73E2C3F2FB066F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA8D7AB894DB17C82041C1CF82F237D1 /* Pods-YXJLinksButton-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56CA85E2621C3B3FC5B0C9DB688D526C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11250426A8A57540A5366315D194CF02 /* YXJLinksButton-dummy.m in Sources */,
+				27BB991EE226B15C1E79A8574A9F8FA8 /* YXJLinksButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24B571F3CB08C2BD4C5F6568A87AE66E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YXJLinksButton;
+			target = C703322BCB7AD09C015D60721CA4AC75 /* YXJLinksButton */;
+			targetProxy = A394172665D9AFDA4253F31F745AB5FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3E28C9954BEB84F6A555D5FF38C1E983 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A88336786793B41D1C35C4D44AA1FFBC /* YXJLinksButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YXJLinksButton/YXJLinksButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YXJLinksButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YXJLinksButton/YXJLinksButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = YXJLinksButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4408D81E92DB2B3D9D79E5FA3F864DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59F22E5CDD12A18FB8AA6ACA8EE76BA7 /* Pods-YXJLinksButton.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-YXJLinksButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YXJLinksButton/Pods-YXJLinksButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_YXJLinksButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA6DA219970671F45607E225AA0AC030 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A88336786793B41D1C35C4D44AA1FFBC /* YXJLinksButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YXJLinksButton/YXJLinksButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YXJLinksButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YXJLinksButton/YXJLinksButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = YXJLinksButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D1B3A954A4BFAFA59F2F45FFBCAD49B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3095CF32CCF7D79B0F0CA7DC09D4082 /* Pods-YXJLinksButton.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-YXJLinksButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YXJLinksButton/Pods-YXJLinksButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_YXJLinksButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47BEF9D903506B003EA5C2B249729489 /* Debug */,
+				AAF678CED40D3499169D10F63CA0719E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A4AD81088DB457F2DDE288E9E1D2200 /* Build configuration list for PBXNativeTarget "Pods-YXJLinksButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B3A954A4BFAFA59F2F45FFBCAD49B9 /* Debug */,
+				4408D81E92DB2B3D9D79E5FA3F864DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A43A42080DD426DEE5C19E787F7960A9 /* Build configuration list for PBXNativeTarget "YXJLinksButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA6DA219970671F45607E225AA0AC030 /* Debug */,
+				3E28C9954BEB84F6A555D5FF38C1E983 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

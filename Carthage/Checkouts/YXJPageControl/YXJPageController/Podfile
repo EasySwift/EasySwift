@@ -1,0 +1,13 @@
+
+platform :ios, '8.0'
+
+target 'YXJPageControllerTest' do
+    
+    xcodeproj 'YXJPageControllerTest.xcodeproj'
+    
+    use_frameworks!
+    
+    pod "YXJPageController", :path => "../"
+#    pod 'YXJPageController'
+
+end

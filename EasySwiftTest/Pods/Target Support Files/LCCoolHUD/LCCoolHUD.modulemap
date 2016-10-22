@@ -1,6 +1,0 @@
-framework module LCCoolHUD {
-  umbrella header "LCCoolHUD-umbrella.h"
-
-  export *
-  module * { export * }
-}

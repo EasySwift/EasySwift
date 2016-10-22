@@ -1,0 +1,16 @@
+PODS:
+  - YXJSlideBar (0.0.1)
+
+DEPENDENCIES:
+  - YXJSlideBar (from `../`)
+
+EXTERNAL SOURCES:
+  YXJSlideBar:
+    :path: ../
+
+SPEC CHECKSUMS:
+  YXJSlideBar: ccd6907d597483916e730e9ac3a28dc7fbb3eab1
+
+PODFILE CHECKSUM: a77544e42cccea226f8c3b665e9c9ef4c44c9aa3
+
+COCOAPODS: 1.0.1

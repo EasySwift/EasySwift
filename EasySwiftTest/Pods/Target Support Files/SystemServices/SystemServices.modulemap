@@ -1,6 +1,0 @@
-framework module SystemServices {
-  umbrella header "SystemServices-umbrella.h"
-
-  export *
-  module * { export * }
-}

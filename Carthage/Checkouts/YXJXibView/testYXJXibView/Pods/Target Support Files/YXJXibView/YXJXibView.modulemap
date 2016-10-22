@@ -1,0 +1,6 @@
+framework module YXJXibView {
+  umbrella header "YXJXibView-umbrella.h"
+
+  export *
+  module * { export * }
+}

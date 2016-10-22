@@ -1,0 +1,13 @@
+
+platform :ios, '8.0'
+
+target 'YXJCycleViewTest' do
+    
+    xcodeproj 'YXJCycleViewTest.xcodeproj'
+    
+    use_frameworks!
+    
+    pod "YXJCycleView", :path => "../"
+#    pod 'YXJCycleView'
+
+end

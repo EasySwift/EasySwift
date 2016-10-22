@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0281A76F66471C5C290F4D588C519A66 /* YXJKxMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F156CD177AD4A76BEF5D3EC5BA027E8 /* YXJKxMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EDD9DA0C6A0C9AFBB29D85EB2030FDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		1660688D58456DAB8AB88697BA75485C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
+		278F1EFE555C12B1C757599B86F1F570 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		28B88127706A716A3D7440633E159963 /* YXJKxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D94989C9CB19E77503F9253A6D99 /* YXJKxMenu.m */; };
+		41222FF73AC270554F32970C0C178EA4 /* YXJKxMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4004064D5E5BC203B47A0835247206D2 /* YXJKxMenu-dummy.m */; };
+		871CD80BCB3C998D1188E2F715CA8CC2 /* Pods-YXJKxMenuTest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70012F3A1546776CCF9B47EBEFB5F572 /* Pods-YXJKxMenuTest-dummy.m */; };
+		DFF31D68E482B405E50B857979066807 /* Pods-YXJKxMenuTest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 882462EB0D1CB8FF9C2170E0DA7FC729 /* Pods-YXJKxMenuTest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDAA6BB0C203955AF585FE0CCB02DD61 /* YXJKxMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D09F692905841916519FCA86D0976891 /* YXJKxMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2890E30144FE0E1B33B91E5C2E9A23E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 215829BCC7B36EBE6FA675A20EB0C623;
+			remoteInfo = YXJKxMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		000F067EAB5F32D60ADAD35A419A8ABE /* YXJKxMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YXJKxMenu.xcconfig; sourceTree = "<group>"; };
+		4004064D5E5BC203B47A0835247206D2 /* YXJKxMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YXJKxMenu-dummy.m"; sourceTree = "<group>"; };
+		4496CE9A7C46E58AC522F6643C2D9228 /* Pods-YXJKxMenuTest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YXJKxMenuTest-frameworks.sh"; sourceTree = "<group>"; };
+		4DE4D94989C9CB19E77503F9253A6D99 /* YXJKxMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YXJKxMenu.m; sourceTree = "<group>"; };
+		6A02D639CD1EAC7550C8A2899E8C3C1C /* Pods-YXJKxMenuTest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YXJKxMenuTest.modulemap"; sourceTree = "<group>"; };
+		6E39B2DB8F7F8277D3652CC725CEC698 /* Pods-YXJKxMenuTest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YXJKxMenuTest-acknowledgements.plist"; sourceTree = "<group>"; };
+		6F156CD177AD4A76BEF5D3EC5BA027E8 /* YXJKxMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YXJKxMenu.h; sourceTree = "<group>"; };
+		70012F3A1546776CCF9B47EBEFB5F572 /* Pods-YXJKxMenuTest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YXJKxMenuTest-dummy.m"; sourceTree = "<group>"; };
+		73CFE4913FF1F4F13A1857F40E2CEA18 /* Pods_YXJKxMenuTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YXJKxMenuTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		882462EB0D1CB8FF9C2170E0DA7FC729 /* Pods-YXJKxMenuTest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YXJKxMenuTest-umbrella.h"; sourceTree = "<group>"; };
+		886932166C7A1A620592915B55B14AF5 /* Pods-YXJKxMenuTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YXJKxMenuTest.debug.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E85764D834E121C072FE8CA352684B7 /* Pods-YXJKxMenuTest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YXJKxMenuTest-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		AB03CCE8872407E0C66ECA2E37A0A692 /* YXJKxMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YXJKxMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACD637BB5CACC25651D67E9AEFDE398D /* YXJKxMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YXJKxMenu-prefix.pch"; sourceTree = "<group>"; };
+		BEBD262E17D090A12FC7B0768948BBD5 /* Pods-YXJKxMenuTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YXJKxMenuTest.release.xcconfig"; sourceTree = "<group>"; };
+		D09F692905841916519FCA86D0976891 /* YXJKxMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YXJKxMenu-umbrella.h"; sourceTree = "<group>"; };
+		D3FC907C56FADC3AD2BD09D914C1BEF4 /* Pods-YXJKxMenuTest-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YXJKxMenuTest-resources.sh"; sourceTree = "<group>"; };
+		D549167198FF24686EDFF4DD5BB10008 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E8A677FEAF5538E1B7573CBBE8EA01EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8DED322C8681B9C187B7C3C4CF986BC /* YXJKxMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = YXJKxMenu.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38ED3A9A6B1F137994B0718E8EBC7FAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EDD9DA0C6A0C9AFBB29D85EB2030FDD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5E3EF9E8C266365F33A84522FE712C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278F1EFE555C12B1C757599B86F1F570 /* Foundation.framework in Frameworks */,
+				1660688D58456DAB8AB88697BA75485C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C3E9C74846DC34D479C994E82F81A30 /* YXJKxMenu */ = {
+			isa = PBXGroup;
+			children = (
+				80828CA34606D7EAA5CB3545627C5CBE /* Pod */,
+				505D3612A69BE8CB52A27BBEFB033F9C /* Support Files */,
+			);
+			name = YXJKxMenu;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		398ED42022B0D538EEB9E4E33A12E4D6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C3E9C74846DC34D479C994E82F81A30 /* YXJKxMenu */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47A3E4DEAE0498838D5724AFDF17E42E /* Pods-YXJKxMenuTest */ = {
+			isa = PBXGroup;
+			children = (
+				D549167198FF24686EDFF4DD5BB10008 /* Info.plist */,
+				6A02D639CD1EAC7550C8A2899E8C3C1C /* Pods-YXJKxMenuTest.modulemap */,
+				9E85764D834E121C072FE8CA352684B7 /* Pods-YXJKxMenuTest-acknowledgements.markdown */,
+				6E39B2DB8F7F8277D3652CC725CEC698 /* Pods-YXJKxMenuTest-acknowledgements.plist */,
+				70012F3A1546776CCF9B47EBEFB5F572 /* Pods-YXJKxMenuTest-dummy.m */,
+				4496CE9A7C46E58AC522F6643C2D9228 /* Pods-YXJKxMenuTest-frameworks.sh */,
+				D3FC907C56FADC3AD2BD09D914C1BEF4 /* Pods-YXJKxMenuTest-resources.sh */,
+				882462EB0D1CB8FF9C2170E0DA7FC729 /* Pods-YXJKxMenuTest-umbrella.h */,
+				886932166C7A1A620592915B55B14AF5 /* Pods-YXJKxMenuTest.debug.xcconfig */,
+				BEBD262E17D090A12FC7B0768948BBD5 /* Pods-YXJKxMenuTest.release.xcconfig */,
+			);
+			name = "Pods-YXJKxMenuTest";
+			path = "Target Support Files/Pods-YXJKxMenuTest";
+			sourceTree = "<group>";
+		};
+		505D3612A69BE8CB52A27BBEFB033F9C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E8A677FEAF5538E1B7573CBBE8EA01EA /* Info.plist */,
+				F8DED322C8681B9C187B7C3C4CF986BC /* YXJKxMenu.modulemap */,
+				000F067EAB5F32D60ADAD35A419A8ABE /* YXJKxMenu.xcconfig */,
+				4004064D5E5BC203B47A0835247206D2 /* YXJKxMenu-dummy.m */,
+				ACD637BB5CACC25651D67E9AEFDE398D /* YXJKxMenu-prefix.pch */,
+				D09F692905841916519FCA86D0976891 /* YXJKxMenu-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "YXJKxMenuTest/Pods/Target Support Files/YXJKxMenu";
+			sourceTree = "<group>";
+		};
+		5FC3883C7DF8F876A2B364E239FD1303 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73CFE4913FF1F4F13A1857F40E2CEA18 /* Pods_YXJKxMenuTest.framework */,
+				AB03CCE8872407E0C66ECA2E37A0A692 /* YXJKxMenu.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				398ED42022B0D538EEB9E4E33A12E4D6 /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				5FC3883C7DF8F876A2B364E239FD1303 /* Products */,
+				D461893793EA0C8EAE7D58F957945EE5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		80828CA34606D7EAA5CB3545627C5CBE /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				6F156CD177AD4A76BEF5D3EC5BA027E8 /* YXJKxMenu.h */,
+				4DE4D94989C9CB19E77503F9253A6D99 /* YXJKxMenu.m */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		D461893793EA0C8EAE7D58F957945EE5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				47A3E4DEAE0498838D5724AFDF17E42E /* Pods-YXJKxMenuTest */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */,
+				E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7D1225E71079D3782CA60D7D936717C8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDAA6BB0C203955AF585FE0CCB02DD61 /* YXJKxMenu-umbrella.h in Headers */,
+				0281A76F66471C5C290F4D588C519A66 /* YXJKxMenu.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB0DDC61671D161471787FB74C6B4DA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF31D68E482B405E50B857979066807 /* Pods-YXJKxMenuTest-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		215829BCC7B36EBE6FA675A20EB0C623 /* YXJKxMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62B214EF6449F4FC3339F160F8DF068F /* Build configuration list for PBXNativeTarget "YXJKxMenu" */;
+			buildPhases = (
+				B87970AD811CE56F1568D243518BF0CF /* Sources */,
+				F5E3EF9E8C266365F33A84522FE712C2 /* Frameworks */,
+				7D1225E71079D3782CA60D7D936717C8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YXJKxMenu;
+			productName = YXJKxMenu;
+			productReference = AB03CCE8872407E0C66ECA2E37A0A692 /* YXJKxMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		73D526F3C0EE533D187CC4532E475870 /* Pods-YXJKxMenuTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EDAF8B978DD245C0CCA3CF71E467153 /* Build configuration list for PBXNativeTarget "Pods-YXJKxMenuTest" */;
+			buildPhases = (
+				E5C129AFC611B1E2CDDD80BC6E5ACD18 /* Sources */,
+				38ED3A9A6B1F137994B0718E8EBC7FAD /* Frameworks */,
+				EB0DDC61671D161471787FB74C6B4DA8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8490A51806708BB01AC9728B0A55F7D7 /* PBXTargetDependency */,
+			);
+			name = "Pods-YXJKxMenuTest";
+			productName = "Pods-YXJKxMenuTest";
+			productReference = 73CFE4913FF1F4F13A1857F40E2CEA18 /* Pods_YXJKxMenuTest.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 5FC3883C7DF8F876A2B364E239FD1303 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73D526F3C0EE533D187CC4532E475870 /* Pods-YXJKxMenuTest */,
+				215829BCC7B36EBE6FA675A20EB0C623 /* YXJKxMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B87970AD811CE56F1568D243518BF0CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41222FF73AC270554F32970C0C178EA4 /* YXJKxMenu-dummy.m in Sources */,
+				28B88127706A716A3D7440633E159963 /* YXJKxMenu.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5C129AFC611B1E2CDDD80BC6E5ACD18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				871CD80BCB3C998D1188E2F715CA8CC2 /* Pods-YXJKxMenuTest-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8490A51806708BB01AC9728B0A55F7D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YXJKxMenu;
+			target = 215829BCC7B36EBE6FA675A20EB0C623 /* YXJKxMenu */;
+			targetProxy = 2890E30144FE0E1B33B91E5C2E9A23E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		51195D769ECEA8C936200AB67051189E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000F067EAB5F32D60ADAD35A419A8ABE /* YXJKxMenu.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YXJKxMenu/YXJKxMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YXJKxMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YXJKxMenu/YXJKxMenu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = YXJKxMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		98E369ED9644B1306C51F5133B4A6CCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 886932166C7A1A620592915B55B14AF5 /* Pods-YXJKxMenuTest.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-YXJKxMenuTest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YXJKxMenuTest/Pods-YXJKxMenuTest.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_YXJKxMenuTest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB1A68DD2C2E443692B5C185BA992041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000F067EAB5F32D60ADAD35A419A8ABE /* YXJKxMenu.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YXJKxMenu/YXJKxMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YXJKxMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YXJKxMenu/YXJKxMenu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = YXJKxMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D6774F559168BB2CD31ECAEFDA5CFB01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEBD262E17D090A12FC7B0768948BBD5 /* Pods-YXJKxMenuTest.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-YXJKxMenuTest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YXJKxMenuTest/Pods-YXJKxMenuTest.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_YXJKxMenuTest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47BEF9D903506B003EA5C2B249729489 /* Debug */,
+				AAF678CED40D3499169D10F63CA0719E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62B214EF6449F4FC3339F160F8DF068F /* Build configuration list for PBXNativeTarget "YXJKxMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB1A68DD2C2E443692B5C185BA992041 /* Debug */,
+				51195D769ECEA8C936200AB67051189E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EDAF8B978DD245C0CCA3CF71E467153 /* Build configuration list for PBXNativeTarget "Pods-YXJKxMenuTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98E369ED9644B1306C51F5133B4A6CCC /* Debug */,
+				D6774F559168BB2CD31ECAEFDA5CFB01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

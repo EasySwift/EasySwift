@@ -1,0 +1,13 @@
+
+platform :ios, '8.0'
+
+target 'YXJKxMenuTest' do
+    
+    xcodeproj 'YXJKxMenuTest.xcodeproj'
+    
+    use_frameworks!
+    
+    pod "YXJKxMenu", :path => "../"
+#    pod 'YXJKxMenu'
+
+end

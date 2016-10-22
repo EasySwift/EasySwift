@@ -1,0 +1,13 @@
+
+platform :ios, '8.0'
+
+target 'YXJSlideBarTest' do
+    
+    xcodeproj 'YXJSlideBarTest.xcodeproj'
+    
+    use_frameworks!
+    
+    pod "YXJSlideBar", :path => "../"
+#    pod 'YXJSlideBar'
+
+end

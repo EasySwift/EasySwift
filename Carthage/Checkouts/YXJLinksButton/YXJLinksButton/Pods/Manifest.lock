@@ -1,0 +1,16 @@
+PODS:
+  - YXJLinksButton (0.0.1)
+
+DEPENDENCIES:
+  - YXJLinksButton (from `../`)
+
+EXTERNAL SOURCES:
+  YXJLinksButton:
+    :path: ../
+
+SPEC CHECKSUMS:
+  YXJLinksButton: 8cd18f02e733435d5923b93b0516542468263d6e
+
+PODFILE CHECKSUM: 20d961f3e4649439a8a93e18fbc562908ee34646
+
+COCOAPODS: 1.0.1

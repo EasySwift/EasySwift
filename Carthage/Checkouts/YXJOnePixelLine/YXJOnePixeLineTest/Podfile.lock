@@ -1,0 +1,16 @@
+PODS:
+  - YXJOnePixeLine (0.0.1)
+
+DEPENDENCIES:
+  - YXJOnePixeLine (from `../`)
+
+EXTERNAL SOURCES:
+  YXJOnePixeLine:
+    :path: ../
+
+SPEC CHECKSUMS:
+  YXJOnePixeLine: a2f3d644908aa5819624ef1da97e3bb2a8c8a105
+
+PODFILE CHECKSUM: 657804a907aaee70fc537be27474addfeb461fb7
+
+COCOAPODS: 1.0.1

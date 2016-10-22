@@ -1,0 +1,13 @@
+
+platform :ios, '8.0'
+
+target 'YXJPullScaleTest' do
+    
+    xcodeproj 'YXJPullScaleTest.xcodeproj'
+    
+    use_frameworks!
+    
+    pod "YXJPullScale", :path => "../"
+#    pod 'YXJPullScale'
+
+end

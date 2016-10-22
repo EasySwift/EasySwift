@@ -1,6 +1,0 @@
-framework module AXBadgeView_Swift {
-  umbrella header "AXBadgeView-Swift-umbrella.h"
-
-  export *
-  module * { export * }
-}

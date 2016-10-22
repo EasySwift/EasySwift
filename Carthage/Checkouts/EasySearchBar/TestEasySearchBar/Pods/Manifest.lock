@@ -1,0 +1,16 @@
+PODS:
+  - EasySearchBar (0.0.1)
+
+DEPENDENCIES:
+  - EasySearchBar (from `../`)
+
+EXTERNAL SOURCES:
+  EasySearchBar:
+    :path: ../
+
+SPEC CHECKSUMS:
+  EasySearchBar: b4ef018ccab9d9018e693f95b41dec59ad26444b
+
+PODFILE CHECKSUM: 9f2f7d2ff7954cbe19da581797b2beb4fc530202
+
+COCOAPODS: 1.0.1

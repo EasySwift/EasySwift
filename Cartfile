@@ -1,0 +1,51 @@
+github "SnapKit/SnapKit" == 3.0.2
+github "SwiftBond/Bond" ~> 5.0
+github "TTTAttributedLabel/TTTAttributedLabel"
+github "Alamofire/Alamofire"
+github "SwiftyJSON/SwiftyJSON"
+github "Draveness/DKChainableAnimationKit"
+github "Hearst-DD/ObjectMapper" #~> 2.1
+github "hsousa/HCSStarRatingView" #评分框架
+github "hackiftekhar/IQKeyboardManager"
+github "forkingdog/UITableView-FDTemplateLayoutCell"
+github "Haneke/HanekeSwift" "feature/swift-3"
+github "ashleymills/Reachability.swift" ~> 3.0
+
+github "EasySwift/Kingfisher"
+github "EasySwift/TOWebViewController"
+github "EasySwift/RainbowNavigation"
+github "EasySwift/gcdswift"
+github "EasySwift/MJRefresh" #== 3.1.0
+github "EasySwift/ZLPhotoBrowser"
+github "EasySwift/TYAlertController"
+github "EasySwift/CYLTabBarController"
+github "EasySwift/FORScrollViewEmptyAssistant"
+github "EasySwift/swiftScan" #"Swift3.0"
+github "EasySwift/Colours"
+github "EasySwift/Loggerithm"
+github "EasySwift/SwiftString"
+github "EasySwift/iOS-System-Services"
+github "EasySwift/AXBadgeView-Swift"
+github "EasySwift/APValidators"
+github "EasySwift/LCCoolHUD"
+github "EasySwift/MWPhotoBrowser"
+github "EasySwift/APAddressBook"
+github "EasySwift/EasyDropDownMenu"
+github "EasySwift/EasySearchBar"
+github "EasySwift/YXJTagView"
+github "EasySwift/YXJXibView"
+github "EasySwift/EasyEmoji"
+github "EasySwift/YXJKxMenu"
+github "EasySwift/YXJLinksButton"
+github "EasySwift/UIButton-SSEdgeInsets"
+github "EasySwift/YXJSwipeTableViewCell"    #
+github "EasySwift/YXJSlideBar"             #
+github "EasySwift/EasyCountDownButton"      #
+github "EasySwift/YXJCycleView"             #
+github "EasySwift/YXJPageControl"        #
+github "EasySwift/YXJOnePixelLine"           #
+github "EasySwift/YXJImageCompressor"       #
+github "EasySwift/YXJPullScale"             #
+
+#github "EasySwift/EasySwift"                #
+

@@ -1,0 +1,7 @@
+language: objective-c
+
+before_script: 
+- gem install xcpretty
+
+script:
+- xcodebuild -project ColoursDemo/ColoursDemo.xcodeproj -scheme ColoursDemo -sdk iphonesimulator test | xcpretty -c

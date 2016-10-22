@@ -1,0 +1,16 @@
+PODS:
+  - YXJXibView (0.0.1)
+
+DEPENDENCIES:
+  - YXJXibView (from `../`)
+
+EXTERNAL SOURCES:
+  YXJXibView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  YXJXibView: da743e70f9fd6e5b16bb6d45da0913679b8f856d
+
+PODFILE CHECKSUM: c7be1c20146cdf7b1d57300b90e436a7e82ca930
+
+COCOAPODS: 1.1.0.beta.2

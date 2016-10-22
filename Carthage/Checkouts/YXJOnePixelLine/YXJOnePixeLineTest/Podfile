@@ -1,0 +1,13 @@
+
+platform :ios, '8.0'
+
+target 'YXJOnePixeLineTest' do
+    
+    xcodeproj 'YXJOnePixeLineTest.xcodeproj'
+    
+    use_frameworks!
+    
+    pod "YXJOnePixeLine", :path => "../"
+#    pod 'YXJOnePixeLine'
+
+end

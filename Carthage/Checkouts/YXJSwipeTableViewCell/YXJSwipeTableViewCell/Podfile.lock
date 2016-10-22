@@ -1,0 +1,20 @@
+PODS:
+  - UIButton-SSEdgeInsets (0.1.4)
+  - YXJSwipeTableViewCell (0.0.1):
+    - UIButton-SSEdgeInsets
+
+DEPENDENCIES:
+  - UIButton-SSEdgeInsets
+  - YXJSwipeTableViewCell (from `../`)
+
+EXTERNAL SOURCES:
+  YXJSwipeTableViewCell:
+    :path: ../
+
+SPEC CHECKSUMS:
+  UIButton-SSEdgeInsets: 50d42c7d441d42ea115f84765622f3dea5cadf55
+  YXJSwipeTableViewCell: 0178d922735bf75f4f82a30a34d3c10074278d4f
+
+PODFILE CHECKSUM: fba55da6d7906749bb0428a9df9cacd2c6935dba
+
+COCOAPODS: 1.1.0.beta.2

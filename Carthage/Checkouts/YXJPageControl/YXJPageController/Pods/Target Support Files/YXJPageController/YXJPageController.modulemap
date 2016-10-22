@@ -1,0 +1,6 @@
+framework module YXJPageController {
+  umbrella header "YXJPageController-umbrella.h"
+
+  export *
+  module * { export * }
+}

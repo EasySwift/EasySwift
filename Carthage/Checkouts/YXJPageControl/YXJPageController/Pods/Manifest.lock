@@ -1,0 +1,16 @@
+PODS:
+  - YXJPageController (0.0.1)
+
+DEPENDENCIES:
+  - YXJPageController (from `../`)
+
+EXTERNAL SOURCES:
+  YXJPageController:
+    :path: ../
+
+SPEC CHECKSUMS:
+  YXJPageController: a8b59d10c9a58d868b5b89d66f3ba23334d383ca
+
+PODFILE CHECKSUM: b84bb438cf0d264ec343c02feada753d2293a0d8
+
+COCOAPODS: 1.0.1

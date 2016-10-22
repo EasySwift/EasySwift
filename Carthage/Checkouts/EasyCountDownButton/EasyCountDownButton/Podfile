@@ -1,0 +1,13 @@
+
+platform :ios, '8.0'
+
+target 'EasyCountDownButtonTest' do
+    
+    xcodeproj 'EasyCountDownButtonTest.xcodeproj'
+    
+    use_frameworks!
+    
+    pod "EasyCountDownButton", :path => "../"
+#    pod 'EasyCountDownButton'
+
+end

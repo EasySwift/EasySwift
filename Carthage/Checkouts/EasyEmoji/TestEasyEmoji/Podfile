@@ -1,0 +1,13 @@
+
+platform :ios, '8.0'
+
+target 'TestEasyEmoji' do
+    
+    xcodeproj 'TestEasyEmoji.xcodeproj'
+    
+    use_frameworks!
+    
+    pod "EasyEmoji", :path => "../"
+#    pod 'EasyEmoji'
+
+end

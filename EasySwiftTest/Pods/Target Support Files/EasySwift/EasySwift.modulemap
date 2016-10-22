@@ -1,6 +1,0 @@
-framework module EasySwift {
-  umbrella header "EasySwift-umbrella.h"
-
-  export *
-  module * { export * }
-}

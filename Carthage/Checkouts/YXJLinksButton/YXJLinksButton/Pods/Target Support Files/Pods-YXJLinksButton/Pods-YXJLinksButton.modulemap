@@ -1,0 +1,6 @@
+framework module Pods_YXJLinksButton {
+  umbrella header "Pods-YXJLinksButton-umbrella.h"
+
+  export *
+  module * { export * }
+}

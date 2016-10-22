@@ -1,0 +1,13 @@
+
+platform :ios, '8.0'
+
+target 'TestEasySearchBar' do
+    
+    xcodeproj 'TestEasySearchBar.xcodeproj'
+    
+    use_frameworks!
+    
+    pod "EasySearchBar", :path => "../"
+#    pod 'EasySearchBar'
+
+end

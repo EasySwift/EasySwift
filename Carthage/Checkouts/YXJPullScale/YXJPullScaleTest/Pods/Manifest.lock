@@ -1,0 +1,19 @@
+PODS:
+  - YXJPullScale (0.0.1):
+    - YXJXibView
+  - YXJXibView (0.0.1)
+
+DEPENDENCIES:
+  - YXJPullScale (from `../`)
+
+EXTERNAL SOURCES:
+  YXJPullScale:
+    :path: ../
+
+SPEC CHECKSUMS:
+  YXJPullScale: 153308b95e0a537a6a9da8557681cbab105004a0
+  YXJXibView: da743e70f9fd6e5b16bb6d45da0913679b8f856d
+
+PODFILE CHECKSUM: 16d63b5308aeddf8087916393bf6fd698e4f3536
+
+COCOAPODS: 1.0.1

@@ -1,0 +1,13 @@
+
+platform :ios, '8.0'
+
+target 'YXJImageCompressorTest' do
+    
+    xcodeproj 'YXJImageCompressorTest.xcodeproj'
+    
+    use_frameworks!
+    
+    pod "YXJImageCompressor", :path => "../"
+#    pod 'YXJImageCompressor'
+
+end

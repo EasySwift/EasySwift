@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCFB6D6F6C5AE1C822E490B7 /* Pods_YXJKxMenuTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB64F4AF57CC3293545018B6 /* Pods_YXJKxMenuTest.framework */; };
+		DE44BBA41D9D6E4400AE68C7 /* YXJKxMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = DE44BBA21D9D6E4400AE68C7 /* YXJKxMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE44BBA71D9D6E4400AE68C7 /* YXJKxMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE44BBA01D9D6E4400AE68C7 /* YXJKxMenu.framework */; };
+		DE44BBA81D9D6E4400AE68C7 /* YXJKxMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE44BBA01D9D6E4400AE68C7 /* YXJKxMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE44BBAF1D9D6E5D00AE68C7 /* YXJKxMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = DE44BBAD1D9D6E5D00AE68C7 /* YXJKxMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE44BBB01D9D6E5D00AE68C7 /* YXJKxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DE44BBAE1D9D6E5D00AE68C7 /* YXJKxMenu.m */; };
+		DE46C6441D59AA3700D4C7FA /* YXJKxMenu1.gif in Resources */ = {isa = PBXBuildFile; fileRef = DE46C6431D59AA3700D4C7FA /* YXJKxMenu1.gif */; };
+		DE883B4B1D599A1C00EF0E5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE883B4A1D599A1C00EF0E5F /* AppDelegate.swift */; };
+		DE883B4D1D599A1C00EF0E5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE883B4C1D599A1C00EF0E5F /* ViewController.swift */; };
+		DE883B501D599A1C00EF0E5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE883B4E1D599A1C00EF0E5F /* Main.storyboard */; };
+		DE883B521D599A1C00EF0E5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE883B511D599A1C00EF0E5F /* Assets.xcassets */; };
+		DE883B551D599A1C00EF0E5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE883B531D599A1C00EF0E5F /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE44BBA51D9D6E4400AE68C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE883B3F1D599A1C00EF0E5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE44BB9F1D9D6E4400AE68C7;
+			remoteInfo = YXJKxMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DE44BBAC1D9D6E4400AE68C7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DE44BBA81D9D6E4400AE68C7 /* YXJKxMenu.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		058713205CB91470BF09D18A /* Pods-YXJKxMenuTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXJKxMenuTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YXJKxMenuTest/Pods-YXJKxMenuTest.debug.xcconfig"; sourceTree = "<group>"; };
+		BD149BADA8DDF3B2A04CF542 /* Pods-YXJKxMenuTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXJKxMenuTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-YXJKxMenuTest/Pods-YXJKxMenuTest.release.xcconfig"; sourceTree = "<group>"; };
+		DE44BBA01D9D6E4400AE68C7 /* YXJKxMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YXJKxMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE44BBA21D9D6E4400AE68C7 /* YXJKxMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXJKxMenu.h; sourceTree = "<group>"; };
+		DE44BBA31D9D6E4400AE68C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE44BBAD1D9D6E5D00AE68C7 /* YXJKxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YXJKxMenu.h; path = ../../Pod/YXJKxMenu.h; sourceTree = "<group>"; };
+		DE44BBAE1D9D6E5D00AE68C7 /* YXJKxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YXJKxMenu.m; path = ../../Pod/YXJKxMenu.m; sourceTree = "<group>"; };
+		DE46C6431D59AA3700D4C7FA /* YXJKxMenu1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = YXJKxMenu1.gif; sourceTree = "<group>"; };
+		DE883B471D599A1C00EF0E5F /* YXJKxMenuTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXJKxMenuTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE883B4A1D599A1C00EF0E5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE883B4C1D599A1C00EF0E5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE883B4F1D599A1C00EF0E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE883B511D599A1C00EF0E5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE883B541D599A1C00EF0E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE883B561D599A1C00EF0E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB64F4AF57CC3293545018B6 /* Pods_YXJKxMenuTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YXJKxMenuTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE44BB9C1D9D6E4400AE68C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE883B441D599A1C00EF0E5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE44BBA71D9D6E4400AE68C7 /* YXJKxMenu.framework in Frameworks */,
+				CCFB6D6F6C5AE1C822E490B7 /* Pods_YXJKxMenuTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C8BCD7A6E279DA4DBEE7561 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB64F4AF57CC3293545018B6 /* Pods_YXJKxMenuTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88500C1790486BEB6D2C3223 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				058713205CB91470BF09D18A /* Pods-YXJKxMenuTest.debug.xcconfig */,
+				BD149BADA8DDF3B2A04CF542 /* Pods-YXJKxMenuTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE44BBA11D9D6E4400AE68C7 /* YXJKxMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DE44BBA21D9D6E4400AE68C7 /* YXJKxMenu.h */,
+				DE44BBAD1D9D6E5D00AE68C7 /* YXJKxMenu.h */,
+				DE44BBAE1D9D6E5D00AE68C7 /* YXJKxMenu.m */,
+				DE44BBA31D9D6E4400AE68C7 /* Info.plist */,
+			);
+			path = YXJKxMenu;
+			sourceTree = "<group>";
+		};
+		DE883B3E1D599A1C00EF0E5F = {
+			isa = PBXGroup;
+			children = (
+				DE883B491D599A1C00EF0E5F /* YXJKxMenuTest */,
+				DE44BBA11D9D6E4400AE68C7 /* YXJKxMenu */,
+				DE883B481D599A1C00EF0E5F /* Products */,
+				88500C1790486BEB6D2C3223 /* Pods */,
+				2C8BCD7A6E279DA4DBEE7561 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DE883B481D599A1C00EF0E5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE883B471D599A1C00EF0E5F /* YXJKxMenuTest.app */,
+				DE44BBA01D9D6E4400AE68C7 /* YXJKxMenu.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE883B491D599A1C00EF0E5F /* YXJKxMenuTest */ = {
+			isa = PBXGroup;
+			children = (
+				DE46C6431D59AA3700D4C7FA /* YXJKxMenu1.gif */,
+				DE883B4A1D599A1C00EF0E5F /* AppDelegate.swift */,
+				DE883B4C1D599A1C00EF0E5F /* ViewController.swift */,
+				DE883B4E1D599A1C00EF0E5F /* Main.storyboard */,
+				DE883B511D599A1C00EF0E5F /* Assets.xcassets */,
+				DE883B531D599A1C00EF0E5F /* LaunchScreen.storyboard */,
+				DE883B561D599A1C00EF0E5F /* Info.plist */,
+			);
+			path = YXJKxMenuTest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DE44BB9D1D9D6E4400AE68C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE44BBAF1D9D6E5D00AE68C7 /* YXJKxMenu.h in Headers */,
+				DE44BBA41D9D6E4400AE68C7 /* YXJKxMenu.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DE44BB9F1D9D6E4400AE68C7 /* YXJKxMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE44BBAB1D9D6E4400AE68C7 /* Build configuration list for PBXNativeTarget "YXJKxMenu" */;
+			buildPhases = (
+				DE44BB9B1D9D6E4400AE68C7 /* Sources */,
+				DE44BB9C1D9D6E4400AE68C7 /* Frameworks */,
+				DE44BB9D1D9D6E4400AE68C7 /* Headers */,
+				DE44BB9E1D9D6E4400AE68C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YXJKxMenu;
+			productName = YXJKxMenu;
+			productReference = DE44BBA01D9D6E4400AE68C7 /* YXJKxMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DE883B461D599A1C00EF0E5F /* YXJKxMenuTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE883B591D599A1C00EF0E5F /* Build configuration list for PBXNativeTarget "YXJKxMenuTest" */;
+			buildPhases = (
+				8CB3A9BB4FA8966F0F8B026B /* [CP] Check Pods Manifest.lock */,
+				DE883B431D599A1C00EF0E5F /* Sources */,
+				DE883B441D599A1C00EF0E5F /* Frameworks */,
+				DE883B451D599A1C00EF0E5F /* Resources */,
+				167D0D2F1543D1092FCF97A9 /* [CP] Embed Pods Frameworks */,
+				F18DF66C5DD2FF76D03D2DD6 /* [CP] Copy Pods Resources */,
+				DE44BBAC1D9D6E4400AE68C7 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE44BBA61D9D6E4400AE68C7 /* PBXTargetDependency */,
+			);
+			name = YXJKxMenuTest;
+			productName = YXJKxMenuTest;
+			productReference = DE883B471D599A1C00EF0E5F /* YXJKxMenuTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE883B3F1D599A1C00EF0E5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "袁晓钧";
+				TargetAttributes = {
+					DE44BB9F1D9D6E4400AE68C7 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					DE883B461D599A1C00EF0E5F = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = DE883B421D599A1C00EF0E5F /* Build configuration list for PBXProject "YXJKxMenuTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE883B3E1D599A1C00EF0E5F;
+			productRefGroup = DE883B481D599A1C00EF0E5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE883B461D599A1C00EF0E5F /* YXJKxMenuTest */,
+				DE44BB9F1D9D6E4400AE68C7 /* YXJKxMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE44BB9E1D9D6E4400AE68C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE883B451D599A1C00EF0E5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE883B551D599A1C00EF0E5F /* LaunchScreen.storyboard in Resources */,
+				DE883B521D599A1C00EF0E5F /* Assets.xcassets in Resources */,
+				DE46C6441D59AA3700D4C7FA /* YXJKxMenu1.gif in Resources */,
+				DE883B501D599A1C00EF0E5F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		167D0D2F1543D1092FCF97A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YXJKxMenuTest/Pods-YXJKxMenuTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CB3A9BB4FA8966F0F8B026B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F18DF66C5DD2FF76D03D2DD6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YXJKxMenuTest/Pods-YXJKxMenuTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE44BB9B1D9D6E4400AE68C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE44BBB01D9D6E5D00AE68C7 /* YXJKxMenu.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE883B431D599A1C00EF0E5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE883B4D1D599A1C00EF0E5F /* ViewController.swift in Sources */,
+				DE883B4B1D599A1C00EF0E5F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE44BBA61D9D6E4400AE68C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE44BB9F1D9D6E4400AE68C7 /* YXJKxMenu */;
+			targetProxy = DE44BBA51D9D6E4400AE68C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE883B4E1D599A1C00EF0E5F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE883B4F1D599A1C00EF0E5F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE883B531D599A1C00EF0E5F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE883B541D599A1C00EF0E5F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE44BBA91D9D6E4400AE68C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YXJKxMenu/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YXJ.YXJKxMenu;
+				PRODUCT_MODULE_NAME = YXJKxMenu;
+				PRODUCT_NAME = YXJKxMenu;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DE44BBAA1D9D6E4400AE68C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YXJKxMenu/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YXJ.YXJKxMenu;
+				PRODUCT_MODULE_NAME = YXJKxMenu;
+				PRODUCT_NAME = YXJKxMenu;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DE883B571D599A1C00EF0E5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE883B581D599A1C00EF0E5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE883B5A1D599A1C00EF0E5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 058713205CB91470BF09D18A /* Pods-YXJKxMenuTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YXJKxMenuTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YXJ.YXJKxMenuTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DE883B5B1D599A1C00EF0E5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD149BADA8DDF3B2A04CF542 /* Pods-YXJKxMenuTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YXJKxMenuTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YXJ.YXJKxMenuTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE44BBAB1D9D6E4400AE68C7 /* Build configuration list for PBXNativeTarget "YXJKxMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE44BBA91D9D6E4400AE68C7 /* Debug */,
+				DE44BBAA1D9D6E4400AE68C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DE883B421D599A1C00EF0E5F /* Build configuration list for PBXProject "YXJKxMenuTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE883B571D599A1C00EF0E5F /* Debug */,
+				DE883B581D599A1C00EF0E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE883B591D599A1C00EF0E5F /* Build configuration list for PBXNativeTarget "YXJKxMenuTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE883B5A1D599A1C00EF0E5F /* Debug */,
+				DE883B5B1D599A1C00EF0E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE883B3F1D599A1C00EF0E5F /* Project object */;
+}

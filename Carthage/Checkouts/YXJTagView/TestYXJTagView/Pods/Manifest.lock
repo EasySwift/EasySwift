@@ -1,0 +1,16 @@
+PODS:
+  - YXJTagView (0.0.1)
+
+DEPENDENCIES:
+  - YXJTagView (from `../`)
+
+EXTERNAL SOURCES:
+  YXJTagView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  YXJTagView: 8edb5a18befd50a6ffb7e425b75cbc25eb00c313
+
+PODFILE CHECKSUM: 29980dab55c14166bdff7de1229f94d2a124496c
+
+COCOAPODS: 1.0.1

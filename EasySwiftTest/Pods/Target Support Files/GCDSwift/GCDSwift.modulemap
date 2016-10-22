@@ -1,6 +1,0 @@
-framework module GCDSwift {
-  umbrella header "GCDSwift-umbrella.h"
-
-  export *
-  module * { export * }
-}

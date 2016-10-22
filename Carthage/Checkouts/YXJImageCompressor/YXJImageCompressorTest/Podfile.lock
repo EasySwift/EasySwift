@@ -1,0 +1,16 @@
+PODS:
+  - YXJImageCompressor (0.0.1)
+
+DEPENDENCIES:
+  - YXJImageCompressor (from `../`)
+
+EXTERNAL SOURCES:
+  YXJImageCompressor:
+    :path: ../
+
+SPEC CHECKSUMS:
+  YXJImageCompressor: 6645a237be72ed2940321095788ce9eed6b7a6ce
+
+PODFILE CHECKSUM: 5a0eaa702587b8764207903a2cbc634dba33dac4
+
+COCOAPODS: 1.0.1

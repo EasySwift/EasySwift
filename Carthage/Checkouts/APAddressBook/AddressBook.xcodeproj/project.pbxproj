@@ -1,0 +1,806 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DEC552A71DA7F76B00CD8617 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC552A61DA7F76B00CD8617 /* AppDelegate.swift */; };
+		DEC552A91DA7F76B00CD8617 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC552A81DA7F76B00CD8617 /* ViewController.swift */; };
+		DEC552AC1DA7F76B00CD8617 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC552AA1DA7F76B00CD8617 /* Main.storyboard */; };
+		DEC552AE1DA7F76B00CD8617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC552AD1DA7F76B00CD8617 /* Assets.xcassets */; };
+		DEC552B11DA7F76B00CD8617 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC552AF1DA7F76B00CD8617 /* LaunchScreen.storyboard */; };
+		DEC552F51DA7F7C000CD8617 /* APContactBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552BC1DA7F7C000CD8617 /* APContactBuilder.m */; };
+		DEC552F61DA7F7C000CD8617 /* APContactListBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552BE1DA7F7C000CD8617 /* APContactListBuilder.m */; };
+		DEC552F71DA7F7C000CD8617 /* APContactDataExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552C31DA7F7C000CD8617 /* APContactDataExtractor.m */; };
+		DEC552F81DA7F7C000CD8617 /* APImageExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552C51DA7F7C000CD8617 /* APImageExtractor.m */; };
+		DEC552F91DA7F7C000CD8617 /* APSocialServiceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552C81DA7F7C000CD8617 /* APSocialServiceHelper.m */; };
+		DEC552FA1DA7F7C000CD8617 /* APAddressBookAccessRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552CB1DA7F7C000CD8617 /* APAddressBookAccessRoutine.m */; };
+		DEC552FB1DA7F7C000CD8617 /* APAddressBookContactsRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552CD1DA7F7C000CD8617 /* APAddressBookContactsRoutine.m */; };
+		DEC552FC1DA7F7C000CD8617 /* APAddressBookExternalChangeRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552D01DA7F7C000CD8617 /* APAddressBookExternalChangeRoutine.m */; };
+		DEC552FD1DA7F7C000CD8617 /* APAddressBookBaseRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552D31DA7F7C000CD8617 /* APAddressBookBaseRoutine.m */; };
+		DEC552FE1DA7F7C000CD8617 /* APThread.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552D61DA7F7C000CD8617 /* APThread.m */; };
+		DEC552FF1DA7F7C000CD8617 /* APAddressBookRefWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552D91DA7F7C000CD8617 /* APAddressBookRefWrapper.m */; };
+		DEC553001DA7F7C000CD8617 /* APAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552DC1DA7F7C000CD8617 /* APAddressBook.m */; };
+		DEC553011DA7F7C000CD8617 /* APAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552DF1DA7F7C000CD8617 /* APAddress.m */; };
+		DEC553021DA7F7C000CD8617 /* APContact.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552E11DA7F7C000CD8617 /* APContact.m */; };
+		DEC553031DA7F7C000CD8617 /* APContactDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552E31DA7F7C000CD8617 /* APContactDate.m */; };
+		DEC553041DA7F7C000CD8617 /* APEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552E51DA7F7C000CD8617 /* APEmail.m */; };
+		DEC553051DA7F7C000CD8617 /* APJob.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552E71DA7F7C000CD8617 /* APJob.m */; };
+		DEC553061DA7F7C000CD8617 /* APName.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552E91DA7F7C000CD8617 /* APName.m */; };
+		DEC553071DA7F7C000CD8617 /* APPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552EB1DA7F7C000CD8617 /* APPhone.m */; };
+		DEC553081DA7F7C000CD8617 /* APRecordDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552ED1DA7F7C000CD8617 /* APRecordDate.m */; };
+		DEC553091DA7F7C000CD8617 /* APRelatedPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552EF1DA7F7C000CD8617 /* APRelatedPerson.m */; };
+		DEC5530A1DA7F7C000CD8617 /* APSocialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552F11DA7F7C000CD8617 /* APSocialProfile.m */; };
+		DEC5530B1DA7F7C000CD8617 /* APSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552F31DA7F7C000CD8617 /* APSource.m */; };
+		DEC553151DA7F85A00CD8617 /* AddressBook_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC553131DA7F85A00CD8617 /* AddressBook_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC553181DA7F85A00CD8617 /* AddressBook_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC553111DA7F85A00CD8617 /* AddressBook_iOS.framework */; };
+		DEC553191DA7F85A00CD8617 /* AddressBook_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEC553111DA7F85A00CD8617 /* AddressBook_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEC5531E1DA7F8B400CD8617 /* APContactBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552BB1DA7F7C000CD8617 /* APContactBuilder.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DEC5531F1DA7F8B400CD8617 /* APContactListBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552BD1DA7F7C000CD8617 /* APContactListBuilder.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DEC553201DA7F8B400CD8617 /* APDeprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552C01DA7F7C000CD8617 /* APDeprecated.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DEC553211DA7F8B400CD8617 /* APContactDataExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552C21DA7F7C000CD8617 /* APContactDataExtractor.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DEC553221DA7F8B400CD8617 /* APImageExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552C41DA7F7C000CD8617 /* APImageExtractor.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DEC553231DA7F8B400CD8617 /* APSocialServiceHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552C71DA7F7C000CD8617 /* APSocialServiceHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DEC553241DA7F8B400CD8617 /* APAddressBookAccessRoutine.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552CA1DA7F7C000CD8617 /* APAddressBookAccessRoutine.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DEC553251DA7F8B400CD8617 /* APAddressBookContactsRoutine.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552CC1DA7F7C000CD8617 /* APAddressBookContactsRoutine.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DEC553261DA7F8B400CD8617 /* APAddressBookExternalChangeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552CE1DA7F7C000CD8617 /* APAddressBookExternalChangeDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DEC553271DA7F8B400CD8617 /* APAddressBookExternalChangeRoutine.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552CF1DA7F7C000CD8617 /* APAddressBookExternalChangeRoutine.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DEC553281DA7F8B400CD8617 /* APAddressBookBaseRoutine.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552D21DA7F7C000CD8617 /* APAddressBookBaseRoutine.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DEC553291DA7F8B400CD8617 /* APThread.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552D51DA7F7C000CD8617 /* APThread.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DEC5532A1DA7F8B400CD8617 /* APAddressBookRefWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552D81DA7F7C000CD8617 /* APAddressBookRefWrapper.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DEC5532B1DA7F8D400CD8617 /* APAddressBook.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552DB1DA7F7C000CD8617 /* APAddressBook.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC5532C1DA7F8D400CD8617 /* APAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552DE1DA7F7C000CD8617 /* APAddress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC5532D1DA7F8D400CD8617 /* APContact.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552E01DA7F7C000CD8617 /* APContact.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC5532E1DA7F8D400CD8617 /* APContactDate.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552E21DA7F7C000CD8617 /* APContactDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC5532F1DA7F8D400CD8617 /* APEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552E41DA7F7C000CD8617 /* APEmail.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC553301DA7F8D400CD8617 /* APJob.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552E61DA7F7C000CD8617 /* APJob.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC553311DA7F8D400CD8617 /* APName.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552E81DA7F7C000CD8617 /* APName.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC553321DA7F8D400CD8617 /* APPhone.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552EA1DA7F7C000CD8617 /* APPhone.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC553331DA7F8D400CD8617 /* APRecordDate.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552EC1DA7F7C000CD8617 /* APRecordDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC553341DA7F8D400CD8617 /* APRelatedPerson.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552EE1DA7F7C000CD8617 /* APRelatedPerson.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC553351DA7F8D400CD8617 /* APSocialProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552F01DA7F7C000CD8617 /* APSocialProfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC553361DA7F8D400CD8617 /* APSource.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552F21DA7F7C000CD8617 /* APSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC553371DA7F8D400CD8617 /* APTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC552F41DA7F7C000CD8617 /* APTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC553381DA7F8F900CD8617 /* APContactBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552BC1DA7F7C000CD8617 /* APContactBuilder.m */; };
+		DEC553391DA7F8F900CD8617 /* APContactListBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552BE1DA7F7C000CD8617 /* APContactListBuilder.m */; };
+		DEC5533A1DA7F8F900CD8617 /* APContactDataExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552C31DA7F7C000CD8617 /* APContactDataExtractor.m */; };
+		DEC5533B1DA7F8F900CD8617 /* APImageExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552C51DA7F7C000CD8617 /* APImageExtractor.m */; };
+		DEC5533C1DA7F8F900CD8617 /* APSocialServiceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552C81DA7F7C000CD8617 /* APSocialServiceHelper.m */; };
+		DEC5533D1DA7F8F900CD8617 /* APAddressBookAccessRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552CB1DA7F7C000CD8617 /* APAddressBookAccessRoutine.m */; };
+		DEC5533E1DA7F8F900CD8617 /* APAddressBookContactsRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552CD1DA7F7C000CD8617 /* APAddressBookContactsRoutine.m */; };
+		DEC5533F1DA7F8F900CD8617 /* APAddressBookExternalChangeRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552D01DA7F7C000CD8617 /* APAddressBookExternalChangeRoutine.m */; };
+		DEC553401DA7F8F900CD8617 /* APAddressBookBaseRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552D31DA7F7C000CD8617 /* APAddressBookBaseRoutine.m */; };
+		DEC553411DA7F8F900CD8617 /* APThread.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552D61DA7F7C000CD8617 /* APThread.m */; };
+		DEC553421DA7F8F900CD8617 /* APAddressBookRefWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552D91DA7F7C000CD8617 /* APAddressBookRefWrapper.m */; };
+		DEC553431DA7F8F900CD8617 /* APAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552DC1DA7F7C000CD8617 /* APAddressBook.m */; };
+		DEC553441DA7F8F900CD8617 /* APAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552DF1DA7F7C000CD8617 /* APAddress.m */; };
+		DEC553451DA7F8F900CD8617 /* APContact.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552E11DA7F7C000CD8617 /* APContact.m */; };
+		DEC553461DA7F8F900CD8617 /* APContactDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552E31DA7F7C000CD8617 /* APContactDate.m */; };
+		DEC553471DA7F8F900CD8617 /* APEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552E51DA7F7C000CD8617 /* APEmail.m */; };
+		DEC553481DA7F8F900CD8617 /* APJob.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552E71DA7F7C000CD8617 /* APJob.m */; };
+		DEC553491DA7F8F900CD8617 /* APName.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552E91DA7F7C000CD8617 /* APName.m */; };
+		DEC5534A1DA7F8F900CD8617 /* APPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552EB1DA7F7C000CD8617 /* APPhone.m */; };
+		DEC5534B1DA7F8F900CD8617 /* APRecordDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552ED1DA7F7C000CD8617 /* APRecordDate.m */; };
+		DEC5534C1DA7F8F900CD8617 /* APRelatedPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552EF1DA7F7C000CD8617 /* APRelatedPerson.m */; };
+		DEC5534D1DA7F8F900CD8617 /* APSocialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552F11DA7F7C000CD8617 /* APSocialProfile.m */; };
+		DEC5534E1DA7F8F900CD8617 /* APSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC552F31DA7F7C000CD8617 /* APSource.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DEC553161DA7F85A00CD8617 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEC5529B1DA7F76B00CD8617 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEC553101DA7F85A00CD8617;
+			remoteInfo = "AddressBook iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DEC5531D1DA7F85A00CD8617 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DEC553191DA7F85A00CD8617 /* AddressBook_iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DEC552A31DA7F76B00CD8617 /* AddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEC552A61DA7F76B00CD8617 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DEC552A81DA7F76B00CD8617 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DEC552AB1DA7F76B00CD8617 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DEC552AD1DA7F76B00CD8617 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DEC552B01DA7F76B00CD8617 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DEC552B21DA7F76B00CD8617 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEC552BB1DA7F7C000CD8617 /* APContactBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APContactBuilder.h; sourceTree = "<group>"; };
+		DEC552BC1DA7F7C000CD8617 /* APContactBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APContactBuilder.m; sourceTree = "<group>"; };
+		DEC552BD1DA7F7C000CD8617 /* APContactListBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APContactListBuilder.h; sourceTree = "<group>"; };
+		DEC552BE1DA7F7C000CD8617 /* APContactListBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APContactListBuilder.m; sourceTree = "<group>"; };
+		DEC552C01DA7F7C000CD8617 /* APDeprecated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDeprecated.h; sourceTree = "<group>"; };
+		DEC552C21DA7F7C000CD8617 /* APContactDataExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APContactDataExtractor.h; sourceTree = "<group>"; };
+		DEC552C31DA7F7C000CD8617 /* APContactDataExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APContactDataExtractor.m; sourceTree = "<group>"; };
+		DEC552C41DA7F7C000CD8617 /* APImageExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APImageExtractor.h; sourceTree = "<group>"; };
+		DEC552C51DA7F7C000CD8617 /* APImageExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APImageExtractor.m; sourceTree = "<group>"; };
+		DEC552C71DA7F7C000CD8617 /* APSocialServiceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSocialServiceHelper.h; sourceTree = "<group>"; };
+		DEC552C81DA7F7C000CD8617 /* APSocialServiceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSocialServiceHelper.m; sourceTree = "<group>"; };
+		DEC552CA1DA7F7C000CD8617 /* APAddressBookAccessRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddressBookAccessRoutine.h; sourceTree = "<group>"; };
+		DEC552CB1DA7F7C000CD8617 /* APAddressBookAccessRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddressBookAccessRoutine.m; sourceTree = "<group>"; };
+		DEC552CC1DA7F7C000CD8617 /* APAddressBookContactsRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddressBookContactsRoutine.h; sourceTree = "<group>"; };
+		DEC552CD1DA7F7C000CD8617 /* APAddressBookContactsRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddressBookContactsRoutine.m; sourceTree = "<group>"; };
+		DEC552CE1DA7F7C000CD8617 /* APAddressBookExternalChangeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddressBookExternalChangeDelegate.h; sourceTree = "<group>"; };
+		DEC552CF1DA7F7C000CD8617 /* APAddressBookExternalChangeRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddressBookExternalChangeRoutine.h; sourceTree = "<group>"; };
+		DEC552D01DA7F7C000CD8617 /* APAddressBookExternalChangeRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddressBookExternalChangeRoutine.m; sourceTree = "<group>"; };
+		DEC552D21DA7F7C000CD8617 /* APAddressBookBaseRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddressBookBaseRoutine.h; sourceTree = "<group>"; };
+		DEC552D31DA7F7C000CD8617 /* APAddressBookBaseRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddressBookBaseRoutine.m; sourceTree = "<group>"; };
+		DEC552D51DA7F7C000CD8617 /* APThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APThread.h; sourceTree = "<group>"; };
+		DEC552D61DA7F7C000CD8617 /* APThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APThread.m; sourceTree = "<group>"; };
+		DEC552D81DA7F7C000CD8617 /* APAddressBookRefWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddressBookRefWrapper.h; sourceTree = "<group>"; };
+		DEC552D91DA7F7C000CD8617 /* APAddressBookRefWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddressBookRefWrapper.m; sourceTree = "<group>"; };
+		DEC552DB1DA7F7C000CD8617 /* APAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddressBook.h; sourceTree = "<group>"; };
+		DEC552DC1DA7F7C000CD8617 /* APAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddressBook.m; sourceTree = "<group>"; };
+		DEC552DE1DA7F7C000CD8617 /* APAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddress.h; sourceTree = "<group>"; };
+		DEC552DF1DA7F7C000CD8617 /* APAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddress.m; sourceTree = "<group>"; };
+		DEC552E01DA7F7C000CD8617 /* APContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APContact.h; sourceTree = "<group>"; };
+		DEC552E11DA7F7C000CD8617 /* APContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APContact.m; sourceTree = "<group>"; };
+		DEC552E21DA7F7C000CD8617 /* APContactDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APContactDate.h; sourceTree = "<group>"; };
+		DEC552E31DA7F7C000CD8617 /* APContactDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APContactDate.m; sourceTree = "<group>"; };
+		DEC552E41DA7F7C000CD8617 /* APEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APEmail.h; sourceTree = "<group>"; };
+		DEC552E51DA7F7C000CD8617 /* APEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APEmail.m; sourceTree = "<group>"; };
+		DEC552E61DA7F7C000CD8617 /* APJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APJob.h; sourceTree = "<group>"; };
+		DEC552E71DA7F7C000CD8617 /* APJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APJob.m; sourceTree = "<group>"; };
+		DEC552E81DA7F7C000CD8617 /* APName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APName.h; sourceTree = "<group>"; };
+		DEC552E91DA7F7C000CD8617 /* APName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APName.m; sourceTree = "<group>"; };
+		DEC552EA1DA7F7C000CD8617 /* APPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPhone.h; sourceTree = "<group>"; };
+		DEC552EB1DA7F7C000CD8617 /* APPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPhone.m; sourceTree = "<group>"; };
+		DEC552EC1DA7F7C000CD8617 /* APRecordDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRecordDate.h; sourceTree = "<group>"; };
+		DEC552ED1DA7F7C000CD8617 /* APRecordDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRecordDate.m; sourceTree = "<group>"; };
+		DEC552EE1DA7F7C000CD8617 /* APRelatedPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRelatedPerson.h; sourceTree = "<group>"; };
+		DEC552EF1DA7F7C000CD8617 /* APRelatedPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRelatedPerson.m; sourceTree = "<group>"; };
+		DEC552F01DA7F7C000CD8617 /* APSocialProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSocialProfile.h; sourceTree = "<group>"; };
+		DEC552F11DA7F7C000CD8617 /* APSocialProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSocialProfile.m; sourceTree = "<group>"; };
+		DEC552F21DA7F7C000CD8617 /* APSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSource.h; sourceTree = "<group>"; };
+		DEC552F31DA7F7C000CD8617 /* APSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSource.m; sourceTree = "<group>"; };
+		DEC552F41DA7F7C000CD8617 /* APTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APTypes.h; sourceTree = "<group>"; };
+		DEC553111DA7F85A00CD8617 /* AddressBook_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AddressBook_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEC553131DA7F85A00CD8617 /* AddressBook_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBook_iOS.h; sourceTree = "<group>"; };
+		DEC553141DA7F85A00CD8617 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEC552A01DA7F76B00CD8617 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEC553181DA7F85A00CD8617 /* AddressBook_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEC5530D1DA7F85A00CD8617 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DEC5529A1DA7F76B00CD8617 = {
+			isa = PBXGroup;
+			children = (
+				DEC552A51DA7F76B00CD8617 /* AddressBook */,
+				DEC553121DA7F85A00CD8617 /* AddressBook_iOS */,
+				DEC552A41DA7F76B00CD8617 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DEC552A41DA7F76B00CD8617 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEC552A31DA7F76B00CD8617 /* AddressBook.app */,
+				DEC553111DA7F85A00CD8617 /* AddressBook_iOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEC552A51DA7F76B00CD8617 /* AddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				DEC552A61DA7F76B00CD8617 /* AppDelegate.swift */,
+				DEC552A81DA7F76B00CD8617 /* ViewController.swift */,
+				DEC552AA1DA7F76B00CD8617 /* Main.storyboard */,
+				DEC552AD1DA7F76B00CD8617 /* Assets.xcassets */,
+				DEC552AF1DA7F76B00CD8617 /* LaunchScreen.storyboard */,
+				DEC552B21DA7F76B00CD8617 /* Info.plist */,
+			);
+			path = AddressBook;
+			sourceTree = "<group>";
+		};
+		DEC552B91DA7F7C000CD8617 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				DEC552BA1DA7F7C000CD8617 /* Builders */,
+				DEC552BF1DA7F7C000CD8617 /* Deprecated */,
+				DEC552C11DA7F7C000CD8617 /* Extractors */,
+				DEC552C61DA7F7C000CD8617 /* Helpers */,
+				DEC552C91DA7F7C000CD8617 /* Routine */,
+				DEC552D41DA7F7C000CD8617 /* Thread */,
+				DEC552D71DA7F7C000CD8617 /* Wrapper */,
+			);
+			name = Private;
+			path = ../Source/Private;
+			sourceTree = "<group>";
+		};
+		DEC552BA1DA7F7C000CD8617 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				DEC552BB1DA7F7C000CD8617 /* APContactBuilder.h */,
+				DEC552BC1DA7F7C000CD8617 /* APContactBuilder.m */,
+				DEC552BD1DA7F7C000CD8617 /* APContactListBuilder.h */,
+				DEC552BE1DA7F7C000CD8617 /* APContactListBuilder.m */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		DEC552BF1DA7F7C000CD8617 /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				DEC552C01DA7F7C000CD8617 /* APDeprecated.h */,
+			);
+			path = Deprecated;
+			sourceTree = "<group>";
+		};
+		DEC552C11DA7F7C000CD8617 /* Extractors */ = {
+			isa = PBXGroup;
+			children = (
+				DEC552C21DA7F7C000CD8617 /* APContactDataExtractor.h */,
+				DEC552C31DA7F7C000CD8617 /* APContactDataExtractor.m */,
+				DEC552C41DA7F7C000CD8617 /* APImageExtractor.h */,
+				DEC552C51DA7F7C000CD8617 /* APImageExtractor.m */,
+			);
+			path = Extractors;
+			sourceTree = "<group>";
+		};
+		DEC552C61DA7F7C000CD8617 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DEC552C71DA7F7C000CD8617 /* APSocialServiceHelper.h */,
+				DEC552C81DA7F7C000CD8617 /* APSocialServiceHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DEC552C91DA7F7C000CD8617 /* Routine */ = {
+			isa = PBXGroup;
+			children = (
+				DEC552CA1DA7F7C000CD8617 /* APAddressBookAccessRoutine.h */,
+				DEC552CB1DA7F7C000CD8617 /* APAddressBookAccessRoutine.m */,
+				DEC552CC1DA7F7C000CD8617 /* APAddressBookContactsRoutine.h */,
+				DEC552CD1DA7F7C000CD8617 /* APAddressBookContactsRoutine.m */,
+				DEC552CE1DA7F7C000CD8617 /* APAddressBookExternalChangeDelegate.h */,
+				DEC552CF1DA7F7C000CD8617 /* APAddressBookExternalChangeRoutine.h */,
+				DEC552D01DA7F7C000CD8617 /* APAddressBookExternalChangeRoutine.m */,
+				DEC552D11DA7F7C000CD8617 /* Base */,
+			);
+			path = Routine;
+			sourceTree = "<group>";
+		};
+		DEC552D11DA7F7C000CD8617 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DEC552D21DA7F7C000CD8617 /* APAddressBookBaseRoutine.h */,
+				DEC552D31DA7F7C000CD8617 /* APAddressBookBaseRoutine.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DEC552D41DA7F7C000CD8617 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				DEC552D51DA7F7C000CD8617 /* APThread.h */,
+				DEC552D61DA7F7C000CD8617 /* APThread.m */,
+			);
+			path = Thread;
+			sourceTree = "<group>";
+		};
+		DEC552D71DA7F7C000CD8617 /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				DEC552D81DA7F7C000CD8617 /* APAddressBookRefWrapper.h */,
+				DEC552D91DA7F7C000CD8617 /* APAddressBookRefWrapper.m */,
+			);
+			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		DEC552DA1DA7F7C000CD8617 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				DEC552DB1DA7F7C000CD8617 /* APAddressBook.h */,
+				DEC552DC1DA7F7C000CD8617 /* APAddressBook.m */,
+				DEC552DD1DA7F7C000CD8617 /* Models */,
+			);
+			name = Public;
+			path = ../Source/Public;
+			sourceTree = "<group>";
+		};
+		DEC552DD1DA7F7C000CD8617 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DEC552DE1DA7F7C000CD8617 /* APAddress.h */,
+				DEC552DF1DA7F7C000CD8617 /* APAddress.m */,
+				DEC552E01DA7F7C000CD8617 /* APContact.h */,
+				DEC552E11DA7F7C000CD8617 /* APContact.m */,
+				DEC552E21DA7F7C000CD8617 /* APContactDate.h */,
+				DEC552E31DA7F7C000CD8617 /* APContactDate.m */,
+				DEC552E41DA7F7C000CD8617 /* APEmail.h */,
+				DEC552E51DA7F7C000CD8617 /* APEmail.m */,
+				DEC552E61DA7F7C000CD8617 /* APJob.h */,
+				DEC552E71DA7F7C000CD8617 /* APJob.m */,
+				DEC552E81DA7F7C000CD8617 /* APName.h */,
+				DEC552E91DA7F7C000CD8617 /* APName.m */,
+				DEC552EA1DA7F7C000CD8617 /* APPhone.h */,
+				DEC552EB1DA7F7C000CD8617 /* APPhone.m */,
+				DEC552EC1DA7F7C000CD8617 /* APRecordDate.h */,
+				DEC552ED1DA7F7C000CD8617 /* APRecordDate.m */,
+				DEC552EE1DA7F7C000CD8617 /* APRelatedPerson.h */,
+				DEC552EF1DA7F7C000CD8617 /* APRelatedPerson.m */,
+				DEC552F01DA7F7C000CD8617 /* APSocialProfile.h */,
+				DEC552F11DA7F7C000CD8617 /* APSocialProfile.m */,
+				DEC552F21DA7F7C000CD8617 /* APSource.h */,
+				DEC552F31DA7F7C000CD8617 /* APSource.m */,
+				DEC552F41DA7F7C000CD8617 /* APTypes.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DEC553121DA7F85A00CD8617 /* AddressBook_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DEC553131DA7F85A00CD8617 /* AddressBook_iOS.h */,
+				DEC553141DA7F85A00CD8617 /* Info.plist */,
+				DEC552B91DA7F7C000CD8617 /* Private */,
+				DEC552DA1DA7F7C000CD8617 /* Public */,
+			);
+			name = AddressBook_iOS;
+			path = "AddressBook iOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DEC5530E1DA7F85A00CD8617 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEC553151DA7F85A00CD8617 /* AddressBook_iOS.h in Headers */,
+				DEC5532B1DA7F8D400CD8617 /* APAddressBook.h in Headers */,
+				DEC5532C1DA7F8D400CD8617 /* APAddress.h in Headers */,
+				DEC5532D1DA7F8D400CD8617 /* APContact.h in Headers */,
+				DEC5532E1DA7F8D400CD8617 /* APContactDate.h in Headers */,
+				DEC5532F1DA7F8D400CD8617 /* APEmail.h in Headers */,
+				DEC553301DA7F8D400CD8617 /* APJob.h in Headers */,
+				DEC553311DA7F8D400CD8617 /* APName.h in Headers */,
+				DEC553321DA7F8D400CD8617 /* APPhone.h in Headers */,
+				DEC553331DA7F8D400CD8617 /* APRecordDate.h in Headers */,
+				DEC553341DA7F8D400CD8617 /* APRelatedPerson.h in Headers */,
+				DEC553351DA7F8D400CD8617 /* APSocialProfile.h in Headers */,
+				DEC553361DA7F8D400CD8617 /* APSource.h in Headers */,
+				DEC553371DA7F8D400CD8617 /* APTypes.h in Headers */,
+				DEC5531E1DA7F8B400CD8617 /* APContactBuilder.h in Headers */,
+				DEC5531F1DA7F8B400CD8617 /* APContactListBuilder.h in Headers */,
+				DEC553201DA7F8B400CD8617 /* APDeprecated.h in Headers */,
+				DEC553211DA7F8B400CD8617 /* APContactDataExtractor.h in Headers */,
+				DEC553221DA7F8B400CD8617 /* APImageExtractor.h in Headers */,
+				DEC553231DA7F8B400CD8617 /* APSocialServiceHelper.h in Headers */,
+				DEC553241DA7F8B400CD8617 /* APAddressBookAccessRoutine.h in Headers */,
+				DEC553251DA7F8B400CD8617 /* APAddressBookContactsRoutine.h in Headers */,
+				DEC553261DA7F8B400CD8617 /* APAddressBookExternalChangeDelegate.h in Headers */,
+				DEC553271DA7F8B400CD8617 /* APAddressBookExternalChangeRoutine.h in Headers */,
+				DEC553281DA7F8B400CD8617 /* APAddressBookBaseRoutine.h in Headers */,
+				DEC553291DA7F8B400CD8617 /* APThread.h in Headers */,
+				DEC5532A1DA7F8B400CD8617 /* APAddressBookRefWrapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DEC552A21DA7F76B00CD8617 /* AddressBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEC552B51DA7F76B00CD8617 /* Build configuration list for PBXNativeTarget "AddressBook" */;
+			buildPhases = (
+				DEC5529F1DA7F76B00CD8617 /* Sources */,
+				DEC552A01DA7F76B00CD8617 /* Frameworks */,
+				DEC552A11DA7F76B00CD8617 /* Resources */,
+				DEC5531D1DA7F85A00CD8617 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEC553171DA7F85A00CD8617 /* PBXTargetDependency */,
+			);
+			name = AddressBook;
+			productName = AddressBook;
+			productReference = DEC552A31DA7F76B00CD8617 /* AddressBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DEC553101DA7F85A00CD8617 /* AddressBook_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEC5531C1DA7F85A00CD8617 /* Build configuration list for PBXNativeTarget "AddressBook_iOS" */;
+			buildPhases = (
+				DEC5530C1DA7F85A00CD8617 /* Sources */,
+				DEC5530D1DA7F85A00CD8617 /* Frameworks */,
+				DEC5530E1DA7F85A00CD8617 /* Headers */,
+				DEC5530F1DA7F85A00CD8617 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AddressBook_iOS;
+			productName = "AddressBook iOS";
+			productReference = DEC553111DA7F85A00CD8617 /* AddressBook_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DEC5529B1DA7F76B00CD8617 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "袁晓钧";
+				TargetAttributes = {
+					DEC552A21DA7F76B00CD8617 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5N5628A342;
+						ProvisioningStyle = Automatic;
+					};
+					DEC553101DA7F85A00CD8617 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5N5628A342;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DEC5529E1DA7F76B00CD8617 /* Build configuration list for PBXProject "AddressBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DEC5529A1DA7F76B00CD8617;
+			productRefGroup = DEC552A41DA7F76B00CD8617 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEC552A21DA7F76B00CD8617 /* AddressBook */,
+				DEC553101DA7F85A00CD8617 /* AddressBook_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DEC552A11DA7F76B00CD8617 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEC552B11DA7F76B00CD8617 /* LaunchScreen.storyboard in Resources */,
+				DEC552AE1DA7F76B00CD8617 /* Assets.xcassets in Resources */,
+				DEC552AC1DA7F76B00CD8617 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEC5530F1DA7F85A00CD8617 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEC5529F1DA7F76B00CD8617 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEC552FD1DA7F7C000CD8617 /* APAddressBookBaseRoutine.m in Sources */,
+				DEC553011DA7F7C000CD8617 /* APAddress.m in Sources */,
+				DEC553051DA7F7C000CD8617 /* APJob.m in Sources */,
+				DEC552FB1DA7F7C000CD8617 /* APAddressBookContactsRoutine.m in Sources */,
+				DEC553021DA7F7C000CD8617 /* APContact.m in Sources */,
+				DEC552F91DA7F7C000CD8617 /* APSocialServiceHelper.m in Sources */,
+				DEC552FA1DA7F7C000CD8617 /* APAddressBookAccessRoutine.m in Sources */,
+				DEC553091DA7F7C000CD8617 /* APRelatedPerson.m in Sources */,
+				DEC553031DA7F7C000CD8617 /* APContactDate.m in Sources */,
+				DEC5530A1DA7F7C000CD8617 /* APSocialProfile.m in Sources */,
+				DEC553041DA7F7C000CD8617 /* APEmail.m in Sources */,
+				DEC552A91DA7F76B00CD8617 /* ViewController.swift in Sources */,
+				DEC552F81DA7F7C000CD8617 /* APImageExtractor.m in Sources */,
+				DEC552FF1DA7F7C000CD8617 /* APAddressBookRefWrapper.m in Sources */,
+				DEC552F61DA7F7C000CD8617 /* APContactListBuilder.m in Sources */,
+				DEC553071DA7F7C000CD8617 /* APPhone.m in Sources */,
+				DEC553061DA7F7C000CD8617 /* APName.m in Sources */,
+				DEC5530B1DA7F7C000CD8617 /* APSource.m in Sources */,
+				DEC552FC1DA7F7C000CD8617 /* APAddressBookExternalChangeRoutine.m in Sources */,
+				DEC552A71DA7F76B00CD8617 /* AppDelegate.swift in Sources */,
+				DEC553081DA7F7C000CD8617 /* APRecordDate.m in Sources */,
+				DEC553001DA7F7C000CD8617 /* APAddressBook.m in Sources */,
+				DEC552F51DA7F7C000CD8617 /* APContactBuilder.m in Sources */,
+				DEC552FE1DA7F7C000CD8617 /* APThread.m in Sources */,
+				DEC552F71DA7F7C000CD8617 /* APContactDataExtractor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEC5530C1DA7F85A00CD8617 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEC553381DA7F8F900CD8617 /* APContactBuilder.m in Sources */,
+				DEC553391DA7F8F900CD8617 /* APContactListBuilder.m in Sources */,
+				DEC5533A1DA7F8F900CD8617 /* APContactDataExtractor.m in Sources */,
+				DEC5533B1DA7F8F900CD8617 /* APImageExtractor.m in Sources */,
+				DEC5533C1DA7F8F900CD8617 /* APSocialServiceHelper.m in Sources */,
+				DEC5533D1DA7F8F900CD8617 /* APAddressBookAccessRoutine.m in Sources */,
+				DEC5533E1DA7F8F900CD8617 /* APAddressBookContactsRoutine.m in Sources */,
+				DEC5533F1DA7F8F900CD8617 /* APAddressBookExternalChangeRoutine.m in Sources */,
+				DEC553401DA7F8F900CD8617 /* APAddressBookBaseRoutine.m in Sources */,
+				DEC553411DA7F8F900CD8617 /* APThread.m in Sources */,
+				DEC553421DA7F8F900CD8617 /* APAddressBookRefWrapper.m in Sources */,
+				DEC553431DA7F8F900CD8617 /* APAddressBook.m in Sources */,
+				DEC553441DA7F8F900CD8617 /* APAddress.m in Sources */,
+				DEC553451DA7F8F900CD8617 /* APContact.m in Sources */,
+				DEC553461DA7F8F900CD8617 /* APContactDate.m in Sources */,
+				DEC553471DA7F8F900CD8617 /* APEmail.m in Sources */,
+				DEC553481DA7F8F900CD8617 /* APJob.m in Sources */,
+				DEC553491DA7F8F900CD8617 /* APName.m in Sources */,
+				DEC5534A1DA7F8F900CD8617 /* APPhone.m in Sources */,
+				DEC5534B1DA7F8F900CD8617 /* APRecordDate.m in Sources */,
+				DEC5534C1DA7F8F900CD8617 /* APRelatedPerson.m in Sources */,
+				DEC5534D1DA7F8F900CD8617 /* APSocialProfile.m in Sources */,
+				DEC5534E1DA7F8F900CD8617 /* APSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEC553171DA7F85A00CD8617 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEC553101DA7F85A00CD8617 /* AddressBook_iOS */;
+			targetProxy = DEC553161DA7F85A00CD8617 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DEC552AA1DA7F76B00CD8617 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEC552AB1DA7F76B00CD8617 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DEC552AF1DA7F76B00CD8617 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEC552B01DA7F76B00CD8617 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DEC552B31DA7F76B00CD8617 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DEC552B41DA7F76B00CD8617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DEC552B61DA7F76B00CD8617 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5N5628A342;
+				INFOPLIST_FILE = AddressBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YXJ.AddressBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DEC552B71DA7F76B00CD8617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5N5628A342;
+				INFOPLIST_FILE = AddressBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YXJ.AddressBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DEC5531A1DA7F85A00CD8617 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5N5628A342;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "AddressBook iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.AddressBook-iOS";
+				PRODUCT_MODULE_NAME = AddressBook_iOS;
+				PRODUCT_NAME = AddressBook_iOS;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DEC5531B1DA7F85A00CD8617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5N5628A342;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "AddressBook iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.AddressBook-iOS";
+				PRODUCT_MODULE_NAME = AddressBook_iOS;
+				PRODUCT_NAME = AddressBook_iOS;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEC5529E1DA7F76B00CD8617 /* Build configuration list for PBXProject "AddressBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEC552B31DA7F76B00CD8617 /* Debug */,
+				DEC552B41DA7F76B00CD8617 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEC552B51DA7F76B00CD8617 /* Build configuration list for PBXNativeTarget "AddressBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEC552B61DA7F76B00CD8617 /* Debug */,
+				DEC552B71DA7F76B00CD8617 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEC5531C1DA7F85A00CD8617 /* Build configuration list for PBXNativeTarget "AddressBook_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEC5531A1DA7F85A00CD8617 /* Debug */,
+				DEC5531B1DA7F85A00CD8617 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DEC5529B1DA7F76B00CD8617 /* Project object */;
+}

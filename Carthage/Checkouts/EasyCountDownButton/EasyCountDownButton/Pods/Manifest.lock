@@ -1,0 +1,16 @@
+PODS:
+  - EasyCountDownButton (0.0.1)
+
+DEPENDENCIES:
+  - EasyCountDownButton (from `../`)
+
+EXTERNAL SOURCES:
+  EasyCountDownButton:
+    :path: ../
+
+SPEC CHECKSUMS:
+  EasyCountDownButton: cd5bbfe94bd994c7003c2064428a91a34dfae621
+
+PODFILE CHECKSUM: 3675ec00817f8235fd98daaf3efa3e4cc3aa2322
+
+COCOAPODS: 1.0.1

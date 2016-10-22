@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03603EF502259FF0F201ABDC95D7D5FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		160D8090594C708F3505F463FE377630 /* YXJDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D02D016A459F68563F4196088B1BE42 /* YXJDotView.m */; };
+		202AC666583345DBB60BA330EA8064C3 /* Pods-YXJPageControllerTest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80570A58E8F504B43E95DE3E1B32D0FE /* Pods-YXJPageControllerTest-dummy.m */; };
+		51A33B89A5CC7B6640D56EBF885066CE /* YXJPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AE73842CF8A36187C71824115515E4 /* YXJPageControl.m */; };
+		535FB9FC19028AD2368C54A7C7482621 /* Pods-YXJPageControllerTest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F7DA4BE8E0E1F7193FFEBEFEC4A00C /* Pods-YXJPageControllerTest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58C06363D4A7B53F10F95605F12F6A9B /* YXJPageController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D00DAB58C6976DFB1FCA3B39A7B03AC /* YXJPageController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E44BDCD6DC2C05AE4D85AE6C05A5773 /* YXJAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B3F35C115C3063F3E34A9DD77F8D6C /* YXJAbstractDotView.m */; };
+		9109EFCD2E0C57958FD6CC04D67B5119 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		A0D09B34B0AE6F4160A609BB264B75AF /* YXJAnimatedDotView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D37F2C97CA527835F78B0D7AEF08A4C /* YXJAnimatedDotView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C167BA6378A866EB8D1C7EF9F5228C44 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
+		D12BFDC6E941B9FEF425A96AE1018175 /* YXJAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0385537B17F8A93EDEE23FD237DA8CFC /* YXJAnimatedDotView.m */; };
+		E51BDA3FC8228CC92D1AA1B6E86CAF90 /* YXJDotView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD7A9FDAA424AD60D12833DAA8303B5E /* YXJDotView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF05E828F10DD6CFB888692080BE4FE4 /* YXJPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B879A992C42CE7FD139D8CB3537908A1 /* YXJPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2B6896898334C5AD9CF0D69F62D1374 /* YXJPageController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A960073B1C94CEF4C60AD8ABCD6AC563 /* YXJPageController-dummy.m */; };
+		FD05C009464D3F11F69E8CE71317A56A /* YXJAbstractDotView.h in Headers */ = {isa = PBXBuildFile; fileRef = 36E7E5C8C15B038A745EBCC14E8BF363 /* YXJAbstractDotView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2AAC5BCD05D94A11D0B6DAA3AE50521 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE5552BD6E28296F640AEE9F0355C1C9;
+			remoteInfo = YXJPageController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		005BE505544CA8BE7625A11488543650 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0385537B17F8A93EDEE23FD237DA8CFC /* YXJAnimatedDotView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YXJAnimatedDotView.m; sourceTree = "<group>"; };
+		065EA5221949DE60B9D1B5AA05700D5D /* YXJPageController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YXJPageController-prefix.pch"; sourceTree = "<group>"; };
+		17F7DA4BE8E0E1F7193FFEBEFEC4A00C /* Pods-YXJPageControllerTest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YXJPageControllerTest-umbrella.h"; sourceTree = "<group>"; };
+		206C06BB9B70988FB44F81092D114948 /* YXJPageController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YXJPageController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B3F35C115C3063F3E34A9DD77F8D6C /* YXJAbstractDotView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YXJAbstractDotView.m; sourceTree = "<group>"; };
+		2D37F2C97CA527835F78B0D7AEF08A4C /* YXJAnimatedDotView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YXJAnimatedDotView.h; sourceTree = "<group>"; };
+		36E7E5C8C15B038A745EBCC14E8BF363 /* YXJAbstractDotView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YXJAbstractDotView.h; sourceTree = "<group>"; };
+		4D02D016A459F68563F4196088B1BE42 /* YXJDotView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YXJDotView.m; sourceTree = "<group>"; };
+		7442D067CDC60B7E0DF53E8AC5DDFF82 /* Pods-YXJPageControllerTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YXJPageControllerTest.release.xcconfig"; sourceTree = "<group>"; };
+		7B858ECE551396B1C364DF13559875AA /* Pods-YXJPageControllerTest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YXJPageControllerTest.modulemap"; sourceTree = "<group>"; };
+		7D00DAB58C6976DFB1FCA3B39A7B03AC /* YXJPageController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YXJPageController-umbrella.h"; sourceTree = "<group>"; };
+		7DBEC33A2CE470A12FBC604190B63EEC /* Pods-YXJPageControllerTest-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YXJPageControllerTest-resources.sh"; sourceTree = "<group>"; };
+		80570A58E8F504B43E95DE3E1B32D0FE /* Pods-YXJPageControllerTest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YXJPageControllerTest-dummy.m"; sourceTree = "<group>"; };
+		921E959433BD1F12E7AD671DFEEFCEF8 /* YXJPageController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = YXJPageController.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		99FCFFFECAD6F74AB37D3F03FC5C3E44 /* Pods_YXJPageControllerTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YXJPageControllerTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B9E9B26075C1C07771934A13AB5DEA2 /* YXJPageController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YXJPageController.xcconfig; sourceTree = "<group>"; };
+		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A960073B1C94CEF4C60AD8ABCD6AC563 /* YXJPageController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YXJPageController-dummy.m"; sourceTree = "<group>"; };
+		B879A992C42CE7FD139D8CB3537908A1 /* YXJPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YXJPageControl.h; sourceTree = "<group>"; };
+		BAFC4D176925B162A8755FAD024DB3A4 /* Pods-YXJPageControllerTest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YXJPageControllerTest-acknowledgements.plist"; sourceTree = "<group>"; };
+		BD7A9FDAA424AD60D12833DAA8303B5E /* YXJDotView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YXJDotView.h; sourceTree = "<group>"; };
+		C40516AFFCAC5E376E6F10588309DA47 /* Pods-YXJPageControllerTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YXJPageControllerTest.debug.xcconfig"; sourceTree = "<group>"; };
+		C5EA10C983277E2E211BF366160C0475 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5F78091655DC2AD4A03217FE2CBEAE2 /* Pods-YXJPageControllerTest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YXJPageControllerTest-frameworks.sh"; sourceTree = "<group>"; };
+		D7AE73842CF8A36187C71824115515E4 /* YXJPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YXJPageControl.m; sourceTree = "<group>"; };
+		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		FC656F49C1EE10488D7B87FBBF7C1C62 /* Pods-YXJPageControllerTest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YXJPageControllerTest-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36453DEC0DDE3D1B16357119F5BEFFED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9109EFCD2E0C57958FD6CC04D67B5119 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77D16B61506980940D43ACBBB84D1A69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03603EF502259FF0F201ABDC95D7D5FF /* Foundation.framework in Frameworks */,
+				C167BA6378A866EB8D1C7EF9F5228C44 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D95304EEA84999C201F354B86914E4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99FCFFFECAD6F74AB37D3F03FC5C3E44 /* Pods_YXJPageControllerTest.framework */,
+				206C06BB9B70988FB44F81092D114948 /* YXJPageController.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		672E00115F95B7B147D74C849DB783F4 /* Pods-YXJPageControllerTest */ = {
+			isa = PBXGroup;
+			children = (
+				005BE505544CA8BE7625A11488543650 /* Info.plist */,
+				7B858ECE551396B1C364DF13559875AA /* Pods-YXJPageControllerTest.modulemap */,
+				FC656F49C1EE10488D7B87FBBF7C1C62 /* Pods-YXJPageControllerTest-acknowledgements.markdown */,
+				BAFC4D176925B162A8755FAD024DB3A4 /* Pods-YXJPageControllerTest-acknowledgements.plist */,
+				80570A58E8F504B43E95DE3E1B32D0FE /* Pods-YXJPageControllerTest-dummy.m */,
+				C5F78091655DC2AD4A03217FE2CBEAE2 /* Pods-YXJPageControllerTest-frameworks.sh */,
+				7DBEC33A2CE470A12FBC604190B63EEC /* Pods-YXJPageControllerTest-resources.sh */,
+				17F7DA4BE8E0E1F7193FFEBEFEC4A00C /* Pods-YXJPageControllerTest-umbrella.h */,
+				C40516AFFCAC5E376E6F10588309DA47 /* Pods-YXJPageControllerTest.debug.xcconfig */,
+				7442D067CDC60B7E0DF53E8AC5DDFF82 /* Pods-YXJPageControllerTest.release.xcconfig */,
+			);
+			name = "Pods-YXJPageControllerTest";
+			path = "Target Support Files/Pods-YXJPageControllerTest";
+			sourceTree = "<group>";
+		};
+		79278BC556AFFD7C24D8C3443F3AF3B9 /* YXJPageController */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B7280787D9F16119CAC6941A70066 /* Pod */,
+				E3A0A0E0784C547AC0B31AECE49BA23D /* Support Files */,
+			);
+			name = YXJPageController;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				DA6B4F1815AE615EDC2F76048ED5DDFF /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				5D95304EEA84999C201F354B86914E4E /* Products */,
+				CEA5BED8BFEECE886F92953DAC6226FE /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CE2B7280787D9F16119CAC6941A70066 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				36E7E5C8C15B038A745EBCC14E8BF363 /* YXJAbstractDotView.h */,
+				28B3F35C115C3063F3E34A9DD77F8D6C /* YXJAbstractDotView.m */,
+				2D37F2C97CA527835F78B0D7AEF08A4C /* YXJAnimatedDotView.h */,
+				0385537B17F8A93EDEE23FD237DA8CFC /* YXJAnimatedDotView.m */,
+				BD7A9FDAA424AD60D12833DAA8303B5E /* YXJDotView.h */,
+				4D02D016A459F68563F4196088B1BE42 /* YXJDotView.m */,
+				B879A992C42CE7FD139D8CB3537908A1 /* YXJPageControl.h */,
+				D7AE73842CF8A36187C71824115515E4 /* YXJPageControl.m */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		CEA5BED8BFEECE886F92953DAC6226FE /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				672E00115F95B7B147D74C849DB783F4 /* Pods-YXJPageControllerTest */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		DA6B4F1815AE615EDC2F76048ED5DDFF /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79278BC556AFFD7C24D8C3443F3AF3B9 /* YXJPageController */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		E3A0A0E0784C547AC0B31AECE49BA23D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5EA10C983277E2E211BF366160C0475 /* Info.plist */,
+				921E959433BD1F12E7AD671DFEEFCEF8 /* YXJPageController.modulemap */,
+				9B9E9B26075C1C07771934A13AB5DEA2 /* YXJPageController.xcconfig */,
+				A960073B1C94CEF4C60AD8ABCD6AC563 /* YXJPageController-dummy.m */,
+				065EA5221949DE60B9D1B5AA05700D5D /* YXJPageController-prefix.pch */,
+				7D00DAB58C6976DFB1FCA3B39A7B03AC /* YXJPageController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "YXJPageController/Pods/Target Support Files/YXJPageController";
+			sourceTree = "<group>";
+		};
+		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */,
+				E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8CFE1E3D146D033B79A908C2162783D0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD05C009464D3F11F69E8CE71317A56A /* YXJAbstractDotView.h in Headers */,
+				A0D09B34B0AE6F4160A609BB264B75AF /* YXJAnimatedDotView.h in Headers */,
+				E51BDA3FC8228CC92D1AA1B6E86CAF90 /* YXJDotView.h in Headers */,
+				EF05E828F10DD6CFB888692080BE4FE4 /* YXJPageControl.h in Headers */,
+				58C06363D4A7B53F10F95605F12F6A9B /* YXJPageController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D45FE6A693A03375FB3241872E787D50 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				535FB9FC19028AD2368C54A7C7482621 /* Pods-YXJPageControllerTest-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		87A5ECCE3AE186ECE63F8E5030574AD2 /* Pods-YXJPageControllerTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D24CFAF17A685608A7F9368F2F283EDC /* Build configuration list for PBXNativeTarget "Pods-YXJPageControllerTest" */;
+			buildPhases = (
+				DC039557D5A0992064E4DECABD8CCC98 /* Sources */,
+				36453DEC0DDE3D1B16357119F5BEFFED /* Frameworks */,
+				D45FE6A693A03375FB3241872E787D50 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24CA02C8ED0FC857695CC2A2B754791F /* PBXTargetDependency */,
+			);
+			name = "Pods-YXJPageControllerTest";
+			productName = "Pods-YXJPageControllerTest";
+			productReference = 99FCFFFECAD6F74AB37D3F03FC5C3E44 /* Pods_YXJPageControllerTest.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BE5552BD6E28296F640AEE9F0355C1C9 /* YXJPageController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE212F847425DD5EE9D50706B0CE2376 /* Build configuration list for PBXNativeTarget "YXJPageController" */;
+			buildPhases = (
+				4ECFEF5CC1005827CC64D06323431410 /* Sources */,
+				77D16B61506980940D43ACBBB84D1A69 /* Frameworks */,
+				8CFE1E3D146D033B79A908C2162783D0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YXJPageController;
+			productName = YXJPageController;
+			productReference = 206C06BB9B70988FB44F81092D114948 /* YXJPageController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 5D95304EEA84999C201F354B86914E4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87A5ECCE3AE186ECE63F8E5030574AD2 /* Pods-YXJPageControllerTest */,
+				BE5552BD6E28296F640AEE9F0355C1C9 /* YXJPageController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4ECFEF5CC1005827CC64D06323431410 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E44BDCD6DC2C05AE4D85AE6C05A5773 /* YXJAbstractDotView.m in Sources */,
+				D12BFDC6E941B9FEF425A96AE1018175 /* YXJAnimatedDotView.m in Sources */,
+				160D8090594C708F3505F463FE377630 /* YXJDotView.m in Sources */,
+				51A33B89A5CC7B6640D56EBF885066CE /* YXJPageControl.m in Sources */,
+				F2B6896898334C5AD9CF0D69F62D1374 /* YXJPageController-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC039557D5A0992064E4DECABD8CCC98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				202AC666583345DBB60BA330EA8064C3 /* Pods-YXJPageControllerTest-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24CA02C8ED0FC857695CC2A2B754791F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YXJPageController;
+			target = BE5552BD6E28296F640AEE9F0355C1C9 /* YXJPageController */;
+			targetProxy = B2AAC5BCD05D94A11D0B6DAA3AE50521 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2FE1C1CA83769D66DE7A90316CADB2C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B9E9B26075C1C07771934A13AB5DEA2 /* YXJPageController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YXJPageController/YXJPageController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YXJPageController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YXJPageController/YXJPageController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = YXJPageController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		501D64771A159E7880A84E6C09979724 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7442D067CDC60B7E0DF53E8AC5DDFF82 /* Pods-YXJPageControllerTest.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-YXJPageControllerTest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YXJPageControllerTest/Pods-YXJPageControllerTest.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_YXJPageControllerTest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		72524E8879879CF740615563CCADE64A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B9E9B26075C1C07771934A13AB5DEA2 /* YXJPageController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YXJPageController/YXJPageController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YXJPageController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YXJPageController/YXJPageController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = YXJPageController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C87D51CF2ADD2659EED8CF72B2E375B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C40516AFFCAC5E376E6F10588309DA47 /* Pods-YXJPageControllerTest.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-YXJPageControllerTest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YXJPageControllerTest/Pods-YXJPageControllerTest.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_YXJPageControllerTest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47BEF9D903506B003EA5C2B249729489 /* Debug */,
+				AAF678CED40D3499169D10F63CA0719E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D24CFAF17A685608A7F9368F2F283EDC /* Build configuration list for PBXNativeTarget "Pods-YXJPageControllerTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C87D51CF2ADD2659EED8CF72B2E375B7 /* Debug */,
+				501D64771A159E7880A84E6C09979724 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE212F847425DD5EE9D50706B0CE2376 /* Build configuration list for PBXNativeTarget "YXJPageController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FE1C1CA83769D66DE7A90316CADB2C6 /* Debug */,
+				72524E8879879CF740615563CCADE64A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

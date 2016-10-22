@@ -1,0 +1,13 @@
+
+platform :ios, '8.0'
+
+target 'TestYXJTagView' do
+    
+    xcodeproj 'TestYXJTagView.xcodeproj'
+    
+    use_frameworks!
+    
+    pod "YXJTagView", :path => "../"
+#    pod 'YXJTagView'
+
+end
