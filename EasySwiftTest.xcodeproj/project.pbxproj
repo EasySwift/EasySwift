@@ -161,30 +161,30 @@
 		DE82D7C31DB00E76002B57F6 /* FLSideSlipViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7441DB00E76002B57F6 /* FLSideSlipViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE82D7C41DB00E76002B57F6 /* FLSideSlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE82D7451DB00E76002B57F6 /* FLSideSlipViewController.m */; };
 		DE82D7C51DB00E76002B57F6 /* attribute.c in Sources */ = {isa = PBXBuildFile; fileRef = DE82D7471DB00E76002B57F6 /* attribute.c */; };
-		DE82D7C61DB00E76002B57F6 /* attribute.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7481DB00E76002B57F6 /* attribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE82D7C61DB00E76002B57F6 /* attribute.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7481DB00E76002B57F6 /* attribute.h */; };
 		DE82D7C71DB00E76002B57F6 /* char_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = DE82D7491DB00E76002B57F6 /* char_ref.c */; };
-		DE82D7C81DB00E76002B57F6 /* char_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D74A1DB00E76002B57F6 /* char_ref.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE82D7C81DB00E76002B57F6 /* char_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D74A1DB00E76002B57F6 /* char_ref.h */; };
 		DE82D7C91DB00E76002B57F6 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = DE82D74B1DB00E76002B57F6 /* error.c */; };
-		DE82D7CA1DB00E76002B57F6 /* error.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D74C1DB00E76002B57F6 /* error.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE82D7CA1DB00E76002B57F6 /* error.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D74C1DB00E76002B57F6 /* error.h */; };
 		DE82D7CB1DB00E76002B57F6 /* gumbo.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D74D1DB00E76002B57F6 /* gumbo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE82D7CC1DB00E76002B57F6 /* insertion_mode.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D74E1DB00E76002B57F6 /* insertion_mode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE82D7CC1DB00E76002B57F6 /* insertion_mode.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D74E1DB00E76002B57F6 /* insertion_mode.h */; };
 		DE82D7CD1DB00E76002B57F6 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = DE82D74F1DB00E76002B57F6 /* parser.c */; };
-		DE82D7CE1DB00E76002B57F6 /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7501DB00E76002B57F6 /* parser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE82D7CE1DB00E76002B57F6 /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7501DB00E76002B57F6 /* parser.h */; };
 		DE82D7CF1DB00E76002B57F6 /* string_buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = DE82D7511DB00E76002B57F6 /* string_buffer.c */; };
-		DE82D7D01DB00E76002B57F6 /* string_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7521DB00E76002B57F6 /* string_buffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE82D7D01DB00E76002B57F6 /* string_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7521DB00E76002B57F6 /* string_buffer.h */; };
 		DE82D7D11DB00E76002B57F6 /* string_piece.c in Sources */ = {isa = PBXBuildFile; fileRef = DE82D7531DB00E76002B57F6 /* string_piece.c */; };
-		DE82D7D21DB00E76002B57F6 /* string_piece.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7541DB00E76002B57F6 /* string_piece.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE82D7D21DB00E76002B57F6 /* string_piece.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7541DB00E76002B57F6 /* string_piece.h */; };
 		DE82D7D31DB00E76002B57F6 /* tag.c in Sources */ = {isa = PBXBuildFile; fileRef = DE82D7551DB00E76002B57F6 /* tag.c */; };
-		DE82D7D41DB00E76002B57F6 /* token_type.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7561DB00E76002B57F6 /* token_type.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE82D7D41DB00E76002B57F6 /* token_type.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7561DB00E76002B57F6 /* token_type.h */; };
 		DE82D7D51DB00E76002B57F6 /* tokenizer.c in Sources */ = {isa = PBXBuildFile; fileRef = DE82D7571DB00E76002B57F6 /* tokenizer.c */; };
-		DE82D7D61DB00E76002B57F6 /* tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7581DB00E76002B57F6 /* tokenizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE82D7D71DB00E76002B57F6 /* tokenizer_states.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7591DB00E76002B57F6 /* tokenizer_states.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE82D7D61DB00E76002B57F6 /* tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7581DB00E76002B57F6 /* tokenizer.h */; };
+		DE82D7D71DB00E76002B57F6 /* tokenizer_states.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7591DB00E76002B57F6 /* tokenizer_states.h */; };
 		DE82D7D81DB00E76002B57F6 /* utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = DE82D75A1DB00E76002B57F6 /* utf8.c */; };
-		DE82D7D91DB00E76002B57F6 /* utf8.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D75B1DB00E76002B57F6 /* utf8.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE82D7D91DB00E76002B57F6 /* utf8.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D75B1DB00E76002B57F6 /* utf8.h */; };
 		DE82D7DA1DB00E76002B57F6 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = DE82D75C1DB00E76002B57F6 /* util.c */; };
-		DE82D7DB1DB00E76002B57F6 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D75D1DB00E76002B57F6 /* util.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE82D7DB1DB00E76002B57F6 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D75D1DB00E76002B57F6 /* util.h */; };
 		DE82D7DC1DB00E76002B57F6 /* vector.c in Sources */ = {isa = PBXBuildFile; fileRef = DE82D75E1DB00E76002B57F6 /* vector.c */; };
-		DE82D7DD1DB00E76002B57F6 /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D75F1DB00E76002B57F6 /* vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE82D7DD1DB00E76002B57F6 /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D75F1DB00E76002B57F6 /* vector.h */; };
 		DE82D7DE1DB00E76002B57F6 /* NSString+OGString.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7611DB00E76002B57F6 /* NSString+OGString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE82D7DF1DB00E76002B57F6 /* NSString+OGString.m in Sources */ = {isa = PBXBuildFile; fileRef = DE82D7621DB00E76002B57F6 /* NSString+OGString.m */; };
 		DE82D7E01DB00E76002B57F6 /* ObjectiveGumbo.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82D7631DB00E76002B57F6 /* ObjectiveGumbo.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -229,9 +229,9 @@
 		DEC54F1E1DA79C5000CD8617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC54F1D1DA79C4F00CD8617 /* Assets.xcassets */; };
 		DEC54F211DA79C5000CD8617 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC54F1F1DA79C5000CD8617 /* LaunchScreen.storyboard */; };
 		DEC54F291DA79CF700CD8617 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = DEC54F281DA79CF700CD8617 /* Cartfile */; };
-		DEC550271DA79F0F00CD8617 /* EasySwift.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC550251DA79F0F00CD8617 /* EasySwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEC5502A1DA79F0F00CD8617 /* EasySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC550231DA79F0F00CD8617 /* EasySwift.framework */; };
-		DEC5502B1DA79F0F00CD8617 /* EasySwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEC550231DA79F0F00CD8617 /* EasySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEC550271DA79F0F00CD8617 /* EasySwift_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC550251DA79F0F00CD8617 /* EasySwift_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC5502A1DA79F0F00CD8617 /* EasySwift_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC550231DA79F0F00CD8617 /* EasySwift_iOS.framework */; };
+		DEC5502B1DA79F0F00CD8617 /* EasySwift_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEC550231DA79F0F00CD8617 /* EasySwift_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -251,7 +251,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DEC5502B1DA79F0F00CD8617 /* EasySwift.framework in Embed Frameworks */,
+				DEC5502B1DA79F0F00CD8617 /* EasySwift_iOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,8 +437,8 @@
 		DEC54F201DA79C5000CD8617 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEC54F221DA79C5000CD8617 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEC54F281DA79CF700CD8617 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
-		DEC550231DA79F0F00CD8617 /* EasySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEC550251DA79F0F00CD8617 /* EasySwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasySwift.h; sourceTree = "<group>"; };
+		DEC550231DA79F0F00CD8617 /* EasySwift_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasySwift_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEC550251DA79F0F00CD8617 /* EasySwift_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasySwift_iOS.h; sourceTree = "<group>"; };
 		DEC550261DA79F0F00CD8617 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -491,7 +491,7 @@
 				DE0D111E1DAFD579001C7C78 /* FORScrollViewEmptyAssistant_iOS.framework in Frameworks */,
 				DE0D11371DAFD579001C7C78 /* YXJDIYButtonPosition.framework in Frameworks */,
 				DE0D11201DAFD579001C7C78 /* Haneke.framework in Frameworks */,
-				DEC5502A1DA79F0F00CD8617 /* EasySwift.framework in Frameworks */,
+				DEC5502A1DA79F0F00CD8617 /* EasySwift_iOS.framework in Frameworks */,
 				DE0D11141DAFD579001C7C78 /* AXBadgeView_iOS.framework in Frameworks */,
 				DE0D113B1DAFD579001C7C78 /* YXJOnePixeLine.framework in Frameworks */,
 			);
@@ -775,7 +775,7 @@
 			isa = PBXGroup;
 			children = (
 				DEC54F151DA79C4F00CD8617 /* EasySwiftTest */,
-				DEC550241DA79F0F00CD8617 /* EasySwift */,
+				DEC550241DA79F0F00CD8617 /* EasySwift_iOS */,
 				DEC54F141DA79C4F00CD8617 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -784,7 +784,7 @@
 			isa = PBXGroup;
 			children = (
 				DEC54F131DA79C4F00CD8617 /* EasySwiftTest.app */,
-				DEC550231DA79F0F00CD8617 /* EasySwift.framework */,
+				DEC550231DA79F0F00CD8617 /* EasySwift_iOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -803,15 +803,16 @@
 			path = EasySwiftTest;
 			sourceTree = "<group>";
 		};
-		DEC550241DA79F0F00CD8617 /* EasySwift */ = {
+		DEC550241DA79F0F00CD8617 /* EasySwift_iOS */ = {
 			isa = PBXGroup;
 			children = (
 				DE82D7061DB00E76002B57F6 /* Core */,
 				DE82D7371DB00E76002B57F6 /* Lib */,
 				DEC552471DA7BBE100CD8617 /* 3party */,
-				DEC550251DA79F0F00CD8617 /* EasySwift.h */,
+				DEC550251DA79F0F00CD8617 /* EasySwift_iOS.h */,
 				DEC550261DA79F0F00CD8617 /* Info.plist */,
 			);
+			name = EasySwift_iOS;
 			path = EasySwift;
 			sourceTree = "<group>";
 		};
@@ -880,31 +881,19 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE82D7DB1DB00E76002B57F6 /* util.h in Headers */,
-				DE82D7C81DB00E76002B57F6 /* char_ref.h in Headers */,
-				DEC550271DA79F0F00CD8617 /* EasySwift.h in Headers */,
-				DE82D7D21DB00E76002B57F6 /* string_piece.h in Headers */,
+				DEC550271DA79F0F00CD8617 /* EasySwift_iOS.h in Headers */,
 				DE82D7B61DB00E76002B57F6 /* UIViewController+OC_YXJ.h in Headers */,
-				DE82D7CB1DB00E76002B57F6 /* gumbo.h in Headers */,
-				DE82D7DD1DB00E76002B57F6 /* vector.h in Headers */,
 				DE82D7C11DB00E76002B57F6 /* UIView+FLEXBOX.h in Headers */,
-				DE82D7D71DB00E76002B57F6 /* tokenizer_states.h in Headers */,
 				DE82D7E41DB00E76002B57F6 /* OGElement.h in Headers */,
-				DE82D7D61DB00E76002B57F6 /* tokenizer.h in Headers */,
-				DE82D7D01DB00E76002B57F6 /* string_buffer.h in Headers */,
 				DE82D7FC1DB00E77002B57F6 /* UIViewController+URLManage.h in Headers */,
 				DE82D7E21DB00E76002B57F6 /* OGDocument.h in Headers */,
 				DE82D7EA1DB00E76002B57F6 /* OGUtility.h in Headers */,
-				DE82D7CE1DB00E76002B57F6 /* parser.h in Headers */,
 				DE82D7F11DB00E77002B57F6 /* TLCity.h in Headers */,
 				DE82D7A51DB00E76002B57F6 /* NSAttributedString+HTMLStyle.h in Headers */,
 				DE82D7A71DB00E76002B57F6 /* NSData+EasyExtend.h in Headers */,
-				DE82D7C61DB00E76002B57F6 /* attribute.h in Headers */,
 				DE82D7F51DB00E77002B57F6 /* TLCityHeaderView.h in Headers */,
-				DE82D7D91DB00E76002B57F6 /* utf8.h in Headers */,
 				DE82D7E61DB00E76002B57F6 /* OGNode.h in Headers */,
 				DE82D7BC1DB00E76002B57F6 /* FlexboxKit.h in Headers */,
-				DE82D7D41DB00E76002B57F6 /* token_type.h in Headers */,
 				DE82D7EC1DB00E77002B57F6 /* pinyin.h in Headers */,
 				DE82D7B41DB00E76002B57F6 /* UIColor+HTMLColors.h in Headers */,
 				DE82D78A1DB00E76002B57F6 /* Defines.h in Headers */,
@@ -921,13 +910,25 @@
 				DE82D7DE1DB00E76002B57F6 /* NSString+OGString.h in Headers */,
 				DE82D7C01DB00E76002B57F6 /* Layout.h in Headers */,
 				DE82D8001DB00E77002B57F6 /* URLNavigation.h in Headers */,
-				DE82D7CC1DB00E76002B57F6 /* insertion_mode.h in Headers */,
 				DE82D7A91DB00E76002B57F6 /* NSDate+Category.h in Headers */,
 				DE82D7F31DB00E77002B57F6 /* TLCityGroupCell.h in Headers */,
 				DE82D7FA1DB00E77002B57F6 /* TLCityPickerSearchResultController.h in Headers */,
 				DE82D7AB1DB00E76002B57F6 /* NSDateFormatter+Category.h in Headers */,
 				DE82D7BD1DB00E76002B57F6 /* FLEXBOXNode.h in Headers */,
+				DE82D7CB1DB00E76002B57F6 /* gumbo.h in Headers */,
+				DE82D7DB1DB00E76002B57F6 /* util.h in Headers */,
+				DE82D7C81DB00E76002B57F6 /* char_ref.h in Headers */,
+				DE82D7D21DB00E76002B57F6 /* string_piece.h in Headers */,
+				DE82D7D71DB00E76002B57F6 /* tokenizer_states.h in Headers */,
+				DE82D7D61DB00E76002B57F6 /* tokenizer.h in Headers */,
+				DE82D7D01DB00E76002B57F6 /* string_buffer.h in Headers */,
+				DE82D7CE1DB00E76002B57F6 /* parser.h in Headers */,
+				DE82D7C61DB00E76002B57F6 /* attribute.h in Headers */,
+				DE82D7D91DB00E76002B57F6 /* utf8.h in Headers */,
+				DE82D7D41DB00E76002B57F6 /* token_type.h in Headers */,
+				DE82D7CC1DB00E76002B57F6 /* insertion_mode.h in Headers */,
 				DE82D7CA1DB00E76002B57F6 /* error.h in Headers */,
+				DE82D7DD1DB00E76002B57F6 /* vector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -953,9 +954,9 @@
 			productReference = DEC54F131DA79C4F00CD8617 /* EasySwiftTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DEC550221DA79F0F00CD8617 /* EasySwift */ = {
+		DEC550221DA79F0F00CD8617 /* EasySwift_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DEC5502C1DA79F0F00CD8617 /* Build configuration list for PBXNativeTarget "EasySwift" */;
+			buildConfigurationList = DEC5502C1DA79F0F00CD8617 /* Build configuration list for PBXNativeTarget "EasySwift_iOS" */;
 			buildPhases = (
 				DEC5501E1DA79F0F00CD8617 /* Sources */,
 				DEC5501F1DA79F0F00CD8617 /* Frameworks */,
@@ -967,9 +968,9 @@
 			);
 			dependencies = (
 			);
-			name = EasySwift;
+			name = EasySwift_iOS;
 			productName = EasySwift;
-			productReference = DEC550231DA79F0F00CD8617 /* EasySwift.framework */;
+			productReference = DEC550231DA79F0F00CD8617 /* EasySwift_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1008,7 +1009,7 @@
 			projectRoot = "";
 			targets = (
 				DEC54F121DA79C4F00CD8617 /* EasySwiftTest */,
-				DEC550221DA79F0F00CD8617 /* EasySwift */,
+				DEC550221DA79F0F00CD8617 /* EasySwift_iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -1194,7 +1195,7 @@
 /* Begin PBXTargetDependency section */
 		DEC550291DA79F0F00CD8617 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DEC550221DA79F0F00CD8617 /* EasySwift */;
+			target = DEC550221DA79F0F00CD8617 /* EasySwift_iOS */;
 			targetProxy = DEC550281DA79F0F00CD8617 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1369,8 +1370,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YXJ.EasySwift;
-				PRODUCT_MODULE_NAME = EasySwift;
-				PRODUCT_NAME = EasySwift;
+				PRODUCT_MODULE_NAME = EasySwift_iOS;
+				PRODUCT_NAME = EasySwift_iOS;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
@@ -1399,8 +1400,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YXJ.EasySwift;
-				PRODUCT_MODULE_NAME = EasySwift;
-				PRODUCT_NAME = EasySwift;
+				PRODUCT_MODULE_NAME = EasySwift_iOS;
+				PRODUCT_NAME = EasySwift_iOS;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
@@ -1431,7 +1432,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DEC5502C1DA79F0F00CD8617 /* Build configuration list for PBXNativeTarget "EasySwift" */ = {
+		DEC5502C1DA79F0F00CD8617 /* Build configuration list for PBXNativeTarget "EasySwift_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DEC5502D1DA79F0F00CD8617 /* Debug */,

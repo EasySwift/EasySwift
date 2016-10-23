@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DEC550221DA79F0F00CD8617"
-               BuildableName = "EasySwift.framework"
-               BlueprintName = "EasySwift"
+               BuildableName = "EasySwift_iOS.framework"
+               BlueprintName = "EasySwift_iOS"
                ReferencedContainer = "container:EasySwiftTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,8 +46,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEC550221DA79F0F00CD8617"
-            BuildableName = "EasySwift.framework"
-            BlueprintName = "EasySwift"
+            BuildableName = "EasySwift_iOS.framework"
+            BlueprintName = "EasySwift_iOS"
             ReferencedContainer = "container:EasySwiftTest.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEC550221DA79F0F00CD8617"
-            BuildableName = "EasySwift.framework"
-            BlueprintName = "EasySwift"
+            BuildableName = "EasySwift_iOS.framework"
+            BlueprintName = "EasySwift_iOS"
             ReferencedContainer = "container:EasySwiftTest.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
