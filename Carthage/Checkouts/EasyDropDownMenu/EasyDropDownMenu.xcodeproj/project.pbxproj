@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE10FAAA1DBCD08C009941EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10FAA91DBCD08C009941EC /* AppDelegate.swift */; };
+		DE10FAAC1DBCD08C009941EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10FAAB1DBCD08C009941EC /* ViewController.swift */; };
+		DE10FAAF1DBCD08C009941EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE10FAAD1DBCD08C009941EC /* Main.storyboard */; };
+		DE10FAB11DBCD08C009941EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE10FAB01DBCD08C009941EC /* Assets.xcassets */; };
+		DE10FAB41DBCD08C009941EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE10FAB21DBCD08C009941EC /* LaunchScreen.storyboard */; };
+		DE10FAC41DBCD100009941EC /* EasyDropDownMenu_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DE10FAC21DBCD100009941EC /* EasyDropDownMenu_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE10FAC71DBCD100009941EC /* EasyDropDownMenu_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE10FAC01DBCD0FF009941EC /* EasyDropDownMenu_iOS.framework */; };
+		DE10FAC81DBCD100009941EC /* EasyDropDownMenu_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE10FAC01DBCD0FF009941EC /* EasyDropDownMenu_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE10FAD01DBCD140009941EC /* Imgs.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DE10FACD1DBCD140009941EC /* Imgs.bundle */; };
+		DE10FAD11DBCD140009941EC /* YXJDropDownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = DE10FACE1DBCD140009941EC /* YXJDropDownMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE10FAD21DBCD140009941EC /* YXJDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DE10FACF1DBCD140009941EC /* YXJDropDownMenu.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE10FAC51DBCD100009941EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE10FA9E1DBCD08C009941EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE10FABF1DBCD0FF009941EC;
+			remoteInfo = EasyDropDownMenu_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DE10FACC1DBCD100009941EC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DE10FAC81DBCD100009941EC /* EasyDropDownMenu_iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DE10FAA61DBCD08C009941EC /* EasyDropDownMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyDropDownMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE10FAA91DBCD08C009941EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE10FAAB1DBCD08C009941EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE10FAAE1DBCD08C009941EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE10FAB01DBCD08C009941EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE10FAB31DBCD08C009941EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE10FAB51DBCD08C009941EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE10FAC01DBCD0FF009941EC /* EasyDropDownMenu_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyDropDownMenu_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE10FAC21DBCD100009941EC /* EasyDropDownMenu_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyDropDownMenu_iOS.h; sourceTree = "<group>"; };
+		DE10FAC31DBCD100009941EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE10FACD1DBCD140009941EC /* Imgs.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Imgs.bundle; sourceTree = "<group>"; };
+		DE10FACE1DBCD140009941EC /* YXJDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXJDropDownMenu.h; sourceTree = "<group>"; };
+		DE10FACF1DBCD140009941EC /* YXJDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXJDropDownMenu.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE10FAA31DBCD08C009941EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE10FAC71DBCD100009941EC /* EasyDropDownMenu_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE10FABC1DBCD0FF009941EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE10FA9D1DBCD08C009941EC = {
+			isa = PBXGroup;
+			children = (
+				DE10FAA81DBCD08C009941EC /* EasyDropDownMenu */,
+				DE10FAC11DBCD100009941EC /* EasyDropDownMenu_iOS */,
+				DE10FAA71DBCD08C009941EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE10FAA71DBCD08C009941EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE10FAA61DBCD08C009941EC /* EasyDropDownMenu.app */,
+				DE10FAC01DBCD0FF009941EC /* EasyDropDownMenu_iOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE10FAA81DBCD08C009941EC /* EasyDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DE10FAA91DBCD08C009941EC /* AppDelegate.swift */,
+				DE10FAAB1DBCD08C009941EC /* ViewController.swift */,
+				DE10FAAD1DBCD08C009941EC /* Main.storyboard */,
+				DE10FAB01DBCD08C009941EC /* Assets.xcassets */,
+				DE10FAB21DBCD08C009941EC /* LaunchScreen.storyboard */,
+				DE10FAB51DBCD08C009941EC /* Info.plist */,
+			);
+			path = EasyDropDownMenu;
+			sourceTree = "<group>";
+		};
+		DE10FAC11DBCD100009941EC /* EasyDropDownMenu_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DE10FAC21DBCD100009941EC /* EasyDropDownMenu_iOS.h */,
+				DE10FACD1DBCD140009941EC /* Imgs.bundle */,
+				DE10FACE1DBCD140009941EC /* YXJDropDownMenu.h */,
+				DE10FACF1DBCD140009941EC /* YXJDropDownMenu.m */,
+				DE10FAC31DBCD100009941EC /* Info.plist */,
+			);
+			path = EasyDropDownMenu_iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DE10FABD1DBCD0FF009941EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE10FAD11DBCD140009941EC /* YXJDropDownMenu.h in Headers */,
+				DE10FAC41DBCD100009941EC /* EasyDropDownMenu_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DE10FAA51DBCD08C009941EC /* EasyDropDownMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE10FAB81DBCD08C009941EC /* Build configuration list for PBXNativeTarget "EasyDropDownMenu" */;
+			buildPhases = (
+				DE10FAA21DBCD08C009941EC /* Sources */,
+				DE10FAA31DBCD08C009941EC /* Frameworks */,
+				DE10FAA41DBCD08C009941EC /* Resources */,
+				DE10FACC1DBCD100009941EC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE10FAC61DBCD100009941EC /* PBXTargetDependency */,
+			);
+			name = EasyDropDownMenu;
+			productName = EasyDropDownMenu;
+			productReference = DE10FAA61DBCD08C009941EC /* EasyDropDownMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE10FABF1DBCD0FF009941EC /* EasyDropDownMenu_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE10FAC91DBCD100009941EC /* Build configuration list for PBXNativeTarget "EasyDropDownMenu_iOS" */;
+			buildPhases = (
+				DE10FABB1DBCD0FF009941EC /* Sources */,
+				DE10FABC1DBCD0FF009941EC /* Frameworks */,
+				DE10FABD1DBCD0FF009941EC /* Headers */,
+				DE10FABE1DBCD0FF009941EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyDropDownMenu_iOS;
+			productName = EasyDropDownMenu_iOS;
+			productReference = DE10FAC01DBCD0FF009941EC /* EasyDropDownMenu_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE10FA9E1DBCD08C009941EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "袁晓钧";
+				TargetAttributes = {
+					DE10FAA51DBCD08C009941EC = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5N5628A342;
+						ProvisioningStyle = Automatic;
+					};
+					DE10FABF1DBCD0FF009941EC = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5N5628A342;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DE10FAA11DBCD08C009941EC /* Build configuration list for PBXProject "EasyDropDownMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE10FA9D1DBCD08C009941EC;
+			productRefGroup = DE10FAA71DBCD08C009941EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE10FAA51DBCD08C009941EC /* EasyDropDownMenu */,
+				DE10FABF1DBCD0FF009941EC /* EasyDropDownMenu_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE10FAA41DBCD08C009941EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE10FAB41DBCD08C009941EC /* LaunchScreen.storyboard in Resources */,
+				DE10FAB11DBCD08C009941EC /* Assets.xcassets in Resources */,
+				DE10FAAF1DBCD08C009941EC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE10FABE1DBCD0FF009941EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE10FAD01DBCD140009941EC /* Imgs.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE10FAA21DBCD08C009941EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE10FAAC1DBCD08C009941EC /* ViewController.swift in Sources */,
+				DE10FAAA1DBCD08C009941EC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE10FABB1DBCD0FF009941EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE10FAD21DBCD140009941EC /* YXJDropDownMenu.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE10FAC61DBCD100009941EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE10FABF1DBCD0FF009941EC /* EasyDropDownMenu_iOS */;
+			targetProxy = DE10FAC51DBCD100009941EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE10FAAD1DBCD08C009941EC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE10FAAE1DBCD08C009941EC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE10FAB21DBCD08C009941EC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE10FAB31DBCD08C009941EC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE10FAB61DBCD08C009941EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE10FAB71DBCD08C009941EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE10FAB91DBCD08C009941EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5N5628A342;
+				INFOPLIST_FILE = EasyDropDownMenu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YXJ.EasyDropDownMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DE10FABA1DBCD08C009941EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5N5628A342;
+				INFOPLIST_FILE = EasyDropDownMenu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YXJ.EasyDropDownMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DE10FACA1DBCD100009941EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5N5628A342;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EasyDropDownMenu_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.EasyDropDownMenu-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DE10FACB1DBCD100009941EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5N5628A342;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EasyDropDownMenu_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.EasyDropDownMenu-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE10FAA11DBCD08C009941EC /* Build configuration list for PBXProject "EasyDropDownMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE10FAB61DBCD08C009941EC /* Debug */,
+				DE10FAB71DBCD08C009941EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE10FAB81DBCD08C009941EC /* Build configuration list for PBXNativeTarget "EasyDropDownMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE10FAB91DBCD08C009941EC /* Debug */,
+				DE10FABA1DBCD08C009941EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DE10FAC91DBCD100009941EC /* Build configuration list for PBXNativeTarget "EasyDropDownMenu_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE10FACA1DBCD100009941EC /* Debug */,
+				DE10FACB1DBCD100009941EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE10FA9E1DBCD08C009941EC /* Project object */;
+}
