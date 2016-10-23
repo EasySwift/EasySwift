@@ -615,7 +615,6 @@
 		DE82D7371DB00E76002B57F6 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				DE82D7381DB00E76002B57F6 /* CoreData */,
 				DE82D7391DB00E76002B57F6 /* FlexboxKit */,
 				DE82D7431DB00E76002B57F6 /* FLSideSlipViewController */,
 				DE82D7461DB00E76002B57F6 /* Gumbo */,
@@ -627,13 +626,6 @@
 				DE82D7891DB00E76002B57F6 /* Watch */,
 			);
 			path = Lib;
-			sourceTree = "<group>";
-		};
-		DE82D7381DB00E76002B57F6 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 		DE82D7391DB00E76002B57F6 /* FlexboxKit */ = {
