@@ -24,10 +24,10 @@
 #import "pinyin.h"
 #import "TLCityPickerController.h"
 #import "TLCityHeaderView.h"
-//#import "TLCity.h"
-//#import "TLCityGroupCell.h"
-//#import "TLCityPickerDelegate.h"
-//#import "TLCityPickerSearchResultController.h"
+#import "TLCity.h"
+#import "TLCityGroupCell.h"
+#import "TLCityPickerDelegate.h"
+#import "TLCityPickerSearchResultController.h"
 #import "URLManager.h"
 
 //! Project version number for EasySwift.
