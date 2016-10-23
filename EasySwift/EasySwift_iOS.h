@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 #import "FlexboxKit.h"
-#import "UIColor+HTMLColors.h"
 
 #import "NSData+EasyExtend.h"
 #import "DesEncrypt.h"
@@ -19,16 +18,22 @@
 #import "SwiftTryCatch.h"
 #import "SystemSoundManager.h"
 #import "UIViewController+OC_YXJ.h"
+
 #import "FLSideSlipViewController.h"
+
 #import "ObjectiveGumbo.h"
 #import "pinyin.h"
+
 #import "TLCityPickerController.h"
 #import "TLCityHeaderView.h"
 #import "TLCity.h"
 #import "TLCityGroupCell.h"
 #import "TLCityPickerDelegate.h"
 #import "TLCityPickerSearchResultController.h"
+
 #import "URLManager.h"
+#import "Defines.h"
+#import "UIColor+HTMLColors.h"
 
 //! Project version number for EasySwift.
 FOUNDATION_EXPORT double EasySwiftVersionNumber;
