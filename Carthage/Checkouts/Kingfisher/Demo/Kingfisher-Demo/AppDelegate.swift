@@ -25,7 +25,7 @@
 //  THE SOFTWARE.
 
 import UIKit
-import Kingfisher
+import Kingfisher_iOS
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

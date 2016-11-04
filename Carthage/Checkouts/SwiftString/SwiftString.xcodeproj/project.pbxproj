@@ -170,10 +170,10 @@
 				LastUpgradeCheck = 9999;
 				TargetAttributes = {
 					"______Target_SwiftString" = {
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 					"______Target_SwiftStringTests" = {
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};

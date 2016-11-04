@@ -1,0 +1,6 @@
+framework module FORScrollViewEmptyAssistant_iOS {
+  umbrella header "FORScrollViewEmptyAssistant_iOS.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE3BAEF01DCA47F300D52596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BAEEF1DCA47F300D52596 /* AppDelegate.swift */; };
+		DE3BAEF21DCA47F300D52596 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BAEF11DCA47F300D52596 /* ViewController.swift */; };
+		DE3BAEF51DCA47F300D52596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3BAEF31DCA47F300D52596 /* Main.storyboard */; };
+		DE3BAEF71DCA47F300D52596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3BAEF61DCA47F300D52596 /* Assets.xcassets */; };
+		DE3BAEFA1DCA47F300D52596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3BAEF81DCA47F300D52596 /* LaunchScreen.storyboard */; };
+		DE3BAF0A1DCA480A00D52596 /* EasyEmoji_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DE3BAF081DCA480A00D52596 /* EasyEmoji_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE3BAF0D1DCA480A00D52596 /* EasyEmoji_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3BAF061DCA480A00D52596 /* EasyEmoji_iOS.framework */; };
+		DE3BAF0E1DCA480A00D52596 /* EasyEmoji_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3BAF061DCA480A00D52596 /* EasyEmoji_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3BAF141DCA484F00D52596 /* EasyEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BAF131DCA484F00D52596 /* EasyEmoji.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE3BAF0B1DCA480A00D52596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE3BAEE41DCA47F300D52596 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE3BAF051DCA480A00D52596;
+			remoteInfo = EasyEmoji_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DE3BAF121DCA480A00D52596 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DE3BAF0E1DCA480A00D52596 /* EasyEmoji_iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DE3BAEEC1DCA47F300D52596 /* EasyEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3BAEEF1DCA47F300D52596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE3BAEF11DCA47F300D52596 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE3BAEF41DCA47F300D52596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE3BAEF61DCA47F300D52596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE3BAEF91DCA47F300D52596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE3BAEFB1DCA47F300D52596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE3BAF061DCA480A00D52596 /* EasyEmoji_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyEmoji_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3BAF081DCA480A00D52596 /* EasyEmoji_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyEmoji_iOS.h; sourceTree = "<group>"; };
+		DE3BAF091DCA480A00D52596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE3BAF131DCA484F00D52596 /* EasyEmoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyEmoji.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE3BAEE91DCA47F300D52596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3BAF0D1DCA480A00D52596 /* EasyEmoji_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3BAF021DCA480A00D52596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE3BAEE31DCA47F300D52596 = {
+			isa = PBXGroup;
+			children = (
+				DE3BAEEE1DCA47F300D52596 /* EasyEmoji */,
+				DE3BAF071DCA480A00D52596 /* EasyEmoji_iOS */,
+				DE3BAEED1DCA47F300D52596 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE3BAEED1DCA47F300D52596 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE3BAEEC1DCA47F300D52596 /* EasyEmoji.app */,
+				DE3BAF061DCA480A00D52596 /* EasyEmoji_iOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE3BAEEE1DCA47F300D52596 /* EasyEmoji */ = {
+			isa = PBXGroup;
+			children = (
+				DE3BAEEF1DCA47F300D52596 /* AppDelegate.swift */,
+				DE3BAEF11DCA47F300D52596 /* ViewController.swift */,
+				DE3BAEF31DCA47F300D52596 /* Main.storyboard */,
+				DE3BAEF61DCA47F300D52596 /* Assets.xcassets */,
+				DE3BAEF81DCA47F300D52596 /* LaunchScreen.storyboard */,
+				DE3BAEFB1DCA47F300D52596 /* Info.plist */,
+			);
+			path = EasyEmoji;
+			sourceTree = "<group>";
+		};
+		DE3BAF071DCA480A00D52596 /* EasyEmoji_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DE3BAF081DCA480A00D52596 /* EasyEmoji_iOS.h */,
+				DE3BAF131DCA484F00D52596 /* EasyEmoji.swift */,
+				DE3BAF091DCA480A00D52596 /* Info.plist */,
+			);
+			path = EasyEmoji_iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DE3BAF031DCA480A00D52596 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3BAF0A1DCA480A00D52596 /* EasyEmoji_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DE3BAEEB1DCA47F300D52596 /* EasyEmoji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE3BAEFE1DCA47F300D52596 /* Build configuration list for PBXNativeTarget "EasyEmoji" */;
+			buildPhases = (
+				DE3BAEE81DCA47F300D52596 /* Sources */,
+				DE3BAEE91DCA47F300D52596 /* Frameworks */,
+				DE3BAEEA1DCA47F300D52596 /* Resources */,
+				DE3BAF121DCA480A00D52596 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE3BAF0C1DCA480A00D52596 /* PBXTargetDependency */,
+			);
+			name = EasyEmoji;
+			productName = EasyEmoji;
+			productReference = DE3BAEEC1DCA47F300D52596 /* EasyEmoji.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE3BAF051DCA480A00D52596 /* EasyEmoji_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE3BAF0F1DCA480A00D52596 /* Build configuration list for PBXNativeTarget "EasyEmoji_iOS" */;
+			buildPhases = (
+				DE3BAF011DCA480A00D52596 /* Sources */,
+				DE3BAF021DCA480A00D52596 /* Frameworks */,
+				DE3BAF031DCA480A00D52596 /* Headers */,
+				DE3BAF041DCA480A00D52596 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyEmoji_iOS;
+			productName = EasyEmoji_iOS;
+			productReference = DE3BAF061DCA480A00D52596 /* EasyEmoji_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE3BAEE41DCA47F300D52596 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "袁晓钧";
+				TargetAttributes = {
+					DE3BAEEB1DCA47F300D52596 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5N5628A342;
+						ProvisioningStyle = Automatic;
+					};
+					DE3BAF051DCA480A00D52596 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5N5628A342;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DE3BAEE71DCA47F300D52596 /* Build configuration list for PBXProject "EasyEmoji" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE3BAEE31DCA47F300D52596;
+			productRefGroup = DE3BAEED1DCA47F300D52596 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE3BAEEB1DCA47F300D52596 /* EasyEmoji */,
+				DE3BAF051DCA480A00D52596 /* EasyEmoji_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE3BAEEA1DCA47F300D52596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3BAEFA1DCA47F300D52596 /* LaunchScreen.storyboard in Resources */,
+				DE3BAEF71DCA47F300D52596 /* Assets.xcassets in Resources */,
+				DE3BAEF51DCA47F300D52596 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3BAF041DCA480A00D52596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE3BAEE81DCA47F300D52596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3BAEF21DCA47F300D52596 /* ViewController.swift in Sources */,
+				DE3BAEF01DCA47F300D52596 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3BAF011DCA480A00D52596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3BAF141DCA484F00D52596 /* EasyEmoji.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE3BAF0C1DCA480A00D52596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE3BAF051DCA480A00D52596 /* EasyEmoji_iOS */;
+			targetProxy = DE3BAF0B1DCA480A00D52596 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE3BAEF31DCA47F300D52596 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE3BAEF41DCA47F300D52596 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE3BAEF81DCA47F300D52596 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE3BAEF91DCA47F300D52596 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE3BAEFC1DCA47F300D52596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE3BAEFD1DCA47F300D52596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE3BAEFF1DCA47F300D52596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5N5628A342;
+				INFOPLIST_FILE = EasyEmoji/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YXJ.EasyEmoji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DE3BAF001DCA47F300D52596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5N5628A342;
+				INFOPLIST_FILE = EasyEmoji/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YXJ.EasyEmoji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DE3BAF101DCA480A00D52596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5N5628A342;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EasyEmoji_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.EasyEmoji-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DE3BAF111DCA480A00D52596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5N5628A342;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EasyEmoji_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.EasyEmoji-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE3BAEE71DCA47F300D52596 /* Build configuration list for PBXProject "EasyEmoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE3BAEFC1DCA47F300D52596 /* Debug */,
+				DE3BAEFD1DCA47F300D52596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE3BAEFE1DCA47F300D52596 /* Build configuration list for PBXNativeTarget "EasyEmoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE3BAEFF1DCA47F300D52596 /* Debug */,
+				DE3BAF001DCA47F300D52596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DE3BAF0F1DCA480A00D52596 /* Build configuration list for PBXNativeTarget "EasyEmoji_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE3BAF101DCA480A00D52596 /* Debug */,
+				DE3BAF111DCA480A00D52596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE3BAEE41DCA47F300D52596 /* Project object */;
+}

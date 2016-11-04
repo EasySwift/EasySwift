@@ -1,0 +1,10 @@
+framework module YXJXibView {
+  umbrella header "YXJXibView.h"
+
+  export *
+  module * { export * }
+}
+
+module YXJXibView.Swift {
+    header "YXJXibView-Swift.h"
+}

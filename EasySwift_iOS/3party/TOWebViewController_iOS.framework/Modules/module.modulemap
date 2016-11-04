@@ -1,0 +1,6 @@
+framework module TOWebViewController_iOS {
+  umbrella header "TOWebViewController_iOS.h"
+
+  export *
+  module * { export * }
+}

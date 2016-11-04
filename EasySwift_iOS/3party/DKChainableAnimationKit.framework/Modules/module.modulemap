@@ -1,0 +1,10 @@
+framework module DKChainableAnimationKit {
+  umbrella header "DKChainableAnimationKit.h"
+
+  export *
+  module * { export * }
+}
+
+module DKChainableAnimationKit.Swift {
+    header "DKChainableAnimationKit-Swift.h"
+}

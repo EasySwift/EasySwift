@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DEC553101DA7F85A00CD8617"
+               BlueprintIdentifier = "DE5855521DC63DDD00C9B280"
                BuildableName = "AddressBook_iOS.framework"
                BlueprintName = "AddressBook_iOS"
                ReferencedContainer = "container:AddressBook.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DEC553101DA7F85A00CD8617"
+            BlueprintIdentifier = "DE5855521DC63DDD00C9B280"
             BuildableName = "AddressBook_iOS.framework"
             BlueprintName = "AddressBook_iOS"
             ReferencedContainer = "container:AddressBook.xcodeproj">
@@ -63,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DEC553101DA7F85A00CD8617"
+            BlueprintIdentifier = "DE5855521DC63DDD00C9B280"
             BuildableName = "AddressBook_iOS.framework"
             BlueprintName = "AddressBook_iOS"
             ReferencedContainer = "container:AddressBook.xcodeproj">

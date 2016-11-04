@@ -27,27 +27,115 @@ import ReactiveKit
 
 public extension NSObject {
 
+  public enum KVOError: Error {
+    case notConvertible(String)
+  }
+
+  /// Returns a ```DynamicSubject``` representing the given KVO path of the given type.
+  ///
+  /// E.g. ```user.dynamic(keyPath: "name", ofType: String.self)```
+  ///
   public func dynamic<T>(keyPath: String, ofType: T.Type) -> DynamicSubject<NSObject, T> {
     return DynamicSubject(
       target: self,
       signal: RKKeyValueSignal(keyPath: keyPath, for: self).toSignal(),
-      get: { $0.value(forKeyPath: keyPath) as! T },
-      set: { $0.setValue($1, forKeyPath: keyPath) }
+      get: { (target) -> T in
+        let maybeValue = target.value(forKeyPath: keyPath)
+        if let value = maybeValue as? T {
+          return value
+        } else {
+          fatalError("Could not convert \(maybeValue) to \(T.self). Maybe `dynamic(keyPath:ofExpectedType:)` method might be of help?)")
+        }
+      },
+      set: {
+        $0.setValue($1, forKeyPath: keyPath)
+      },
+      triggerEventOnSetting: false
     )
   }
 
+  /// Returns a ```DynamicSubject``` representing the given KVO path of the given type.
+  ///
+  /// E.g. ```user.dynamic(keyPath: "name", ofType: Optional<String>.self)```
+  ///
   public func dynamic<T>(keyPath: String, ofType: T.Type) -> DynamicSubject<NSObject, T> where T: OptionalProtocol {
     return DynamicSubject(
       target: self,
       signal: RKKeyValueSignal(keyPath: keyPath, for: self).toSignal(),
-      get: { ($0.value(forKeyPath: keyPath) as? T) ?? T(nilLiteral: ()) },
+      get: { (target) -> T in
+        let maybeValue = target.value(forKeyPath: keyPath)
+        if let value = maybeValue as? T {
+          return value
+        } else if maybeValue == nil {
+          return T(nilLiteral: ())
+        } else {
+          fatalError("Could not convert \(maybeValue) to \(T.self). Maybe `dynamic(keyPath:ofExpectedType:)` method might be of help?)")
+        }
+      },
       set: {
         if let value = $1._unbox {
           $0.setValue(value, forKeyPath: keyPath)
         } else {
           $0.setValue(nil, forKeyPath: keyPath)
         }
-      }
+      },
+      triggerEventOnSetting: false
+    )
+  }
+
+  /// Returns a ```DynamicSubject``` representing the given KVO path of the given expected type.
+  ///
+  /// If the key path emits a value other than ```ofExpectedType```, the subject will fail with a ```KVOError```.
+  ///
+  /// E.g. ```user.dynamic(keyPath: "name", ofType: String.self)```
+  ///
+  public func dynamic<T>(keyPath: String, ofExpectedType: T.Type) -> DynamicSubject2<NSObject, T, KVOError> {
+    return DynamicSubject2(
+      target: self,
+      signal: RKKeyValueSignal(keyPath: keyPath, for: self).castError(),
+      get: { (target) -> Result<T, KVOError> in
+        let maybeValue = target.value(forKeyPath: keyPath)
+        if let value = maybeValue as? T {
+          return .success(value)
+        } else {
+          return .failure(.notConvertible("Could not convert \(maybeValue) to \(T.self)."))
+        }
+      },
+      set: {
+        $0.setValue($1, forKeyPath: keyPath)
+      },
+      triggerEventOnSetting: false
+    )
+  }
+
+  /// Returns a ```DynamicSubject``` representing the given KVO path of the given expected type.
+  ///
+  /// If the key path emits a value other than ```ofExpectedType```, the subject will fail with a ```KVOError```.
+  ///
+  /// E.g. ```user.dynamic(keyPath: "name", ofType: Optional<String>.self)```
+  ///
+  public func dynamic<T>(keyPath: String, ofExpectedType: T.Type) -> DynamicSubject2<NSObject, T, KVOError> where T: OptionalProtocol {
+    return DynamicSubject2(
+      target: self,
+      signal: RKKeyValueSignal(keyPath: keyPath, for: self).castError(),
+      get: { (target) -> Result<T, KVOError> in
+        let maybeValue = target.value(forKeyPath: keyPath)
+        if let value = maybeValue as? T {
+          return .success(value)
+        } else if maybeValue == nil {
+          return .success(T(nilLiteral: ()))
+        } else {
+          return .failure(.notConvertible("Could not convert \(maybeValue) to \(T.self)."))
+        }
+      },
+      set: {
+        if let value = $1._unbox {
+          $0.setValue(value, forKeyPath: keyPath)
+        } else {
+          $0.setValue(nil, forKeyPath: keyPath)
+        }
+      },
+      triggerEventOnSetting: false
     )
   }
 }
@@ -62,22 +150,23 @@ private class RKKeyValueSignal: NSObject, SignalProtocol {
   private var numberOfObservers: Int = 0
   private var observing = false
   private let deallocationDisposable = SerialDisposable(otherDisposable: nil)
-  private let lock = NSRecursiveLock(name: "ReactiveKit.Bond.RKKeyValueSignal")
+  private let lock = NSRecursiveLock(name: "com.reactivekit.bond.rkkeyvaluesignal")
   
   fileprivate init(keyPath: String, for object: NSObject) {
     self.keyPath = keyPath
     self.subject = AnySubject(base: PublishSubject())
     self.object = object
     super.init()
-    lock.atomic {
-      deallocationDisposable.otherDisposable = object._willDeallocate.observeNext { object in
-        if self.observing {
-          object.removeObserver(self, forKeyPath: self.keyPath, context: &self.context)
-        }
+
+    lock.lock()
+    deallocationDisposable.otherDisposable = object._willDeallocate.observeNext { object in
+      if self.observing {
+        object.removeObserver(self, forKeyPath: self.keyPath, context: &self.context)
       }
     }
+    lock.unlock()
   }
-  
+
   deinit {
     deallocationDisposable.dispose()
     subject.completed()
@@ -94,25 +183,23 @@ private class RKKeyValueSignal: NSObject, SignalProtocol {
   }
 
   private func increaseNumberOfObservers() {
-    lock.atomic {
-      numberOfObservers += 1
-      if let object = object, numberOfObservers == 1 && !observing {
-        observing = true
-        object.addObserver(self, forKeyPath: keyPath, options: [.new], context: &self.context)
-      }
+    lock.lock(); defer { lock.unlock() }
+    numberOfObservers += 1
+    if let object = object, numberOfObservers == 1 && !observing {
+      observing = true
+      object.addObserver(self, forKeyPath: keyPath, options: [.new], context: &self.context)
     }
   }
-  
+
   private func decreaseNumberOfObservers() {
-    lock.atomic {
-      numberOfObservers -= 1
-      if let object = object, numberOfObservers == 0 && observing {
-        observing = false
-        object.removeObserver(self, forKeyPath: self.keyPath, context: &self.context)
-      }
+    lock.lock(); defer { lock.unlock() }
+    numberOfObservers -= 1
+    if let object = object, numberOfObservers == 0 && observing {
+      observing = false
+      object.removeObserver(self, forKeyPath: self.keyPath, context: &self.context)
     }
   }
-  
+
   fileprivate func observe(with observer: @escaping (Event<Void, NoError>) -> Void) -> Disposable {
     increaseNumberOfObservers()
     let disposable = subject.observe(with: observer)
@@ -129,7 +216,7 @@ extension NSObject {
   private struct StaticVariables {
     static var willDeallocateSubject = "WillDeallocateSubject"
     static var swizzledTypes: Set<String> = []
-    static var lock = NSRecursiveLock(name: "ReactiveKit.Bond.NSObject")
+    static var lock = NSRecursiveLock(name: "com.reactivekit.bond.nsobject")
   }
 
   private var _willDeallocateSubject: ReplayOneSubject<NSObject, NoError>? {
@@ -137,22 +224,21 @@ extension NSObject {
   }
 
   fileprivate var _willDeallocate: Signal<NSObject, NoError> {
-    return StaticVariables.lock.atomic {
-      if let subject = _willDeallocateSubject {
-        return subject.toSignal()
-      } else {
-        let typeName: String = String(describing: type(of: self))
+    StaticVariables.lock.lock(); defer { StaticVariables.lock.unlock() }
+    if let subject = _willDeallocateSubject {
+      return subject.toSignal()
+    } else {
+      let typeName: String = String(describing: type(of: self))
 
-        if !StaticVariables.swizzledTypes.contains(typeName) {
-          type(of: self)._swizzleDeinit()
-          StaticVariables.swizzledTypes.insert(typeName)
-        }
-
-        let subject = ReplayOneSubject<NSObject, NoError>()
-        objc_setAssociatedObject(self, &StaticVariables.willDeallocateSubject, subject, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-
-        return subject.toSignal()
+      if !StaticVariables.swizzledTypes.contains(typeName) {
+        type(of: self)._swizzleDeinit()
+        StaticVariables.swizzledTypes.insert(typeName)
       }
+
+      let subject = ReplayOneSubject<NSObject, NoError>()
+      objc_setAssociatedObject(self, &StaticVariables.willDeallocateSubject, subject, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+
+      return subject.toSignal()
     }
   }
 

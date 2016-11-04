@@ -1,0 +1,10 @@
+framework module Loggerithm_iOS {
+  umbrella header "Loggerithm_iOS.h"
+
+  export *
+  module * { export * }
+}
+
+module Loggerithm_iOS.Swift {
+    header "Loggerithm_iOS-Swift.h"
+}

@@ -1,0 +1,10 @@
+framework module YXJLinksButton_iOS {
+  umbrella header "YXJLinksButton_iOS.h"
+
+  export *
+  module * { export * }
+}
+
+module YXJLinksButton_iOS.Swift {
+    header "YXJLinksButton_iOS-Swift.h"
+}

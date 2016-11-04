@@ -12,11 +12,10 @@
 		011308F81C7D9D7600C02261 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011308F61C7D9D7600C02261 /* Main.storyboard */; };
 		011308FA1C7D9D7600C02261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011308F91C7D9D7600C02261 /* Assets.xcassets */; };
 		011308FD1C7D9D7600C02261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011308FB1C7D9D7600C02261 /* LaunchScreen.storyboard */; };
-		011309051C7D9DBD00C02261 /* AXBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011309041C7D9DBD00C02261 /* AXBadgeView.swift */; };
 		DE31207A1DAD467A00BD780A /* AXBadgeView_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DE3120781DAD467A00BD780A /* AXBadgeView_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE31207D1DAD467A00BD780A /* AXBadgeView_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3120761DAD467A00BD780A /* AXBadgeView_iOS.framework */; };
 		DE31207E1DAD467A00BD780A /* AXBadgeView_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3120761DAD467A00BD780A /* AXBadgeView_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3120831DAD468800BD780A /* AXBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011309041C7D9DBD00C02261 /* AXBadgeView.swift */; };
+		DE6C2EBA1DCB7A4000D3CBB6 /* AXBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C2EB91DCB7A4000D3CBB6 /* AXBadgeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +50,10 @@
 		011308F91C7D9D7600C02261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		011308FC1C7D9D7600C02261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		011308FE1C7D9D7600C02261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		011309041C7D9DBD00C02261 /* AXBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AXBadgeView.swift; path = AXBadgeView/AXBadgeView.swift; sourceTree = "<group>"; };
 		DE3120761DAD467A00BD780A /* AXBadgeView_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AXBadgeView_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3120781DAD467A00BD780A /* AXBadgeView_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AXBadgeView_iOS.h; sourceTree = "<group>"; };
 		DE3120791DAD467A00BD780A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE6C2EB91DCB7A4000D3CBB6 /* AXBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AXBadgeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +98,6 @@
 			children = (
 				011308F21C7D9D7600C02261 /* AppDelegate.swift */,
 				011308F41C7D9D7600C02261 /* ViewController.swift */,
-				011309061C7D9DC000C02261 /* AXBadgeView */,
 				011308F61C7D9D7600C02261 /* Main.storyboard */,
 				011308F91C7D9D7600C02261 /* Assets.xcassets */,
 				011308FB1C7D9D7600C02261 /* LaunchScreen.storyboard */,
@@ -108,17 +106,10 @@
 			path = "AXBadgeView-Swift";
 			sourceTree = "<group>";
 		};
-		011309061C7D9DC000C02261 /* AXBadgeView */ = {
-			isa = PBXGroup;
-			children = (
-				011309041C7D9DBD00C02261 /* AXBadgeView.swift */,
-			);
-			name = AXBadgeView;
-			sourceTree = "<group>";
-		};
 		DE3120771DAD467A00BD780A /* AXBadgeView_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				DE6C2EB91DCB7A4000D3CBB6 /* AXBadgeView.swift */,
 				DE3120781DAD467A00BD780A /* AXBadgeView_iOS.h */,
 				DE3120791DAD467A00BD780A /* Info.plist */,
 			);
@@ -242,7 +233,6 @@
 			files = (
 				011308F51C7D9D7600C02261 /* ViewController.swift in Sources */,
 				011308F31C7D9D7600C02261 /* AppDelegate.swift in Sources */,
-				011309051C7D9DBD00C02261 /* AXBadgeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE3120831DAD468800BD780A /* AXBadgeView.swift in Sources */,
+				DE6C2EBA1DCB7A4000D3CBB6 /* AXBadgeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +366,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "AXBadgeView-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "devedbox.AXBadgeView-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -389,6 +380,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "AXBadgeView-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "devedbox.AXBadgeView-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,7 +402,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AXBadgeView_iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.AXBadgeView-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,7 +429,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AXBadgeView_iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.AXBadgeView-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -477,6 +469,7 @@
 				DE3120811DAD467A00BD780A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

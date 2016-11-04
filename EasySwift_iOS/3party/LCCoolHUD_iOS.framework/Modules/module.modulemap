@@ -1,0 +1,6 @@
+framework module LCCoolHUD_iOS {
+  umbrella header "LCCoolHUD_iOS.h"
+
+  export *
+  module * { export * }
+}

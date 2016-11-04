@@ -7,15 +7,15 @@
 //
 
 import UIKit
-import EasyCountDownButton
+import EasyCountDown_iOS
 
 class ViewController: UIViewController {
-
-    let btn = EasyCountDownButton(frame: CGRect(x: 100, y: 100, width: 100, height: 30))
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let btn = EasyCountDownButton(frame: CGRect(x: 100, y: 100, width: 100, height: 30))
+        
         btn.disableConfig = EasyCountDownButtonConfig(
             font: UIFont.systemFont(ofSize: 14),
             title: "剩余 5 秒",

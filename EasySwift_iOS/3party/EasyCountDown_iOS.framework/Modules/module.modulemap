@@ -1,0 +1,6 @@
+framework module EasyCountDown_iOS {
+  umbrella header "EasyCountDown_iOS.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module EasyDropDownMenu_iOS {
+  umbrella header "EasyDropDownMenu_iOS.h"
+
+  export *
+  module * { export * }
+}

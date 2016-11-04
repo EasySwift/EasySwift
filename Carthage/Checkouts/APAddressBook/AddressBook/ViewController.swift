@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import AddressBook_iOS
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let aa = APAddressBook()
+        print(aa)
     }
 
     override func didReceiveMemoryWarning() {

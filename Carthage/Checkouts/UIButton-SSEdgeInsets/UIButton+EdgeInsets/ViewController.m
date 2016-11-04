@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "UIButton+SSEdgeInsets.h"
+
+#import <YXJDIYButtonPosition/UIButton+SSEdgeInsets.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *defaultStyleBtn;

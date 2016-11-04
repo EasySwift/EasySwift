@@ -1,7 +1,7 @@
 # Bond, Swift Bond
 
-[![Platform](https://img.shields.io/cocoapods/p/Bond.svg?style=flat)](http://cocoadocs.org/docsets/ReactiveKit/3.0.0-beta1/)
-[![CI Status](https://travis-ci.org/SwiftBond/Bond.svg?branch=master)](https://travis-ci.org/SwiftBond/Bond)
+[![Platform](https://img.shields.io/cocoapods/p/Bond.svg?style=flat)](http://cocoadocs.org/docsets/Bond/)
+[![CI Status](https://travis-ci.org/ReactiveKit/Bond.svg?branch=master)](https://travis-ci.org/ReactiveKit/Bond)
 [![Join Us on Gitter](https://img.shields.io/badge/GITTER-join%20chat-blue.svg)](https://gitter.im/ReactiveKit/General)
 [![Twitter](https://img.shields.io/badge/twitter-@srdanrasic-red.svg?style=flat)](https://twitter.com/srdanrasic)
 
@@ -397,7 +397,7 @@ then the row at index path 1 would be deleted and new rows would be inserted at 
 
 ### Observable2DArray / MutableObservable2DArray
 
-Array is often not enough. Usually our data is grouped into sections. To enable such use case, Bond provides two-dimensional arrays that can be observed and bound to table or collection views. 
+Array is often not enough. Usually our data is grouped into sections. To enable such use case, Bond provides two-dimensional arrays that can be observed and bound to table or collection views.
 
 Let's explain this type by example. First we'll need some sections. A section represents a group of items. Those items, i.e. section can have a metadata associated with it. In iOS it's useful to display section header and footer titles to the user so let's define that as our metadata:
 
@@ -444,9 +444,9 @@ struct MyBond: TableViewBond {
 }
 ```
 
-Only the method `cellForRow:at:tableView:` is required. Other two are optional and are used when we want to show header and/or footer titles. 
+Only the method `cellForRow:at:tableView:` is required. Other two are optional and are used when we want to show header and/or footer titles.
 
-Method `cellForRow:at:tableView:` describes how cells are instantiated (dequeued) and filled with data. Method `titleForHeader/Footer` just reads section metadata from the data source object and returns it. 
+Method `cellForRow:at:tableView:` describes how cells are instantiated (dequeued) and filled with data. Method `titleForHeader/Footer` just reads section metadata from the data source object and returns it.
 
 > If you don't need to display header and/or footer titles, you don't need to create `TableViewBond` type. Just bind `Observable2DArray` as you would bind `ObservableArray` as described in the previous section of this document.
 
@@ -502,7 +502,7 @@ There are many other methods. Just look at the code reference or source.
 ### CocoaPods
 
 1. Add the following to your *Podfile*:
-  <br> `pod 'Bond', '~> 5.0-beta9'`
+  <br> `pod 'Bond', '~> 5.0'`
 2. Run `pod install`.
 
 ## <a name="migration"></a>Migration

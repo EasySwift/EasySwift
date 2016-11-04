@@ -176,11 +176,11 @@
 				TargetAttributes = {
 					4DA8AD3E193D22EB006D2C36 = {
 						CreatedOnToolsVersion = 6.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 					4DA8AD49193D22EB006D2C36 = {
 						CreatedOnToolsVersion = 6.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 						TestTargetID = 4DA8AD3E193D22EB006D2C36;
 					};
 				};

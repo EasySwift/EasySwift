@@ -1,6 +1,0 @@
-framework module UIButton_SSEdgeInsets {
-  umbrella header "UIButton-SSEdgeInsets-umbrella.h"
-
-  export *
-  module * { export * }
-}

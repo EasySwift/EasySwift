@@ -68,17 +68,16 @@ public final class BlockDisposable: Disposable {
   }
 
   private var handler: (() -> ())?
-  private let lock = NSRecursiveLock(name: "ReactiveKit.BlockDisposable")
+  private let lock = NSRecursiveLock(name: "com.reactivekit.blockdisposable")
 
   public init(_ handler: @escaping () -> ()) {
     self.handler = handler
   }
 
   public func dispose() {
-    lock.atomic {
-      handler?()
-      handler = nil
-    }
+    lock.lock(); defer { lock.unlock() }
+    handler?()
+    handler = nil
   }
 }
 
@@ -109,7 +108,7 @@ public final class CompositeDisposable: Disposable {
 
   public private(set) var isDisposed: Bool = false
   private var disposables: [Disposable] = []
-  private let lock = NSRecursiveLock(name: "ReactiveKit.CompositeDisposable")
+  private let lock = NSRecursiveLock(name: "com.reactivekit.compositedisposable")
 
   public convenience init() {
     self.init([])
@@ -120,22 +119,20 @@ public final class CompositeDisposable: Disposable {
   }
 
   public func add(disposable: Disposable) {
-    lock.atomic {
-      if isDisposed {
-        disposable.dispose()
-      } else {
-        disposables.append(disposable)
-        self.disposables = disposables.filter { $0.isDisposed == false }
-      }
+    lock.lock(); defer { lock.unlock() }
+    if isDisposed {
+      disposable.dispose()
+    } else {
+      disposables.append(disposable)
+      self.disposables = disposables.filter { $0.isDisposed == false }
     }
   }
 
   public func dispose() {
-    lock.atomic {
-      isDisposed = true
-      disposables.forEach { $0.dispose() }
-      disposables.removeAll()
-    }
+    lock.lock(); defer { lock.unlock() }
+    isDisposed = true
+    disposables.forEach { $0.dispose() }
+    disposables.removeAll()
   }
 }
 
@@ -188,15 +185,14 @@ public extension Disposable {
 public final class SerialDisposable: Disposable {
 
   public private(set) var isDisposed: Bool = false
-  private let lock = NSRecursiveLock(name: "ReactiveKit.SerialDisposable")
+  private let lock = NSRecursiveLock(name: "com.reactivekit.serialdisposable")
 
   /// Will dispose other disposable immediately if self is already disposed.
   public var otherDisposable: Disposable? {
     didSet {
-      lock.atomic {
-        if isDisposed {
-          otherDisposable?.dispose()
-        }
+      lock.lock(); defer { lock.unlock() }
+      if isDisposed {
+        otherDisposable?.dispose()
       }
     }
   }
@@ -206,11 +202,10 @@ public final class SerialDisposable: Disposable {
   }
 
   public func dispose() {
-    lock.atomic {
-      if !isDisposed {
-        isDisposed = true
-        otherDisposable?.dispose()
-      }
+    lock.lock(); defer { lock.unlock() }
+    if !isDisposed {
+      isDisposed = true
+      otherDisposable?.dispose()
     }
   }
 }

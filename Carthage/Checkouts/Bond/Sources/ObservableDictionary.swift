@@ -42,7 +42,7 @@ public class ObservableDictionary<Key: Hashable, Value>: Collection, SignalProto
 
   fileprivate var dictionary: Dictionary<Key, Value>
   fileprivate let subject = PublishSubject<ObservableDictionaryEvent<Key, Value>, NoError>()
-  fileprivate let lock = NSRecursiveLock(name: "ObservableDictionary")
+  fileprivate let lock = NSRecursiveLock(name: "com.reactivekit.bond.observabledictionary")
 
   public init(_ dictionary: Dictionary<Key, Value>) {
     self.dictionary = dictionary
@@ -135,25 +135,22 @@ public class MutableObservableDictionary<Key: Hashable, Value>: ObservableDictio
   }
 
   public func replace(with dictionary: Dictionary<Key, Value>) {
-    lock.atomic {
-      self.dictionary = dictionary
-      subject.next(ObservableDictionaryEvent(kind: .reset, source: self))
-    }
+    lock.lock(); defer { lock.unlock() }
+    self.dictionary = dictionary
+    subject.next(ObservableDictionaryEvent(kind: .reset, source: self))
   }
 
   /// Perform batched updates on the dictionary.
   public func batchUpdate(_ update: (MutableObservableDictionary<Key, Value>) -> Void) {
-    lock.atomic {
-      subject.next(ObservableDictionaryEvent(kind: .beginBatchEditing, source: self))
-      update(self)
-      subject.next(ObservableDictionaryEvent(kind: .endBatchEditing, source: self))
-    }
+    lock.lock(); defer { lock.unlock() }
+    subject.next(ObservableDictionaryEvent(kind: .beginBatchEditing, source: self))
+    update(self)
+    subject.next(ObservableDictionaryEvent(kind: .endBatchEditing, source: self))
   }
 
   /// Change the underlying value withouth notifying the observers.
   public func silentUpdate(_ update: (inout Dictionary<Key, Value>) -> Void) {
-    lock.atomic {
-      update(&dictionary)
-    }
+    lock.lock(); defer { lock.unlock() }
+    update(&dictionary)
   }
 }

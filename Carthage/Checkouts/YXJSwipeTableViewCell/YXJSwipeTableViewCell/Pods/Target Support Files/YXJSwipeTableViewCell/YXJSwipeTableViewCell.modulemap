@@ -1,6 +1,0 @@
-framework module YXJSwipeTableViewCell {
-  umbrella header "YXJSwipeTableViewCell-umbrella.h"
-
-  export *
-  module * { export * }
-}

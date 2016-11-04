@@ -1,0 +1,10 @@
+framework module SwiftScan_iOS {
+  umbrella header "SwiftScan_iOS.h"
+
+  export *
+  module * { export * }
+}
+
+module SwiftScan_iOS.Swift {
+    header "SwiftScan_iOS-Swift.h"
+}

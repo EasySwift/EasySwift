@@ -35,7 +35,7 @@ public class Property<Value>: PropertyProtocol, SubjectProtocol, BindableProtoco
 
   private var _value: Value
   private let subject = PublishSubject<Value, NoError>()
-  private let lock = NSRecursiveLock(name: "ReactiveKit.Property")
+  private let lock = NSRecursiveLock(name: "com.reactivekit.property")
 
   public var disposeBag: DisposeBag {
     return subject.disposeBag
@@ -44,13 +44,13 @@ public class Property<Value>: PropertyProtocol, SubjectProtocol, BindableProtoco
   /// Underlying value. Changing it emits `.next` event with new value.
   public var value: Value {
     get {
-      return lock.atomic { _value }
+      lock.lock(); defer { lock.unlock() }
+      return _value
     }
     set {
-      lock.atomic {
-        _value = newValue
-        subject.next(newValue)
-      }
+      lock.lock(); defer { lock.unlock() }
+      _value = newValue
+      subject.next(newValue)
     }
   }
 
@@ -60,14 +60,13 @@ public class Property<Value>: PropertyProtocol, SubjectProtocol, BindableProtoco
 
   public func on(_ event: Event<Value, NoError>) {
     if case .next(let element) = event {
-      self._value = element
+      _value = element
     }
     subject.on(event)
   }
 
   public func observe(with observer: @escaping (Event<Value, NoError>) -> Void) -> Disposable {
-    observer(.next(value))
-    return subject.observe(with: observer)
+    return subject.start(with: value).observe(with: observer)
   }
 
   public var readOnlyView: AnyProperty<Value> {
@@ -80,10 +79,12 @@ public class Property<Value>: PropertyProtocol, SubjectProtocol, BindableProtoco
   }
 
   public func bind(signal: Signal<Value, NoError>) -> Disposable {
-    return signal.take(until: disposeBag.deallocated).observe { [weak self] event in
-      guard let s = self else { return }
-      s.on(event)
-    }
+    return signal
+      .take(until: disposeBag.deallocated)
+      .observeNext { [weak self] element in
+        guard let s = self else { return }
+        s.on(.next(element))
+      }
   }
 
   deinit {

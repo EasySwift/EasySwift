@@ -14,12 +14,11 @@
 		00CCEBB91BEBB49000BA8EA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00CCEBB81BEBB49000BA8EA2 /* Assets.xcassets */; };
 		00CCEBBC1BEBB49000BA8EA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CCEBBA1BEBB49000BA8EA2 /* LaunchScreen.storyboard */; };
 		00CCEBC71BEBB49000BA8EA2 /* UIButton_EdgeInsetsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CCEBC61BEBB49000BA8EA2 /* UIButton_EdgeInsetsTests.m */; };
-		00F5AA941BFC436000D5D8CD /* UIButton+SSEdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F5AA931BFC436000D5D8CD /* UIButton+SSEdgeInsets.m */; };
 		DE44BC411D9D7CB900AE68C7 /* YXJDIYButtonPosition.h in Headers */ = {isa = PBXBuildFile; fileRef = DE44BC3F1D9D7CB900AE68C7 /* YXJDIYButtonPosition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE44BC441D9D7CB900AE68C7 /* YXJDIYButtonPosition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE44BC3D1D9D7CB900AE68C7 /* YXJDIYButtonPosition.framework */; };
 		DE44BC451D9D7CB900AE68C7 /* YXJDIYButtonPosition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE44BC3D1D9D7CB900AE68C7 /* YXJDIYButtonPosition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE44BC4A1D9D7CFA00AE68C7 /* UIButton+SSEdgeInsets.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F5AA921BFC436000D5D8CD /* UIButton+SSEdgeInsets.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE44BC4B1D9D7D0700AE68C7 /* UIButton+SSEdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F5AA931BFC436000D5D8CD /* UIButton+SSEdgeInsets.m */; };
+		DED9714E1DBD969500E59179 /* UIButton+SSEdgeInsets.h in Headers */ = {isa = PBXBuildFile; fileRef = DED9714C1DBD969500E59179 /* UIButton+SSEdgeInsets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DED9714F1DBD969500E59179 /* UIButton+SSEdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = DED9714D1DBD969500E59179 /* UIButton+SSEdgeInsets.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,11 +66,11 @@
 		00CCEBC21BEBB49000BA8EA2 /* UIButton+EdgeInsetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIButton+EdgeInsetsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CCEBC61BEBB49000BA8EA2 /* UIButton_EdgeInsetsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIButton_EdgeInsetsTests.m; sourceTree = "<group>"; };
 		00CCEBC81BEBB49000BA8EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00F5AA921BFC436000D5D8CD /* UIButton+SSEdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+SSEdgeInsets.h"; path = "../UIButton+EdgeInsets/UIButton+SSEdgeInsets.h"; sourceTree = "<group>"; };
-		00F5AA931BFC436000D5D8CD /* UIButton+SSEdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+SSEdgeInsets.m"; path = "../UIButton+EdgeInsets/UIButton+SSEdgeInsets.m"; sourceTree = "<group>"; };
 		DE44BC3D1D9D7CB900AE68C7 /* YXJDIYButtonPosition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YXJDIYButtonPosition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE44BC3F1D9D7CB900AE68C7 /* YXJDIYButtonPosition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXJDIYButtonPosition.h; sourceTree = "<group>"; };
 		DE44BC401D9D7CB900AE68C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DED9714C1DBD969500E59179 /* UIButton+SSEdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SSEdgeInsets.h"; sourceTree = "<group>"; };
+		DED9714D1DBD969500E59179 /* UIButton+SSEdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SSEdgeInsets.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +155,8 @@
 		DE44BC3E1D9D7CB900AE68C7 /* YXJDIYButtonPosition */ = {
 			isa = PBXGroup;
 			children = (
-				00F5AA921BFC436000D5D8CD /* UIButton+SSEdgeInsets.h */,
-				00F5AA931BFC436000D5D8CD /* UIButton+SSEdgeInsets.m */,
+				DED9714C1DBD969500E59179 /* UIButton+SSEdgeInsets.h */,
+				DED9714D1DBD969500E59179 /* UIButton+SSEdgeInsets.m */,
 				DE44BC3F1D9D7CB900AE68C7 /* YXJDIYButtonPosition.h */,
 				DE44BC401D9D7CB900AE68C7 /* Info.plist */,
 			);
@@ -172,7 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE44BC411D9D7CB900AE68C7 /* YXJDIYButtonPosition.h in Headers */,
-				DE44BC4A1D9D7CFA00AE68C7 /* UIButton+SSEdgeInsets.h in Headers */,
+				DED9714E1DBD969500E59179 /* UIButton+SSEdgeInsets.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +307,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F5AA941BFC436000D5D8CD /* UIButton+SSEdgeInsets.m in Sources */,
 				00CCEBB41BEBB49000BA8EA2 /* ViewController.m in Sources */,
 				00CCEBB11BEBB49000BA8EA2 /* AppDelegate.m in Sources */,
 				00CCEBAE1BEBB49000BA8EA2 /* main.m in Sources */,
@@ -327,7 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE44BC4B1D9D7D0700AE68C7 /* UIButton+SSEdgeInsets.m in Sources */,
+				DED9714F1DBD969500E59179 /* UIButton+SSEdgeInsets.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +588,7 @@
 				DE44BC471D9D7CB900AE68C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

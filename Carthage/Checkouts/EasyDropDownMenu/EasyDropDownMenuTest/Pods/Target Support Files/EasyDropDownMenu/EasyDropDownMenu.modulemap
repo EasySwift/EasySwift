@@ -1,6 +1,0 @@
-framework module EasyDropDownMenu {
-  umbrella header "EasyDropDownMenu-umbrella.h"
-
-  export *
-  module * { export * }
-}

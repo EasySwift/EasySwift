@@ -8,26 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		B3E463F961459C2D6E5A4536 /* Pods_EasyCountDownButtonTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD582BBFDC078A9B1F88AF0 /* Pods_EasyCountDownButtonTest.framework */; };
+		DE10FAE21DBD0B9C009941EC /* EasyCountDown_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DE10FAE01DBD0B9C009941EC /* EasyCountDown_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE10FAE51DBD0B9C009941EC /* EasyCountDown_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE10FADE1DBD0B9C009941EC /* EasyCountDown_iOS.framework */; };
+		DE10FAE61DBD0B9C009941EC /* EasyCountDown_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE10FADE1DBD0B9C009941EC /* EasyCountDown_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE10FAEC1DBD0BC9009941EC /* EasyCountDownButton.h in Headers */ = {isa = PBXBuildFile; fileRef = DE10FAEA1DBD0BC9009941EC /* EasyCountDownButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE10FAED1DBD0BC9009941EC /* EasyCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DE10FAEB1DBD0BC9009941EC /* EasyCountDownButton.m */; };
 		DE19AF931D5B53C400B3E23F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE19AF921D5B53C400B3E23F /* AppDelegate.swift */; };
 		DE19AF951D5B53C400B3E23F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE19AF941D5B53C400B3E23F /* ViewController.swift */; };
 		DE19AF981D5B53C400B3E23F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE19AF961D5B53C400B3E23F /* Main.storyboard */; };
 		DE19AF9A1D5B53C400B3E23F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE19AF991D5B53C400B3E23F /* Assets.xcassets */; };
 		DE19AF9D1D5B53C400B3E23F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE19AF9B1D5B53C400B3E23F /* LaunchScreen.storyboard */; };
-		DEC9D08D1D9EBB7300CE7C48 /* EasyCountDown ios.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC9D08B1D9EBB7300CE7C48 /* EasyCountDown ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEC9D0901D9EBB7300CE7C48 /* EasyCountDownButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC9D0891D9EBB7300CE7C48 /* EasyCountDownButton.framework */; };
-		DEC9D0911D9EBB7300CE7C48 /* EasyCountDownButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEC9D0891D9EBB7300CE7C48 /* EasyCountDownButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DEC9D0981D9EBBB400CE7C48 /* EasyCountDownButton.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC9D0961D9EBBB400CE7C48 /* EasyCountDownButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEC9D0991D9EBBB400CE7C48 /* EasyCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC9D0971D9EBBB400CE7C48 /* EasyCountDownButton.m */; };
 		DED5D5811D5B7507005A7F67 /* EasyCountDownButton1.gif in Resources */ = {isa = PBXBuildFile; fileRef = DED5D5801D5B7507005A7F67 /* EasyCountDownButton1.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DEC9D08E1D9EBB7300CE7C48 /* PBXContainerItemProxy */ = {
+		DE10FAE31DBD0B9C009941EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DE19AF871D5B53C400B3E23F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DEC9D0881D9EBB7300CE7C48;
-			remoteInfo = "EasyCountDown ios";
+			remoteGlobalIDString = DE10FADD1DBD0B9C009941EC;
+			remoteInfo = EasyCountDown_iOS;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -38,7 +38,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DEC9D0911D9EBB7300CE7C48 /* EasyCountDownButton.framework in Embed Frameworks */,
+				DE10FAE61DBD0B9C009941EC /* EasyCountDown_iOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +49,11 @@
 		3CD582BBFDC078A9B1F88AF0 /* Pods_EasyCountDownButtonTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyCountDownButtonTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A742BCAE0F58B871B0B45A07 /* Pods-EasyCountDownButtonTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyCountDownButtonTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyCountDownButtonTest/Pods-EasyCountDownButtonTest.release.xcconfig"; sourceTree = "<group>"; };
 		DDD13BBB2A1269B9997E32E3 /* Pods-EasyCountDownButtonTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyCountDownButtonTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyCountDownButtonTest/Pods-EasyCountDownButtonTest.debug.xcconfig"; sourceTree = "<group>"; };
+		DE10FADE1DBD0B9C009941EC /* EasyCountDown_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyCountDown_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE10FAE01DBD0B9C009941EC /* EasyCountDown_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyCountDown_iOS.h; sourceTree = "<group>"; };
+		DE10FAE11DBD0B9C009941EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE10FAEA1DBD0BC9009941EC /* EasyCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyCountDownButton.h; sourceTree = "<group>"; };
+		DE10FAEB1DBD0BC9009941EC /* EasyCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyCountDownButton.m; sourceTree = "<group>"; };
 		DE19AF8F1D5B53C400B3E23F /* EasyCountDownButtonTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyCountDownButtonTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE19AF921D5B53C400B3E23F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE19AF941D5B53C400B3E23F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,28 +61,23 @@
 		DE19AF991D5B53C400B3E23F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE19AF9C1D5B53C400B3E23F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE19AF9E1D5B53C400B3E23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEC9D0891D9EBB7300CE7C48 /* EasyCountDownButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyCountDownButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEC9D08B1D9EBB7300CE7C48 /* EasyCountDown ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyCountDown ios.h"; sourceTree = "<group>"; };
-		DEC9D08C1D9EBB7300CE7C48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEC9D0961D9EBBB400CE7C48 /* EasyCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasyCountDownButton.h; path = ../../Pod/EasyCountDownButton.h; sourceTree = "<group>"; };
-		DEC9D0971D9EBBB400CE7C48 /* EasyCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EasyCountDownButton.m; path = ../../Pod/EasyCountDownButton.m; sourceTree = "<group>"; };
 		DED5D5801D5B7507005A7F67 /* EasyCountDownButton1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = EasyCountDownButton1.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DE10FADA1DBD0B9C009941EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE19AF8C1D5B53C400B3E23F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B3E463F961459C2D6E5A4536 /* Pods_EasyCountDownButtonTest.framework in Frameworks */,
-				DEC9D0901D9EBB7300CE7C48 /* EasyCountDownButton.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DEC9D0851D9EBB7300CE7C48 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				DE10FAE51DBD0B9C009941EC /* EasyCountDown_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +101,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE10FADF1DBD0B9C009941EC /* EasyCountDown_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DE10FAE01DBD0B9C009941EC /* EasyCountDown_iOS.h */,
+				DE10FAEA1DBD0BC9009941EC /* EasyCountDownButton.h */,
+				DE10FAEB1DBD0BC9009941EC /* EasyCountDownButton.m */,
+				DE10FAE11DBD0B9C009941EC /* Info.plist */,
+			);
+			path = EasyCountDown_iOS;
+			sourceTree = "<group>";
+		};
 		DE19AF861D5B53C400B3E23F = {
 			isa = PBXGroup;
 			children = (
 				DE19AF911D5B53C400B3E23F /* EasyCountDownButton */,
-				DEC9D08A1D9EBB7300CE7C48 /* EasyCountDown ios */,
+				DE10FADF1DBD0B9C009941EC /* EasyCountDown_iOS */,
 				DE19AF901D5B53C400B3E23F /* Products */,
 				7E6644682DDC3BE4D0472974 /* Pods */,
 				8204E95BF9FF52FE19D3ACF7 /* Frameworks */,
@@ -116,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				DE19AF8F1D5B53C400B3E23F /* EasyCountDownButtonTest.app */,
-				DEC9D0891D9EBB7300CE7C48 /* EasyCountDownButton.framework */,
+				DE10FADE1DBD0B9C009941EC /* EasyCountDown_iOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,32 +146,38 @@
 			path = EasyCountDownButton;
 			sourceTree = "<group>";
 		};
-		DEC9D08A1D9EBB7300CE7C48 /* EasyCountDown ios */ = {
-			isa = PBXGroup;
-			children = (
-				DEC9D0961D9EBBB400CE7C48 /* EasyCountDownButton.h */,
-				DEC9D0971D9EBBB400CE7C48 /* EasyCountDownButton.m */,
-				DEC9D08B1D9EBB7300CE7C48 /* EasyCountDown ios.h */,
-				DEC9D08C1D9EBB7300CE7C48 /* Info.plist */,
-			);
-			path = "EasyCountDown ios";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		DEC9D0861D9EBB7300CE7C48 /* Headers */ = {
+		DE10FADB1DBD0B9C009941EC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEC9D0981D9EBBB400CE7C48 /* EasyCountDownButton.h in Headers */,
-				DEC9D08D1D9EBB7300CE7C48 /* EasyCountDown ios.h in Headers */,
+				DE10FAEC1DBD0BC9009941EC /* EasyCountDownButton.h in Headers */,
+				DE10FAE21DBD0B9C009941EC /* EasyCountDown_iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		DE10FADD1DBD0B9C009941EC /* EasyCountDown_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE10FAE91DBD0B9C009941EC /* Build configuration list for PBXNativeTarget "EasyCountDown_iOS" */;
+			buildPhases = (
+				DE10FAD91DBD0B9C009941EC /* Sources */,
+				DE10FADA1DBD0B9C009941EC /* Frameworks */,
+				DE10FADB1DBD0B9C009941EC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyCountDown_iOS;
+			productName = EasyCountDown_iOS;
+			productReference = DE10FADE1DBD0B9C009941EC /* EasyCountDown_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		DE19AF8E1D5B53C400B3E23F /* EasyCountDownButtonTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE19AFA11D5B53C400B3E23F /* Build configuration list for PBXNativeTarget "EasyCountDownButtonTest" */;
@@ -176,30 +193,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				DEC9D08F1D9EBB7300CE7C48 /* PBXTargetDependency */,
+				DE10FAE41DBD0B9C009941EC /* PBXTargetDependency */,
 			);
 			name = EasyCountDownButtonTest;
 			productName = EasyCountDownButton;
 			productReference = DE19AF8F1D5B53C400B3E23F /* EasyCountDownButtonTest.app */;
 			productType = "com.apple.product-type.application";
-		};
-		DEC9D0881D9EBB7300CE7C48 /* EasyCountDown ios */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DEC9D0941D9EBB7300CE7C48 /* Build configuration list for PBXNativeTarget "EasyCountDown ios" */;
-			buildPhases = (
-				DEC9D0841D9EBB7300CE7C48 /* Sources */,
-				DEC9D0851D9EBB7300CE7C48 /* Frameworks */,
-				DEC9D0861D9EBB7300CE7C48 /* Headers */,
-				DEC9D0871D9EBB7300CE7C48 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "EasyCountDown ios";
-			productName = "EasyCountDown ios";
-			productReference = DEC9D0891D9EBB7300CE7C48 /* EasyCountDownButton.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -211,13 +210,13 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "袁晓钧";
 				TargetAttributes = {
+					DE10FADD1DBD0B9C009941EC = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 					DE19AF8E1D5B53C400B3E23F = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0800;
-					};
-					DEC9D0881D9EBB7300CE7C48 = {
-						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -235,7 +234,7 @@
 			projectRoot = "";
 			targets = (
 				DE19AF8E1D5B53C400B3E23F /* EasyCountDownButtonTest */,
-				DEC9D0881D9EBB7300CE7C48 /* EasyCountDown ios */,
+				DE10FADD1DBD0B9C009941EC /* EasyCountDown_iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -249,13 +248,6 @@
 				DE19AF9D1D5B53C400B3E23F /* LaunchScreen.storyboard in Resources */,
 				DE19AF9A1D5B53C400B3E23F /* Assets.xcassets in Resources */,
 				DE19AF981D5B53C400B3E23F /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DEC9D0871D9EBB7300CE7C48 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +302,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DE10FAD91DBD0B9C009941EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE10FAED1DBD0BC9009941EC /* EasyCountDownButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE19AF8B1D5B53C400B3E23F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,21 +319,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DEC9D0841D9EBB7300CE7C48 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DEC9D0991D9EBBB400CE7C48 /* EasyCountDownButton.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DEC9D08F1D9EBB7300CE7C48 /* PBXTargetDependency */ = {
+		DE10FAE41DBD0B9C009941EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DEC9D0881D9EBB7300CE7C48 /* EasyCountDown ios */;
-			targetProxy = DEC9D08E1D9EBB7300CE7C48 /* PBXContainerItemProxy */;
+			target = DE10FADD1DBD0B9C009941EC /* EasyCountDown_iOS */;
+			targetProxy = DE10FAE31DBD0B9C009941EC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -357,6 +349,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DE10FAE71DBD0B9C009941EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EasyCountDown_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.EasyCountDown-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DE10FAE81DBD0B9C009941EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EasyCountDown_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.EasyCountDown-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		DE19AF9F1D5B53C400B3E23F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -471,62 +511,18 @@
 			};
 			name = Release;
 		};
-		DEC9D0921D9EBB7300CE7C48 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "EasyCountDown ios/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.EasyCountDown-ios";
-				PRODUCT_MODULE_NAME = EasyCountDownButton;
-				PRODUCT_NAME = EasyCountDownButton;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DEC9D0931D9EBB7300CE7C48 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "EasyCountDown ios/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.EasyCountDown-ios";
-				PRODUCT_MODULE_NAME = EasyCountDownButton;
-				PRODUCT_NAME = EasyCountDownButton;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DE10FAE91DBD0B9C009941EC /* Build configuration list for PBXNativeTarget "EasyCountDown_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE10FAE71DBD0B9C009941EC /* Debug */,
+				DE10FAE81DBD0B9C009941EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DE19AF8A1D5B53C400B3E23F /* Build configuration list for PBXProject "EasyCountDownButtonTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -544,14 +540,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		DEC9D0941D9EBB7300CE7C48 /* Build configuration list for PBXNativeTarget "EasyCountDown ios" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DEC9D0921D9EBB7300CE7C48 /* Debug */,
-				DEC9D0931D9EBB7300CE7C48 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

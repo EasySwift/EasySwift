@@ -1,6 +1,0 @@
-framework module YXJLinksButton {
-  umbrella header "YXJLinksButton-umbrella.h"
-
-  export *
-  module * { export * }
-}

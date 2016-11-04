@@ -1,0 +1,6 @@
+framework module YXJSlideBar {
+  umbrella header "YXJSlideBar.h"
+
+  export *
+  module * { export * }
+}

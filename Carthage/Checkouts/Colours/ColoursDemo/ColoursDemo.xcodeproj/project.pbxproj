@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E4C42EA1851434200F323C1 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C42E91851434200F323C1 /* Colours.m */; };
 		44B99604182159C40068C943 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44B99603182159C40068C943 /* Storyboard.storyboard */; };
 		44B996081823C5BD0068C943 /* ColoursDemoContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B996071823C5BD0068C943 /* ColoursDemoContainerViewController.m */; };
 		44C791BC1823CFDA0059592D /* SchemesContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C791BB1823CFDA0059592D /* SchemesContainerViewController.m */; };
@@ -17,7 +16,6 @@
 		44C791CF182586210059592D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44C791CD182586210059592D /* InfoPlist.strings */; };
 		44C791D1182586210059592D /* ColoursDemo_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C791D0182586210059592D /* ColoursDemo_Tests.m */; };
 		B6120DC9188DF0B60037E5EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6120DC8188DF0B60037E5EC /* AppDelegate.m */; };
-		B65430841A4FAEAE00A28A8A /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65430831A4FAEAE00A28A8A /* Colours.swift */; };
 		C06758B616F6824200CE7AA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06758B516F6824200CE7AA1 /* UIKit.framework */; };
 		C06758B816F6824200CE7AA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06758B716F6824200CE7AA1 /* Foundation.framework */; };
 		C06758BA16F6824200CE7AA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06758B916F6824200CE7AA1 /* CoreGraphics.framework */; };
@@ -31,11 +29,12 @@
 		C06758E016F691E000CE7AA1 /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = C06758DE16F691E000CE7AA1 /* icon57.png */; };
 		C06758E116F691E000CE7AA1 /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = C06758DF16F691E000CE7AA1 /* icon114.png */; };
 		D326F23C179B19BA0082A676 /* ColoursListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D326F23B179B19BA0082A676 /* ColoursListTableViewController.m */; };
+		DE794D651DC79FDF006DCA2B /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = DE794D641DC79FDF006DCA2B /* Colours.m */; };
+		DE794D661DC79FF2006DCA2B /* Colours.h in Headers */ = {isa = PBXBuildFile; fileRef = DE794D631DC79FDF006DCA2B /* Colours.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE794D671DC79FFF006DCA2B /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = DE794D641DC79FDF006DCA2B /* Colours.m */; };
 		DED4FD971DABF8CA00F8FA65 /* Color_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DED4FD951DABF8CA00F8FA65 /* Color_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DED4FD9A1DABF8CA00F8FA65 /* Colour_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED4FD931DABF8CA00F8FA65 /* Colour_iOS.framework */; };
 		DED4FD9B1DABF8CA00F8FA65 /* Colour_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DED4FD931DABF8CA00F8FA65 /* Colour_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DED4FDA11DABF9A100F8FA65 /* Colours.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4C42E81851434200F323C1 /* Colours.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DED4FDA21DABF9B300F8FA65 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C42E91851434200F323C1 /* Colours.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +69,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E4C42E81851434200F323C1 /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Colours.h; path = ../../Colours.h; sourceTree = "<group>"; };
-		1E4C42E91851434200F323C1 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Colours.m; path = ../../Colours.m; sourceTree = "<group>"; };
 		44B99603182159C40068C943 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		44B996061823C5BD0068C943 /* ColoursDemoContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoursDemoContainerViewController.h; sourceTree = "<group>"; };
 		44B996071823C5BD0068C943 /* ColoursDemoContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoursDemoContainerViewController.m; sourceTree = "<group>"; };
@@ -86,8 +83,6 @@
 		44C791D2182586210059592D /* ColoursDemo Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColoursDemo Tests-Prefix.pch"; sourceTree = "<group>"; };
 		B6120DC7188DF0B60037E5EC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B6120DC8188DF0B60037E5EC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B65430821A4FAEAD00A28A8A /* ColoursDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColoursDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		B65430831A4FAEAE00A28A8A /* Colours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colours.swift; path = ../../Colours.swift; sourceTree = "<group>"; };
 		C06758B216F6824200CE7AA1 /* ColoursDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColoursDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06758B516F6824200CE7AA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C06758B716F6824200CE7AA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -106,6 +101,8 @@
 		C06758DF16F691E000CE7AA1 /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
 		D326F23A179B19BA0082A676 /* ColoursListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoursListTableViewController.h; sourceTree = "<group>"; };
 		D326F23B179B19BA0082A676 /* ColoursListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoursListTableViewController.m; sourceTree = "<group>"; };
+		DE794D631DC79FDF006DCA2B /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
+		DE794D641DC79FDF006DCA2B /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
 		DED4FD931DABF8CA00F8FA65 /* Colour_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Colour_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED4FD951DABF8CA00F8FA65 /* Color_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color_iOS.h; sourceTree = "<group>"; };
 		DED4FD961DABF8CA00F8FA65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -161,17 +158,6 @@
 				D326F23B179B19BA0082A676 /* ColoursListTableViewController.m */,
 			);
 			name = "List View Controllers";
-			sourceTree = "<group>";
-		};
-		44C791B91823CB070059592D /* UIColor Category (Class Extension) */ = {
-			isa = PBXGroup;
-			children = (
-				1E4C42E81851434200F323C1 /* Colours.h */,
-				1E4C42E91851434200F323C1 /* Colours.m */,
-				B65430831A4FAEAE00A28A8A /* Colours.swift */,
-				B65430821A4FAEAD00A28A8A /* ColoursDemo-Bridging-Header.h */,
-			);
-			name = "UIColor Category (Class Extension)";
 			sourceTree = "<group>";
 		};
 		44C791BD1823CFE20059592D /* Schemes View Controllers */ = {
@@ -249,7 +235,6 @@
 		C06758BB16F6824200CE7AA1 /* ColoursDemo */ = {
 			isa = PBXGroup;
 			children = (
-				44C791B91823CB070059592D /* UIColor Category (Class Extension) */,
 				B6120DC7188DF0B60037E5EC /* AppDelegate.h */,
 				B6120DC8188DF0B60037E5EC /* AppDelegate.m */,
 				44B99603182159C40068C943 /* Storyboard.storyboard */,
@@ -279,6 +264,8 @@
 			isa = PBXGroup;
 			children = (
 				DED4FD951DABF8CA00F8FA65 /* Color_iOS.h */,
+				DE794D631DC79FDF006DCA2B /* Colours.h */,
+				DE794D641DC79FDF006DCA2B /* Colours.m */,
 				DED4FD961DABF8CA00F8FA65 /* Info.plist */,
 			);
 			path = Color_iOS;
@@ -292,7 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DED4FD971DABF8CA00F8FA65 /* Color_iOS.h in Headers */,
-				DED4FDA11DABF9A100F8FA65 /* Colours.h in Headers */,
+				DE794D661DC79FF2006DCA2B /* Colours.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,12 +430,11 @@
 			files = (
 				C06758C216F6824200CE7AA1 /* main.m in Sources */,
 				44B996081823C5BD0068C943 /* ColoursDemoContainerViewController.m in Sources */,
-				1E4C42EA1851434200F323C1 /* Colours.m in Sources */,
 				C06758CF16F6824200CE7AA1 /* ColoursDemoViewController.m in Sources */,
 				B6120DC9188DF0B60037E5EC /* AppDelegate.m in Sources */,
 				44C791C01823D0480059592D /* SchemesViewController.m in Sources */,
 				D326F23C179B19BA0082A676 /* ColoursListTableViewController.m in Sources */,
-				B65430841A4FAEAE00A28A8A /* Colours.swift in Sources */,
+				DE794D651DC79FDF006DCA2B /* Colours.m in Sources */,
 				44C791BC1823CFDA0059592D /* SchemesContainerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,7 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED4FDA21DABF9B300F8FA65 /* Colours.m in Sources */,
+				DE794D671DC79FFF006DCA2B /* Colours.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,6 +779,7 @@
 				DED4FD9E1DABF8CB00F8FA65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

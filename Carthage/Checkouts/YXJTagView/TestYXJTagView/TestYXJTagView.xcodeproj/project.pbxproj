@@ -256,6 +256,7 @@
 					};
 					DE5C31DC1D9C27AD00AB40AB = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -605,6 +606,7 @@
 				DE5C31E71D9C27AE00AB40AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

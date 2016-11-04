@@ -2,7 +2,6 @@ github "SnapKit/SnapKit" == 3.0.2
 github "SwiftBond/Bond" ~> 5.0
 github "TTTAttributedLabel/TTTAttributedLabel"
 github "Alamofire/Alamofire"
-github "SwiftyJSON/SwiftyJSON"
 github "Draveness/DKChainableAnimationKit"
 github "Hearst-DD/ObjectMapper" #~> 2.1
 github "hsousa/HCSStarRatingView" #评分框架
@@ -11,6 +10,7 @@ github "forkingdog/UITableView-FDTemplateLayoutCell"
 github "Haneke/HanekeSwift" "feature/swift-3"
 github "ashleymills/Reachability.swift" ~> 3.0
 
+github "EasySwift/SwiftyJSON"
 github "EasySwift/Kingfisher"
 github "EasySwift/TOWebViewController"
 github "EasySwift/RainbowNavigation"

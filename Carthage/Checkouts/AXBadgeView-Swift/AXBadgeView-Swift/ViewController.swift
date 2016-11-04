@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AXBadgeView_iOS
 
 class ViewController: UIViewController {
 

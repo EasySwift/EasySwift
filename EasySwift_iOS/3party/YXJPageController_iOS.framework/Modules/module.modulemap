@@ -1,0 +1,6 @@
+framework module YXJPageController_iOS {
+  umbrella header "YXJPageController_iOS.h"
+
+  export *
+  module * { export * }
+}

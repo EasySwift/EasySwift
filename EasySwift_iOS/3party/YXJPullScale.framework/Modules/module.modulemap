@@ -1,0 +1,6 @@
+framework module YXJPullScale {
+  umbrella header "YXJPullScale.h"
+
+  export *
+  module * { export * }
+}

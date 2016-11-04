@@ -28,7 +28,6 @@ import Foundation
 public protocol Lock {
   func lock()
   func unlock()
-  func atomic<T>(body: () -> T) -> T
 }
 
 public extension Lock {
@@ -54,19 +53,5 @@ extension NSRecursiveLock: Lock {
   public convenience init(name: String) {
     self.init()
     self.name = name
-  }
-}
-
-/// Spin Lock
-final class SpinLock: Lock {
-
-  private var spinLock = OS_SPINLOCK_INIT
-
-  internal func lock() {
-    OSSpinLockLock(&spinLock)
-  }
-
-  internal func unlock() {
-    OSSpinLockUnlock(&spinLock)
   }
 }

@@ -1,0 +1,6 @@
+framework module ZLPhotoBrowser_iOS {
+  umbrella header "ZLPhotoBrowser_iOS.h"
+
+  export *
+  module * { export * }
+}

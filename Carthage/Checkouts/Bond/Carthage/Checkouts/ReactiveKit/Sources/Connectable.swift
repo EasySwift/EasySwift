@@ -22,8 +22,6 @@
 //  THE SOFTWARE.
 //
 
-// MARK: - ConnectableSignalType
-
 /// Represents a signal that is started by calling `connect` on it.
 public protocol ConnectableSignalProtocol: SignalProtocol {
 
@@ -31,13 +29,11 @@ public protocol ConnectableSignalProtocol: SignalProtocol {
   func connect() -> Disposable
 }
 
-// MARK: - RawConnectableSignal
-
 /// Makes a signal connectable through the given subject.
 public final class ConnectableSignal<O: SignalProtocol>: ConnectableSignalProtocol {
 
   private let source: O
-  private let lock = SpinLock()
+  private let lock = NSRecursiveLock()
   private let subject: AnySubject<O.Element, O.Error>
   private var connectionDisposable: Disposable? = nil
 
@@ -48,13 +44,12 @@ public final class ConnectableSignal<O: SignalProtocol>: ConnectableSignalProtoc
 
   /// Start the signal.
   public func connect() -> Disposable {
-    return lock.atomic {
-      if connectionDisposable == nil {
-        connectionDisposable = source.observe(with: subject.on)
-      }
-      
-      return connectionDisposable!
+    lock.lock(); defer { lock.unlock() }
+    if connectionDisposable == nil {
+      connectionDisposable = source.observe(with: subject.on)
     }
+
+    return connectionDisposable!
   }
 
   /// Register an observer that will receive events from the signal.
@@ -73,7 +68,7 @@ public extension ConnectableSignalProtocol {
     var connectionDisposable: Disposable? = nil
     return Signal { observer in
       count = count + 1
-      let disposable = self.observe(with: observer.observer)
+      let disposable = self.observe(with: observer.on)
       if connectionDisposable == nil {
         connectionDisposable = self.connect()
       }

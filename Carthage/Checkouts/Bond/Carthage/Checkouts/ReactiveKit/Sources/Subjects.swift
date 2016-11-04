@@ -31,7 +31,7 @@ public protocol SubjectProtocol: SignalProtocol, ObserverProtocol {
 /// A type that is both a signal and an observer.
 public final class PublishSubject<Element, Error: Swift.Error>: ObserverRegister<(Event<Element, Error>) -> Void>, SubjectProtocol {
 
-  private let lock = NSRecursiveLock(name: "PublishSubject")
+  private let lock = NSRecursiveLock(name: "com.reactivekit.publishsubject")
   private var terminated = false
 
   public let disposeBag = DisposeBag()
@@ -40,11 +40,10 @@ public final class PublishSubject<Element, Error: Swift.Error>: ObserverRegister
   }
 
   public func on(_ event: Event<Element, Error>) {
-    lock.atomic {
-      guard !terminated else { return }
-      terminated = event.isTerminal
-      forEachObserver { $0(event) }
-    }
+    lock.lock(); defer { lock.unlock() }
+    guard !terminated else { return }
+    terminated = event.isTerminal
+    forEachObserver { $0(event) }
   }
 
   public func observe(with observer: @escaping (Event<Element, Error>) -> Void) -> Disposable {
@@ -54,11 +53,13 @@ public final class PublishSubject<Element, Error: Swift.Error>: ObserverRegister
 
 extension PublishSubject: BindableProtocol {
   
-  public func bind(signal: Signal<Element, Error>) -> Disposable {
-    return signal.take(until: disposeBag.deallocated).observe { [weak self] event in
-      guard let s = self else { return }
-      s.on(event)
-    }
+  public func bind(signal: Signal<Element, NoError>) -> Disposable {
+    return signal
+      .take(until: disposeBag.deallocated)
+      .observeNext { [weak self] element in
+        guard let s = self else { return }
+        s.on(.next(element))
+      }
   }
 }
 
@@ -67,7 +68,7 @@ public typealias PublishSubject1<Element> = PublishSubject<Element, NoError>
 public final class ReplaySubject<Element, Error: Swift.Error>: ObserverRegister<(Event<Element, Error>) -> Void>, SubjectProtocol {
 
   private var buffer: ArraySlice<Event<Element, Error>> = []
-  private let lock = NSRecursiveLock(name: "ReactiveKit.ReplaySubject")
+  private let lock = NSRecursiveLock(name: "com.reactivekit.replaysubject")
 
   public let bufferSize: Int
   public let disposeBag = DisposeBag()
@@ -81,19 +82,17 @@ public final class ReplaySubject<Element, Error: Swift.Error>: ObserverRegister<
   }
 
   public func on(_ event: Event<Element, Error>) {
-    lock.atomic {
-      guard !terminated else { return }
-      buffer.append(event)
-      buffer = buffer.suffix(bufferSize)
-      forEachObserver { $0(event) }
-    }
+    lock.lock(); defer { lock.unlock() }
+    guard !terminated else { return }
+    buffer.append(event)
+    buffer = buffer.suffix(bufferSize)
+    forEachObserver { $0(event) }
   }
 
   public func observe(with observer: @escaping (Event<Element, Error>) -> Void) -> Disposable {
-    return lock.atomic {
-      buffer.forEach(observer)
-      return add(observer: observer)
-    }
+    lock.lock(); defer { lock.unlock() }
+    buffer.forEach(observer)
+    return add(observer: observer)
   }
 
   private var terminated: Bool {
@@ -109,33 +108,31 @@ internal class _ReplayOneSubject<Element, Error: Swift.Error>: ObserverRegister<
 
   private var lastEvent: Event<Element, Error>? = nil
   private var terminalEvent: Event<Element, Error>? = nil
-  private let lock = NSRecursiveLock(name: "ReplayOneSubject")
+  private let lock = NSRecursiveLock(name: "com.reactivekit.replayonesubject")
 
   public override init() {
   }
 
   public func on(_ event: Event<Element, Error>) {
-    lock.atomic {
-      guard terminalEvent == nil else { return }
-      if event.isTerminal {
-        terminalEvent = event
-      } else {
-        lastEvent = event
-      }
-      forEachObserver { $0(event) }
+    lock.lock(); defer { lock.unlock() }
+    guard terminalEvent == nil else { return }
+    if event.isTerminal {
+      terminalEvent = event
+    } else {
+      lastEvent = event
     }
+    forEachObserver { $0(event) }
   }
 
   public func observe(with observer: @escaping (Event<Element, Error>) -> Void) -> Disposable {
-    return lock.atomic {
-      if let event = lastEvent {
-        observer(event)
-      }
-      if let event = terminalEvent {
-        observer(event)
-      }
-      return add(observer: observer)
+    lock.lock(); defer { lock.unlock() }
+    if let event = lastEvent {
+      observer(event)
     }
+    if let event = terminalEvent {
+      observer(event)
+    }
+    return add(observer: observer)
   }
 }
 
@@ -170,7 +167,7 @@ private class ObserverRegister<Observer> {
   private var nextToken: Token = 0
 
   private var observers: [Token: Observer] = [:]
-  private let tokenLock = SpinLock()
+  private let tokenLock = NSRecursiveLock(name: "com.reactivekit.observerregister")
 
   public init() {}
 

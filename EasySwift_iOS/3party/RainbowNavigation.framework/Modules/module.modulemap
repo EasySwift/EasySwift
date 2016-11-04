@@ -1,0 +1,10 @@
+framework module RainbowNavigation {
+  umbrella header "RainbowNavigation.h"
+
+  export *
+  module * { export * }
+}
+
+module RainbowNavigation.Swift {
+    header "RainbowNavigation-Swift.h"
+}

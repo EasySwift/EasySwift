@@ -1,0 +1,6 @@
+framework module SystemServices_iOS {
+  umbrella header "SystemServices_iOS.h"
+
+  export *
+  module * { export * }
+}

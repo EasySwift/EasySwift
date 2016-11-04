@@ -34,7 +34,7 @@ class ImageProcessorTests: XCTestCase {
         return imageNames.filter { !$0.contains(".png") }
     }
     
-    func imageData(noAlpha: Bool = false) -> [Data] {
+    func imageData(_ noAlpha: Bool = false) -> [Data] {
         return noAlpha ? nonPNGIamgeNames.map { Data(fileName: $0) } : imageNames.map { Data(fileName: $0) }
     }
     
@@ -146,7 +146,7 @@ extension ImageProcessorTests {
         checkImagesEqual(targetImages: targetImages, resultImages: resultImages, for: specifiedSuffix)
     }
     
-    func checkImagesEqual(targetImages: [Image], resultImages: [Image], for suffix: String) {
+    func checkImagesEqual(_ targetImages: [Image], resultImages: [Image], for suffix: String) {
         XCTAssertEqual(targetImages.count, resultImages.count)
         
         for (i, (resultImage, targetImage)) in zip(resultImages, targetImages).enumerated() {

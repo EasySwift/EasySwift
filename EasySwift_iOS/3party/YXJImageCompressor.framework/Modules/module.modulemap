@@ -1,0 +1,6 @@
+framework module YXJImageCompressor {
+  umbrella header "YXJImageCompressor.h"
+
+  export *
+  module * { export * }
+}

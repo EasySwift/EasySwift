@@ -228,6 +228,7 @@
 					DE44BB631D9D638100AE68C7 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 5N5628A342;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					DE62C0391D2ABA130031B784 = {
@@ -562,6 +563,7 @@
 				DE44BB6F1D9D638100AE68C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE62C0351D2ABA130031B784 /* Build configuration list for PBXProject "testYXJXibView" */ = {
 			isa = XCConfigurationList;

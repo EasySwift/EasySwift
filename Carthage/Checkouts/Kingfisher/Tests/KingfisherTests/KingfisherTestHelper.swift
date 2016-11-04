@@ -32,7 +32,7 @@ let testImageString = "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAD8GlDQ1BJQ
 
 var testImage: Image = Image(data: testImageData! as Data)!
 
-let testImageData = NSData(base64Encoded: testImageString, options: [])
+let testImageData = Data(base64Encoded: testImageString, options: [])
 
 let testImagePNGData = testImage.kf.pngRepresentation()!
 let testImageJEPGData = testImage.kf.jpegRepresentation(compressionQuality: 1.0)!

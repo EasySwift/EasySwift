@@ -27,7 +27,7 @@ public extension String {
     
     // https://gist.github.com/stevenschobert/540dd33e828461916c11
     func camelize() -> String {
-        let source = clean(with: " ", allOf: "-", "_")
+        let source = clean("", allOf: "-", "_")
         if source.characters.contains(" ") {
 			let first = self[self.startIndex...self.index(after: startIndex)] //source.substringToIndex(source.index(after: startIndex))
             let cammel = NSString(format: "%@", (source as NSString).capitalized.replacingOccurrences(of: " ", with: "")) as String
@@ -71,11 +71,11 @@ public extension String {
     }
     
     func collapseWhitespace() -> String {
-        let thecomponents = components(separatedBy: NSCharacterSet.whitespacesAndNewlines).filter { !$0.isEmpty }
+        let thecomponents = components(separatedBy: CharacterSet.whitespacesAndNewlines).filter { !$0.isEmpty }
         return thecomponents.joined(separator: " ")
     }
     
-    func clean(with: String, allOf: String...) -> String {
+    func clean(_ with: String, allOf: String...) -> String {
         var string = self
         for target in allOf {
             string = string.replacingOccurrences(of: target, with: with)
@@ -136,7 +136,7 @@ public extension String {
     }
     
     func isAlphaNumeric() -> Bool {
-        let alphaNumeric = NSCharacterSet.alphanumerics
+        let alphaNumeric = CharacterSet.alphanumerics
 		let output = self.unicodeScalars.split { !alphaNumeric.contains($0)}.map(String.init)
 		if output.count == 1 {
 			if output[0] != self {
@@ -158,7 +158,7 @@ public extension String {
         return false
     }
     
-    private func join<S: Sequence>(_ elements: S) -> String {
+    fileprivate func join<S: Sequence>(_ elements: S) -> String {
         return elements.map{String(describing: $0)}.joined(separator: self)
     }
 
@@ -168,7 +168,7 @@ public extension String {
     }
     
     func lines() -> [String] {
-        return self.components(separatedBy: NSCharacterSet.newlines)
+        return self.components(separatedBy: CharacterSet.newlines)
     }
     
     var length: Int {
@@ -190,7 +190,7 @@ public extension String {
     }
     
     func slugify(withSeparator separator: Character = "-") -> String {
-        let slugCharacterSet = NSCharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\(separator)")
+        let slugCharacterSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\(separator)")
         return latinize()
             .lowercased()
             .components(separatedBy: slugCharacterSet.inverted)
@@ -246,14 +246,14 @@ public extension String {
     }
     
     func trimmedLeft() -> String {
-        if let range = rangeOfCharacter(from: NSCharacterSet.whitespacesAndNewlines.inverted) {
+        if let range = rangeOfCharacter(from: CharacterSet.whitespacesAndNewlines.inverted) {
             return self[range.lowerBound..<endIndex]
         }
         return self
     }
     
     func trimmedRight() -> String {
-        if let range = rangeOfCharacter(from: NSCharacterSet.whitespacesAndNewlines.inverted, options: NSString.CompareOptions.backwards) {
+        if let range = rangeOfCharacter(from: CharacterSet.whitespacesAndNewlines.inverted, options: NSString.CompareOptions.backwards) {
             return self[startIndex..<range.upperBound]
         }
         return self
@@ -289,14 +289,14 @@ private enum ThreadLocalIdentifier {
     case dateFormatter(String)
 
     case defaultNumberFormatter
-    case localeNumberFormatter(NSLocale)
+    case localeNumberFormatter(Locale)
 
     var objcDictKey: String {
         switch self {
         case .dateFormatter(let format):
             return "SS\(self)\(format)"
         case .localeNumberFormatter(let l):
-            return "SS\(self)\(l.localeIdentifier)"
+            return "SS\(self)\(l.identifier)"
         default:
             return "SS\(self)"
         }
@@ -328,7 +328,7 @@ private func defaultNumberFormatter() -> NumberFormatter {
 }
 
 private func localeNumberFormatter(_ locale: NSLocale) -> NumberFormatter {
-    return threadLocalInstance(.localeNumberFormatter(locale), initialValue: {
+    return threadLocalInstance(ThreadLocalIdentifier.localeNumberFormatter(locale as Locale), initialValue: {
         let nf = NumberFormatter()
         nf.locale = locale as Locale!
         return nf

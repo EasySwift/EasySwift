@@ -1,0 +1,10 @@
+framework module EasyEmoji_iOS {
+  umbrella header "EasyEmoji_iOS.h"
+
+  export *
+  module * { export * }
+}
+
+module EasyEmoji_iOS.Swift {
+    header "EasyEmoji_iOS-Swift.h"
+}

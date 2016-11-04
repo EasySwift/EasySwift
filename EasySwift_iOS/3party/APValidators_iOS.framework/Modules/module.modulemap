@@ -1,0 +1,6 @@
+framework module APValidators_iOS {
+  umbrella header "APValidators_iOS.h"
+
+  export *
+  module * { export * }
+}

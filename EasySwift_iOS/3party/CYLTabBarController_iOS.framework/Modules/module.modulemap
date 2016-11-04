@@ -1,0 +1,6 @@
+framework module CYLTabBarController_iOS {
+  umbrella header "CYLTabBarController_iOS.h"
+
+  export *
+  module * { export * }
+}

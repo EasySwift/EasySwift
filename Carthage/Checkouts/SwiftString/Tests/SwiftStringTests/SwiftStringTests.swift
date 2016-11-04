@@ -117,10 +117,10 @@ class SwiftStringTests: XCTestCase {
 	//isEmpty
 	func testisEmpty() {
 		let s = "stupid brown Fox!"
-		XCTAssertEqual(s.isEmpty(), false, "isEmpty is invalid")
+		XCTAssertEqual(s.isEmpty, false, "isEmpty is invalid")
 
 		let snx = ""
-		XCTAssertEqual(snx.isEmpty(), true, "isEmpty is invalid")
+		XCTAssertEqual(snx.isEmpty, true, "isEmpty is invalid")
 	}
 	//isNumeric
 	func testisNumeric() {

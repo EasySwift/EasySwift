@@ -247,6 +247,7 @@
 					DED4FD791DABF5FE00F8FA65 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 5N5628A342;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -576,6 +577,7 @@
 				DED4FD841DABF5FE00F8FA65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

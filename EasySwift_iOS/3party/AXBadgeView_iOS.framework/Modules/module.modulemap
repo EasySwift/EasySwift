@@ -1,0 +1,10 @@
+framework module AXBadgeView_iOS {
+  umbrella header "AXBadgeView_iOS.h"
+
+  export *
+  module * { export * }
+}
+
+module AXBadgeView_iOS.Swift {
+    header "AXBadgeView_iOS-Swift.h"
+}

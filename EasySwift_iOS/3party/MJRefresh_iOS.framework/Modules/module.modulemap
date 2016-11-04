@@ -1,0 +1,6 @@
+framework module MJRefresh_iOS {
+  umbrella header "MJRefresh_iOS.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module YXJSwipeTableViewCell_iOS {
+  umbrella header "YXJSwipeTableViewCell_iOS.h"
+
+  export *
+  module * { export * }
+}

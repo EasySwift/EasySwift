@@ -1,0 +1,6 @@
+framework module AddressBook_iOS {
+  umbrella header "AddressBook_iOS.h"
+
+  export *
+  module * { export * }
+}

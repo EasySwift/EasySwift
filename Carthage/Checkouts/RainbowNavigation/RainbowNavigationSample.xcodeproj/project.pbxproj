@@ -201,10 +201,11 @@
 					12767C401C33AEA100193645 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = D65DK9X9W4;
+						LastSwiftMigration = 0810;
 					};
 					12767C5A1C33AEB200193645 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};

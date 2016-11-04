@@ -1,0 +1,10 @@
+framework module YXJTagView {
+  umbrella header "YXJTagView.h"
+
+  export *
+  module * { export * }
+}
+
+module YXJTagView.Swift {
+    header "YXJTagView-Swift.h"
+}

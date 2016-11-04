@@ -1,6 +1,0 @@
-framework module EasyEmoji {
-  umbrella header "EasyEmoji-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -44,6 +44,7 @@ extension NSObject: Deallocatable {
     }
   }
 
+  /// A signal that fires completion event when the object is deallocated.
   public var bnd_deallocated: Signal<Void, NoError> {
     if let helper = objc_getAssociatedObject(self, &AssociatedKeys.DeallocationSignalHelper) as? BNDDeallocationSignalHelper {
       return helper.subject.toSignal()
@@ -67,13 +68,13 @@ extension NSObject: Deallocatable {
 
   /// Bind `signal` to `bindable` and dispose in `bnd_bag` of receiver.
   @discardableResult
-  public func bind<O: SignalProtocol, B: BindableProtocol>(_ signal: O, to bindable: B) where O.Element == B.Element, O.Error == B.Error {
+  public func bind<O: SignalProtocol, B: BindableProtocol>(_ signal: O, to bindable: B) where O.Element == B.Element, O.Error == NoError {
     signal.bind(to: bindable).disposeIn(bnd_bag)
   }
   
   /// Bind `signal` to `bindable` and dispose in `bnd_bag` of receiver.
   @discardableResult
-  public func bind<O: SignalProtocol, B: BindableProtocol>(_ signal: O, to bindable: B) where B.Element: OptionalProtocol, O.Element == B.Element.Wrapped, O.Error == B.Error {
+  public func bind<O: SignalProtocol, B: BindableProtocol>(_ signal: O, to bindable: B) where B.Element: OptionalProtocol, O.Element == B.Element.Wrapped, O.Error == NoError {
     signal.bind(to: bindable).disposeIn(bnd_bag)
   }
 }
