@@ -17,3 +17,6 @@ FOUNDATION_EXPORT const unsigned char YXJSilderBar_iosVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <YXJSilderBar_ios/PublicHeader.h>
 
 
+#import "YXJSlideContentView.h"
+#import "YXJSlideBarItem.h"
+#import "YXJSlideBar.h"

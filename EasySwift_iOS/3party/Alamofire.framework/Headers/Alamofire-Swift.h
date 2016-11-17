@@ -367,6 +367,10 @@ SWIFT_CLASS("_TtC9Alamofire15SessionDelegate")
   \endcode.
 */
 @property (nonatomic, copy) void (^ _Nullable streamTaskDidBecomeInputAndOutputStreams)(NSURLSession * _Nonnull, NSURLSessionStreamTask * _Nonnull, NSInputStream * _Nonnull, NSOutputStream * _Nonnull);
+@property (nonatomic) id _Nullable _streamTaskReadClosed;
+@property (nonatomic) id _Nullable _streamTaskWriteClosed;
+@property (nonatomic) id _Nullable _streamTaskBetterRouteDiscovered;
+@property (nonatomic) id _Nullable _streamTaskDidBecomeInputStream;
 /**
   Initializes the \code
   SessionDelegate

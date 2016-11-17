@@ -16,3 +16,16 @@ FOUNDATION_EXPORT double AddressBook_iOSVersionNumber;
 FOUNDATION_EXPORT const unsigned char AddressBook_iOSVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <AddressBook_iOS/PublicHeader.h>
+
+#import "APAddress.h"
+#import "APContact.h"
+#import "APContactDate.h"
+#import "APEmail.h"
+#import "APJob.h"
+#import "APName.h"
+#import "APPhone.h"
+#import "APRecordDate.h"
+#import "APRelatedPerson.h"
+#import "APSocialProfile.h"
+#import "APSource.h"
+#import "APTypes.h"

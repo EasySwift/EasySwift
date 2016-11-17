@@ -36,6 +36,11 @@ extension UINavigationBar {
         }
         backgroundView?.backgroundColor = color
         
+        for subview in subviews {
+            if subview != backgroundView {
+                self.bringSubview(toFront: subview)
+            }
+        }
     }
 
     public func df_reset() {

@@ -17,3 +17,6 @@ FOUNDATION_EXPORT const unsigned char LCCoolHUD_iOSVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <LCCoolHUD_iOS/PublicHeader.h>
 
 
+#import "LCCoolHUD.h"
+#import "JGProgressHUD.h"
+#import "LCLoadingHUD.h"

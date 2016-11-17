@@ -17,3 +17,12 @@ FOUNDATION_EXPORT const unsigned char TYAlertController_iOSVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <TYAlertController_iOS/PublicHeader.h>
 
 
+#import "TYAlertController.h"
+#import "TYShowAlertView.h"
+#import "UIView+TYAlertView.h"
+#import "UIView+TYAutoLayout.h"
+#import "TYAlertView.h"
+#import "TYBaseAnimation.h"
+#import "TYAlertFadeAnimation.h"
+#import "TYAlertScaleFadeAnimation.h"
+#import "TYAlertDropDownAnimation.h"

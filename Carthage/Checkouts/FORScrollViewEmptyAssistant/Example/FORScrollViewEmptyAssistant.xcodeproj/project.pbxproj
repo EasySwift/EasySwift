@@ -33,7 +33,7 @@
 		DE1521841DABE5FD00A01D27 /* blank_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE1521811DABE5FD00A01D27 /* blank_button@2x.png */; };
 		DE1521851DABE5FD00A01D27 /* blank_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE1521821DABE5FD00A01D27 /* blank_button@3x.png */; };
 		DE15218C1DABE9B200A01D27 /* DZNEmptyDataSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1521881DABE6C600A01D27 /* DZNEmptyDataSet.framework */; };
-		DE15219A1DABED2400A01D27 /* UIScrollView+EmptyDataSet.h in Headers */ = {isa = PBXBuildFile; fileRef = DE1521981DABED2400A01D27 /* UIScrollView+EmptyDataSet.h */; };
+		DE15219A1DABED2400A01D27 /* UIScrollView+EmptyDataSet.h in Headers */ = {isa = PBXBuildFile; fileRef = DE1521981DABED2400A01D27 /* UIScrollView+EmptyDataSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE15219B1DABED2400A01D27 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1521991DABED2400A01D27 /* UIScrollView+EmptyDataSet.m */; };
 		F014EBB11CED53E800FED264 /* launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = F014EBB01CED53E800FED264 /* launch.xib */; };
 /* End PBXBuildFile section */
@@ -378,6 +378,7 @@
 					};
 					DE1521671DABE51300A01D27 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -777,7 +778,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = FORScrollViewEmptyAssistant_iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.FORScrollViewEmptyAssistant-iOS";
@@ -813,7 +814,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = FORScrollViewEmptyAssistant_iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.FORScrollViewEmptyAssistant-iOS";

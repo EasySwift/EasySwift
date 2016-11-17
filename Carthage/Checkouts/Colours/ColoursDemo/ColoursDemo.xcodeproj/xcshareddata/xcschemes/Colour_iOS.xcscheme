@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DED4FD921DABF8CA00F8FA65"
+               BlueprintIdentifier = "DE4D7E861DDA01C5008BE335"
                BuildableName = "Colour_iOS.framework"
                BlueprintName = "Colour_iOS"
                ReferencedContainer = "container:ColoursDemo.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DED4FD921DABF8CA00F8FA65"
+            BlueprintIdentifier = "DE4D7E861DDA01C5008BE335"
             BuildableName = "Colour_iOS.framework"
             BlueprintName = "Colour_iOS"
             ReferencedContainer = "container:ColoursDemo.xcodeproj">
@@ -63,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DED4FD921DABF8CA00F8FA65"
+            BlueprintIdentifier = "DE4D7E861DDA01C5008BE335"
             BuildableName = "Colour_iOS.framework"
             BlueprintName = "Colour_iOS"
             ReferencedContainer = "container:ColoursDemo.xcodeproj">

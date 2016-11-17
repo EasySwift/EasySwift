@@ -27,8 +27,8 @@ class ColorTableViewController: UITableViewController, RainbowColorSource {
     }
 
     // MARK: - Table view data source
-
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
@@ -36,7 +36,7 @@ class ColorTableViewController: UITableViewController, RainbowColorSource {
         return 20
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath as IndexPath)
         cell.textLabel?.text = "Cell"
 

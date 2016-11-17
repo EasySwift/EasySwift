@@ -17,3 +17,6 @@ FOUNDATION_EXPORT const unsigned char FORScrollViewEmptyAssistant_iOSVersionStri
 // In this header, you should import all the public headers of your framework using statements like #import <FORScrollViewEmptyAssistant_iOS/PublicHeader.h>
 
 
+#import "FOREmptyAssistantConfiger.h"
+#import "FORScrollViewEmptyAssistant.h"
+#import "UIScrollView+EmptyDataSet.h"

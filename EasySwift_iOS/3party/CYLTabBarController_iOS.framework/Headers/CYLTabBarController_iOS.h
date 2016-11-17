@@ -17,3 +17,5 @@ FOUNDATION_EXPORT const unsigned char CYLTabBarController_iOSVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <CYLTabBarController_iOS/PublicHeader.h>
 
 
+#import "CYLTabBarController.h"
+#import "CYLTabBar.h"

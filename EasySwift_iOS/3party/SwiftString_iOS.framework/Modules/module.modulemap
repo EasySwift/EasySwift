@@ -1,0 +1,10 @@
+framework module SwiftString_iOS {
+  umbrella header "SwiftString_iOS.h"
+
+  export *
+  module * { export * }
+}
+
+module SwiftString_iOS.Swift {
+    header "SwiftString_iOS-Swift.h"
+}

@@ -1,0 +1,6 @@
+framework module Colour_iOS {
+  umbrella header "Colour_iOS.h"
+
+  export *
+  module * { export * }
+}

@@ -23,7 +23,7 @@ IB_DESIGNABLE
 
 /**
  *  @param frame        父view的frame
- *  @param color        线的颜色
+ *  @param lineColor        线的颜色
  *  @param linePosition 线的位置 @see YXJLinePosition
  *
  *  @return 一个像素的线

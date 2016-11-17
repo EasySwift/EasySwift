@@ -105,7 +105,7 @@ extension YXJTagView {
         btnClick = sender
 
         if let d = delegate {
-            if let click = d.didClickView?(sender.currentTitle!, index: sender.tag - 100) {
+            if (d.didClickView?(sender.currentTitle!, index: sender.tag - 100)) != nil {
                 d.didClickView?(sender.currentTitle!, index: sender.tag - 100)
             } else {
                 YXJLog("未实现YXJTagView > didClickView方法")

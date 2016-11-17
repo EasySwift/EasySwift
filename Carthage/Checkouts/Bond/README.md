@@ -233,18 +233,22 @@ First make an extension on your type, UITableView in the following example, that
 
 ```swift
 extension UITableView {
-  public var rDelegate: ProtocolProxy {
+  public var bnd_delegate: ProtocolProxy {
     return protocolProxy(for: UITableViewDelegate.self, setter: NSSelectorFromString("setDelegate:"))
   }
 }
 ```
 
+> Note: `bnd_delegate` is already provided by Bond. This is an example of the implementation.
+
 You can then convert methods of that protocol into signals:
 
 ```swift
 extension UITableView {
-  var selectedRow: Signal<Int> {
-    return rDelegate.signal(for: #selector(UITableViewDelegate.tableView(_:didSelectRowAtIndexPath:))) { (_: UITableView, indexPath: NSIndexPath) in indexPath.row }
+  var selectedRow: Signal<Int, NoError> {
+    return bnd_delegate.signal(for: #selector(UITableViewDelegate.tableView(_:didSelectRowAtIndexPath:))) { (subject: PublishSubject<Int, NoError>, _: UITableView, indexPath: NSIndexPath) in 
+      subject.next(indexPath.row)
+    }
   }
 }
 ```
@@ -259,14 +263,14 @@ tableView.selectedRow.observeNext { row in
 }.disposeIn(bnd_bag)
 ```
 
-**Note:** Protocol proxy takes up delegate slot of the object so if you also need to implement delegate methods manually, don't set `tableView.delegate = x`, rather set `tableView.rDelegate.forwardTo = x`.
+**Note:** Protocol proxy takes up delegate slot of the object so if you also need to implement delegate methods manually, don't set `tableView.delegate = x`, rather set `tableView.bnd_delegate.forwardTo = x`.
 
 Protocol methods that return values are usually used to query data. Such methods can be set up to be fed from a property type. For example:
 
 ```swift
 let numberOfItems = Property(12)
 
-tableView.rDataSource.feed(
+tableView.bnd_dataSource.feed(
   property: numberOfItems,
   to: #selector(UITableViewDataSource.tableView(_:numberOfRowsInSection:)),
   map: { (value: Int, _: UITableView, _: Int) -> Int in value }
@@ -495,14 +499,14 @@ There are many other methods. Just look at the code reference or source.
 ### Carthage
 
 1. Add the following to your *Cartfile*:
-  <br> `github "SwiftBond/Bond" ~> 5.0`
+  <br> `github "ReactiveKit/Bond" ~> 5.1`
 2. Run `carthage update`
 3. Add the framework as described in [Carthage Readme](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application)
 
 ### CocoaPods
 
 1. Add the following to your *Podfile*:
-  <br> `pod 'Bond', '~> 5.0'`
+  <br> `pod 'Bond', '~> 5.1'`
 2. Run `pod install`.
 
 ## <a name="migration"></a>Migration

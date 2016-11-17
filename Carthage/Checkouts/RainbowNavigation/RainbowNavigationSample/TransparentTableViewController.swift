@@ -36,12 +36,13 @@ class TransparentTableViewController: UITableViewController, RainbowColorSource 
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath as IndexPath)
         cell.textLabel?.text = "Cell"
         
         return cell
     }
+    
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let themeColor = UIColor(red: 247/255.0, green: 80/255.0, blue: 120/255.0, alpha: 1.0)
         

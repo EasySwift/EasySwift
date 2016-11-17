@@ -506,6 +506,9 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Shmoopi LLC";
 				TargetAttributes = {
+					01ADF9F216051BFE008B0A6B = {
+						DevelopmentTeam = 9SNWDNRC89;
+					};
 					DE3120441DAD448F00BD780A = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
@@ -730,6 +733,7 @@
 		01ADFA1216051BFE008B0A6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9SNWDNRC89;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SystemServicesDemo/SystemServicesDemo-Prefix.pch";
 				INFOPLIST_FILE = "SystemServicesDemo/SystemServicesDemo-Info.plist";
@@ -748,6 +752,7 @@
 		01ADFA1316051BFE008B0A6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9SNWDNRC89;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SystemServicesDemo/SystemServicesDemo-Prefix.pch";
 				INFOPLIST_FILE = "SystemServicesDemo/SystemServicesDemo-Info.plist";
@@ -784,7 +789,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = SystemServices_iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.SystemServices-iOS";
@@ -822,7 +827,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = SystemServices_iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.SystemServices-iOS";
@@ -864,6 +869,7 @@
 				DE3120501DAD448F00BD780A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -17,3 +17,16 @@ FOUNDATION_EXPORT const unsigned char APValidators_iOSVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <APValidators_iOS/PublicHeader.h>
 
 
+#import "APValidator.h"
+#import "APEqualStringValidator.h"
+#import "APCharactersCountValidator.h"
+#import "APCompoundValidator.h"
+#import "APCreditCardValidator.h"
+#import "APEmailValidator.h"
+#import "APRegexValidator.h"
+#import "UITextField+APValidators.h"
+#import "UITextView+APValidators.h"
+#import "APRequiredValidator.h"
+#import "APBlockValidator.h"
+#import "APZipValidator.h"
+#import "APStringValidator.h"

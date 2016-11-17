@@ -7,198 +7,153 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE3989791DCCEB24005E7ECC /* AddressBook_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989491DCCEB24005E7ECC /* AddressBook_iOS.framework */; };
-		DE39897A1DCCEB24005E7ECC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894A1DCCEB24005E7ECC /* Alamofire.framework */; };
-		DE39897B1DCCEB24005E7ECC /* APValidators_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894B1DCCEB24005E7ECC /* APValidators_iOS.framework */; };
-		DE39897C1DCCEB24005E7ECC /* AXBadgeView_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894C1DCCEB24005E7ECC /* AXBadgeView_iOS.framework */; };
-		DE39897D1DCCEB24005E7ECC /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894D1DCCEB24005E7ECC /* Bond.framework */; };
-		DE39897E1DCCEB24005E7ECC /* Colour_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894E1DCCEB24005E7ECC /* Colour_iOS.framework */; };
-		DE39897F1DCCEB24005E7ECC /* CYLTabBarController_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894F1DCCEB24005E7ECC /* CYLTabBarController_iOS.framework */; };
-		DE3989801DCCEB24005E7ECC /* DKChainableAnimationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989501DCCEB24005E7ECC /* DKChainableAnimationKit.framework */; };
-		DE3989811DCCEB24005E7ECC /* EasyCountDown_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989511DCCEB24005E7ECC /* EasyCountDown_iOS.framework */; };
-		DE3989821DCCEB24005E7ECC /* EasyDropDownMenu_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989521DCCEB24005E7ECC /* EasyDropDownMenu_iOS.framework */; };
-		DE3989831DCCEB24005E7ECC /* EasyEmoji_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989531DCCEB24005E7ECC /* EasyEmoji_iOS.framework */; };
-		DE3989841DCCEB24005E7ECC /* EasySearchBarFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989541DCCEB24005E7ECC /* EasySearchBarFrameWork.framework */; };
-		DE3989851DCCEB24005E7ECC /* FDTemplateLayoutCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989551DCCEB24005E7ECC /* FDTemplateLayoutCell.framework */; };
-		DE3989861DCCEB24005E7ECC /* FORScrollViewEmptyAssistant_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989561DCCEB24005E7ECC /* FORScrollViewEmptyAssistant_iOS.framework */; };
-		DE3989871DCCEB24005E7ECC /* GCDSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989571DCCEB24005E7ECC /* GCDSwift.framework */; };
-		DE3989881DCCEB24005E7ECC /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989581DCCEB24005E7ECC /* Haneke.framework */; };
-		DE3989891DCCEB24005E7ECC /* HCSStarRatingView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989591DCCEB24005E7ECC /* HCSStarRatingView.framework */; };
-		DE39898A1DCCEB24005E7ECC /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895A1DCCEB24005E7ECC /* IQKeyboardManager.framework */; };
-		DE39898B1DCCEB24005E7ECC /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895B1DCCEB24005E7ECC /* IQKeyboardManagerSwift.framework */; };
-		DE39898C1DCCEB24005E7ECC /* Kingfisher_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895C1DCCEB24005E7ECC /* Kingfisher_iOS.framework */; };
-		DE39898D1DCCEB24005E7ECC /* LCCoolHUD_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895D1DCCEB24005E7ECC /* LCCoolHUD_iOS.framework */; };
-		DE39898E1DCCEB24005E7ECC /* Loggerithm_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895E1DCCEB24005E7ECC /* Loggerithm_iOS.framework */; };
-		DE39898F1DCCEB24005E7ECC /* MJRefresh_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895F1DCCEB24005E7ECC /* MJRefresh_iOS.framework */; };
-		DE3989901DCCEB24005E7ECC /* MWPhotoBrowser_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989601DCCEB24005E7ECC /* MWPhotoBrowser_iOS.framework */; };
-		DE3989911DCCEB24005E7ECC /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989611DCCEB24005E7ECC /* ObjectMapper.framework */; };
-		DE3989921DCCEB24005E7ECC /* RainbowNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989621DCCEB24005E7ECC /* RainbowNavigation.framework */; };
-		DE3989931DCCEB24005E7ECC /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989631DCCEB24005E7ECC /* Reachability.framework */; };
-		DE3989941DCCEB24005E7ECC /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989641DCCEB24005E7ECC /* ReactiveKit.framework */; };
-		DE3989951DCCEB24005E7ECC /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989651DCCEB24005E7ECC /* SnapKit.framework */; };
-		DE3989961DCCEB24005E7ECC /* SwiftScan_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989661DCCEB24005E7ECC /* SwiftScan_iOS.framework */; };
-		DE3989971DCCEB24005E7ECC /* SwiftString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989671DCCEB24005E7ECC /* SwiftString.framework */; };
-		DE3989981DCCEB24005E7ECC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989681DCCEB24005E7ECC /* SwiftyJSON.framework */; };
-		DE3989991DCCEB24005E7ECC /* SystemServices_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989691DCCEB24005E7ECC /* SystemServices_iOS.framework */; };
-		DE39899A1DCCEB24005E7ECC /* TOWebViewController_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896A1DCCEB24005E7ECC /* TOWebViewController_iOS.framework */; };
-		DE39899B1DCCEB24005E7ECC /* TTTAttributedLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896B1DCCEB24005E7ECC /* TTTAttributedLabel.framework */; };
-		DE39899C1DCCEB24005E7ECC /* TYAlertController_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896C1DCCEB24005E7ECC /* TYAlertController_iOS.framework */; };
-		DE39899D1DCCEB24005E7ECC /* YXJDIYButtonPosition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896D1DCCEB24005E7ECC /* YXJDIYButtonPosition.framework */; };
-		DE39899E1DCCEB24005E7ECC /* YXJImageCompressor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896E1DCCEB24005E7ECC /* YXJImageCompressor.framework */; };
-		DE39899F1DCCEB24005E7ECC /* YXJKxMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896F1DCCEB24005E7ECC /* YXJKxMenu.framework */; };
-		DE3989A01DCCEB24005E7ECC /* YXJLinksButton_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989701DCCEB24005E7ECC /* YXJLinksButton_iOS.framework */; };
-		DE3989A11DCCEB24005E7ECC /* YXJOnePixeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989711DCCEB24005E7ECC /* YXJOnePixeLine.framework */; };
-		DE3989A21DCCEB24005E7ECC /* YXJPageController_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989721DCCEB24005E7ECC /* YXJPageController_iOS.framework */; };
-		DE3989A31DCCEB24005E7ECC /* YXJPullScale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989731DCCEB24005E7ECC /* YXJPullScale.framework */; };
-		DE3989A41DCCEB24005E7ECC /* YXJSlideBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989741DCCEB24005E7ECC /* YXJSlideBar.framework */; };
-		DE3989A51DCCEB24005E7ECC /* YXJSwipeTableViewCell_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989751DCCEB24005E7ECC /* YXJSwipeTableViewCell_iOS.framework */; };
-		DE3989A61DCCEB24005E7ECC /* YXJTagView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989761DCCEB24005E7ECC /* YXJTagView.framework */; };
-		DE3989A71DCCEB24005E7ECC /* YXJXibView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989771DCCEB24005E7ECC /* YXJXibView.framework */; };
-		DE3989A81DCCEB24005E7ECC /* ZLPhotoBrowser_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989781DCCEB24005E7ECC /* ZLPhotoBrowser_iOS.framework */; };
-		DE3989A91DCCED8D005E7ECC /* AddressBook_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989491DCCEB24005E7ECC /* AddressBook_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989AA1DCCED8D005E7ECC /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39894A1DCCEB24005E7ECC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989AB1DCCED8D005E7ECC /* APValidators_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39894B1DCCEB24005E7ECC /* APValidators_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989AC1DCCED8D005E7ECC /* AXBadgeView_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39894C1DCCEB24005E7ECC /* AXBadgeView_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989AD1DCCED8D005E7ECC /* Bond.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39894D1DCCEB24005E7ECC /* Bond.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989AE1DCCED8D005E7ECC /* Colour_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39894E1DCCEB24005E7ECC /* Colour_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989AF1DCCED8D005E7ECC /* CYLTabBarController_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39894F1DCCEB24005E7ECC /* CYLTabBarController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989B01DCCED8D005E7ECC /* DKChainableAnimationKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989501DCCEB24005E7ECC /* DKChainableAnimationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989B11DCCED8D005E7ECC /* EasyCountDown_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989511DCCEB24005E7ECC /* EasyCountDown_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989B21DCCED8E005E7ECC /* EasyDropDownMenu_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989521DCCEB24005E7ECC /* EasyDropDownMenu_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989B31DCCED8E005E7ECC /* EasyEmoji_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989531DCCEB24005E7ECC /* EasyEmoji_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989B41DCCED8E005E7ECC /* EasySearchBarFrameWork.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989541DCCEB24005E7ECC /* EasySearchBarFrameWork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989B51DCCED8E005E7ECC /* FDTemplateLayoutCell.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989551DCCEB24005E7ECC /* FDTemplateLayoutCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989B61DCCED8E005E7ECC /* FORScrollViewEmptyAssistant_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989561DCCEB24005E7ECC /* FORScrollViewEmptyAssistant_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989B71DCCED8E005E7ECC /* GCDSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989571DCCEB24005E7ECC /* GCDSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989B81DCCED8E005E7ECC /* Haneke.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989581DCCEB24005E7ECC /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989B91DCCED8E005E7ECC /* HCSStarRatingView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989591DCCEB24005E7ECC /* HCSStarRatingView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989BA1DCCED8E005E7ECC /* IQKeyboardManager.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39895A1DCCEB24005E7ECC /* IQKeyboardManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989BB1DCCED8E005E7ECC /* IQKeyboardManagerSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39895B1DCCEB24005E7ECC /* IQKeyboardManagerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989BC1DCCED8E005E7ECC /* Kingfisher_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39895C1DCCEB24005E7ECC /* Kingfisher_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989BD1DCCED8E005E7ECC /* LCCoolHUD_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39895D1DCCEB24005E7ECC /* LCCoolHUD_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989BE1DCCED8E005E7ECC /* Loggerithm_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39895E1DCCEB24005E7ECC /* Loggerithm_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989BF1DCCED8E005E7ECC /* MJRefresh_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39895F1DCCEB24005E7ECC /* MJRefresh_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989C01DCCED8E005E7ECC /* MWPhotoBrowser_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989601DCCEB24005E7ECC /* MWPhotoBrowser_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989C11DCCED8E005E7ECC /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989611DCCEB24005E7ECC /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989C21DCCED8E005E7ECC /* RainbowNavigation.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989621DCCEB24005E7ECC /* RainbowNavigation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989C31DCCED8E005E7ECC /* Reachability.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989631DCCEB24005E7ECC /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989C41DCCED8E005E7ECC /* ReactiveKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989641DCCEB24005E7ECC /* ReactiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989C51DCCED8E005E7ECC /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989651DCCEB24005E7ECC /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989C61DCCED8E005E7ECC /* SwiftScan_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989661DCCEB24005E7ECC /* SwiftScan_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989C71DCCED8E005E7ECC /* SwiftString.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989671DCCEB24005E7ECC /* SwiftString.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989C81DCCED8E005E7ECC /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989681DCCEB24005E7ECC /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989C91DCCED8E005E7ECC /* SystemServices_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989691DCCEB24005E7ECC /* SystemServices_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989CA1DCCED8E005E7ECC /* TOWebViewController_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39896A1DCCEB24005E7ECC /* TOWebViewController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989CB1DCCED8E005E7ECC /* TTTAttributedLabel.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39896B1DCCEB24005E7ECC /* TTTAttributedLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989CC1DCCED8E005E7ECC /* TYAlertController_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39896C1DCCEB24005E7ECC /* TYAlertController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989CD1DCCED8E005E7ECC /* YXJDIYButtonPosition.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39896D1DCCEB24005E7ECC /* YXJDIYButtonPosition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989CE1DCCED8E005E7ECC /* YXJImageCompressor.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39896E1DCCEB24005E7ECC /* YXJImageCompressor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989CF1DCCED8E005E7ECC /* YXJKxMenu.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE39896F1DCCEB24005E7ECC /* YXJKxMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989D01DCCED8E005E7ECC /* YXJLinksButton_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989701DCCEB24005E7ECC /* YXJLinksButton_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989D11DCCED8E005E7ECC /* YXJOnePixeLine.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989711DCCEB24005E7ECC /* YXJOnePixeLine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989D21DCCED8E005E7ECC /* YXJPageController_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989721DCCEB24005E7ECC /* YXJPageController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989D31DCCED8E005E7ECC /* YXJPullScale.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989731DCCEB24005E7ECC /* YXJPullScale.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989D41DCCED8E005E7ECC /* YXJSlideBar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989741DCCEB24005E7ECC /* YXJSlideBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989D51DCCED8E005E7ECC /* YXJSwipeTableViewCell_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989751DCCEB24005E7ECC /* YXJSwipeTableViewCell_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989D61DCCED8E005E7ECC /* YXJTagView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989761DCCEB24005E7ECC /* YXJTagView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989D71DCCED8E005E7ECC /* YXJXibView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989771DCCEB24005E7ECC /* YXJXibView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989D81DCCED8E005E7ECC /* ZLPhotoBrowser_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3989781DCCEB24005E7ECC /* ZLPhotoBrowser_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989D91DCCEDD3005E7ECC /* AddressBook_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989491DCCEB24005E7ECC /* AddressBook_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989DA1DCCEDD3005E7ECC /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894A1DCCEB24005E7ECC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989DB1DCCEDD3005E7ECC /* APValidators_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894B1DCCEB24005E7ECC /* APValidators_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989DC1DCCEDD3005E7ECC /* AXBadgeView_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894C1DCCEB24005E7ECC /* AXBadgeView_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989DD1DCCEDD3005E7ECC /* Bond.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894D1DCCEB24005E7ECC /* Bond.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989DE1DCCEDD3005E7ECC /* Colour_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894E1DCCEB24005E7ECC /* Colour_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989DF1DCCEDD3005E7ECC /* CYLTabBarController_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894F1DCCEB24005E7ECC /* CYLTabBarController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989E01DCCEDD3005E7ECC /* DKChainableAnimationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989501DCCEB24005E7ECC /* DKChainableAnimationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989E11DCCEDD3005E7ECC /* EasyCountDown_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989511DCCEB24005E7ECC /* EasyCountDown_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989E21DCCEDD3005E7ECC /* EasyDropDownMenu_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989521DCCEB24005E7ECC /* EasyDropDownMenu_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989E31DCCEDD3005E7ECC /* EasyEmoji_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989531DCCEB24005E7ECC /* EasyEmoji_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989E41DCCEDD3005E7ECC /* EasySearchBarFrameWork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989541DCCEB24005E7ECC /* EasySearchBarFrameWork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989E51DCCEDD3005E7ECC /* FDTemplateLayoutCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989551DCCEB24005E7ECC /* FDTemplateLayoutCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989E61DCCEDD3005E7ECC /* FORScrollViewEmptyAssistant_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989561DCCEB24005E7ECC /* FORScrollViewEmptyAssistant_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989E71DCCEDD3005E7ECC /* GCDSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989571DCCEB24005E7ECC /* GCDSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989E81DCCEDD3005E7ECC /* Haneke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989581DCCEB24005E7ECC /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989E91DCCEDD3005E7ECC /* HCSStarRatingView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989591DCCEB24005E7ECC /* HCSStarRatingView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989EA1DCCEDD3005E7ECC /* IQKeyboardManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895A1DCCEB24005E7ECC /* IQKeyboardManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989EB1DCCEDD3005E7ECC /* IQKeyboardManagerSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895B1DCCEB24005E7ECC /* IQKeyboardManagerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989EC1DCCEDD3005E7ECC /* Kingfisher_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895C1DCCEB24005E7ECC /* Kingfisher_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989ED1DCCEDD3005E7ECC /* LCCoolHUD_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895D1DCCEB24005E7ECC /* LCCoolHUD_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989EE1DCCEDD3005E7ECC /* Loggerithm_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895E1DCCEB24005E7ECC /* Loggerithm_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989EF1DCCEDD3005E7ECC /* MJRefresh_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895F1DCCEB24005E7ECC /* MJRefresh_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989F01DCCEDD3005E7ECC /* MWPhotoBrowser_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989601DCCEB24005E7ECC /* MWPhotoBrowser_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989F11DCCEDD3005E7ECC /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989611DCCEB24005E7ECC /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989F21DCCEDD3005E7ECC /* RainbowNavigation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989621DCCEB24005E7ECC /* RainbowNavigation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989F31DCCEDD3005E7ECC /* Reachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989631DCCEB24005E7ECC /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989F41DCCEDD3005E7ECC /* ReactiveKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989641DCCEB24005E7ECC /* ReactiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989F51DCCEDD3005E7ECC /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989651DCCEB24005E7ECC /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989F61DCCEDD3005E7ECC /* SwiftScan_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989661DCCEB24005E7ECC /* SwiftScan_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989F71DCCEDD3005E7ECC /* SwiftString.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989671DCCEB24005E7ECC /* SwiftString.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989F81DCCEDD3005E7ECC /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989681DCCEB24005E7ECC /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989F91DCCEDD3005E7ECC /* SystemServices_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989691DCCEB24005E7ECC /* SystemServices_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989FA1DCCEDD3005E7ECC /* TOWebViewController_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896A1DCCEB24005E7ECC /* TOWebViewController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989FB1DCCEDD3005E7ECC /* TTTAttributedLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896B1DCCEB24005E7ECC /* TTTAttributedLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989FC1DCCEDD3005E7ECC /* TYAlertController_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896C1DCCEB24005E7ECC /* TYAlertController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989FD1DCCEDD3005E7ECC /* YXJDIYButtonPosition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896D1DCCEB24005E7ECC /* YXJDIYButtonPosition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989FE1DCCEDD3005E7ECC /* YXJImageCompressor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896E1DCCEB24005E7ECC /* YXJImageCompressor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3989FF1DCCEDD3005E7ECC /* YXJKxMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896F1DCCEB24005E7ECC /* YXJKxMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE398A001DCCEDD3005E7ECC /* YXJLinksButton_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989701DCCEB24005E7ECC /* YXJLinksButton_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE398A011DCCEDD3005E7ECC /* YXJOnePixeLine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989711DCCEB24005E7ECC /* YXJOnePixeLine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE398A021DCCEDD3005E7ECC /* YXJPageController_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989721DCCEB24005E7ECC /* YXJPageController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE398A031DCCEDD3005E7ECC /* YXJPullScale.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989731DCCEB24005E7ECC /* YXJPullScale.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE398A041DCCEDD3005E7ECC /* YXJSlideBar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989741DCCEB24005E7ECC /* YXJSlideBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE398A051DCCEDD3005E7ECC /* YXJSwipeTableViewCell_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989751DCCEB24005E7ECC /* YXJSwipeTableViewCell_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE398A061DCCEDD3005E7ECC /* YXJTagView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989761DCCEB24005E7ECC /* YXJTagView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE398A071DCCEDD3005E7ECC /* YXJXibView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989771DCCEB24005E7ECC /* YXJXibView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE398A081DCCEDD3005E7ECC /* ZLPhotoBrowser_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989781DCCEB24005E7ECC /* ZLPhotoBrowser_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE398A091DCCEDEC005E7ECC /* AddressBook_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989491DCCEB24005E7ECC /* AddressBook_iOS.framework */; };
-		DE398A0A1DCCEDEC005E7ECC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894A1DCCEB24005E7ECC /* Alamofire.framework */; };
-		DE398A0B1DCCEDEC005E7ECC /* APValidators_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894B1DCCEB24005E7ECC /* APValidators_iOS.framework */; };
-		DE398A0C1DCCEDEC005E7ECC /* AXBadgeView_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894C1DCCEB24005E7ECC /* AXBadgeView_iOS.framework */; };
-		DE398A0D1DCCEDEC005E7ECC /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894D1DCCEB24005E7ECC /* Bond.framework */; };
-		DE398A0E1DCCEDEC005E7ECC /* Colour_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894E1DCCEB24005E7ECC /* Colour_iOS.framework */; };
-		DE398A0F1DCCEDEC005E7ECC /* CYLTabBarController_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39894F1DCCEB24005E7ECC /* CYLTabBarController_iOS.framework */; };
-		DE398A101DCCEDEC005E7ECC /* DKChainableAnimationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989501DCCEB24005E7ECC /* DKChainableAnimationKit.framework */; };
-		DE398A111DCCEDEC005E7ECC /* EasyCountDown_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989511DCCEB24005E7ECC /* EasyCountDown_iOS.framework */; };
-		DE398A121DCCEDEC005E7ECC /* EasyDropDownMenu_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989521DCCEB24005E7ECC /* EasyDropDownMenu_iOS.framework */; };
-		DE398A131DCCEDEC005E7ECC /* EasyEmoji_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989531DCCEB24005E7ECC /* EasyEmoji_iOS.framework */; };
-		DE398A141DCCEDEC005E7ECC /* EasySearchBarFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989541DCCEB24005E7ECC /* EasySearchBarFrameWork.framework */; };
-		DE398A151DCCEDEC005E7ECC /* FDTemplateLayoutCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989551DCCEB24005E7ECC /* FDTemplateLayoutCell.framework */; };
-		DE398A161DCCEDEC005E7ECC /* FORScrollViewEmptyAssistant_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989561DCCEB24005E7ECC /* FORScrollViewEmptyAssistant_iOS.framework */; };
-		DE398A171DCCEDEC005E7ECC /* GCDSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989571DCCEB24005E7ECC /* GCDSwift.framework */; };
-		DE398A181DCCEDEC005E7ECC /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989581DCCEB24005E7ECC /* Haneke.framework */; };
-		DE398A191DCCEDEC005E7ECC /* HCSStarRatingView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989591DCCEB24005E7ECC /* HCSStarRatingView.framework */; };
-		DE398A1A1DCCEDEC005E7ECC /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895A1DCCEB24005E7ECC /* IQKeyboardManager.framework */; };
-		DE398A1B1DCCEDEC005E7ECC /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895B1DCCEB24005E7ECC /* IQKeyboardManagerSwift.framework */; };
-		DE398A1C1DCCEDEC005E7ECC /* Kingfisher_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895C1DCCEB24005E7ECC /* Kingfisher_iOS.framework */; };
-		DE398A1D1DCCEDEC005E7ECC /* LCCoolHUD_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895D1DCCEB24005E7ECC /* LCCoolHUD_iOS.framework */; };
-		DE398A1E1DCCEDEC005E7ECC /* Loggerithm_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895E1DCCEB24005E7ECC /* Loggerithm_iOS.framework */; };
-		DE398A1F1DCCEDEC005E7ECC /* MJRefresh_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39895F1DCCEB24005E7ECC /* MJRefresh_iOS.framework */; };
-		DE398A201DCCEDEC005E7ECC /* MWPhotoBrowser_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989601DCCEB24005E7ECC /* MWPhotoBrowser_iOS.framework */; };
-		DE398A211DCCEDEC005E7ECC /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989611DCCEB24005E7ECC /* ObjectMapper.framework */; };
-		DE398A221DCCEDEC005E7ECC /* RainbowNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989621DCCEB24005E7ECC /* RainbowNavigation.framework */; };
-		DE398A231DCCEDEC005E7ECC /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989631DCCEB24005E7ECC /* Reachability.framework */; };
-		DE398A241DCCEDEC005E7ECC /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989641DCCEB24005E7ECC /* ReactiveKit.framework */; };
-		DE398A251DCCEDEC005E7ECC /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989651DCCEB24005E7ECC /* SnapKit.framework */; };
-		DE398A261DCCEDEC005E7ECC /* SwiftScan_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989661DCCEB24005E7ECC /* SwiftScan_iOS.framework */; };
-		DE398A271DCCEDEC005E7ECC /* SwiftString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989671DCCEB24005E7ECC /* SwiftString.framework */; };
-		DE398A281DCCEDEC005E7ECC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989681DCCEB24005E7ECC /* SwiftyJSON.framework */; };
-		DE398A291DCCEDEC005E7ECC /* SystemServices_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989691DCCEB24005E7ECC /* SystemServices_iOS.framework */; };
-		DE398A2A1DCCEDEC005E7ECC /* TOWebViewController_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896A1DCCEB24005E7ECC /* TOWebViewController_iOS.framework */; };
-		DE398A2B1DCCEDEC005E7ECC /* TTTAttributedLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896B1DCCEB24005E7ECC /* TTTAttributedLabel.framework */; };
-		DE398A2C1DCCEDEC005E7ECC /* TYAlertController_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896C1DCCEB24005E7ECC /* TYAlertController_iOS.framework */; };
-		DE398A2D1DCCEDEC005E7ECC /* YXJDIYButtonPosition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896D1DCCEB24005E7ECC /* YXJDIYButtonPosition.framework */; };
-		DE398A2E1DCCEDEC005E7ECC /* YXJImageCompressor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896E1DCCEB24005E7ECC /* YXJImageCompressor.framework */; };
-		DE398A2F1DCCEDEC005E7ECC /* YXJKxMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE39896F1DCCEB24005E7ECC /* YXJKxMenu.framework */; };
-		DE398A301DCCEDEC005E7ECC /* YXJLinksButton_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989701DCCEB24005E7ECC /* YXJLinksButton_iOS.framework */; };
-		DE398A311DCCEDEC005E7ECC /* YXJOnePixeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989711DCCEB24005E7ECC /* YXJOnePixeLine.framework */; };
-		DE398A321DCCEDEC005E7ECC /* YXJPageController_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989721DCCEB24005E7ECC /* YXJPageController_iOS.framework */; };
-		DE398A331DCCEDEC005E7ECC /* YXJPullScale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989731DCCEB24005E7ECC /* YXJPullScale.framework */; };
-		DE398A341DCCEDEC005E7ECC /* YXJSlideBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989741DCCEB24005E7ECC /* YXJSlideBar.framework */; };
-		DE398A351DCCEDEC005E7ECC /* YXJSwipeTableViewCell_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989751DCCEB24005E7ECC /* YXJSwipeTableViewCell_iOS.framework */; };
-		DE398A361DCCEDEC005E7ECC /* YXJTagView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989761DCCEB24005E7ECC /* YXJTagView.framework */; };
-		DE398A371DCCEDEC005E7ECC /* YXJXibView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989771DCCEB24005E7ECC /* YXJXibView.framework */; };
-		DE398A381DCCEDEC005E7ECC /* ZLPhotoBrowser_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3989781DCCEB24005E7ECC /* ZLPhotoBrowser_iOS.framework */; };
+		DE3896A21DDDF0DD009C60F8 /* AddressBook_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896701DDDF0DD009C60F8 /* AddressBook_iOS.framework */; };
+		DE3896A31DDDF0DD009C60F8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896711DDDF0DD009C60F8 /* Alamofire.framework */; };
+		DE3896A41DDDF0DD009C60F8 /* APValidators_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896721DDDF0DD009C60F8 /* APValidators_iOS.framework */; };
+		DE3896A51DDDF0DD009C60F8 /* AXBadgeView_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896731DDDF0DD009C60F8 /* AXBadgeView_iOS.framework */; };
+		DE3896A61DDDF0DD009C60F8 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896741DDDF0DD009C60F8 /* Bond.framework */; };
+		DE3896A71DDDF0DD009C60F8 /* Colour_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896751DDDF0DD009C60F8 /* Colour_iOS.framework */; };
+		DE3896A81DDDF0DD009C60F8 /* CYLTabBarController_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896761DDDF0DD009C60F8 /* CYLTabBarController_iOS.framework */; };
+		DE3896A91DDDF0DD009C60F8 /* DKChainableAnimationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896771DDDF0DD009C60F8 /* DKChainableAnimationKit.framework */; };
+		DE3896AA1DDDF0DD009C60F8 /* EasyCountDown_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896781DDDF0DD009C60F8 /* EasyCountDown_iOS.framework */; };
+		DE3896AB1DDDF0DD009C60F8 /* EasyDropDownMenu_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896791DDDF0DD009C60F8 /* EasyDropDownMenu_iOS.framework */; };
+		DE3896AC1DDDF0DD009C60F8 /* EasyEmoji_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38967A1DDDF0DD009C60F8 /* EasyEmoji_iOS.framework */; };
+		DE3896AD1DDDF0DD009C60F8 /* EasySearchBarFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38967B1DDDF0DD009C60F8 /* EasySearchBarFrameWork.framework */; };
+		DE3896AE1DDDF0DD009C60F8 /* FDTemplateLayoutCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38967C1DDDF0DD009C60F8 /* FDTemplateLayoutCell.framework */; };
+		DE3896AF1DDDF0DD009C60F8 /* FORScrollViewEmptyAssistant_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38967D1DDDF0DD009C60F8 /* FORScrollViewEmptyAssistant_iOS.framework */; };
+		DE3896B01DDDF0DD009C60F8 /* GCDSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38967E1DDDF0DD009C60F8 /* GCDSwift.framework */; };
+		DE3896B11DDDF0DD009C60F8 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38967F1DDDF0DD009C60F8 /* Haneke.framework */; };
+		DE3896B21DDDF0DD009C60F8 /* HCSStarRatingView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896801DDDF0DD009C60F8 /* HCSStarRatingView.framework */; };
+		DE3896B31DDDF0DD009C60F8 /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896811DDDF0DD009C60F8 /* IQKeyboardManager.framework */; };
+		DE3896B41DDDF0DD009C60F8 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896821DDDF0DD009C60F8 /* IQKeyboardManagerSwift.framework */; };
+		DE3896B51DDDF0DD009C60F8 /* Kingfisher_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896831DDDF0DD009C60F8 /* Kingfisher_iOS.framework */; };
+		DE3896B61DDDF0DD009C60F8 /* LCCoolHUD_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896841DDDF0DD009C60F8 /* LCCoolHUD_iOS.framework */; };
+		DE3896B71DDDF0DD009C60F8 /* Loggerithm_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896851DDDF0DD009C60F8 /* Loggerithm_iOS.framework */; };
+		DE3896B81DDDF0DD009C60F8 /* MJRefresh_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896861DDDF0DD009C60F8 /* MJRefresh_iOS.framework */; };
+		DE3896B91DDDF0DD009C60F8 /* MWPhotoBrowser_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896871DDDF0DD009C60F8 /* MWPhotoBrowser_iOS.framework */; };
+		DE3896BA1DDDF0DD009C60F8 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896881DDDF0DD009C60F8 /* ObjectMapper.framework */; };
+		DE3896BB1DDDF0DE009C60F8 /* RainbowNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896891DDDF0DD009C60F8 /* RainbowNavigation.framework */; };
+		DE3896BC1DDDF0DE009C60F8 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38968A1DDDF0DD009C60F8 /* Reachability.framework */; };
+		DE3896BD1DDDF0DE009C60F8 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38968B1DDDF0DD009C60F8 /* ReactiveKit.framework */; };
+		DE3896BE1DDDF0DE009C60F8 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38968C1DDDF0DD009C60F8 /* SnapKit.framework */; };
+		DE3896BF1DDDF0DE009C60F8 /* SwiftScan_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38968D1DDDF0DD009C60F8 /* SwiftScan_iOS.framework */; };
+		DE3896C01DDDF0DE009C60F8 /* SwiftString_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38968E1DDDF0DD009C60F8 /* SwiftString_iOS.framework */; };
+		DE3896C21DDDF0DE009C60F8 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896901DDDF0DD009C60F8 /* SwiftyJSON.framework */; };
+		DE3896C31DDDF0DE009C60F8 /* SystemServices_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896911DDDF0DD009C60F8 /* SystemServices_iOS.framework */; };
+		DE3896C41DDDF0DE009C60F8 /* TOWebViewController_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896921DDDF0DD009C60F8 /* TOWebViewController_iOS.framework */; };
+		DE3896C51DDDF0DE009C60F8 /* TTTAttributedLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896931DDDF0DD009C60F8 /* TTTAttributedLabel.framework */; };
+		DE3896C61DDDF0DE009C60F8 /* TYAlertController_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896941DDDF0DD009C60F8 /* TYAlertController_iOS.framework */; };
+		DE3896C71DDDF0DE009C60F8 /* YXJCycleView_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896951DDDF0DD009C60F8 /* YXJCycleView_iOS.framework */; };
+		DE3896C81DDDF0DE009C60F8 /* YXJDIYButtonPosition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896961DDDF0DD009C60F8 /* YXJDIYButtonPosition.framework */; };
+		DE3896C91DDDF0DE009C60F8 /* YXJImageCompressor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896971DDDF0DD009C60F8 /* YXJImageCompressor.framework */; };
+		DE3896CA1DDDF0DE009C60F8 /* YXJKxMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896981DDDF0DD009C60F8 /* YXJKxMenu.framework */; };
+		DE3896CB1DDDF0DE009C60F8 /* YXJLinksButton_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896991DDDF0DD009C60F8 /* YXJLinksButton_iOS.framework */; };
+		DE3896CC1DDDF0DE009C60F8 /* YXJOnePixeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38969A1DDDF0DD009C60F8 /* YXJOnePixeLine.framework */; };
+		DE3896CD1DDDF0DE009C60F8 /* YXJPageController_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38969B1DDDF0DD009C60F8 /* YXJPageController_iOS.framework */; };
+		DE3896CE1DDDF0DE009C60F8 /* YXJPullScale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38969C1DDDF0DD009C60F8 /* YXJPullScale.framework */; };
+		DE3896CF1DDDF0DE009C60F8 /* YXJSlideBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38969D1DDDF0DD009C60F8 /* YXJSlideBar.framework */; };
+		DE3896D01DDDF0DE009C60F8 /* YXJSwipeTableViewCell_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38969E1DDDF0DD009C60F8 /* YXJSwipeTableViewCell_iOS.framework */; };
+		DE3896D11DDDF0DE009C60F8 /* YXJTagView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE38969F1DDDF0DD009C60F8 /* YXJTagView.framework */; };
+		DE3896D21DDDF0DE009C60F8 /* YXJXibView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896A01DDDF0DD009C60F8 /* YXJXibView.framework */; };
+		DE3896D31DDDF0DE009C60F8 /* ZLPhotoBrowser_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896A11DDDF0DD009C60F8 /* ZLPhotoBrowser_iOS.framework */; };
+		DE3896D41DDDF12E009C60F8 /* AddressBook_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896701DDDF0DD009C60F8 /* AddressBook_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896D51DDDF12E009C60F8 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896711DDDF0DD009C60F8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896D61DDDF12E009C60F8 /* APValidators_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896721DDDF0DD009C60F8 /* APValidators_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896D71DDDF12E009C60F8 /* AXBadgeView_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896731DDDF0DD009C60F8 /* AXBadgeView_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896D81DDDF12E009C60F8 /* Bond.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896741DDDF0DD009C60F8 /* Bond.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896D91DDDF12E009C60F8 /* Colour_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896751DDDF0DD009C60F8 /* Colour_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896DA1DDDF12E009C60F8 /* CYLTabBarController_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896761DDDF0DD009C60F8 /* CYLTabBarController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896DB1DDDF12E009C60F8 /* DKChainableAnimationKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896771DDDF0DD009C60F8 /* DKChainableAnimationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896DC1DDDF12E009C60F8 /* EasyCountDown_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896781DDDF0DD009C60F8 /* EasyCountDown_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896DD1DDDF12E009C60F8 /* EasyDropDownMenu_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896791DDDF0DD009C60F8 /* EasyDropDownMenu_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896DE1DDDF12E009C60F8 /* EasyEmoji_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38967A1DDDF0DD009C60F8 /* EasyEmoji_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896DF1DDDF12E009C60F8 /* EasySearchBarFrameWork.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38967B1DDDF0DD009C60F8 /* EasySearchBarFrameWork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896E01DDDF12E009C60F8 /* FDTemplateLayoutCell.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38967C1DDDF0DD009C60F8 /* FDTemplateLayoutCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896E11DDDF12E009C60F8 /* FORScrollViewEmptyAssistant_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38967D1DDDF0DD009C60F8 /* FORScrollViewEmptyAssistant_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896E21DDDF12E009C60F8 /* GCDSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38967E1DDDF0DD009C60F8 /* GCDSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896E31DDDF12E009C60F8 /* Haneke.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38967F1DDDF0DD009C60F8 /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896E41DDDF12E009C60F8 /* HCSStarRatingView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896801DDDF0DD009C60F8 /* HCSStarRatingView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896E51DDDF12E009C60F8 /* IQKeyboardManager.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896811DDDF0DD009C60F8 /* IQKeyboardManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896E61DDDF12E009C60F8 /* IQKeyboardManagerSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896821DDDF0DD009C60F8 /* IQKeyboardManagerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896E71DDDF12E009C60F8 /* Kingfisher_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896831DDDF0DD009C60F8 /* Kingfisher_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896E81DDDF12E009C60F8 /* LCCoolHUD_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896841DDDF0DD009C60F8 /* LCCoolHUD_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896E91DDDF12E009C60F8 /* Loggerithm_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896851DDDF0DD009C60F8 /* Loggerithm_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896EA1DDDF12E009C60F8 /* MJRefresh_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896861DDDF0DD009C60F8 /* MJRefresh_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896EB1DDDF12E009C60F8 /* MWPhotoBrowser_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896871DDDF0DD009C60F8 /* MWPhotoBrowser_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896EC1DDDF12E009C60F8 /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896881DDDF0DD009C60F8 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896ED1DDDF12E009C60F8 /* RainbowNavigation.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896891DDDF0DD009C60F8 /* RainbowNavigation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896EE1DDDF12E009C60F8 /* Reachability.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38968A1DDDF0DD009C60F8 /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896EF1DDDF12E009C60F8 /* ReactiveKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38968B1DDDF0DD009C60F8 /* ReactiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896F01DDDF12E009C60F8 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38968C1DDDF0DD009C60F8 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896F11DDDF12E009C60F8 /* SwiftScan_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38968D1DDDF0DD009C60F8 /* SwiftScan_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896F21DDDF12E009C60F8 /* SwiftString_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38968E1DDDF0DD009C60F8 /* SwiftString_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896F41DDDF12E009C60F8 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896901DDDF0DD009C60F8 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896F51DDDF12E009C60F8 /* SystemServices_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896911DDDF0DD009C60F8 /* SystemServices_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896F61DDDF12E009C60F8 /* TOWebViewController_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896921DDDF0DD009C60F8 /* TOWebViewController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896F71DDDF12E009C60F8 /* TTTAttributedLabel.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896931DDDF0DD009C60F8 /* TTTAttributedLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896F81DDDF12E009C60F8 /* TYAlertController_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896941DDDF0DD009C60F8 /* TYAlertController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896F91DDDF12E009C60F8 /* YXJCycleView_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896951DDDF0DD009C60F8 /* YXJCycleView_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896FA1DDDF12E009C60F8 /* YXJDIYButtonPosition.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896961DDDF0DD009C60F8 /* YXJDIYButtonPosition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896FB1DDDF12E009C60F8 /* YXJImageCompressor.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896971DDDF0DD009C60F8 /* YXJImageCompressor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896FC1DDDF12E009C60F8 /* YXJKxMenu.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896981DDDF0DD009C60F8 /* YXJKxMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896FD1DDDF12E009C60F8 /* YXJLinksButton_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896991DDDF0DD009C60F8 /* YXJLinksButton_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896FE1DDDF12E009C60F8 /* YXJOnePixeLine.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38969A1DDDF0DD009C60F8 /* YXJOnePixeLine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3896FF1DDDF12E009C60F8 /* YXJPageController_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38969B1DDDF0DD009C60F8 /* YXJPageController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897001DDDF12E009C60F8 /* YXJPullScale.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38969C1DDDF0DD009C60F8 /* YXJPullScale.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897011DDDF12E009C60F8 /* YXJSlideBar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38969D1DDDF0DD009C60F8 /* YXJSlideBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897021DDDF12E009C60F8 /* YXJSwipeTableViewCell_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38969E1DDDF0DD009C60F8 /* YXJSwipeTableViewCell_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897031DDDF12E009C60F8 /* YXJTagView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE38969F1DDDF0DD009C60F8 /* YXJTagView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897041DDDF12E009C60F8 /* YXJXibView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896A01DDDF0DD009C60F8 /* YXJXibView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897051DDDF12E009C60F8 /* ZLPhotoBrowser_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE3896A11DDDF0DD009C60F8 /* ZLPhotoBrowser_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897371DDDF30A009C60F8 /* AddressBook_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896701DDDF0DD009C60F8 /* AddressBook_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897381DDDF30A009C60F8 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896711DDDF0DD009C60F8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897391DDDF30A009C60F8 /* APValidators_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896721DDDF0DD009C60F8 /* APValidators_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38973A1DDDF30A009C60F8 /* AXBadgeView_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896731DDDF0DD009C60F8 /* AXBadgeView_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38973B1DDDF30A009C60F8 /* Bond.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896741DDDF0DD009C60F8 /* Bond.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38973C1DDDF30A009C60F8 /* Colour_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896751DDDF0DD009C60F8 /* Colour_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38973D1DDDF30A009C60F8 /* CYLTabBarController_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896761DDDF0DD009C60F8 /* CYLTabBarController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38973E1DDDF30A009C60F8 /* DKChainableAnimationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896771DDDF0DD009C60F8 /* DKChainableAnimationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38973F1DDDF30A009C60F8 /* EasyCountDown_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896781DDDF0DD009C60F8 /* EasyCountDown_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897401DDDF30A009C60F8 /* EasyDropDownMenu_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896791DDDF0DD009C60F8 /* EasyDropDownMenu_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897411DDDF30A009C60F8 /* EasyEmoji_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38967A1DDDF0DD009C60F8 /* EasyEmoji_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897421DDDF30A009C60F8 /* EasySearchBarFrameWork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38967B1DDDF0DD009C60F8 /* EasySearchBarFrameWork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897431DDDF30A009C60F8 /* FDTemplateLayoutCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38967C1DDDF0DD009C60F8 /* FDTemplateLayoutCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897441DDDF30A009C60F8 /* FORScrollViewEmptyAssistant_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38967D1DDDF0DD009C60F8 /* FORScrollViewEmptyAssistant_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897451DDDF30A009C60F8 /* GCDSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38967E1DDDF0DD009C60F8 /* GCDSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897461DDDF30A009C60F8 /* Haneke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38967F1DDDF0DD009C60F8 /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897471DDDF30A009C60F8 /* HCSStarRatingView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896801DDDF0DD009C60F8 /* HCSStarRatingView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897481DDDF30A009C60F8 /* IQKeyboardManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896811DDDF0DD009C60F8 /* IQKeyboardManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897491DDDF30A009C60F8 /* IQKeyboardManagerSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896821DDDF0DD009C60F8 /* IQKeyboardManagerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38974A1DDDF30A009C60F8 /* Kingfisher_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896831DDDF0DD009C60F8 /* Kingfisher_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38974B1DDDF30A009C60F8 /* LCCoolHUD_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896841DDDF0DD009C60F8 /* LCCoolHUD_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38974C1DDDF30A009C60F8 /* Loggerithm_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896851DDDF0DD009C60F8 /* Loggerithm_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38974D1DDDF30A009C60F8 /* MJRefresh_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896861DDDF0DD009C60F8 /* MJRefresh_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38974E1DDDF30A009C60F8 /* MWPhotoBrowser_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896871DDDF0DD009C60F8 /* MWPhotoBrowser_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38974F1DDDF30A009C60F8 /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896881DDDF0DD009C60F8 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897501DDDF30A009C60F8 /* RainbowNavigation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896891DDDF0DD009C60F8 /* RainbowNavigation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897511DDDF30A009C60F8 /* Reachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38968A1DDDF0DD009C60F8 /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897521DDDF30A009C60F8 /* ReactiveKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38968B1DDDF0DD009C60F8 /* ReactiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897531DDDF30A009C60F8 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38968C1DDDF0DD009C60F8 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897541DDDF30A009C60F8 /* SwiftScan_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38968D1DDDF0DD009C60F8 /* SwiftScan_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897551DDDF30A009C60F8 /* SwiftString_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38968E1DDDF0DD009C60F8 /* SwiftString_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897561DDDF30A009C60F8 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896901DDDF0DD009C60F8 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897571DDDF30A009C60F8 /* SystemServices_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896911DDDF0DD009C60F8 /* SystemServices_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897581DDDF30A009C60F8 /* TOWebViewController_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896921DDDF0DD009C60F8 /* TOWebViewController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897591DDDF30A009C60F8 /* TTTAttributedLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896931DDDF0DD009C60F8 /* TTTAttributedLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38975A1DDDF30A009C60F8 /* TYAlertController_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896941DDDF0DD009C60F8 /* TYAlertController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38975B1DDDF30A009C60F8 /* YXJCycleView_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896951DDDF0DD009C60F8 /* YXJCycleView_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38975C1DDDF30A009C60F8 /* YXJDIYButtonPosition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896961DDDF0DD009C60F8 /* YXJDIYButtonPosition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38975D1DDDF30A009C60F8 /* YXJImageCompressor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896971DDDF0DD009C60F8 /* YXJImageCompressor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38975E1DDDF30A009C60F8 /* YXJKxMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896981DDDF0DD009C60F8 /* YXJKxMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE38975F1DDDF30A009C60F8 /* YXJLinksButton_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896991DDDF0DD009C60F8 /* YXJLinksButton_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897601DDDF30A009C60F8 /* YXJOnePixeLine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38969A1DDDF0DD009C60F8 /* YXJOnePixeLine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897611DDDF30A009C60F8 /* YXJPageController_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38969B1DDDF0DD009C60F8 /* YXJPageController_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897621DDDF30A009C60F8 /* YXJPullScale.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38969C1DDDF0DD009C60F8 /* YXJPullScale.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897631DDDF30A009C60F8 /* YXJSlideBar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38969D1DDDF0DD009C60F8 /* YXJSlideBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897641DDDF30A009C60F8 /* YXJSwipeTableViewCell_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38969E1DDDF0DD009C60F8 /* YXJSwipeTableViewCell_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897651DDDF30A009C60F8 /* YXJTagView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE38969F1DDDF0DD009C60F8 /* YXJTagView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897661DDDF30A009C60F8 /* YXJXibView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896A01DDDF0DD009C60F8 /* YXJXibView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3897671DDDF30A009C60F8 /* ZLPhotoBrowser_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3896A11DDDF0DD009C60F8 /* ZLPhotoBrowser_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE6571E11DC625F500ABD670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6571E01DC625F500ABD670 /* AppDelegate.swift */; };
 		DE6571E31DC625F500ABD670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6571E21DC625F500ABD670 /* ViewController.swift */; };
 		DE6571E61DC625F500ABD670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6571E41DC625F500ABD670 /* Main.storyboard */; };
@@ -349,54 +304,55 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DE3989A91DCCED8D005E7ECC /* AddressBook_iOS.framework in CopyFiles */,
-				DE3989AA1DCCED8D005E7ECC /* Alamofire.framework in CopyFiles */,
-				DE3989AB1DCCED8D005E7ECC /* APValidators_iOS.framework in CopyFiles */,
-				DE3989AC1DCCED8D005E7ECC /* AXBadgeView_iOS.framework in CopyFiles */,
-				DE3989AD1DCCED8D005E7ECC /* Bond.framework in CopyFiles */,
-				DE3989AE1DCCED8D005E7ECC /* Colour_iOS.framework in CopyFiles */,
-				DE3989AF1DCCED8D005E7ECC /* CYLTabBarController_iOS.framework in CopyFiles */,
-				DE3989B01DCCED8D005E7ECC /* DKChainableAnimationKit.framework in CopyFiles */,
-				DE3989B11DCCED8D005E7ECC /* EasyCountDown_iOS.framework in CopyFiles */,
-				DE3989B21DCCED8E005E7ECC /* EasyDropDownMenu_iOS.framework in CopyFiles */,
-				DE3989B31DCCED8E005E7ECC /* EasyEmoji_iOS.framework in CopyFiles */,
-				DE3989B41DCCED8E005E7ECC /* EasySearchBarFrameWork.framework in CopyFiles */,
-				DE3989B51DCCED8E005E7ECC /* FDTemplateLayoutCell.framework in CopyFiles */,
-				DE3989B61DCCED8E005E7ECC /* FORScrollViewEmptyAssistant_iOS.framework in CopyFiles */,
-				DE3989B71DCCED8E005E7ECC /* GCDSwift.framework in CopyFiles */,
-				DE3989B81DCCED8E005E7ECC /* Haneke.framework in CopyFiles */,
-				DE3989B91DCCED8E005E7ECC /* HCSStarRatingView.framework in CopyFiles */,
-				DE3989BA1DCCED8E005E7ECC /* IQKeyboardManager.framework in CopyFiles */,
-				DE3989BB1DCCED8E005E7ECC /* IQKeyboardManagerSwift.framework in CopyFiles */,
-				DE3989BC1DCCED8E005E7ECC /* Kingfisher_iOS.framework in CopyFiles */,
-				DE3989BD1DCCED8E005E7ECC /* LCCoolHUD_iOS.framework in CopyFiles */,
-				DE3989BE1DCCED8E005E7ECC /* Loggerithm_iOS.framework in CopyFiles */,
-				DE3989BF1DCCED8E005E7ECC /* MJRefresh_iOS.framework in CopyFiles */,
-				DE3989C01DCCED8E005E7ECC /* MWPhotoBrowser_iOS.framework in CopyFiles */,
-				DE3989C11DCCED8E005E7ECC /* ObjectMapper.framework in CopyFiles */,
-				DE3989C21DCCED8E005E7ECC /* RainbowNavigation.framework in CopyFiles */,
-				DE3989C31DCCED8E005E7ECC /* Reachability.framework in CopyFiles */,
-				DE3989C41DCCED8E005E7ECC /* ReactiveKit.framework in CopyFiles */,
-				DE3989C51DCCED8E005E7ECC /* SnapKit.framework in CopyFiles */,
-				DE3989C61DCCED8E005E7ECC /* SwiftScan_iOS.framework in CopyFiles */,
-				DE3989C71DCCED8E005E7ECC /* SwiftString.framework in CopyFiles */,
-				DE3989C81DCCED8E005E7ECC /* SwiftyJSON.framework in CopyFiles */,
-				DE3989C91DCCED8E005E7ECC /* SystemServices_iOS.framework in CopyFiles */,
-				DE3989CA1DCCED8E005E7ECC /* TOWebViewController_iOS.framework in CopyFiles */,
-				DE3989CB1DCCED8E005E7ECC /* TTTAttributedLabel.framework in CopyFiles */,
-				DE3989CC1DCCED8E005E7ECC /* TYAlertController_iOS.framework in CopyFiles */,
-				DE3989CD1DCCED8E005E7ECC /* YXJDIYButtonPosition.framework in CopyFiles */,
-				DE3989CE1DCCED8E005E7ECC /* YXJImageCompressor.framework in CopyFiles */,
-				DE3989CF1DCCED8E005E7ECC /* YXJKxMenu.framework in CopyFiles */,
-				DE3989D01DCCED8E005E7ECC /* YXJLinksButton_iOS.framework in CopyFiles */,
-				DE3989D11DCCED8E005E7ECC /* YXJOnePixeLine.framework in CopyFiles */,
-				DE3989D21DCCED8E005E7ECC /* YXJPageController_iOS.framework in CopyFiles */,
-				DE3989D31DCCED8E005E7ECC /* YXJPullScale.framework in CopyFiles */,
-				DE3989D41DCCED8E005E7ECC /* YXJSlideBar.framework in CopyFiles */,
-				DE3989D51DCCED8E005E7ECC /* YXJSwipeTableViewCell_iOS.framework in CopyFiles */,
-				DE3989D61DCCED8E005E7ECC /* YXJTagView.framework in CopyFiles */,
-				DE3989D71DCCED8E005E7ECC /* YXJXibView.framework in CopyFiles */,
-				DE3989D81DCCED8E005E7ECC /* ZLPhotoBrowser_iOS.framework in CopyFiles */,
+				DE3896D41DDDF12E009C60F8 /* AddressBook_iOS.framework in CopyFiles */,
+				DE3896D51DDDF12E009C60F8 /* Alamofire.framework in CopyFiles */,
+				DE3896D61DDDF12E009C60F8 /* APValidators_iOS.framework in CopyFiles */,
+				DE3896D71DDDF12E009C60F8 /* AXBadgeView_iOS.framework in CopyFiles */,
+				DE3896D81DDDF12E009C60F8 /* Bond.framework in CopyFiles */,
+				DE3896D91DDDF12E009C60F8 /* Colour_iOS.framework in CopyFiles */,
+				DE3896DA1DDDF12E009C60F8 /* CYLTabBarController_iOS.framework in CopyFiles */,
+				DE3896DB1DDDF12E009C60F8 /* DKChainableAnimationKit.framework in CopyFiles */,
+				DE3896DC1DDDF12E009C60F8 /* EasyCountDown_iOS.framework in CopyFiles */,
+				DE3896DD1DDDF12E009C60F8 /* EasyDropDownMenu_iOS.framework in CopyFiles */,
+				DE3896DE1DDDF12E009C60F8 /* EasyEmoji_iOS.framework in CopyFiles */,
+				DE3896DF1DDDF12E009C60F8 /* EasySearchBarFrameWork.framework in CopyFiles */,
+				DE3896E01DDDF12E009C60F8 /* FDTemplateLayoutCell.framework in CopyFiles */,
+				DE3896E11DDDF12E009C60F8 /* FORScrollViewEmptyAssistant_iOS.framework in CopyFiles */,
+				DE3896E21DDDF12E009C60F8 /* GCDSwift.framework in CopyFiles */,
+				DE3896E31DDDF12E009C60F8 /* Haneke.framework in CopyFiles */,
+				DE3896E41DDDF12E009C60F8 /* HCSStarRatingView.framework in CopyFiles */,
+				DE3896E51DDDF12E009C60F8 /* IQKeyboardManager.framework in CopyFiles */,
+				DE3896E61DDDF12E009C60F8 /* IQKeyboardManagerSwift.framework in CopyFiles */,
+				DE3896E71DDDF12E009C60F8 /* Kingfisher_iOS.framework in CopyFiles */,
+				DE3896E81DDDF12E009C60F8 /* LCCoolHUD_iOS.framework in CopyFiles */,
+				DE3896E91DDDF12E009C60F8 /* Loggerithm_iOS.framework in CopyFiles */,
+				DE3896EA1DDDF12E009C60F8 /* MJRefresh_iOS.framework in CopyFiles */,
+				DE3896EB1DDDF12E009C60F8 /* MWPhotoBrowser_iOS.framework in CopyFiles */,
+				DE3896EC1DDDF12E009C60F8 /* ObjectMapper.framework in CopyFiles */,
+				DE3896ED1DDDF12E009C60F8 /* RainbowNavigation.framework in CopyFiles */,
+				DE3896EE1DDDF12E009C60F8 /* Reachability.framework in CopyFiles */,
+				DE3896EF1DDDF12E009C60F8 /* ReactiveKit.framework in CopyFiles */,
+				DE3896F01DDDF12E009C60F8 /* SnapKit.framework in CopyFiles */,
+				DE3896F11DDDF12E009C60F8 /* SwiftScan_iOS.framework in CopyFiles */,
+				DE3896F21DDDF12E009C60F8 /* SwiftString_iOS.framework in CopyFiles */,
+				DE3896F41DDDF12E009C60F8 /* SwiftyJSON.framework in CopyFiles */,
+				DE3896F51DDDF12E009C60F8 /* SystemServices_iOS.framework in CopyFiles */,
+				DE3896F61DDDF12E009C60F8 /* TOWebViewController_iOS.framework in CopyFiles */,
+				DE3896F71DDDF12E009C60F8 /* TTTAttributedLabel.framework in CopyFiles */,
+				DE3896F81DDDF12E009C60F8 /* TYAlertController_iOS.framework in CopyFiles */,
+				DE3896F91DDDF12E009C60F8 /* YXJCycleView_iOS.framework in CopyFiles */,
+				DE3896FA1DDDF12E009C60F8 /* YXJDIYButtonPosition.framework in CopyFiles */,
+				DE3896FB1DDDF12E009C60F8 /* YXJImageCompressor.framework in CopyFiles */,
+				DE3896FC1DDDF12E009C60F8 /* YXJKxMenu.framework in CopyFiles */,
+				DE3896FD1DDDF12E009C60F8 /* YXJLinksButton_iOS.framework in CopyFiles */,
+				DE3896FE1DDDF12E009C60F8 /* YXJOnePixeLine.framework in CopyFiles */,
+				DE3896FF1DDDF12E009C60F8 /* YXJPageController_iOS.framework in CopyFiles */,
+				DE3897001DDDF12E009C60F8 /* YXJPullScale.framework in CopyFiles */,
+				DE3897011DDDF12E009C60F8 /* YXJSlideBar.framework in CopyFiles */,
+				DE3897021DDDF12E009C60F8 /* YXJSwipeTableViewCell_iOS.framework in CopyFiles */,
+				DE3897031DDDF12E009C60F8 /* YXJTagView.framework in CopyFiles */,
+				DE3897041DDDF12E009C60F8 /* YXJXibView.framework in CopyFiles */,
+				DE3897051DDDF12E009C60F8 /* ZLPhotoBrowser_iOS.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -406,54 +362,55 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DE3989D91DCCEDD3005E7ECC /* AddressBook_iOS.framework in Embed Frameworks */,
-				DE3989DA1DCCEDD3005E7ECC /* Alamofire.framework in Embed Frameworks */,
-				DE3989DB1DCCEDD3005E7ECC /* APValidators_iOS.framework in Embed Frameworks */,
-				DE3989DC1DCCEDD3005E7ECC /* AXBadgeView_iOS.framework in Embed Frameworks */,
-				DE3989DD1DCCEDD3005E7ECC /* Bond.framework in Embed Frameworks */,
-				DE3989DE1DCCEDD3005E7ECC /* Colour_iOS.framework in Embed Frameworks */,
-				DE3989DF1DCCEDD3005E7ECC /* CYLTabBarController_iOS.framework in Embed Frameworks */,
-				DE3989E01DCCEDD3005E7ECC /* DKChainableAnimationKit.framework in Embed Frameworks */,
-				DE3989E11DCCEDD3005E7ECC /* EasyCountDown_iOS.framework in Embed Frameworks */,
-				DE3989E21DCCEDD3005E7ECC /* EasyDropDownMenu_iOS.framework in Embed Frameworks */,
-				DE3989E31DCCEDD3005E7ECC /* EasyEmoji_iOS.framework in Embed Frameworks */,
-				DE3989E41DCCEDD3005E7ECC /* EasySearchBarFrameWork.framework in Embed Frameworks */,
-				DE3989E51DCCEDD3005E7ECC /* FDTemplateLayoutCell.framework in Embed Frameworks */,
-				DE3989E61DCCEDD3005E7ECC /* FORScrollViewEmptyAssistant_iOS.framework in Embed Frameworks */,
-				DE3989E71DCCEDD3005E7ECC /* GCDSwift.framework in Embed Frameworks */,
-				DE3989E81DCCEDD3005E7ECC /* Haneke.framework in Embed Frameworks */,
-				DE3989E91DCCEDD3005E7ECC /* HCSStarRatingView.framework in Embed Frameworks */,
-				DE3989EA1DCCEDD3005E7ECC /* IQKeyboardManager.framework in Embed Frameworks */,
-				DE3989EB1DCCEDD3005E7ECC /* IQKeyboardManagerSwift.framework in Embed Frameworks */,
-				DE3989EC1DCCEDD3005E7ECC /* Kingfisher_iOS.framework in Embed Frameworks */,
-				DE3989ED1DCCEDD3005E7ECC /* LCCoolHUD_iOS.framework in Embed Frameworks */,
-				DE3989EE1DCCEDD3005E7ECC /* Loggerithm_iOS.framework in Embed Frameworks */,
-				DE3989EF1DCCEDD3005E7ECC /* MJRefresh_iOS.framework in Embed Frameworks */,
-				DE3989F01DCCEDD3005E7ECC /* MWPhotoBrowser_iOS.framework in Embed Frameworks */,
-				DE3989F11DCCEDD3005E7ECC /* ObjectMapper.framework in Embed Frameworks */,
-				DE3989F21DCCEDD3005E7ECC /* RainbowNavigation.framework in Embed Frameworks */,
-				DE3989F31DCCEDD3005E7ECC /* Reachability.framework in Embed Frameworks */,
-				DE3989F41DCCEDD3005E7ECC /* ReactiveKit.framework in Embed Frameworks */,
-				DE3989F51DCCEDD3005E7ECC /* SnapKit.framework in Embed Frameworks */,
-				DE3989F61DCCEDD3005E7ECC /* SwiftScan_iOS.framework in Embed Frameworks */,
-				DE3989F71DCCEDD3005E7ECC /* SwiftString.framework in Embed Frameworks */,
-				DE3989F81DCCEDD3005E7ECC /* SwiftyJSON.framework in Embed Frameworks */,
-				DE3989F91DCCEDD3005E7ECC /* SystemServices_iOS.framework in Embed Frameworks */,
-				DE3989FA1DCCEDD3005E7ECC /* TOWebViewController_iOS.framework in Embed Frameworks */,
-				DE3989FB1DCCEDD3005E7ECC /* TTTAttributedLabel.framework in Embed Frameworks */,
-				DE3989FC1DCCEDD3005E7ECC /* TYAlertController_iOS.framework in Embed Frameworks */,
-				DE3989FD1DCCEDD3005E7ECC /* YXJDIYButtonPosition.framework in Embed Frameworks */,
-				DE3989FE1DCCEDD3005E7ECC /* YXJImageCompressor.framework in Embed Frameworks */,
-				DE3989FF1DCCEDD3005E7ECC /* YXJKxMenu.framework in Embed Frameworks */,
-				DE398A001DCCEDD3005E7ECC /* YXJLinksButton_iOS.framework in Embed Frameworks */,
-				DE398A011DCCEDD3005E7ECC /* YXJOnePixeLine.framework in Embed Frameworks */,
-				DE398A021DCCEDD3005E7ECC /* YXJPageController_iOS.framework in Embed Frameworks */,
-				DE398A031DCCEDD3005E7ECC /* YXJPullScale.framework in Embed Frameworks */,
-				DE398A041DCCEDD3005E7ECC /* YXJSlideBar.framework in Embed Frameworks */,
-				DE398A051DCCEDD3005E7ECC /* YXJSwipeTableViewCell_iOS.framework in Embed Frameworks */,
-				DE398A061DCCEDD3005E7ECC /* YXJTagView.framework in Embed Frameworks */,
-				DE398A071DCCEDD3005E7ECC /* YXJXibView.framework in Embed Frameworks */,
-				DE398A081DCCEDD3005E7ECC /* ZLPhotoBrowser_iOS.framework in Embed Frameworks */,
+				DE3897371DDDF30A009C60F8 /* AddressBook_iOS.framework in Embed Frameworks */,
+				DE3897381DDDF30A009C60F8 /* Alamofire.framework in Embed Frameworks */,
+				DE3897391DDDF30A009C60F8 /* APValidators_iOS.framework in Embed Frameworks */,
+				DE38973A1DDDF30A009C60F8 /* AXBadgeView_iOS.framework in Embed Frameworks */,
+				DE38973B1DDDF30A009C60F8 /* Bond.framework in Embed Frameworks */,
+				DE38973C1DDDF30A009C60F8 /* Colour_iOS.framework in Embed Frameworks */,
+				DE38973D1DDDF30A009C60F8 /* CYLTabBarController_iOS.framework in Embed Frameworks */,
+				DE38973E1DDDF30A009C60F8 /* DKChainableAnimationKit.framework in Embed Frameworks */,
+				DE38973F1DDDF30A009C60F8 /* EasyCountDown_iOS.framework in Embed Frameworks */,
+				DE3897401DDDF30A009C60F8 /* EasyDropDownMenu_iOS.framework in Embed Frameworks */,
+				DE3897411DDDF30A009C60F8 /* EasyEmoji_iOS.framework in Embed Frameworks */,
+				DE3897421DDDF30A009C60F8 /* EasySearchBarFrameWork.framework in Embed Frameworks */,
+				DE3897431DDDF30A009C60F8 /* FDTemplateLayoutCell.framework in Embed Frameworks */,
+				DE3897441DDDF30A009C60F8 /* FORScrollViewEmptyAssistant_iOS.framework in Embed Frameworks */,
+				DE3897451DDDF30A009C60F8 /* GCDSwift.framework in Embed Frameworks */,
+				DE3897461DDDF30A009C60F8 /* Haneke.framework in Embed Frameworks */,
+				DE3897471DDDF30A009C60F8 /* HCSStarRatingView.framework in Embed Frameworks */,
+				DE3897481DDDF30A009C60F8 /* IQKeyboardManager.framework in Embed Frameworks */,
+				DE3897491DDDF30A009C60F8 /* IQKeyboardManagerSwift.framework in Embed Frameworks */,
+				DE38974A1DDDF30A009C60F8 /* Kingfisher_iOS.framework in Embed Frameworks */,
+				DE38974B1DDDF30A009C60F8 /* LCCoolHUD_iOS.framework in Embed Frameworks */,
+				DE38974C1DDDF30A009C60F8 /* Loggerithm_iOS.framework in Embed Frameworks */,
+				DE38974D1DDDF30A009C60F8 /* MJRefresh_iOS.framework in Embed Frameworks */,
+				DE38974E1DDDF30A009C60F8 /* MWPhotoBrowser_iOS.framework in Embed Frameworks */,
+				DE38974F1DDDF30A009C60F8 /* ObjectMapper.framework in Embed Frameworks */,
+				DE3897501DDDF30A009C60F8 /* RainbowNavigation.framework in Embed Frameworks */,
+				DE3897511DDDF30A009C60F8 /* Reachability.framework in Embed Frameworks */,
+				DE3897521DDDF30A009C60F8 /* ReactiveKit.framework in Embed Frameworks */,
+				DE3897531DDDF30A009C60F8 /* SnapKit.framework in Embed Frameworks */,
+				DE3897541DDDF30A009C60F8 /* SwiftScan_iOS.framework in Embed Frameworks */,
+				DE3897551DDDF30A009C60F8 /* SwiftString_iOS.framework in Embed Frameworks */,
+				DE3897561DDDF30A009C60F8 /* SwiftyJSON.framework in Embed Frameworks */,
+				DE3897571DDDF30A009C60F8 /* SystemServices_iOS.framework in Embed Frameworks */,
+				DE3897581DDDF30A009C60F8 /* TOWebViewController_iOS.framework in Embed Frameworks */,
+				DE3897591DDDF30A009C60F8 /* TTTAttributedLabel.framework in Embed Frameworks */,
+				DE38975A1DDDF30A009C60F8 /* TYAlertController_iOS.framework in Embed Frameworks */,
+				DE38975B1DDDF30A009C60F8 /* YXJCycleView_iOS.framework in Embed Frameworks */,
+				DE38975C1DDDF30A009C60F8 /* YXJDIYButtonPosition.framework in Embed Frameworks */,
+				DE38975D1DDDF30A009C60F8 /* YXJImageCompressor.framework in Embed Frameworks */,
+				DE38975E1DDDF30A009C60F8 /* YXJKxMenu.framework in Embed Frameworks */,
+				DE38975F1DDDF30A009C60F8 /* YXJLinksButton_iOS.framework in Embed Frameworks */,
+				DE3897601DDDF30A009C60F8 /* YXJOnePixeLine.framework in Embed Frameworks */,
+				DE3897611DDDF30A009C60F8 /* YXJPageController_iOS.framework in Embed Frameworks */,
+				DE3897621DDDF30A009C60F8 /* YXJPullScale.framework in Embed Frameworks */,
+				DE3897631DDDF30A009C60F8 /* YXJSlideBar.framework in Embed Frameworks */,
+				DE3897641DDDF30A009C60F8 /* YXJSwipeTableViewCell_iOS.framework in Embed Frameworks */,
+				DE3897651DDDF30A009C60F8 /* YXJTagView.framework in Embed Frameworks */,
+				DE3897661DDDF30A009C60F8 /* YXJXibView.framework in Embed Frameworks */,
+				DE3897671DDDF30A009C60F8 /* ZLPhotoBrowser_iOS.framework in Embed Frameworks */,
 				DE6571FF1DC6265B00ABD670 /* EasySwift_iOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -462,54 +419,55 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DE3989491DCCEB24005E7ECC /* AddressBook_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AddressBook_iOS.framework; sourceTree = "<group>"; };
-		DE39894A1DCCEB24005E7ECC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
-		DE39894B1DCCEB24005E7ECC /* APValidators_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = APValidators_iOS.framework; sourceTree = "<group>"; };
-		DE39894C1DCCEB24005E7ECC /* AXBadgeView_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AXBadgeView_iOS.framework; sourceTree = "<group>"; };
-		DE39894D1DCCEB24005E7ECC /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bond.framework; sourceTree = "<group>"; };
-		DE39894E1DCCEB24005E7ECC /* Colour_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Colour_iOS.framework; sourceTree = "<group>"; };
-		DE39894F1DCCEB24005E7ECC /* CYLTabBarController_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CYLTabBarController_iOS.framework; sourceTree = "<group>"; };
-		DE3989501DCCEB24005E7ECC /* DKChainableAnimationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DKChainableAnimationKit.framework; sourceTree = "<group>"; };
-		DE3989511DCCEB24005E7ECC /* EasyCountDown_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EasyCountDown_iOS.framework; sourceTree = "<group>"; };
-		DE3989521DCCEB24005E7ECC /* EasyDropDownMenu_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EasyDropDownMenu_iOS.framework; sourceTree = "<group>"; };
-		DE3989531DCCEB24005E7ECC /* EasyEmoji_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EasyEmoji_iOS.framework; sourceTree = "<group>"; };
-		DE3989541DCCEB24005E7ECC /* EasySearchBarFrameWork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EasySearchBarFrameWork.framework; sourceTree = "<group>"; };
-		DE3989551DCCEB24005E7ECC /* FDTemplateLayoutCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FDTemplateLayoutCell.framework; sourceTree = "<group>"; };
-		DE3989561DCCEB24005E7ECC /* FORScrollViewEmptyAssistant_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FORScrollViewEmptyAssistant_iOS.framework; sourceTree = "<group>"; };
-		DE3989571DCCEB24005E7ECC /* GCDSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GCDSwift.framework; sourceTree = "<group>"; };
-		DE3989581DCCEB24005E7ECC /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Haneke.framework; sourceTree = "<group>"; };
-		DE3989591DCCEB24005E7ECC /* HCSStarRatingView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HCSStarRatingView.framework; sourceTree = "<group>"; };
-		DE39895A1DCCEB24005E7ECC /* IQKeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = "<group>"; };
-		DE39895B1DCCEB24005E7ECC /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
-		DE39895C1DCCEB24005E7ECC /* Kingfisher_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher_iOS.framework; sourceTree = "<group>"; };
-		DE39895D1DCCEB24005E7ECC /* LCCoolHUD_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LCCoolHUD_iOS.framework; sourceTree = "<group>"; };
-		DE39895E1DCCEB24005E7ECC /* Loggerithm_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Loggerithm_iOS.framework; sourceTree = "<group>"; };
-		DE39895F1DCCEB24005E7ECC /* MJRefresh_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MJRefresh_iOS.framework; sourceTree = "<group>"; };
-		DE3989601DCCEB24005E7ECC /* MWPhotoBrowser_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MWPhotoBrowser_iOS.framework; sourceTree = "<group>"; };
-		DE3989611DCCEB24005E7ECC /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = "<group>"; };
-		DE3989621DCCEB24005E7ECC /* RainbowNavigation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RainbowNavigation.framework; sourceTree = "<group>"; };
-		DE3989631DCCEB24005E7ECC /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reachability.framework; sourceTree = "<group>"; };
-		DE3989641DCCEB24005E7ECC /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveKit.framework; sourceTree = "<group>"; };
-		DE3989651DCCEB24005E7ECC /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
-		DE3989661DCCEB24005E7ECC /* SwiftScan_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftScan_iOS.framework; sourceTree = "<group>"; };
-		DE3989671DCCEB24005E7ECC /* SwiftString.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftString.framework; sourceTree = "<group>"; };
-		DE3989681DCCEB24005E7ECC /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
-		DE3989691DCCEB24005E7ECC /* SystemServices_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SystemServices_iOS.framework; sourceTree = "<group>"; };
-		DE39896A1DCCEB24005E7ECC /* TOWebViewController_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TOWebViewController_iOS.framework; sourceTree = "<group>"; };
-		DE39896B1DCCEB24005E7ECC /* TTTAttributedLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TTTAttributedLabel.framework; sourceTree = "<group>"; };
-		DE39896C1DCCEB24005E7ECC /* TYAlertController_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TYAlertController_iOS.framework; sourceTree = "<group>"; };
-		DE39896D1DCCEB24005E7ECC /* YXJDIYButtonPosition.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJDIYButtonPosition.framework; sourceTree = "<group>"; };
-		DE39896E1DCCEB24005E7ECC /* YXJImageCompressor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJImageCompressor.framework; sourceTree = "<group>"; };
-		DE39896F1DCCEB24005E7ECC /* YXJKxMenu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJKxMenu.framework; sourceTree = "<group>"; };
-		DE3989701DCCEB24005E7ECC /* YXJLinksButton_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJLinksButton_iOS.framework; sourceTree = "<group>"; };
-		DE3989711DCCEB24005E7ECC /* YXJOnePixeLine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJOnePixeLine.framework; sourceTree = "<group>"; };
-		DE3989721DCCEB24005E7ECC /* YXJPageController_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJPageController_iOS.framework; sourceTree = "<group>"; };
-		DE3989731DCCEB24005E7ECC /* YXJPullScale.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJPullScale.framework; sourceTree = "<group>"; };
-		DE3989741DCCEB24005E7ECC /* YXJSlideBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJSlideBar.framework; sourceTree = "<group>"; };
-		DE3989751DCCEB24005E7ECC /* YXJSwipeTableViewCell_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJSwipeTableViewCell_iOS.framework; sourceTree = "<group>"; };
-		DE3989761DCCEB24005E7ECC /* YXJTagView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJTagView.framework; sourceTree = "<group>"; };
-		DE3989771DCCEB24005E7ECC /* YXJXibView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJXibView.framework; sourceTree = "<group>"; };
-		DE3989781DCCEB24005E7ECC /* ZLPhotoBrowser_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZLPhotoBrowser_iOS.framework; sourceTree = "<group>"; };
+		DE3896701DDDF0DD009C60F8 /* AddressBook_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AddressBook_iOS.framework; sourceTree = "<group>"; };
+		DE3896711DDDF0DD009C60F8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		DE3896721DDDF0DD009C60F8 /* APValidators_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = APValidators_iOS.framework; sourceTree = "<group>"; };
+		DE3896731DDDF0DD009C60F8 /* AXBadgeView_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AXBadgeView_iOS.framework; sourceTree = "<group>"; };
+		DE3896741DDDF0DD009C60F8 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bond.framework; sourceTree = "<group>"; };
+		DE3896751DDDF0DD009C60F8 /* Colour_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Colour_iOS.framework; sourceTree = "<group>"; };
+		DE3896761DDDF0DD009C60F8 /* CYLTabBarController_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CYLTabBarController_iOS.framework; sourceTree = "<group>"; };
+		DE3896771DDDF0DD009C60F8 /* DKChainableAnimationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DKChainableAnimationKit.framework; sourceTree = "<group>"; };
+		DE3896781DDDF0DD009C60F8 /* EasyCountDown_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EasyCountDown_iOS.framework; sourceTree = "<group>"; };
+		DE3896791DDDF0DD009C60F8 /* EasyDropDownMenu_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EasyDropDownMenu_iOS.framework; sourceTree = "<group>"; };
+		DE38967A1DDDF0DD009C60F8 /* EasyEmoji_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EasyEmoji_iOS.framework; sourceTree = "<group>"; };
+		DE38967B1DDDF0DD009C60F8 /* EasySearchBarFrameWork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EasySearchBarFrameWork.framework; sourceTree = "<group>"; };
+		DE38967C1DDDF0DD009C60F8 /* FDTemplateLayoutCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FDTemplateLayoutCell.framework; sourceTree = "<group>"; };
+		DE38967D1DDDF0DD009C60F8 /* FORScrollViewEmptyAssistant_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FORScrollViewEmptyAssistant_iOS.framework; sourceTree = "<group>"; };
+		DE38967E1DDDF0DD009C60F8 /* GCDSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GCDSwift.framework; sourceTree = "<group>"; };
+		DE38967F1DDDF0DD009C60F8 /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Haneke.framework; sourceTree = "<group>"; };
+		DE3896801DDDF0DD009C60F8 /* HCSStarRatingView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HCSStarRatingView.framework; sourceTree = "<group>"; };
+		DE3896811DDDF0DD009C60F8 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = "<group>"; };
+		DE3896821DDDF0DD009C60F8 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
+		DE3896831DDDF0DD009C60F8 /* Kingfisher_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher_iOS.framework; sourceTree = "<group>"; };
+		DE3896841DDDF0DD009C60F8 /* LCCoolHUD_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LCCoolHUD_iOS.framework; sourceTree = "<group>"; };
+		DE3896851DDDF0DD009C60F8 /* Loggerithm_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Loggerithm_iOS.framework; sourceTree = "<group>"; };
+		DE3896861DDDF0DD009C60F8 /* MJRefresh_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MJRefresh_iOS.framework; sourceTree = "<group>"; };
+		DE3896871DDDF0DD009C60F8 /* MWPhotoBrowser_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MWPhotoBrowser_iOS.framework; sourceTree = "<group>"; };
+		DE3896881DDDF0DD009C60F8 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = "<group>"; };
+		DE3896891DDDF0DD009C60F8 /* RainbowNavigation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RainbowNavigation.framework; sourceTree = "<group>"; };
+		DE38968A1DDDF0DD009C60F8 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reachability.framework; sourceTree = "<group>"; };
+		DE38968B1DDDF0DD009C60F8 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveKit.framework; sourceTree = "<group>"; };
+		DE38968C1DDDF0DD009C60F8 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
+		DE38968D1DDDF0DD009C60F8 /* SwiftScan_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftScan_iOS.framework; sourceTree = "<group>"; };
+		DE38968E1DDDF0DD009C60F8 /* SwiftString_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftString_iOS.framework; sourceTree = "<group>"; };
+		DE3896901DDDF0DD009C60F8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
+		DE3896911DDDF0DD009C60F8 /* SystemServices_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SystemServices_iOS.framework; sourceTree = "<group>"; };
+		DE3896921DDDF0DD009C60F8 /* TOWebViewController_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TOWebViewController_iOS.framework; sourceTree = "<group>"; };
+		DE3896931DDDF0DD009C60F8 /* TTTAttributedLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TTTAttributedLabel.framework; sourceTree = "<group>"; };
+		DE3896941DDDF0DD009C60F8 /* TYAlertController_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TYAlertController_iOS.framework; sourceTree = "<group>"; };
+		DE3896951DDDF0DD009C60F8 /* YXJCycleView_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJCycleView_iOS.framework; sourceTree = "<group>"; };
+		DE3896961DDDF0DD009C60F8 /* YXJDIYButtonPosition.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJDIYButtonPosition.framework; sourceTree = "<group>"; };
+		DE3896971DDDF0DD009C60F8 /* YXJImageCompressor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJImageCompressor.framework; sourceTree = "<group>"; };
+		DE3896981DDDF0DD009C60F8 /* YXJKxMenu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJKxMenu.framework; sourceTree = "<group>"; };
+		DE3896991DDDF0DD009C60F8 /* YXJLinksButton_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJLinksButton_iOS.framework; sourceTree = "<group>"; };
+		DE38969A1DDDF0DD009C60F8 /* YXJOnePixeLine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJOnePixeLine.framework; sourceTree = "<group>"; };
+		DE38969B1DDDF0DD009C60F8 /* YXJPageController_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJPageController_iOS.framework; sourceTree = "<group>"; };
+		DE38969C1DDDF0DD009C60F8 /* YXJPullScale.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJPullScale.framework; sourceTree = "<group>"; };
+		DE38969D1DDDF0DD009C60F8 /* YXJSlideBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJSlideBar.framework; sourceTree = "<group>"; };
+		DE38969E1DDDF0DD009C60F8 /* YXJSwipeTableViewCell_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJSwipeTableViewCell_iOS.framework; sourceTree = "<group>"; };
+		DE38969F1DDDF0DD009C60F8 /* YXJTagView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJTagView.framework; sourceTree = "<group>"; };
+		DE3896A01DDDF0DD009C60F8 /* YXJXibView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YXJXibView.framework; sourceTree = "<group>"; };
+		DE3896A11DDDF0DD009C60F8 /* ZLPhotoBrowser_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZLPhotoBrowser_iOS.framework; sourceTree = "<group>"; };
 		DE6571DD1DC625F500ABD670 /* EasySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6571E01DC625F500ABD670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE6571E21DC625F500ABD670 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -650,54 +608,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE398A091DCCEDEC005E7ECC /* AddressBook_iOS.framework in Frameworks */,
-				DE398A0A1DCCEDEC005E7ECC /* Alamofire.framework in Frameworks */,
-				DE398A0B1DCCEDEC005E7ECC /* APValidators_iOS.framework in Frameworks */,
-				DE398A0C1DCCEDEC005E7ECC /* AXBadgeView_iOS.framework in Frameworks */,
-				DE398A0D1DCCEDEC005E7ECC /* Bond.framework in Frameworks */,
-				DE398A0E1DCCEDEC005E7ECC /* Colour_iOS.framework in Frameworks */,
-				DE398A0F1DCCEDEC005E7ECC /* CYLTabBarController_iOS.framework in Frameworks */,
-				DE398A101DCCEDEC005E7ECC /* DKChainableAnimationKit.framework in Frameworks */,
-				DE398A111DCCEDEC005E7ECC /* EasyCountDown_iOS.framework in Frameworks */,
-				DE398A121DCCEDEC005E7ECC /* EasyDropDownMenu_iOS.framework in Frameworks */,
-				DE398A131DCCEDEC005E7ECC /* EasyEmoji_iOS.framework in Frameworks */,
-				DE398A141DCCEDEC005E7ECC /* EasySearchBarFrameWork.framework in Frameworks */,
-				DE398A151DCCEDEC005E7ECC /* FDTemplateLayoutCell.framework in Frameworks */,
-				DE398A161DCCEDEC005E7ECC /* FORScrollViewEmptyAssistant_iOS.framework in Frameworks */,
-				DE398A171DCCEDEC005E7ECC /* GCDSwift.framework in Frameworks */,
-				DE398A181DCCEDEC005E7ECC /* Haneke.framework in Frameworks */,
-				DE398A191DCCEDEC005E7ECC /* HCSStarRatingView.framework in Frameworks */,
-				DE398A1A1DCCEDEC005E7ECC /* IQKeyboardManager.framework in Frameworks */,
-				DE398A1B1DCCEDEC005E7ECC /* IQKeyboardManagerSwift.framework in Frameworks */,
-				DE398A1C1DCCEDEC005E7ECC /* Kingfisher_iOS.framework in Frameworks */,
-				DE398A1D1DCCEDEC005E7ECC /* LCCoolHUD_iOS.framework in Frameworks */,
-				DE398A1E1DCCEDEC005E7ECC /* Loggerithm_iOS.framework in Frameworks */,
-				DE398A1F1DCCEDEC005E7ECC /* MJRefresh_iOS.framework in Frameworks */,
-				DE398A201DCCEDEC005E7ECC /* MWPhotoBrowser_iOS.framework in Frameworks */,
-				DE398A211DCCEDEC005E7ECC /* ObjectMapper.framework in Frameworks */,
-				DE398A221DCCEDEC005E7ECC /* RainbowNavigation.framework in Frameworks */,
-				DE398A231DCCEDEC005E7ECC /* Reachability.framework in Frameworks */,
-				DE398A241DCCEDEC005E7ECC /* ReactiveKit.framework in Frameworks */,
-				DE398A251DCCEDEC005E7ECC /* SnapKit.framework in Frameworks */,
-				DE398A261DCCEDEC005E7ECC /* SwiftScan_iOS.framework in Frameworks */,
-				DE398A271DCCEDEC005E7ECC /* SwiftString.framework in Frameworks */,
-				DE398A281DCCEDEC005E7ECC /* SwiftyJSON.framework in Frameworks */,
-				DE398A291DCCEDEC005E7ECC /* SystemServices_iOS.framework in Frameworks */,
-				DE398A2A1DCCEDEC005E7ECC /* TOWebViewController_iOS.framework in Frameworks */,
-				DE398A2B1DCCEDEC005E7ECC /* TTTAttributedLabel.framework in Frameworks */,
-				DE398A2C1DCCEDEC005E7ECC /* TYAlertController_iOS.framework in Frameworks */,
-				DE398A2D1DCCEDEC005E7ECC /* YXJDIYButtonPosition.framework in Frameworks */,
-				DE398A2E1DCCEDEC005E7ECC /* YXJImageCompressor.framework in Frameworks */,
-				DE398A2F1DCCEDEC005E7ECC /* YXJKxMenu.framework in Frameworks */,
-				DE398A301DCCEDEC005E7ECC /* YXJLinksButton_iOS.framework in Frameworks */,
-				DE398A311DCCEDEC005E7ECC /* YXJOnePixeLine.framework in Frameworks */,
-				DE398A321DCCEDEC005E7ECC /* YXJPageController_iOS.framework in Frameworks */,
-				DE398A331DCCEDEC005E7ECC /* YXJPullScale.framework in Frameworks */,
-				DE398A341DCCEDEC005E7ECC /* YXJSlideBar.framework in Frameworks */,
-				DE398A351DCCEDEC005E7ECC /* YXJSwipeTableViewCell_iOS.framework in Frameworks */,
-				DE398A361DCCEDEC005E7ECC /* YXJTagView.framework in Frameworks */,
-				DE398A371DCCEDEC005E7ECC /* YXJXibView.framework in Frameworks */,
-				DE398A381DCCEDEC005E7ECC /* ZLPhotoBrowser_iOS.framework in Frameworks */,
 				DE6571FE1DC6265B00ABD670 /* EasySwift_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -706,54 +616,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE3989951DCCEB24005E7ECC /* SnapKit.framework in Frameworks */,
-				DE3989961DCCEB24005E7ECC /* SwiftScan_iOS.framework in Frameworks */,
-				DE3989991DCCEB24005E7ECC /* SystemServices_iOS.framework in Frameworks */,
-				DE3989A11DCCEB24005E7ECC /* YXJOnePixeLine.framework in Frameworks */,
-				DE39898C1DCCEB24005E7ECC /* Kingfisher_iOS.framework in Frameworks */,
-				DE39897B1DCCEB24005E7ECC /* APValidators_iOS.framework in Frameworks */,
-				DE3989801DCCEB24005E7ECC /* DKChainableAnimationKit.framework in Frameworks */,
-				DE3989921DCCEB24005E7ECC /* RainbowNavigation.framework in Frameworks */,
-				DE3989931DCCEB24005E7ECC /* Reachability.framework in Frameworks */,
-				DE3989871DCCEB24005E7ECC /* GCDSwift.framework in Frameworks */,
-				DE3989A41DCCEB24005E7ECC /* YXJSlideBar.framework in Frameworks */,
-				DE39897F1DCCEB24005E7ECC /* CYLTabBarController_iOS.framework in Frameworks */,
-				DE3989861DCCEB24005E7ECC /* FORScrollViewEmptyAssistant_iOS.framework in Frameworks */,
-				DE39898A1DCCEB24005E7ECC /* IQKeyboardManager.framework in Frameworks */,
-				DE3989911DCCEB24005E7ECC /* ObjectMapper.framework in Frameworks */,
-				DE3989971DCCEB24005E7ECC /* SwiftString.framework in Frameworks */,
-				DE3989791DCCEB24005E7ECC /* AddressBook_iOS.framework in Frameworks */,
-				DE39899B1DCCEB24005E7ECC /* TTTAttributedLabel.framework in Frameworks */,
-				DE3989A51DCCEB24005E7ECC /* YXJSwipeTableViewCell_iOS.framework in Frameworks */,
-				DE39899A1DCCEB24005E7ECC /* TOWebViewController_iOS.framework in Frameworks */,
-				DE39897C1DCCEB24005E7ECC /* AXBadgeView_iOS.framework in Frameworks */,
-				DE3989A01DCCEB24005E7ECC /* YXJLinksButton_iOS.framework in Frameworks */,
-				DE3989A81DCCEB24005E7ECC /* ZLPhotoBrowser_iOS.framework in Frameworks */,
-				DE3989891DCCEB24005E7ECC /* HCSStarRatingView.framework in Frameworks */,
-				DE3989A31DCCEB24005E7ECC /* YXJPullScale.framework in Frameworks */,
-				DE3989981DCCEB24005E7ECC /* SwiftyJSON.framework in Frameworks */,
-				DE39898E1DCCEB24005E7ECC /* Loggerithm_iOS.framework in Frameworks */,
-				DE3989851DCCEB24005E7ECC /* FDTemplateLayoutCell.framework in Frameworks */,
-				DE3989901DCCEB24005E7ECC /* MWPhotoBrowser_iOS.framework in Frameworks */,
-				DE3989A61DCCEB24005E7ECC /* YXJTagView.framework in Frameworks */,
-				DE3989881DCCEB24005E7ECC /* Haneke.framework in Frameworks */,
-				DE3989811DCCEB24005E7ECC /* EasyCountDown_iOS.framework in Frameworks */,
-				DE3989841DCCEB24005E7ECC /* EasySearchBarFrameWork.framework in Frameworks */,
-				DE39897A1DCCEB24005E7ECC /* Alamofire.framework in Frameworks */,
-				DE3989941DCCEB24005E7ECC /* ReactiveKit.framework in Frameworks */,
-				DE39898F1DCCEB24005E7ECC /* MJRefresh_iOS.framework in Frameworks */,
-				DE39898B1DCCEB24005E7ECC /* IQKeyboardManagerSwift.framework in Frameworks */,
-				DE3989A71DCCEB24005E7ECC /* YXJXibView.framework in Frameworks */,
-				DE39898D1DCCEB24005E7ECC /* LCCoolHUD_iOS.framework in Frameworks */,
-				DE39899E1DCCEB24005E7ECC /* YXJImageCompressor.framework in Frameworks */,
-				DE39899D1DCCEB24005E7ECC /* YXJDIYButtonPosition.framework in Frameworks */,
-				DE39897E1DCCEB24005E7ECC /* Colour_iOS.framework in Frameworks */,
-				DE39899F1DCCEB24005E7ECC /* YXJKxMenu.framework in Frameworks */,
-				DE3989821DCCEB24005E7ECC /* EasyDropDownMenu_iOS.framework in Frameworks */,
-				DE39897D1DCCEB24005E7ECC /* Bond.framework in Frameworks */,
-				DE39899C1DCCEB24005E7ECC /* TYAlertController_iOS.framework in Frameworks */,
-				DE3989831DCCEB24005E7ECC /* EasyEmoji_iOS.framework in Frameworks */,
-				DE3989A21DCCEB24005E7ECC /* YXJPageController_iOS.framework in Frameworks */,
+				DE3896C81DDDF0DE009C60F8 /* YXJDIYButtonPosition.framework in Frameworks */,
+				DE3896D01DDDF0DE009C60F8 /* YXJSwipeTableViewCell_iOS.framework in Frameworks */,
+				DE3896D11DDDF0DE009C60F8 /* YXJTagView.framework in Frameworks */,
+				DE3896C61DDDF0DE009C60F8 /* TYAlertController_iOS.framework in Frameworks */,
+				DE3896C51DDDF0DE009C60F8 /* TTTAttributedLabel.framework in Frameworks */,
+				DE3896BE1DDDF0DE009C60F8 /* SnapKit.framework in Frameworks */,
+				DE3896CF1DDDF0DE009C60F8 /* YXJSlideBar.framework in Frameworks */,
+				DE3896BF1DDDF0DE009C60F8 /* SwiftScan_iOS.framework in Frameworks */,
+				DE3896CE1DDDF0DE009C60F8 /* YXJPullScale.framework in Frameworks */,
+				DE3896B51DDDF0DD009C60F8 /* Kingfisher_iOS.framework in Frameworks */,
+				DE3896A41DDDF0DD009C60F8 /* APValidators_iOS.framework in Frameworks */,
+				DE3896A91DDDF0DD009C60F8 /* DKChainableAnimationKit.framework in Frameworks */,
+				DE3896BB1DDDF0DE009C60F8 /* RainbowNavigation.framework in Frameworks */,
+				DE3896BC1DDDF0DE009C60F8 /* Reachability.framework in Frameworks */,
+				DE3896B01DDDF0DD009C60F8 /* GCDSwift.framework in Frameworks */,
+				DE3896C91DDDF0DE009C60F8 /* YXJImageCompressor.framework in Frameworks */,
+				DE3896A81DDDF0DD009C60F8 /* CYLTabBarController_iOS.framework in Frameworks */,
+				DE3896AF1DDDF0DD009C60F8 /* FORScrollViewEmptyAssistant_iOS.framework in Frameworks */,
+				DE3896B31DDDF0DD009C60F8 /* IQKeyboardManager.framework in Frameworks */,
+				DE3896BA1DDDF0DD009C60F8 /* ObjectMapper.framework in Frameworks */,
+				DE3896A21DDDF0DD009C60F8 /* AddressBook_iOS.framework in Frameworks */,
+				DE3896CD1DDDF0DE009C60F8 /* YXJPageController_iOS.framework in Frameworks */,
+				DE3896C31DDDF0DE009C60F8 /* SystemServices_iOS.framework in Frameworks */,
+				DE3896CC1DDDF0DE009C60F8 /* YXJOnePixeLine.framework in Frameworks */,
+				DE3896A51DDDF0DD009C60F8 /* AXBadgeView_iOS.framework in Frameworks */,
+				DE3896B21DDDF0DD009C60F8 /* HCSStarRatingView.framework in Frameworks */,
+				DE3896B71DDDF0DD009C60F8 /* Loggerithm_iOS.framework in Frameworks */,
+				DE3896AE1DDDF0DD009C60F8 /* FDTemplateLayoutCell.framework in Frameworks */,
+				DE3896D31DDDF0DE009C60F8 /* ZLPhotoBrowser_iOS.framework in Frameworks */,
+				DE3896C41DDDF0DE009C60F8 /* TOWebViewController_iOS.framework in Frameworks */,
+				DE3896C21DDDF0DE009C60F8 /* SwiftyJSON.framework in Frameworks */,
+				DE3896C71DDDF0DE009C60F8 /* YXJCycleView_iOS.framework in Frameworks */,
+				DE3896B91DDDF0DD009C60F8 /* MWPhotoBrowser_iOS.framework in Frameworks */,
+				DE3896D21DDDF0DE009C60F8 /* YXJXibView.framework in Frameworks */,
+				DE3896B11DDDF0DD009C60F8 /* Haneke.framework in Frameworks */,
+				DE3896AA1DDDF0DD009C60F8 /* EasyCountDown_iOS.framework in Frameworks */,
+				DE3896C01DDDF0DE009C60F8 /* SwiftString_iOS.framework in Frameworks */,
+				DE3896AD1DDDF0DD009C60F8 /* EasySearchBarFrameWork.framework in Frameworks */,
+				DE3896A31DDDF0DD009C60F8 /* Alamofire.framework in Frameworks */,
+				DE3896BD1DDDF0DE009C60F8 /* ReactiveKit.framework in Frameworks */,
+				DE3896B81DDDF0DD009C60F8 /* MJRefresh_iOS.framework in Frameworks */,
+				DE3896CB1DDDF0DE009C60F8 /* YXJLinksButton_iOS.framework in Frameworks */,
+				DE3896B41DDDF0DD009C60F8 /* IQKeyboardManagerSwift.framework in Frameworks */,
+				DE3896B61DDDF0DD009C60F8 /* LCCoolHUD_iOS.framework in Frameworks */,
+				DE3896CA1DDDF0DE009C60F8 /* YXJKxMenu.framework in Frameworks */,
+				DE3896A71DDDF0DD009C60F8 /* Colour_iOS.framework in Frameworks */,
+				DE3896AB1DDDF0DD009C60F8 /* EasyDropDownMenu_iOS.framework in Frameworks */,
+				DE3896A61DDDF0DD009C60F8 /* Bond.framework in Frameworks */,
+				DE3896AC1DDDF0DD009C60F8 /* EasyEmoji_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,54 +720,55 @@
 		DE6572041DC626BA00ABD670 /* 3party */ = {
 			isa = PBXGroup;
 			children = (
-				DE3989491DCCEB24005E7ECC /* AddressBook_iOS.framework */,
-				DE39894A1DCCEB24005E7ECC /* Alamofire.framework */,
-				DE39894B1DCCEB24005E7ECC /* APValidators_iOS.framework */,
-				DE39894C1DCCEB24005E7ECC /* AXBadgeView_iOS.framework */,
-				DE39894D1DCCEB24005E7ECC /* Bond.framework */,
-				DE39894E1DCCEB24005E7ECC /* Colour_iOS.framework */,
-				DE39894F1DCCEB24005E7ECC /* CYLTabBarController_iOS.framework */,
-				DE3989501DCCEB24005E7ECC /* DKChainableAnimationKit.framework */,
-				DE3989511DCCEB24005E7ECC /* EasyCountDown_iOS.framework */,
-				DE3989521DCCEB24005E7ECC /* EasyDropDownMenu_iOS.framework */,
-				DE3989531DCCEB24005E7ECC /* EasyEmoji_iOS.framework */,
-				DE3989541DCCEB24005E7ECC /* EasySearchBarFrameWork.framework */,
-				DE3989551DCCEB24005E7ECC /* FDTemplateLayoutCell.framework */,
-				DE3989561DCCEB24005E7ECC /* FORScrollViewEmptyAssistant_iOS.framework */,
-				DE3989571DCCEB24005E7ECC /* GCDSwift.framework */,
-				DE3989581DCCEB24005E7ECC /* Haneke.framework */,
-				DE3989591DCCEB24005E7ECC /* HCSStarRatingView.framework */,
-				DE39895A1DCCEB24005E7ECC /* IQKeyboardManager.framework */,
-				DE39895B1DCCEB24005E7ECC /* IQKeyboardManagerSwift.framework */,
-				DE39895C1DCCEB24005E7ECC /* Kingfisher_iOS.framework */,
-				DE39895D1DCCEB24005E7ECC /* LCCoolHUD_iOS.framework */,
-				DE39895E1DCCEB24005E7ECC /* Loggerithm_iOS.framework */,
-				DE39895F1DCCEB24005E7ECC /* MJRefresh_iOS.framework */,
-				DE3989601DCCEB24005E7ECC /* MWPhotoBrowser_iOS.framework */,
-				DE3989611DCCEB24005E7ECC /* ObjectMapper.framework */,
-				DE3989621DCCEB24005E7ECC /* RainbowNavigation.framework */,
-				DE3989631DCCEB24005E7ECC /* Reachability.framework */,
-				DE3989641DCCEB24005E7ECC /* ReactiveKit.framework */,
-				DE3989651DCCEB24005E7ECC /* SnapKit.framework */,
-				DE3989661DCCEB24005E7ECC /* SwiftScan_iOS.framework */,
-				DE3989671DCCEB24005E7ECC /* SwiftString.framework */,
-				DE3989681DCCEB24005E7ECC /* SwiftyJSON.framework */,
-				DE3989691DCCEB24005E7ECC /* SystemServices_iOS.framework */,
-				DE39896A1DCCEB24005E7ECC /* TOWebViewController_iOS.framework */,
-				DE39896B1DCCEB24005E7ECC /* TTTAttributedLabel.framework */,
-				DE39896C1DCCEB24005E7ECC /* TYAlertController_iOS.framework */,
-				DE39896D1DCCEB24005E7ECC /* YXJDIYButtonPosition.framework */,
-				DE39896E1DCCEB24005E7ECC /* YXJImageCompressor.framework */,
-				DE39896F1DCCEB24005E7ECC /* YXJKxMenu.framework */,
-				DE3989701DCCEB24005E7ECC /* YXJLinksButton_iOS.framework */,
-				DE3989711DCCEB24005E7ECC /* YXJOnePixeLine.framework */,
-				DE3989721DCCEB24005E7ECC /* YXJPageController_iOS.framework */,
-				DE3989731DCCEB24005E7ECC /* YXJPullScale.framework */,
-				DE3989741DCCEB24005E7ECC /* YXJSlideBar.framework */,
-				DE3989751DCCEB24005E7ECC /* YXJSwipeTableViewCell_iOS.framework */,
-				DE3989761DCCEB24005E7ECC /* YXJTagView.framework */,
-				DE3989771DCCEB24005E7ECC /* YXJXibView.framework */,
-				DE3989781DCCEB24005E7ECC /* ZLPhotoBrowser_iOS.framework */,
+				DE3896701DDDF0DD009C60F8 /* AddressBook_iOS.framework */,
+				DE3896711DDDF0DD009C60F8 /* Alamofire.framework */,
+				DE3896721DDDF0DD009C60F8 /* APValidators_iOS.framework */,
+				DE3896731DDDF0DD009C60F8 /* AXBadgeView_iOS.framework */,
+				DE3896741DDDF0DD009C60F8 /* Bond.framework */,
+				DE3896751DDDF0DD009C60F8 /* Colour_iOS.framework */,
+				DE3896761DDDF0DD009C60F8 /* CYLTabBarController_iOS.framework */,
+				DE3896771DDDF0DD009C60F8 /* DKChainableAnimationKit.framework */,
+				DE3896781DDDF0DD009C60F8 /* EasyCountDown_iOS.framework */,
+				DE3896791DDDF0DD009C60F8 /* EasyDropDownMenu_iOS.framework */,
+				DE38967A1DDDF0DD009C60F8 /* EasyEmoji_iOS.framework */,
+				DE38967B1DDDF0DD009C60F8 /* EasySearchBarFrameWork.framework */,
+				DE38967C1DDDF0DD009C60F8 /* FDTemplateLayoutCell.framework */,
+				DE38967D1DDDF0DD009C60F8 /* FORScrollViewEmptyAssistant_iOS.framework */,
+				DE38967E1DDDF0DD009C60F8 /* GCDSwift.framework */,
+				DE38967F1DDDF0DD009C60F8 /* Haneke.framework */,
+				DE3896801DDDF0DD009C60F8 /* HCSStarRatingView.framework */,
+				DE3896811DDDF0DD009C60F8 /* IQKeyboardManager.framework */,
+				DE3896821DDDF0DD009C60F8 /* IQKeyboardManagerSwift.framework */,
+				DE3896831DDDF0DD009C60F8 /* Kingfisher_iOS.framework */,
+				DE3896841DDDF0DD009C60F8 /* LCCoolHUD_iOS.framework */,
+				DE3896851DDDF0DD009C60F8 /* Loggerithm_iOS.framework */,
+				DE3896861DDDF0DD009C60F8 /* MJRefresh_iOS.framework */,
+				DE3896871DDDF0DD009C60F8 /* MWPhotoBrowser_iOS.framework */,
+				DE3896881DDDF0DD009C60F8 /* ObjectMapper.framework */,
+				DE3896891DDDF0DD009C60F8 /* RainbowNavigation.framework */,
+				DE38968A1DDDF0DD009C60F8 /* Reachability.framework */,
+				DE38968B1DDDF0DD009C60F8 /* ReactiveKit.framework */,
+				DE38968C1DDDF0DD009C60F8 /* SnapKit.framework */,
+				DE38968D1DDDF0DD009C60F8 /* SwiftScan_iOS.framework */,
+				DE38968E1DDDF0DD009C60F8 /* SwiftString_iOS.framework */,
+				DE3896901DDDF0DD009C60F8 /* SwiftyJSON.framework */,
+				DE3896911DDDF0DD009C60F8 /* SystemServices_iOS.framework */,
+				DE3896921DDDF0DD009C60F8 /* TOWebViewController_iOS.framework */,
+				DE3896931DDDF0DD009C60F8 /* TTTAttributedLabel.framework */,
+				DE3896941DDDF0DD009C60F8 /* TYAlertController_iOS.framework */,
+				DE3896951DDDF0DD009C60F8 /* YXJCycleView_iOS.framework */,
+				DE3896961DDDF0DD009C60F8 /* YXJDIYButtonPosition.framework */,
+				DE3896971DDDF0DD009C60F8 /* YXJImageCompressor.framework */,
+				DE3896981DDDF0DD009C60F8 /* YXJKxMenu.framework */,
+				DE3896991DDDF0DD009C60F8 /* YXJLinksButton_iOS.framework */,
+				DE38969A1DDDF0DD009C60F8 /* YXJOnePixeLine.framework */,
+				DE38969B1DDDF0DD009C60F8 /* YXJPageController_iOS.framework */,
+				DE38969C1DDDF0DD009C60F8 /* YXJPullScale.framework */,
+				DE38969D1DDDF0DD009C60F8 /* YXJSlideBar.framework */,
+				DE38969E1DDDF0DD009C60F8 /* YXJSwipeTableViewCell_iOS.framework */,
+				DE38969F1DDDF0DD009C60F8 /* YXJTagView.framework */,
+				DE3896A01DDDF0DD009C60F8 /* YXJXibView.framework */,
+				DE3896A11DDDF0DD009C60F8 /* ZLPhotoBrowser_iOS.framework */,
 			);
 			path = 3party;
 			sourceTree = "<group>";
@@ -1261,7 +1173,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftScan_iOS.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftString.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftString_iOS.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SystemServices_iOS.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TOWebViewController_iOS.framework",
@@ -1554,6 +1466,7 @@
 				);
 				INFOPLIST_FILE = EasySwift_iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.EasySwift-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1581,6 +1494,7 @@
 				);
 				INFOPLIST_FILE = EasySwift_iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.EasySwift-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";

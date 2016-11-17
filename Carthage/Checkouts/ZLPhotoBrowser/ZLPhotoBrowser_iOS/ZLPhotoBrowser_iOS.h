@@ -17,3 +17,16 @@ FOUNDATION_EXPORT const unsigned char ZLPhotoBrowser_iOSVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <ZLPhotoBrowser_iOS/PublicHeader.h>
 
 
+#import "ZLPhotoBrowser.h"
+#import "ToastUtils.h"
+#import "ZLBigImageCell.h"
+#import "ZLCollectionCell.h"
+#import "ZLDefine.h"
+#import "ZLNoAuthorityViewController.h"
+#import "ZLPhotoActionSheet.h"
+#import "ZLPhotoBrowserCell.h"
+#import "ZLPhotoTool.h"
+#import "ZLProgressHUD.h"
+#import "ZLSelectPhotoModel.h"
+#import "ZLShowBigImgViewController.h"
+#import "ZLThumbnailViewController.h"

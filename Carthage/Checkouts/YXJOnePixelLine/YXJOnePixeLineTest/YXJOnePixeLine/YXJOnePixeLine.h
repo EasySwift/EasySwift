@@ -17,3 +17,4 @@ FOUNDATION_EXPORT const unsigned char YXJOnePixeLineVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <YXJOnePixeLine/PublicHeader.h>
 
 
+#import "YXJOnePixelLine.h"

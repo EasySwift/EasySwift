@@ -17,3 +17,4 @@ FOUNDATION_EXPORT const unsigned char YXJPullScaleVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <YXJPullScale/PublicHeader.h>
 
 
+#import "UIScrollView+PullScale.h"

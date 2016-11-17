@@ -17,3 +17,4 @@ FOUNDATION_EXPORT const unsigned char YXJImageCompressorVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <YXJImageCompressor/PublicHeader.h>
 
 
+#import "YXJImageCompressor.h"

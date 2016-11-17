@@ -13,6 +13,9 @@
 		DE31203D1DAD395A00BD780A /* Loggerithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43926061B7D2FC400616CDE /* Loggerithm.swift */; };
 		DE31203E1DAD395A00BD780A /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43926071B7D2FC400616CDE /* Type.swift */; };
 		DE31203F1DAD395A00BD780A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C86B51B7D8DDD002A3A49 /* Color.swift */; };
+		DE4D7E971DDA05DF008BE335 /* Loggerithm.swift in Headers */ = {isa = PBXBuildFile; fileRef = E43926061B7D2FC400616CDE /* Loggerithm.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE4D7E981DDA05DF008BE335 /* Type.swift in Headers */ = {isa = PBXBuildFile; fileRef = E43926071B7D2FC400616CDE /* Type.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE4D7E991DDA05DF008BE335 /* Color.swift in Headers */ = {isa = PBXBuildFile; fileRef = E45C86B51B7D8DDD002A3A49 /* Color.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		E43926081B7D2FC400616CDE /* Loggerithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43926061B7D2FC400616CDE /* Loggerithm.swift */; };
 		E43926091B7D2FC400616CDE /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43926071B7D2FC400616CDE /* Type.swift */; };
 		E45C86B61B7D8DDD002A3A49 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C86B51B7D8DDD002A3A49 /* Color.swift */; };
@@ -187,6 +190,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE3120341DAD393B00BD780A /* Loggerithm_iOS.h in Headers */,
+				DE4D7E971DDA05DF008BE335 /* Loggerithm.swift in Headers */,
+				DE4D7E981DDA05DF008BE335 /* Type.swift in Headers */,
+				DE4D7E991DDA05DF008BE335 /* Color.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +408,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Loggerithm_iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.Loggerithm-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -430,7 +436,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Loggerithm_iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YXJ.Loggerithm-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -600,6 +606,7 @@
 				DE31203B1DAD393B00BD780A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA3CB4831A38F4230088F488 /* Build configuration list for PBXProject "Demo" */ = {
 			isa = XCConfigurationList;

@@ -65,7 +65,7 @@
 		D2A653E31C7E874500566F54 /* TOWebViewController+1Password.h in Headers */ = {isa = PBXBuildFile; fileRef = 2282E1EC1C266EE100D53AB1 /* TOWebViewController+1Password.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2A653E41C7E874500566F54 /* TOWebViewController+1Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 2282E1ED1C266EE100D53AB1 /* TOWebViewController+1Password.m */; };
 		D2A653E51C7EAAF900566F54 /* TOWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F922591753B15E0034FEF6 /* TOWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEAD326E1DBB3CEA008E49B6 /* TOWebViewController_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DEAD326D1DBB3CEA008E49B6 /* TOWebViewController_iOS.h */; };
+		DEAD326E1DBB3CEA008E49B6 /* TOWebViewController_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DEAD326D1DBB3CEA008E49B6 /* TOWebViewController_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -472,10 +472,10 @@
 				D2A653D71C7E872600566F54 /* NJKWebViewProgressView.h in Headers */,
 				D2A653DA1C7E873700566F54 /* TOActivitySafari.h in Headers */,
 				D2A653E51C7EAAF900566F54 /* TOWebViewController.h in Headers */,
-				DEAD326E1DBB3CEA008E49B6 /* TOWebViewController_iOS.h in Headers */,
 				D2A653DC1C7E873700566F54 /* TOActivityChrome.h in Headers */,
 				D2A653E31C7E874500566F54 /* TOWebViewController+1Password.h in Headers */,
 				D2A653DE1C7E873700566F54 /* UIImage+TOWebViewControllerIcons.h in Headers */,
+				DEAD326E1DBB3CEA008E49B6 /* TOWebViewController_iOS.h in Headers */,
 				D2A653D61C7E871F00566F54 /* NJKWebViewProgress.h in Headers */,
 				D2A653E01C7E873F00566F54 /* OnePasswordExtension.h in Headers */,
 			);
@@ -1066,7 +1066,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = TOWebViewController/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = Carsales.com.au.TOWebViewController;
@@ -1106,7 +1106,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = TOWebViewController/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = Carsales.com.au.TOWebViewController;
